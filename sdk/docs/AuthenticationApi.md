@@ -5,6 +5,7 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
 | [**GetAuthenticationInformation**](AuthenticationApi.md#getauthenticationinformation) | **GET** /api/authentication/information | GetAuthenticationInformation: Gets AuthenticationInformation |
+| [**GetPasswordPolicy**](AuthenticationApi.md#getpasswordpolicy) | **GET** /api/authentication/password-policy/{userType} | [EXPERIMENTAL] GetPasswordPolicy: Gets Password Policy for a user type |
 | [**GetSupportAccessHistory**](AuthenticationApi.md#getsupportaccesshistory) | **GET** /api/authentication/support | [EARLY ACCESS] GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination |
 | [**GetSupportRoles**](AuthenticationApi.md#getsupportroles) | **GET** /api/authentication/support-roles | [EARLY ACCESS] GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation |
 | [**GrantSupportAccess**](AuthenticationApi.md#grantsupportaccess) | **POST** /api/authentication/support | [EARLY ACCESS] GrantSupportAccess: Grants FINBOURNE support access to your account |
@@ -96,6 +97,102 @@ This endpoint does not need any parameter.
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Get authentication information |  -  |
+| **0** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="getpasswordpolicy"></a>
+# **GetPasswordPolicy**
+> PasswordPolicy GetPasswordPolicy (string userType)
+
+[EXPERIMENTAL] GetPasswordPolicy: Gets Password Policy for a user type
+
+Get the password policy for a given user type
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Finbourne.Identity.Sdk.Api;
+using Finbourne.Identity.Sdk.Client;
+using Finbourne.Identity.Sdk.Model;
+
+namespace Example
+{
+    public class GetPasswordPolicyExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://fbn-prd.lusid.com/identity";
+            // Configure OAuth2 access token for authorization: oauth2
+            config.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new AuthenticationApi(config);
+            var userType = "userType_example";  // string | The type of user (should only be personal or service)
+
+            try
+            {
+                // [EXPERIMENTAL] GetPasswordPolicy: Gets Password Policy for a user type
+                PasswordPolicy result = apiInstance.GetPasswordPolicy(userType);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling AuthenticationApi.GetPasswordPolicy: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetPasswordPolicyWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // [EXPERIMENTAL] GetPasswordPolicy: Gets Password Policy for a user type
+    ApiResponse<PasswordPolicy> response = apiInstance.GetPasswordPolicyWithHttpInfo(userType);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling AuthenticationApi.GetPasswordPolicyWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userType** | **string** | The type of user (should only be personal or service) |  |
+
+### Return type
+
+[**PasswordPolicy**](PasswordPolicy.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Get password policy |  -  |
+| **400** | The details of the input related failure |  -  |
 | **0** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
