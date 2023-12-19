@@ -41,7 +41,8 @@ namespace Finbourne.Identity.Sdk.Model
         /// <param name="source">The source of the role (required).</param>
         /// <param name="name">The role name, which must be unique within the system. (required).</param>
         /// <param name="description">The description for this role.</param>
-        public RoleResponse(string id = default(string), RoleId roleId = default(RoleId), string source = default(string), string name = default(string), string description = default(string))
+        /// <param name="samlName">The name to use on the SAML request if assigning this role via SAML Just in Time (JIT).</param>
+        public RoleResponse(string id = default(string), RoleId roleId = default(RoleId), string source = default(string), string name = default(string), string description = default(string), string samlName = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -68,6 +69,7 @@ namespace Finbourne.Identity.Sdk.Model
             }
             this.Name = name;
             this.Description = description;
+            this.SamlName = samlName;
         }
 
         /// <summary>
@@ -105,6 +107,13 @@ namespace Finbourne.Identity.Sdk.Model
         public string Description { get; set; }
 
         /// <summary>
+        /// The name to use on the SAML request if assigning this role via SAML Just in Time (JIT)
+        /// </summary>
+        /// <value>The name to use on the SAML request if assigning this role via SAML Just in Time (JIT)</value>
+        [DataMember(Name = "samlName", EmitDefaultValue = true)]
+        public string SamlName { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -117,6 +126,7 @@ namespace Finbourne.Identity.Sdk.Model
             sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  SamlName: ").Append(SamlName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -176,6 +186,11 @@ namespace Finbourne.Identity.Sdk.Model
                     this.Description == input.Description ||
                     (this.Description != null &&
                     this.Description.Equals(input.Description))
+                ) && 
+                (
+                    this.SamlName == input.SamlName ||
+                    (this.SamlName != null &&
+                    this.SamlName.Equals(input.SamlName))
                 );
         }
 
@@ -207,6 +222,10 @@ namespace Finbourne.Identity.Sdk.Model
                 if (this.Description != null)
                 {
                     hashCode = (hashCode * 59) + this.Description.GetHashCode();
+                }
+                if (this.SamlName != null)
+                {
+                    hashCode = (hashCode * 59) + this.SamlName.GetHashCode();
                 }
                 return hashCode;
             }
