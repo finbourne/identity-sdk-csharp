@@ -8,7 +8,7 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 | [**DeleteApplication**](ApplicationsApi.md#deleteapplication) | **DELETE** /api/applications/{id} | [EARLY ACCESS] DeleteApplication: Delete Application |
 | [**GetApplication**](ApplicationsApi.md#getapplication) | **GET** /api/applications/{id} | [EARLY ACCESS] GetApplication: Get Application |
 | [**ListApplications**](ApplicationsApi.md#listapplications) | **GET** /api/applications | [EARLY ACCESS] ListApplications: List Applications |
-| [**RotateApplicationSecrets**](ApplicationsApi.md#rotateapplicationsecrets) | **POST** /api/applications/{id}/lifecycle/$newsecret | [EXPERIMENTAL] RotateApplicationSecrets: Rotate Application Secrets |
+| [**RotateApplicationSecrets**](ApplicationsApi.md#rotateapplicationsecrets) | **POST** /api/applications/{id}/lifecycle/$newsecret | [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets |
 
 <a id="createapplication"></a>
 # **CreateApplication**
@@ -391,7 +391,7 @@ This endpoint does not need any parameter.
 # **RotateApplicationSecrets**
 > OAuthApplication RotateApplicationSecrets (string id)
 
-[EXPERIMENTAL] RotateApplicationSecrets: Rotate Application Secrets
+[EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets
 
 Rotate the secrets for the specified application
 
@@ -419,7 +419,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] RotateApplicationSecrets: Rotate Application Secrets
+                // [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets
                 OAuthApplication result = apiInstance.RotateApplicationSecrets(id);
                 Debug.WriteLine(result);
             }
@@ -440,7 +440,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] RotateApplicationSecrets: Rotate Application Secrets
+    // [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets
     ApiResponse<OAuthApplication> response = apiInstance.RotateApplicationSecretsWithHttpInfo(id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);

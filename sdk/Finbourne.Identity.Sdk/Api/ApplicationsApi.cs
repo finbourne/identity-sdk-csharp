@@ -117,7 +117,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of List&lt;OAuthApplication&gt;</returns>
         ApiResponse<List<OAuthApplication>> ListApplicationsWithHttpInfo(int operationIndex = 0);
         /// <summary>
-        /// [EXPERIMENTAL] RotateApplicationSecrets: Rotate Application Secrets
+        /// [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets
         /// </summary>
         /// <remarks>
         /// Rotate the secrets for the specified application
@@ -129,7 +129,7 @@ namespace Finbourne.Identity.Sdk.Api
         OAuthApplication RotateApplicationSecrets(string id, int operationIndex = 0);
 
         /// <summary>
-        /// [EXPERIMENTAL] RotateApplicationSecrets: Rotate Application Secrets
+        /// [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets
         /// </summary>
         /// <remarks>
         /// Rotate the secrets for the specified application
@@ -249,7 +249,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (List&lt;OAuthApplication&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<OAuthApplication>>> ListApplicationsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EXPERIMENTAL] RotateApplicationSecrets: Rotate Application Secrets
+        /// [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets
         /// </summary>
         /// <remarks>
         /// Rotate the secrets for the specified application
@@ -262,7 +262,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<OAuthApplication> RotateApplicationSecretsAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EXPERIMENTAL] RotateApplicationSecrets: Rotate Application Secrets
+        /// [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets
         /// </summary>
         /// <remarks>
         /// Rotate the secrets for the specified application
@@ -1083,7 +1083,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RotateApplicationSecrets: Rotate Application Secrets Rotate the secrets for the specified application
+        /// [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets Rotate the secrets for the specified application
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the application</param>
@@ -1096,7 +1096,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RotateApplicationSecrets: Rotate Application Secrets Rotate the secrets for the specified application
+        /// [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets Rotate the secrets for the specified application
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the application</param>
@@ -1169,7 +1169,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RotateApplicationSecrets: Rotate Application Secrets Rotate the secrets for the specified application
+        /// [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets Rotate the secrets for the specified application
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the application</param>
@@ -1183,7 +1183,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RotateApplicationSecrets: Rotate Application Secrets Rotate the secrets for the specified application
+        /// [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets Rotate the secrets for the specified application
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the application</param>
