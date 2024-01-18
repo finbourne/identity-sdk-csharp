@@ -1,10 +1,10 @@
-# Finbourne.Identity.Sdk.Model.PasswordPolicyLockout
+# Finbourne.Identity.Sdk.Model.PasswordPolicyDto
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MaxAttempts** | **int** | The maximum number of unsuccessful attempts before the user is locked out of their account | [optional] 
+**Conditions** | [**PasswordPolicyConditionsDto**](PasswordPolicyConditionsDto.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

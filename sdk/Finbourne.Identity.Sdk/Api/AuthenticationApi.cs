@@ -46,7 +46,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of AuthenticationInformation</returns>
         ApiResponse<AuthenticationInformation> GetAuthenticationInformationWithHttpInfo(int operationIndex = 0);
         /// <summary>
-        /// [EXPERIMENTAL] GetPasswordPolicy: Gets Password Policy for a user type
+        /// [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type
         /// </summary>
         /// <remarks>
         /// Get the password policy for a given user type
@@ -54,11 +54,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userType">The type of user (should only be personal or service)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PasswordPolicy</returns>
-        PasswordPolicy GetPasswordPolicy(string userType, int operationIndex = 0);
+        /// <returns>PasswordPolicyDto</returns>
+        PasswordPolicyDto GetPasswordPolicy(string userType, int operationIndex = 0);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetPasswordPolicy: Gets Password Policy for a user type
+        /// [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type
         /// </summary>
         /// <remarks>
         /// Get the password policy for a given user type
@@ -66,8 +66,8 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userType">The type of user (should only be personal or service)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PasswordPolicy</returns>
-        ApiResponse<PasswordPolicy> GetPasswordPolicyWithHttpInfo(string userType, int operationIndex = 0);
+        /// <returns>ApiResponse of PasswordPolicyDto</returns>
+        ApiResponse<PasswordPolicyDto> GetPasswordPolicyWithHttpInfo(string userType, int operationIndex = 0);
         /// <summary>
         /// [EARLY ACCESS] GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
         /// </summary>
@@ -158,6 +158,31 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SupportAccessResponse&gt;</returns>
         ApiResponse<List<SupportAccessResponse>> InvalidateSupportAccessWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type
+        /// </summary>
+        /// <remarks>
+        /// Update the password policy for a given user type
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userType">The type of user (should only be personal or service)</param>
+        /// <param name="passwordPolicyDto">The password policy for the given user type (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PasswordPolicyDto</returns>
+        PasswordPolicyDto UpdatePasswordPolicy(string userType, PasswordPolicyDto? passwordPolicyDto = default(PasswordPolicyDto?), int operationIndex = 0);
+
+        /// <summary>
+        /// [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type
+        /// </summary>
+        /// <remarks>
+        /// Update the password policy for a given user type
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userType">The type of user (should only be personal or service)</param>
+        /// <param name="passwordPolicyDto">The password policy for the given user type (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PasswordPolicyDto</returns>
+        ApiResponse<PasswordPolicyDto> UpdatePasswordPolicyWithHttpInfo(string userType, PasswordPolicyDto? passwordPolicyDto = default(PasswordPolicyDto?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -191,7 +216,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (AuthenticationInformation)</returns>
         System.Threading.Tasks.Task<ApiResponse<AuthenticationInformation>> GetAuthenticationInformationWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EXPERIMENTAL] GetPasswordPolicy: Gets Password Policy for a user type
+        /// [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type
         /// </summary>
         /// <remarks>
         /// Get the password policy for a given user type
@@ -200,11 +225,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="userType">The type of user (should only be personal or service)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PasswordPolicy</returns>
-        System.Threading.Tasks.Task<PasswordPolicy> GetPasswordPolicyAsync(string userType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PasswordPolicyDto</returns>
+        System.Threading.Tasks.Task<PasswordPolicyDto> GetPasswordPolicyAsync(string userType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EXPERIMENTAL] GetPasswordPolicy: Gets Password Policy for a user type
+        /// [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type
         /// </summary>
         /// <remarks>
         /// Get the password policy for a given user type
@@ -213,8 +238,8 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="userType">The type of user (should only be personal or service)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PasswordPolicy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PasswordPolicy>> GetPasswordPolicyWithHttpInfoAsync(string userType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PasswordPolicyDto)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PasswordPolicyDto>> GetPasswordPolicyWithHttpInfoAsync(string userType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// [EARLY ACCESS] GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
         /// </summary>
@@ -313,6 +338,33 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SupportAccessResponse&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<SupportAccessResponse>>> InvalidateSupportAccessWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type
+        /// </summary>
+        /// <remarks>
+        /// Update the password policy for a given user type
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userType">The type of user (should only be personal or service)</param>
+        /// <param name="passwordPolicyDto">The password policy for the given user type (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PasswordPolicyDto</returns>
+        System.Threading.Tasks.Task<PasswordPolicyDto> UpdatePasswordPolicyAsync(string userType, PasswordPolicyDto? passwordPolicyDto = default(PasswordPolicyDto?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type
+        /// </summary>
+        /// <remarks>
+        /// Update the password policy for a given user type
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userType">The type of user (should only be personal or service)</param>
+        /// <param name="passwordPolicyDto">The password policy for the given user type (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PasswordPolicyDto)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PasswordPolicyDto>> UpdatePasswordPolicyWithHttpInfoAsync(string userType, PasswordPolicyDto? passwordPolicyDto = default(PasswordPolicyDto?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -589,26 +641,26 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetPasswordPolicy: Gets Password Policy for a user type Get the password policy for a given user type
+        /// [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type Get the password policy for a given user type
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userType">The type of user (should only be personal or service)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PasswordPolicy</returns>
-        public PasswordPolicy GetPasswordPolicy(string userType, int operationIndex = 0)
+        /// <returns>PasswordPolicyDto</returns>
+        public PasswordPolicyDto GetPasswordPolicy(string userType, int operationIndex = 0)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<PasswordPolicy> localVarResponse = GetPasswordPolicyWithHttpInfo(userType);
+            Finbourne.Identity.Sdk.Client.ApiResponse<PasswordPolicyDto> localVarResponse = GetPasswordPolicyWithHttpInfo(userType);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetPasswordPolicy: Gets Password Policy for a user type Get the password policy for a given user type
+        /// [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type Get the password policy for a given user type
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userType">The type of user (should only be personal or service)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PasswordPolicy</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<PasswordPolicy> GetPasswordPolicyWithHttpInfo(string userType, int operationIndex = 0)
+        /// <returns>ApiResponse of PasswordPolicyDto</returns>
+        public Finbourne.Identity.Sdk.Client.ApiResponse<PasswordPolicyDto> GetPasswordPolicyWithHttpInfo(string userType, int operationIndex = 0)
         {
             // verify the required parameter 'userType' is set
             if (userType == null)
@@ -661,7 +713,7 @@ namespace Finbourne.Identity.Sdk.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PasswordPolicy>("/api/authentication/password-policy/{userType}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PasswordPolicyDto>("/api/authentication/password-policy/{userType}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetPasswordPolicy", localVarResponse);
@@ -675,28 +727,28 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetPasswordPolicy: Gets Password Policy for a user type Get the password policy for a given user type
+        /// [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type Get the password policy for a given user type
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userType">The type of user (should only be personal or service)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PasswordPolicy</returns>
-        public async System.Threading.Tasks.Task<PasswordPolicy> GetPasswordPolicyAsync(string userType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PasswordPolicyDto</returns>
+        public async System.Threading.Tasks.Task<PasswordPolicyDto> GetPasswordPolicyAsync(string userType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<PasswordPolicy> localVarResponse = await GetPasswordPolicyWithHttpInfoAsync(userType, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Identity.Sdk.Client.ApiResponse<PasswordPolicyDto> localVarResponse = await GetPasswordPolicyWithHttpInfoAsync(userType, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetPasswordPolicy: Gets Password Policy for a user type Get the password policy for a given user type
+        /// [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type Get the password policy for a given user type
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userType">The type of user (should only be personal or service)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PasswordPolicy)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<PasswordPolicy>> GetPasswordPolicyWithHttpInfoAsync(string userType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PasswordPolicyDto)</returns>
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<PasswordPolicyDto>> GetPasswordPolicyWithHttpInfoAsync(string userType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'userType' is set
             if (userType == null)
@@ -750,7 +802,7 @@ namespace Finbourne.Identity.Sdk.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PasswordPolicy>("/api/authentication/password-policy/{userType}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PasswordPolicyDto>("/api/authentication/password-policy/{userType}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1437,6 +1489,196 @@ namespace Finbourne.Identity.Sdk.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InvalidateSupportAccess", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type Update the password policy for a given user type
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userType">The type of user (should only be personal or service)</param>
+        /// <param name="passwordPolicyDto">The password policy for the given user type (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PasswordPolicyDto</returns>
+        public PasswordPolicyDto UpdatePasswordPolicy(string userType, PasswordPolicyDto? passwordPolicyDto = default(PasswordPolicyDto?), int operationIndex = 0)
+        {
+            Finbourne.Identity.Sdk.Client.ApiResponse<PasswordPolicyDto> localVarResponse = UpdatePasswordPolicyWithHttpInfo(userType, passwordPolicyDto);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type Update the password policy for a given user type
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userType">The type of user (should only be personal or service)</param>
+        /// <param name="passwordPolicyDto">The password policy for the given user type (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PasswordPolicyDto</returns>
+        public Finbourne.Identity.Sdk.Client.ApiResponse<PasswordPolicyDto> UpdatePasswordPolicyWithHttpInfo(string userType, PasswordPolicyDto? passwordPolicyDto = default(PasswordPolicyDto?), int operationIndex = 0)
+        {
+            // verify the required parameter 'userType' is set
+            if (userType == null)
+            {
+                throw new Finbourne.Identity.Sdk.Client.ApiException(400, "Missing required parameter 'userType' when calling AuthenticationApi->UpdatePasswordPolicy");
+            }
+
+            Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json-patch+json",
+                "application/json",
+                "text/json",
+                "application/*+json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("userType", Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToString(userType)); // path parameter
+            localVarRequestOptions.Data = passwordPolicyDto;
+
+            localVarRequestOptions.Operation = "AuthenticationApi.UpdatePasswordPolicy";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Put<PasswordPolicyDto>("/api/authentication/password-policy/{userType}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdatePasswordPolicy", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type Update the password policy for a given user type
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userType">The type of user (should only be personal or service)</param>
+        /// <param name="passwordPolicyDto">The password policy for the given user type (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PasswordPolicyDto</returns>
+        public async System.Threading.Tasks.Task<PasswordPolicyDto> UpdatePasswordPolicyAsync(string userType, PasswordPolicyDto? passwordPolicyDto = default(PasswordPolicyDto?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Finbourne.Identity.Sdk.Client.ApiResponse<PasswordPolicyDto> localVarResponse = await UpdatePasswordPolicyWithHttpInfoAsync(userType, passwordPolicyDto, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type Update the password policy for a given user type
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userType">The type of user (should only be personal or service)</param>
+        /// <param name="passwordPolicyDto">The password policy for the given user type (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PasswordPolicyDto)</returns>
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<PasswordPolicyDto>> UpdatePasswordPolicyWithHttpInfoAsync(string userType, PasswordPolicyDto? passwordPolicyDto = default(PasswordPolicyDto?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'userType' is set
+            if (userType == null)
+            {
+                throw new Finbourne.Identity.Sdk.Client.ApiException(400, "Missing required parameter 'userType' when calling AuthenticationApi->UpdatePasswordPolicy");
+            }
+
+
+            Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json-patch+json", 
+                "application/json", 
+                "text/json", 
+                "application/*+json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("userType", Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToString(userType)); // path parameter
+            localVarRequestOptions.Data = passwordPolicyDto;
+
+            localVarRequestOptions.Operation = "AuthenticationApi.UpdatePasswordPolicy";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PasswordPolicyDto>("/api/authentication/password-policy/{userType}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdatePasswordPolicy", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

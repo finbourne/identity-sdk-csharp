@@ -23,35 +23,35 @@ using OpenAPIDateConverter = Finbourne.Identity.Sdk.Client.OpenAPIDateConverter;
 namespace Finbourne.Identity.Sdk.Model
 {
     /// <summary>
-    /// PasswordPolicyAge
+    /// PasswordPolicyDto
     /// </summary>
-    [DataContract(Name = "PasswordPolicyAge")]
-    public partial class PasswordPolicyAge : IEquatable<PasswordPolicyAge>, IValidatableObject
+    [DataContract(Name = "PasswordPolicyDto")]
+    public partial class PasswordPolicyDto : IEquatable<PasswordPolicyDto>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PasswordPolicyAge" /> class.
+        /// Initializes a new instance of the <see cref="PasswordPolicyDto" /> class.
         /// </summary>
-        /// <param name="maxAgeDays">The maximum age (in days) a password can be before expiring and needing to be changed.</param>
-        /// <param name="historyCount">The number of unique passwords that need to be used before a previous password is permitted again.</param>
-        public PasswordPolicyAge(int maxAgeDays = default(int), int historyCount = default(int))
+        [JsonConstructorAttribute]
+        protected PasswordPolicyDto() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PasswordPolicyDto" /> class.
+        /// </summary>
+        /// <param name="conditions">conditions (required).</param>
+        public PasswordPolicyDto(PasswordPolicyConditionsDto conditions = default(PasswordPolicyConditionsDto))
         {
-            this.MaxAgeDays = maxAgeDays;
-            this.HistoryCount = historyCount;
+            // to ensure "conditions" is required (not null)
+            if (conditions == null)
+            {
+                throw new ArgumentNullException("conditions is a required property for PasswordPolicyDto and cannot be null");
+            }
+            this.Conditions = conditions;
         }
 
         /// <summary>
-        /// The maximum age (in days) a password can be before expiring and needing to be changed
+        /// Gets or Sets Conditions
         /// </summary>
-        /// <value>The maximum age (in days) a password can be before expiring and needing to be changed</value>
-        [DataMember(Name = "maxAgeDays", EmitDefaultValue = false)]
-        public int MaxAgeDays { get; set; }
-
-        /// <summary>
-        /// The number of unique passwords that need to be used before a previous password is permitted again
-        /// </summary>
-        /// <value>The number of unique passwords that need to be used before a previous password is permitted again</value>
-        [DataMember(Name = "historyCount", EmitDefaultValue = false)]
-        public int HistoryCount { get; set; }
+        [DataMember(Name = "conditions", IsRequired = true, EmitDefaultValue = true)]
+        public PasswordPolicyConditionsDto Conditions { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -60,9 +60,8 @@ namespace Finbourne.Identity.Sdk.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PasswordPolicyAge {\n");
-            sb.Append("  MaxAgeDays: ").Append(MaxAgeDays).Append("\n");
-            sb.Append("  HistoryCount: ").Append(HistoryCount).Append("\n");
+            sb.Append("class PasswordPolicyDto {\n");
+            sb.Append("  Conditions: ").Append(Conditions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -83,15 +82,15 @@ namespace Finbourne.Identity.Sdk.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PasswordPolicyAge);
+            return this.Equals(input as PasswordPolicyDto);
         }
 
         /// <summary>
-        /// Returns true if PasswordPolicyAge instances are equal
+        /// Returns true if PasswordPolicyDto instances are equal
         /// </summary>
-        /// <param name="input">Instance of PasswordPolicyAge to be compared</param>
+        /// <param name="input">Instance of PasswordPolicyDto to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PasswordPolicyAge input)
+        public bool Equals(PasswordPolicyDto input)
         {
             if (input == null)
             {
@@ -99,12 +98,9 @@ namespace Finbourne.Identity.Sdk.Model
             }
             return 
                 (
-                    this.MaxAgeDays == input.MaxAgeDays ||
-                    this.MaxAgeDays.Equals(input.MaxAgeDays)
-                ) && 
-                (
-                    this.HistoryCount == input.HistoryCount ||
-                    this.HistoryCount.Equals(input.HistoryCount)
+                    this.Conditions == input.Conditions ||
+                    (this.Conditions != null &&
+                    this.Conditions.Equals(input.Conditions))
                 );
         }
 
@@ -117,8 +113,10 @@ namespace Finbourne.Identity.Sdk.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.MaxAgeDays.GetHashCode();
-                hashCode = (hashCode * 59) + this.HistoryCount.GetHashCode();
+                if (this.Conditions != null)
+                {
+                    hashCode = (hashCode * 59) + this.Conditions.GetHashCode();
+                }
                 return hashCode;
             }
         }

@@ -23,26 +23,40 @@ using OpenAPIDateConverter = Finbourne.Identity.Sdk.Client.OpenAPIDateConverter;
 namespace Finbourne.Identity.Sdk.Model
 {
     /// <summary>
-    /// PasswordPolicyLockout
+    /// PasswordPolicyAgeDto
     /// </summary>
-    [DataContract(Name = "PasswordPolicyLockout")]
-    public partial class PasswordPolicyLockout : IEquatable<PasswordPolicyLockout>, IValidatableObject
+    [DataContract(Name = "PasswordPolicyAgeDto")]
+    public partial class PasswordPolicyAgeDto : IEquatable<PasswordPolicyAgeDto>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PasswordPolicyLockout" /> class.
+        /// Initializes a new instance of the <see cref="PasswordPolicyAgeDto" /> class.
         /// </summary>
-        /// <param name="maxAttempts">The maximum number of unsuccessful attempts before the user is locked out of their account.</param>
-        public PasswordPolicyLockout(int maxAttempts = default(int))
+        [JsonConstructorAttribute]
+        protected PasswordPolicyAgeDto() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PasswordPolicyAgeDto" /> class.
+        /// </summary>
+        /// <param name="maxAgeDays">The maximum age (in days) a password can be before expiring and needing to be changed (required).</param>
+        /// <param name="historyCount">The number of unique passwords that need to be used before a previous password is permitted again (required).</param>
+        public PasswordPolicyAgeDto(int maxAgeDays = default(int), int historyCount = default(int))
         {
-            this.MaxAttempts = maxAttempts;
+            this.MaxAgeDays = maxAgeDays;
+            this.HistoryCount = historyCount;
         }
 
         /// <summary>
-        /// The maximum number of unsuccessful attempts before the user is locked out of their account
+        /// The maximum age (in days) a password can be before expiring and needing to be changed
         /// </summary>
-        /// <value>The maximum number of unsuccessful attempts before the user is locked out of their account</value>
-        [DataMember(Name = "maxAttempts", EmitDefaultValue = false)]
-        public int MaxAttempts { get; set; }
+        /// <value>The maximum age (in days) a password can be before expiring and needing to be changed</value>
+        [DataMember(Name = "maxAgeDays", IsRequired = true, EmitDefaultValue = true)]
+        public int MaxAgeDays { get; set; }
+
+        /// <summary>
+        /// The number of unique passwords that need to be used before a previous password is permitted again
+        /// </summary>
+        /// <value>The number of unique passwords that need to be used before a previous password is permitted again</value>
+        [DataMember(Name = "historyCount", IsRequired = true, EmitDefaultValue = true)]
+        public int HistoryCount { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -51,8 +65,9 @@ namespace Finbourne.Identity.Sdk.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PasswordPolicyLockout {\n");
-            sb.Append("  MaxAttempts: ").Append(MaxAttempts).Append("\n");
+            sb.Append("class PasswordPolicyAgeDto {\n");
+            sb.Append("  MaxAgeDays: ").Append(MaxAgeDays).Append("\n");
+            sb.Append("  HistoryCount: ").Append(HistoryCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -73,15 +88,15 @@ namespace Finbourne.Identity.Sdk.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PasswordPolicyLockout);
+            return this.Equals(input as PasswordPolicyAgeDto);
         }
 
         /// <summary>
-        /// Returns true if PasswordPolicyLockout instances are equal
+        /// Returns true if PasswordPolicyAgeDto instances are equal
         /// </summary>
-        /// <param name="input">Instance of PasswordPolicyLockout to be compared</param>
+        /// <param name="input">Instance of PasswordPolicyAgeDto to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PasswordPolicyLockout input)
+        public bool Equals(PasswordPolicyAgeDto input)
         {
             if (input == null)
             {
@@ -89,8 +104,12 @@ namespace Finbourne.Identity.Sdk.Model
             }
             return 
                 (
-                    this.MaxAttempts == input.MaxAttempts ||
-                    this.MaxAttempts.Equals(input.MaxAttempts)
+                    this.MaxAgeDays == input.MaxAgeDays ||
+                    this.MaxAgeDays.Equals(input.MaxAgeDays)
+                ) && 
+                (
+                    this.HistoryCount == input.HistoryCount ||
+                    this.HistoryCount.Equals(input.HistoryCount)
                 );
         }
 
@@ -103,7 +122,8 @@ namespace Finbourne.Identity.Sdk.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.MaxAttempts.GetHashCode();
+                hashCode = (hashCode * 59) + this.MaxAgeDays.GetHashCode();
+                hashCode = (hashCode * 59) + this.HistoryCount.GetHashCode();
                 return hashCode;
             }
         }

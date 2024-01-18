@@ -23,18 +23,23 @@ using OpenAPIDateConverter = Finbourne.Identity.Sdk.Client.OpenAPIDateConverter;
 namespace Finbourne.Identity.Sdk.Model
 {
     /// <summary>
-    /// PasswordPolicyComplexity
+    /// PasswordPolicyComplexityDto
     /// </summary>
-    [DataContract(Name = "PasswordPolicyComplexity")]
-    public partial class PasswordPolicyComplexity : IEquatable<PasswordPolicyComplexity>, IValidatableObject
+    [DataContract(Name = "PasswordPolicyComplexityDto")]
+    public partial class PasswordPolicyComplexityDto : IEquatable<PasswordPolicyComplexityDto>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PasswordPolicyComplexity" /> class.
+        /// Initializes a new instance of the <see cref="PasswordPolicyComplexityDto" /> class.
         /// </summary>
-        /// <param name="minLength">The minimum length for a password.</param>
-        /// <param name="excludeFirstName">Rule determining whether a user&#39;s first name should be permitted in their password.</param>
-        /// <param name="excludeLastName">Rule determining whether a user&#39;s last name should be permitted in their password.</param>
-        public PasswordPolicyComplexity(int minLength = default(int), bool excludeFirstName = default(bool), bool excludeLastName = default(bool))
+        [JsonConstructorAttribute]
+        protected PasswordPolicyComplexityDto() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PasswordPolicyComplexityDto" /> class.
+        /// </summary>
+        /// <param name="minLength">The minimum length for a password (required).</param>
+        /// <param name="excludeFirstName">Rule determining whether a user&#39;s first name should be permitted in their password (required).</param>
+        /// <param name="excludeLastName">Rule determining whether a user&#39;s last name should be permitted in their password (required).</param>
+        public PasswordPolicyComplexityDto(int minLength = default(int), bool excludeFirstName = default(bool), bool excludeLastName = default(bool))
         {
             this.MinLength = minLength;
             this.ExcludeFirstName = excludeFirstName;
@@ -45,21 +50,21 @@ namespace Finbourne.Identity.Sdk.Model
         /// The minimum length for a password
         /// </summary>
         /// <value>The minimum length for a password</value>
-        [DataMember(Name = "minLength", EmitDefaultValue = false)]
+        [DataMember(Name = "minLength", IsRequired = true, EmitDefaultValue = true)]
         public int MinLength { get; set; }
 
         /// <summary>
         /// Rule determining whether a user&#39;s first name should be permitted in their password
         /// </summary>
         /// <value>Rule determining whether a user&#39;s first name should be permitted in their password</value>
-        [DataMember(Name = "excludeFirstName", EmitDefaultValue = true)]
+        [DataMember(Name = "excludeFirstName", IsRequired = true, EmitDefaultValue = true)]
         public bool ExcludeFirstName { get; set; }
 
         /// <summary>
         /// Rule determining whether a user&#39;s last name should be permitted in their password
         /// </summary>
         /// <value>Rule determining whether a user&#39;s last name should be permitted in their password</value>
-        [DataMember(Name = "excludeLastName", EmitDefaultValue = true)]
+        [DataMember(Name = "excludeLastName", IsRequired = true, EmitDefaultValue = true)]
         public bool ExcludeLastName { get; set; }
 
         /// <summary>
@@ -69,7 +74,7 @@ namespace Finbourne.Identity.Sdk.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PasswordPolicyComplexity {\n");
+            sb.Append("class PasswordPolicyComplexityDto {\n");
             sb.Append("  MinLength: ").Append(MinLength).Append("\n");
             sb.Append("  ExcludeFirstName: ").Append(ExcludeFirstName).Append("\n");
             sb.Append("  ExcludeLastName: ").Append(ExcludeLastName).Append("\n");
@@ -93,15 +98,15 @@ namespace Finbourne.Identity.Sdk.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PasswordPolicyComplexity);
+            return this.Equals(input as PasswordPolicyComplexityDto);
         }
 
         /// <summary>
-        /// Returns true if PasswordPolicyComplexity instances are equal
+        /// Returns true if PasswordPolicyComplexityDto instances are equal
         /// </summary>
-        /// <param name="input">Instance of PasswordPolicyComplexity to be compared</param>
+        /// <param name="input">Instance of PasswordPolicyComplexityDto to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PasswordPolicyComplexity input)
+        public bool Equals(PasswordPolicyComplexityDto input)
         {
             if (input == null)
             {

@@ -23,25 +23,31 @@ using OpenAPIDateConverter = Finbourne.Identity.Sdk.Client.OpenAPIDateConverter;
 namespace Finbourne.Identity.Sdk.Model
 {
     /// <summary>
-    /// PasswordPolicy
+    /// PasswordPolicyLockoutDto
     /// </summary>
-    [DataContract(Name = "PasswordPolicy")]
-    public partial class PasswordPolicy : IEquatable<PasswordPolicy>, IValidatableObject
+    [DataContract(Name = "PasswordPolicyLockoutDto")]
+    public partial class PasswordPolicyLockoutDto : IEquatable<PasswordPolicyLockoutDto>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PasswordPolicy" /> class.
+        /// Initializes a new instance of the <see cref="PasswordPolicyLockoutDto" /> class.
         /// </summary>
-        /// <param name="conditions">conditions.</param>
-        public PasswordPolicy(PasswordPolicyConditions conditions = default(PasswordPolicyConditions))
+        [JsonConstructorAttribute]
+        protected PasswordPolicyLockoutDto() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PasswordPolicyLockoutDto" /> class.
+        /// </summary>
+        /// <param name="maxAttempts">The maximum number of unsuccessful attempts before the user is locked out of their account (required).</param>
+        public PasswordPolicyLockoutDto(int maxAttempts = default(int))
         {
-            this.Conditions = conditions;
+            this.MaxAttempts = maxAttempts;
         }
 
         /// <summary>
-        /// Gets or Sets Conditions
+        /// The maximum number of unsuccessful attempts before the user is locked out of their account
         /// </summary>
-        [DataMember(Name = "conditions", EmitDefaultValue = false)]
-        public PasswordPolicyConditions Conditions { get; set; }
+        /// <value>The maximum number of unsuccessful attempts before the user is locked out of their account</value>
+        [DataMember(Name = "maxAttempts", IsRequired = true, EmitDefaultValue = true)]
+        public int MaxAttempts { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -50,8 +56,8 @@ namespace Finbourne.Identity.Sdk.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PasswordPolicy {\n");
-            sb.Append("  Conditions: ").Append(Conditions).Append("\n");
+            sb.Append("class PasswordPolicyLockoutDto {\n");
+            sb.Append("  MaxAttempts: ").Append(MaxAttempts).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -72,15 +78,15 @@ namespace Finbourne.Identity.Sdk.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PasswordPolicy);
+            return this.Equals(input as PasswordPolicyLockoutDto);
         }
 
         /// <summary>
-        /// Returns true if PasswordPolicy instances are equal
+        /// Returns true if PasswordPolicyLockoutDto instances are equal
         /// </summary>
-        /// <param name="input">Instance of PasswordPolicy to be compared</param>
+        /// <param name="input">Instance of PasswordPolicyLockoutDto to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PasswordPolicy input)
+        public bool Equals(PasswordPolicyLockoutDto input)
         {
             if (input == null)
             {
@@ -88,9 +94,8 @@ namespace Finbourne.Identity.Sdk.Model
             }
             return 
                 (
-                    this.Conditions == input.Conditions ||
-                    (this.Conditions != null &&
-                    this.Conditions.Equals(input.Conditions))
+                    this.MaxAttempts == input.MaxAttempts ||
+                    this.MaxAttempts.Equals(input.MaxAttempts)
                 );
         }
 
@@ -103,10 +108,7 @@ namespace Finbourne.Identity.Sdk.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Conditions != null)
-                {
-                    hashCode = (hashCode * 59) + this.Conditions.GetHashCode();
-                }
+                hashCode = (hashCode * 59) + this.MaxAttempts.GetHashCode();
                 return hashCode;
             }
         }
