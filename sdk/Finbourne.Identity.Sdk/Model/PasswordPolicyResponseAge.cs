@@ -23,22 +23,22 @@ using OpenAPIDateConverter = Finbourne.Identity.Sdk.Client.OpenAPIDateConverter;
 namespace Finbourne.Identity.Sdk.Model
 {
     /// <summary>
-    /// PasswordPolicyAgeDto
+    /// PasswordPolicyResponseAge
     /// </summary>
-    [DataContract(Name = "PasswordPolicyAgeDto")]
-    public partial class PasswordPolicyAgeDto : IEquatable<PasswordPolicyAgeDto>, IValidatableObject
+    [DataContract(Name = "PasswordPolicyResponseAge")]
+    public partial class PasswordPolicyResponseAge : IEquatable<PasswordPolicyResponseAge>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PasswordPolicyAgeDto" /> class.
+        /// Initializes a new instance of the <see cref="PasswordPolicyResponseAge" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected PasswordPolicyAgeDto() { }
+        protected PasswordPolicyResponseAge() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="PasswordPolicyAgeDto" /> class.
+        /// Initializes a new instance of the <see cref="PasswordPolicyResponseAge" /> class.
         /// </summary>
         /// <param name="maxAgeDays">The maximum age (in days) a password can be before expiring and needing to be changed (required).</param>
         /// <param name="historyCount">The number of unique passwords that need to be used before a previous password is permitted again (required).</param>
-        public PasswordPolicyAgeDto(int maxAgeDays = default(int), int historyCount = default(int))
+        public PasswordPolicyResponseAge(int maxAgeDays = default(int), int historyCount = default(int))
         {
             this.MaxAgeDays = maxAgeDays;
             this.HistoryCount = historyCount;
@@ -65,7 +65,7 @@ namespace Finbourne.Identity.Sdk.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PasswordPolicyAgeDto {\n");
+            sb.Append("class PasswordPolicyResponseAge {\n");
             sb.Append("  MaxAgeDays: ").Append(MaxAgeDays).Append("\n");
             sb.Append("  HistoryCount: ").Append(HistoryCount).Append("\n");
             sb.Append("}\n");
@@ -88,15 +88,15 @@ namespace Finbourne.Identity.Sdk.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PasswordPolicyAgeDto);
+            return this.Equals(input as PasswordPolicyResponseAge);
         }
 
         /// <summary>
-        /// Returns true if PasswordPolicyAgeDto instances are equal
+        /// Returns true if PasswordPolicyResponseAge instances are equal
         /// </summary>
-        /// <param name="input">Instance of PasswordPolicyAgeDto to be compared</param>
+        /// <param name="input">Instance of PasswordPolicyResponseAge to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PasswordPolicyAgeDto input)
+        public bool Equals(PasswordPolicyResponseAge input)
         {
             if (input == null)
             {

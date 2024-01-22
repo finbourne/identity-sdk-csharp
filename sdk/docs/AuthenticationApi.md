@@ -104,7 +104,7 @@ This endpoint does not need any parameter.
 
 <a id="getpasswordpolicy"></a>
 # **GetPasswordPolicy**
-> PasswordPolicyDto GetPasswordPolicy (string userType)
+> PasswordPolicyResponse GetPasswordPolicy (string userType)
 
 [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type
 
@@ -135,7 +135,7 @@ namespace Example
             try
             {
                 // [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type
-                PasswordPolicyDto result = apiInstance.GetPasswordPolicy(userType);
+                PasswordPolicyResponse result = apiInstance.GetPasswordPolicy(userType);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -156,7 +156,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type
-    ApiResponse<PasswordPolicyDto> response = apiInstance.GetPasswordPolicyWithHttpInfo(userType);
+    ApiResponse<PasswordPolicyResponse> response = apiInstance.GetPasswordPolicyWithHttpInfo(userType);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -177,7 +177,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PasswordPolicyDto**](PasswordPolicyDto.md)
+[**PasswordPolicyResponse**](PasswordPolicyResponse.md)
 
 ### Authorization
 
@@ -574,7 +574,7 @@ This endpoint does not need any parameter.
 
 <a id="updatepasswordpolicy"></a>
 # **UpdatePasswordPolicy**
-> PasswordPolicyDto UpdatePasswordPolicy (string userType, PasswordPolicyDto? passwordPolicyDto = null)
+> PasswordPolicyResponse UpdatePasswordPolicy (string userType, UpdatePasswordPolicyRequest? updatePasswordPolicyRequest = null)
 
 [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type
 
@@ -601,12 +601,12 @@ namespace Example
 
             var apiInstance = new AuthenticationApi(config);
             var userType = "userType_example";  // string | The type of user (should only be personal or service)
-            var passwordPolicyDto = new PasswordPolicyDto?(); // PasswordPolicyDto? | The password policy for the given user type (optional) 
+            var updatePasswordPolicyRequest = new UpdatePasswordPolicyRequest?(); // UpdatePasswordPolicyRequest? | The password policy for the given user type (optional) 
 
             try
             {
                 // [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type
-                PasswordPolicyDto result = apiInstance.UpdatePasswordPolicy(userType, passwordPolicyDto);
+                PasswordPolicyResponse result = apiInstance.UpdatePasswordPolicy(userType, updatePasswordPolicyRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -627,7 +627,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type
-    ApiResponse<PasswordPolicyDto> response = apiInstance.UpdatePasswordPolicyWithHttpInfo(userType, passwordPolicyDto);
+    ApiResponse<PasswordPolicyResponse> response = apiInstance.UpdatePasswordPolicyWithHttpInfo(userType, updatePasswordPolicyRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -645,11 +645,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **userType** | **string** | The type of user (should only be personal or service) |  |
-| **passwordPolicyDto** | [**PasswordPolicyDto?**](PasswordPolicyDto?.md) | The password policy for the given user type | [optional]  |
+| **updatePasswordPolicyRequest** | [**UpdatePasswordPolicyRequest?**](UpdatePasswordPolicyRequest?.md) | The password policy for the given user type | [optional]  |
 
 ### Return type
 
-[**PasswordPolicyDto**](PasswordPolicyDto.md)
+[**PasswordPolicyResponse**](PasswordPolicyResponse.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# Finbourne.Identity.Sdk.Model.PasswordPolicyComplexityDto
+# Finbourne.Identity.Sdk.Model.PasswordPolicyResponseComplexity
 
 ## Properties
 

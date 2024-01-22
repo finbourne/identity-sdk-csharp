@@ -23,31 +23,35 @@ using OpenAPIDateConverter = Finbourne.Identity.Sdk.Client.OpenAPIDateConverter;
 namespace Finbourne.Identity.Sdk.Model
 {
     /// <summary>
-    /// PasswordPolicyLockoutDto
+    /// PasswordPolicyResponse
     /// </summary>
-    [DataContract(Name = "PasswordPolicyLockoutDto")]
-    public partial class PasswordPolicyLockoutDto : IEquatable<PasswordPolicyLockoutDto>, IValidatableObject
+    [DataContract(Name = "PasswordPolicyResponse")]
+    public partial class PasswordPolicyResponse : IEquatable<PasswordPolicyResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PasswordPolicyLockoutDto" /> class.
+        /// Initializes a new instance of the <see cref="PasswordPolicyResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected PasswordPolicyLockoutDto() { }
+        protected PasswordPolicyResponse() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="PasswordPolicyLockoutDto" /> class.
+        /// Initializes a new instance of the <see cref="PasswordPolicyResponse" /> class.
         /// </summary>
-        /// <param name="maxAttempts">The maximum number of unsuccessful attempts before the user is locked out of their account (required).</param>
-        public PasswordPolicyLockoutDto(int maxAttempts = default(int))
+        /// <param name="conditions">conditions (required).</param>
+        public PasswordPolicyResponse(PasswordPolicyResponseConditions conditions = default(PasswordPolicyResponseConditions))
         {
-            this.MaxAttempts = maxAttempts;
+            // to ensure "conditions" is required (not null)
+            if (conditions == null)
+            {
+                throw new ArgumentNullException("conditions is a required property for PasswordPolicyResponse and cannot be null");
+            }
+            this.Conditions = conditions;
         }
 
         /// <summary>
-        /// The maximum number of unsuccessful attempts before the user is locked out of their account
+        /// Gets or Sets Conditions
         /// </summary>
-        /// <value>The maximum number of unsuccessful attempts before the user is locked out of their account</value>
-        [DataMember(Name = "maxAttempts", IsRequired = true, EmitDefaultValue = true)]
-        public int MaxAttempts { get; set; }
+        [DataMember(Name = "conditions", IsRequired = true, EmitDefaultValue = true)]
+        public PasswordPolicyResponseConditions Conditions { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -56,8 +60,8 @@ namespace Finbourne.Identity.Sdk.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PasswordPolicyLockoutDto {\n");
-            sb.Append("  MaxAttempts: ").Append(MaxAttempts).Append("\n");
+            sb.Append("class PasswordPolicyResponse {\n");
+            sb.Append("  Conditions: ").Append(Conditions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -78,15 +82,15 @@ namespace Finbourne.Identity.Sdk.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PasswordPolicyLockoutDto);
+            return this.Equals(input as PasswordPolicyResponse);
         }
 
         /// <summary>
-        /// Returns true if PasswordPolicyLockoutDto instances are equal
+        /// Returns true if PasswordPolicyResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of PasswordPolicyLockoutDto to be compared</param>
+        /// <param name="input">Instance of PasswordPolicyResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PasswordPolicyLockoutDto input)
+        public bool Equals(PasswordPolicyResponse input)
         {
             if (input == null)
             {
@@ -94,8 +98,9 @@ namespace Finbourne.Identity.Sdk.Model
             }
             return 
                 (
-                    this.MaxAttempts == input.MaxAttempts ||
-                    this.MaxAttempts.Equals(input.MaxAttempts)
+                    this.Conditions == input.Conditions ||
+                    (this.Conditions != null &&
+                    this.Conditions.Equals(input.Conditions))
                 );
         }
 
@@ -108,7 +113,10 @@ namespace Finbourne.Identity.Sdk.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.MaxAttempts.GetHashCode();
+                if (this.Conditions != null)
+                {
+                    hashCode = (hashCode * 59) + this.Conditions.GetHashCode();
+                }
                 return hashCode;
             }
         }

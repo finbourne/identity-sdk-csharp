@@ -1,4 +1,4 @@
-# Finbourne.Identity.Sdk.Model.PasswordPolicyAgeDto
+# Finbourne.Identity.Sdk.Model.PasswordPolicyResponseAge
 
 ## Properties
 

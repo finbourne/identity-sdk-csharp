@@ -25,38 +25,38 @@ namespace Finbourne.Identity.Sdk.Model
     /// <summary>
     /// Password policy conditions for a password policy
     /// </summary>
-    [DataContract(Name = "PasswordPolicyConditionsDto")]
-    public partial class PasswordPolicyConditionsDto : IEquatable<PasswordPolicyConditionsDto>, IValidatableObject
+    [DataContract(Name = "UpdatePasswordPolicyRequestConditions")]
+    public partial class UpdatePasswordPolicyRequestConditions : IEquatable<UpdatePasswordPolicyRequestConditions>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PasswordPolicyConditionsDto" /> class.
+        /// Initializes a new instance of the <see cref="UpdatePasswordPolicyRequestConditions" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected PasswordPolicyConditionsDto() { }
+        protected UpdatePasswordPolicyRequestConditions() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="PasswordPolicyConditionsDto" /> class.
+        /// Initializes a new instance of the <see cref="UpdatePasswordPolicyRequestConditions" /> class.
         /// </summary>
         /// <param name="complexity">complexity (required).</param>
         /// <param name="age">age (required).</param>
         /// <param name="lockout">lockout (required).</param>
-        public PasswordPolicyConditionsDto(PasswordPolicyComplexityDto complexity = default(PasswordPolicyComplexityDto), PasswordPolicyAgeDto age = default(PasswordPolicyAgeDto), PasswordPolicyLockoutDto lockout = default(PasswordPolicyLockoutDto))
+        public UpdatePasswordPolicyRequestConditions(UpdatePasswordPolicyRequestComplexity complexity = default(UpdatePasswordPolicyRequestComplexity), UpdatePasswordPolicyRequestAge age = default(UpdatePasswordPolicyRequestAge), UpdatePasswordPolicyRequestLockout lockout = default(UpdatePasswordPolicyRequestLockout))
         {
             // to ensure "complexity" is required (not null)
             if (complexity == null)
             {
-                throw new ArgumentNullException("complexity is a required property for PasswordPolicyConditionsDto and cannot be null");
+                throw new ArgumentNullException("complexity is a required property for UpdatePasswordPolicyRequestConditions and cannot be null");
             }
             this.Complexity = complexity;
             // to ensure "age" is required (not null)
             if (age == null)
             {
-                throw new ArgumentNullException("age is a required property for PasswordPolicyConditionsDto and cannot be null");
+                throw new ArgumentNullException("age is a required property for UpdatePasswordPolicyRequestConditions and cannot be null");
             }
             this.Age = age;
             // to ensure "lockout" is required (not null)
             if (lockout == null)
             {
-                throw new ArgumentNullException("lockout is a required property for PasswordPolicyConditionsDto and cannot be null");
+                throw new ArgumentNullException("lockout is a required property for UpdatePasswordPolicyRequestConditions and cannot be null");
             }
             this.Lockout = lockout;
         }
@@ -65,19 +65,19 @@ namespace Finbourne.Identity.Sdk.Model
         /// Gets or Sets Complexity
         /// </summary>
         [DataMember(Name = "complexity", IsRequired = true, EmitDefaultValue = true)]
-        public PasswordPolicyComplexityDto Complexity { get; set; }
+        public UpdatePasswordPolicyRequestComplexity Complexity { get; set; }
 
         /// <summary>
         /// Gets or Sets Age
         /// </summary>
         [DataMember(Name = "age", IsRequired = true, EmitDefaultValue = true)]
-        public PasswordPolicyAgeDto Age { get; set; }
+        public UpdatePasswordPolicyRequestAge Age { get; set; }
 
         /// <summary>
         /// Gets or Sets Lockout
         /// </summary>
         [DataMember(Name = "lockout", IsRequired = true, EmitDefaultValue = true)]
-        public PasswordPolicyLockoutDto Lockout { get; set; }
+        public UpdatePasswordPolicyRequestLockout Lockout { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -86,7 +86,7 @@ namespace Finbourne.Identity.Sdk.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PasswordPolicyConditionsDto {\n");
+            sb.Append("class UpdatePasswordPolicyRequestConditions {\n");
             sb.Append("  Complexity: ").Append(Complexity).Append("\n");
             sb.Append("  Age: ").Append(Age).Append("\n");
             sb.Append("  Lockout: ").Append(Lockout).Append("\n");
@@ -110,15 +110,15 @@ namespace Finbourne.Identity.Sdk.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PasswordPolicyConditionsDto);
+            return this.Equals(input as UpdatePasswordPolicyRequestConditions);
         }
 
         /// <summary>
-        /// Returns true if PasswordPolicyConditionsDto instances are equal
+        /// Returns true if UpdatePasswordPolicyRequestConditions instances are equal
         /// </summary>
-        /// <param name="input">Instance of PasswordPolicyConditionsDto to be compared</param>
+        /// <param name="input">Instance of UpdatePasswordPolicyRequestConditions to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PasswordPolicyConditionsDto input)
+        public bool Equals(UpdatePasswordPolicyRequestConditions input)
         {
             if (input == null)
             {

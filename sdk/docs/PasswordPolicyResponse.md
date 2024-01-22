@@ -1,10 +1,10 @@
-# Finbourne.Identity.Sdk.Model.PasswordPolicyDto
+# Finbourne.Identity.Sdk.Model.PasswordPolicyResponse
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Conditions** | [**PasswordPolicyConditionsDto**](PasswordPolicyConditionsDto.md) |  | 
+**Conditions** | [**PasswordPolicyResponseConditions**](PasswordPolicyResponseConditions.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
