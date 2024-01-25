@@ -36,16 +36,16 @@ namespace Finbourne.Identity.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdatePasswordPolicyRequestLockout" /> class.
         /// </summary>
-        /// <param name="maxAttempts">The maximum number of unsuccessful attempts before the user is locked out of their account (required).</param>
+        /// <param name="maxAttempts">The maximum number of unsuccessful attempts before the user is locked out of their account.  0 indicates no limit (required).</param>
         public UpdatePasswordPolicyRequestLockout(int maxAttempts = default(int))
         {
             this.MaxAttempts = maxAttempts;
         }
 
         /// <summary>
-        /// The maximum number of unsuccessful attempts before the user is locked out of their account
+        /// The maximum number of unsuccessful attempts before the user is locked out of their account.  0 indicates no limit
         /// </summary>
-        /// <value>The maximum number of unsuccessful attempts before the user is locked out of their account</value>
+        /// <value>The maximum number of unsuccessful attempts before the user is locked out of their account.  0 indicates no limit</value>
         [DataMember(Name = "maxAttempts", IsRequired = true, EmitDefaultValue = true)]
         public int MaxAttempts { get; set; }
 
@@ -120,6 +120,18 @@ namespace Finbourne.Identity.Sdk.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // MaxAttempts (int) maximum
+            if (this.MaxAttempts > (int)100)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxAttempts, must be a value less than or equal to 100.", new [] { "MaxAttempts" });
+            }
+
+            // MaxAttempts (int) minimum
+            if (this.MaxAttempts < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxAttempts, must be a value greater than or equal to 0.", new [] { "MaxAttempts" });
+            }
+
             yield break;
         }
     }

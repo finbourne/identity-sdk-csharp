@@ -36,8 +36,8 @@ namespace Finbourne.Identity.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdatePasswordPolicyRequestAge" /> class.
         /// </summary>
-        /// <param name="maxAgeDays">The maximum age (in days) a password can be before expiring and needing to be changed (required).</param>
-        /// <param name="historyCount">The number of unique passwords that need to be used before a previous password is permitted again (required).</param>
+        /// <param name="maxAgeDays">The maximum age (in days) a password can be before expiring and needing to be changed.  0 indicates no limit (required).</param>
+        /// <param name="historyCount">The number of unique passwords that need to be used before a previous password is permitted again.  0 indicates none (required).</param>
         public UpdatePasswordPolicyRequestAge(int maxAgeDays = default(int), int historyCount = default(int))
         {
             this.MaxAgeDays = maxAgeDays;
@@ -45,16 +45,16 @@ namespace Finbourne.Identity.Sdk.Model
         }
 
         /// <summary>
-        /// The maximum age (in days) a password can be before expiring and needing to be changed
+        /// The maximum age (in days) a password can be before expiring and needing to be changed.  0 indicates no limit
         /// </summary>
-        /// <value>The maximum age (in days) a password can be before expiring and needing to be changed</value>
+        /// <value>The maximum age (in days) a password can be before expiring and needing to be changed.  0 indicates no limit</value>
         [DataMember(Name = "maxAgeDays", IsRequired = true, EmitDefaultValue = true)]
         public int MaxAgeDays { get; set; }
 
         /// <summary>
-        /// The number of unique passwords that need to be used before a previous password is permitted again
+        /// The number of unique passwords that need to be used before a previous password is permitted again.  0 indicates none
         /// </summary>
-        /// <value>The number of unique passwords that need to be used before a previous password is permitted again</value>
+        /// <value>The number of unique passwords that need to be used before a previous password is permitted again.  0 indicates none</value>
         [DataMember(Name = "historyCount", IsRequired = true, EmitDefaultValue = true)]
         public int HistoryCount { get; set; }
 
@@ -135,6 +135,30 @@ namespace Finbourne.Identity.Sdk.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // MaxAgeDays (int) maximum
+            if (this.MaxAgeDays > (int)999)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxAgeDays, must be a value less than or equal to 999.", new [] { "MaxAgeDays" });
+            }
+
+            // MaxAgeDays (int) minimum
+            if (this.MaxAgeDays < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxAgeDays, must be a value greater than or equal to 0.", new [] { "MaxAgeDays" });
+            }
+
+            // HistoryCount (int) maximum
+            if (this.HistoryCount > (int)30)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for HistoryCount, must be a value less than or equal to 30.", new [] { "HistoryCount" });
+            }
+
+            // HistoryCount (int) minimum
+            if (this.HistoryCount < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for HistoryCount, must be a value greater than or equal to 0.", new [] { "HistoryCount" });
+            }
+
             yield break;
         }
     }

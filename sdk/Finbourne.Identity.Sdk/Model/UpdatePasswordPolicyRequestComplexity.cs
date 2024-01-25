@@ -150,6 +150,18 @@ namespace Finbourne.Identity.Sdk.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // MinLength (int) maximum
+            if (this.MinLength > (int)30)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MinLength, must be a value less than or equal to 30.", new [] { "MinLength" });
+            }
+
+            // MinLength (int) minimum
+            if (this.MinLength < (int)12)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MinLength, must be a value greater than or equal to 12.", new [] { "MinLength" });
+            }
+
             yield break;
         }
     }
