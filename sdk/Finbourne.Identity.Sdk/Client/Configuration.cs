@@ -15,6 +15,7 @@ using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Net.Http;
+using Finbourne.Identity.Sdk.Extensions;
 using Finbourne.Identity.Sdk.Client.Auth;
 
 namespace Finbourne.Identity.Sdk.Client
@@ -543,7 +544,7 @@ namespace Finbourne.Identity.Sdk.Client
             string report = "C# SDK (Finbourne.Identity.Sdk) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
-            report += "    Version of the API: 0.0.2834\n";
+            report += "    Version of the API: 0.0.2848\n";
             report += "    SDK Package Version: 2.0.0\n";
 
             return report;

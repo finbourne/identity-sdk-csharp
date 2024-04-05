@@ -6,6 +6,7 @@
  */
 
 using System.Collections.Generic;
+using Finbourne.Identity.Sdk.Extensions;
 
 namespace Finbourne.Identity.Sdk.Client
 {
