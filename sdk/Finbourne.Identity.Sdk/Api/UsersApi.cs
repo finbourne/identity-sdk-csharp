@@ -25,7 +25,7 @@ namespace Finbourne.Identity.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] CreateUser: Create User
+        /// CreateUser: Create User
         /// </summary>
         /// <remarks>
         /// Create a new User
@@ -38,7 +38,7 @@ namespace Finbourne.Identity.Sdk.Api
         UserResponse CreateUser(CreateUserRequest createUserRequest, bool? waitForReindex = default(bool?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] CreateUser: Create User
+        /// CreateUser: Create User
         /// </summary>
         /// <remarks>
         /// Create a new User
@@ -50,7 +50,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of UserResponse</returns>
         ApiResponse<UserResponse> CreateUserWithHttpInfo(CreateUserRequest createUserRequest, bool? waitForReindex = default(bool?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] DeleteUser: Delete User
+        /// DeleteUser: Delete User
         /// </summary>
         /// <remarks>
         /// By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
@@ -63,7 +63,7 @@ namespace Finbourne.Identity.Sdk.Api
         void DeleteUser(string id, bool? purge = default(bool?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteUser: Delete User
+        /// DeleteUser: Delete User
         /// </summary>
         /// <remarks>
         /// By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
@@ -75,7 +75,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteUserWithHttpInfo(string id, bool? purge = default(bool?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] ExpirePassword: Reset the user&#39;s password to a temporary one
+        /// ExpirePassword: Reset the user&#39;s password to a temporary one
         /// </summary>
         /// <remarks>
         /// Resets the user&#39;s password to a temporary one which is then expired
@@ -87,7 +87,7 @@ namespace Finbourne.Identity.Sdk.Api
         TemporaryPassword ExpirePassword(string id, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] ExpirePassword: Reset the user&#39;s password to a temporary one
+        /// ExpirePassword: Reset the user&#39;s password to a temporary one
         /// </summary>
         /// <remarks>
         /// Resets the user&#39;s password to a temporary one which is then expired
@@ -98,7 +98,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of TemporaryPassword</returns>
         ApiResponse<TemporaryPassword> ExpirePasswordWithHttpInfo(string id, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] FindUsersById: Find users by id endpoint
+        /// FindUsersById: Find users by id endpoint
         /// </summary>
         /// <remarks>
         /// Finds a maximum of 50 users by ID
@@ -110,7 +110,7 @@ namespace Finbourne.Identity.Sdk.Api
         ListUsersResponse FindUsersById(List<string> id, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] FindUsersById: Find users by id endpoint
+        /// FindUsersById: Find users by id endpoint
         /// </summary>
         /// <remarks>
         /// Finds a maximum of 50 users by ID
@@ -121,7 +121,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of ListUsersResponse</returns>
         ApiResponse<ListUsersResponse> FindUsersByIdWithHttpInfo(List<string> id, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] GetUser: Get User
+        /// GetUser: Get User
         /// </summary>
         /// <remarks>
         /// Get the specified User
@@ -134,7 +134,7 @@ namespace Finbourne.Identity.Sdk.Api
         UserResponse GetUser(string id, bool? includeRoles = default(bool?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] GetUser: Get User
+        /// GetUser: Get User
         /// </summary>
         /// <remarks>
         /// Get the specified User
@@ -167,7 +167,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of List&lt;UserResponse&gt;</returns>
         ApiResponse<List<UserResponse>> ListRunnableUsersWithHttpInfo(int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] ListUsers: List Users
+        /// ListUsers: List Users
         /// </summary>
         /// <remarks>
         /// List the available Users
@@ -180,7 +180,7 @@ namespace Finbourne.Identity.Sdk.Api
         List<UserResponse> ListUsers(bool? includeRoles = default(bool?), bool? includeDeactivated = default(bool?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] ListUsers: List Users
+        /// ListUsers: List Users
         /// </summary>
         /// <remarks>
         /// List the available Users
@@ -192,7 +192,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of List&lt;UserResponse&gt;</returns>
         ApiResponse<List<UserResponse>> ListUsersWithHttpInfo(bool? includeRoles = default(bool?), bool? includeDeactivated = default(bool?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] ResetFactors: Reset MFA factors
+        /// ResetFactors: Reset MFA factors
         /// </summary>
         /// <remarks>
         /// Resets the MFA factors of the specified User
@@ -204,7 +204,7 @@ namespace Finbourne.Identity.Sdk.Api
         void ResetFactors(string id, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] ResetFactors: Reset MFA factors
+        /// ResetFactors: Reset MFA factors
         /// </summary>
         /// <remarks>
         /// Resets the MFA factors of the specified User
@@ -215,7 +215,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ResetFactorsWithHttpInfo(string id, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] ResetPassword: Reset Password
+        /// ResetPassword: Reset Password
         /// </summary>
         /// <remarks>
         /// Resets the password of the specified User
@@ -227,7 +227,7 @@ namespace Finbourne.Identity.Sdk.Api
         void ResetPassword(string id, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] ResetPassword: Reset Password
+        /// ResetPassword: Reset Password
         /// </summary>
         /// <remarks>
         /// Resets the password of the specified User
@@ -238,7 +238,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ResetPasswordWithHttpInfo(string id, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] SendActivationEmail: Sends an activation email to the User
+        /// SendActivationEmail: Sends an activation email to the User
         /// </summary>
         /// <remarks>
         /// Sends an activation email to the specified User
@@ -250,7 +250,7 @@ namespace Finbourne.Identity.Sdk.Api
         void SendActivationEmail(string id, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] SendActivationEmail: Sends an activation email to the User
+        /// SendActivationEmail: Sends an activation email to the User
         /// </summary>
         /// <remarks>
         /// Sends an activation email to the specified User
@@ -261,7 +261,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> SendActivationEmailWithHttpInfo(string id, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] UnlockUser: Unlock User
+        /// UnlockUser: Unlock User
         /// </summary>
         /// <remarks>
         /// Unlocks the specified User
@@ -273,7 +273,7 @@ namespace Finbourne.Identity.Sdk.Api
         void UnlockUser(string id, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] UnlockUser: Unlock User
+        /// UnlockUser: Unlock User
         /// </summary>
         /// <remarks>
         /// Unlocks the specified User
@@ -307,7 +307,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UnsuspendUserWithHttpInfo(string id, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] UpdateUser: Update User
+        /// UpdateUser: Update User
         /// </summary>
         /// <remarks>
         /// Updates the specified User
@@ -320,7 +320,7 @@ namespace Finbourne.Identity.Sdk.Api
         UserResponse UpdateUser(string id, UpdateUserRequest updateUserRequest, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] UpdateUser: Update User
+        /// UpdateUser: Update User
         /// </summary>
         /// <remarks>
         /// Updates the specified User
@@ -341,7 +341,7 @@ namespace Finbourne.Identity.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] CreateUser: Create User
+        /// CreateUser: Create User
         /// </summary>
         /// <remarks>
         /// Create a new User
@@ -355,7 +355,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<UserResponse> CreateUserAsync(CreateUserRequest createUserRequest, bool? waitForReindex = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] CreateUser: Create User
+        /// CreateUser: Create User
         /// </summary>
         /// <remarks>
         /// Create a new User
@@ -368,7 +368,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (UserResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserResponse>> CreateUserWithHttpInfoAsync(CreateUserRequest createUserRequest, bool? waitForReindex = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] DeleteUser: Delete User
+        /// DeleteUser: Delete User
         /// </summary>
         /// <remarks>
         /// By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
@@ -382,7 +382,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task DeleteUserAsync(string id, bool? purge = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteUser: Delete User
+        /// DeleteUser: Delete User
         /// </summary>
         /// <remarks>
         /// By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
@@ -395,7 +395,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserWithHttpInfoAsync(string id, bool? purge = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] ExpirePassword: Reset the user&#39;s password to a temporary one
+        /// ExpirePassword: Reset the user&#39;s password to a temporary one
         /// </summary>
         /// <remarks>
         /// Resets the user&#39;s password to a temporary one which is then expired
@@ -408,7 +408,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<TemporaryPassword> ExpirePasswordAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] ExpirePassword: Reset the user&#39;s password to a temporary one
+        /// ExpirePassword: Reset the user&#39;s password to a temporary one
         /// </summary>
         /// <remarks>
         /// Resets the user&#39;s password to a temporary one which is then expired
@@ -420,7 +420,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (TemporaryPassword)</returns>
         System.Threading.Tasks.Task<ApiResponse<TemporaryPassword>> ExpirePasswordWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] FindUsersById: Find users by id endpoint
+        /// FindUsersById: Find users by id endpoint
         /// </summary>
         /// <remarks>
         /// Finds a maximum of 50 users by ID
@@ -433,7 +433,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<ListUsersResponse> FindUsersByIdAsync(List<string> id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] FindUsersById: Find users by id endpoint
+        /// FindUsersById: Find users by id endpoint
         /// </summary>
         /// <remarks>
         /// Finds a maximum of 50 users by ID
@@ -445,7 +445,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (ListUsersResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ListUsersResponse>> FindUsersByIdWithHttpInfoAsync(List<string> id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] GetUser: Get User
+        /// GetUser: Get User
         /// </summary>
         /// <remarks>
         /// Get the specified User
@@ -459,7 +459,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<UserResponse> GetUserAsync(string id, bool? includeRoles = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] GetUser: Get User
+        /// GetUser: Get User
         /// </summary>
         /// <remarks>
         /// Get the specified User
@@ -495,7 +495,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (List&lt;UserResponse&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UserResponse>>> ListRunnableUsersWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] ListUsers: List Users
+        /// ListUsers: List Users
         /// </summary>
         /// <remarks>
         /// List the available Users
@@ -509,7 +509,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<List<UserResponse>> ListUsersAsync(bool? includeRoles = default(bool?), bool? includeDeactivated = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] ListUsers: List Users
+        /// ListUsers: List Users
         /// </summary>
         /// <remarks>
         /// List the available Users
@@ -522,7 +522,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (List&lt;UserResponse&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UserResponse>>> ListUsersWithHttpInfoAsync(bool? includeRoles = default(bool?), bool? includeDeactivated = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] ResetFactors: Reset MFA factors
+        /// ResetFactors: Reset MFA factors
         /// </summary>
         /// <remarks>
         /// Resets the MFA factors of the specified User
@@ -535,7 +535,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task ResetFactorsAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] ResetFactors: Reset MFA factors
+        /// ResetFactors: Reset MFA factors
         /// </summary>
         /// <remarks>
         /// Resets the MFA factors of the specified User
@@ -547,7 +547,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ResetFactorsWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] ResetPassword: Reset Password
+        /// ResetPassword: Reset Password
         /// </summary>
         /// <remarks>
         /// Resets the password of the specified User
@@ -560,7 +560,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task ResetPasswordAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] ResetPassword: Reset Password
+        /// ResetPassword: Reset Password
         /// </summary>
         /// <remarks>
         /// Resets the password of the specified User
@@ -572,7 +572,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ResetPasswordWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] SendActivationEmail: Sends an activation email to the User
+        /// SendActivationEmail: Sends an activation email to the User
         /// </summary>
         /// <remarks>
         /// Sends an activation email to the specified User
@@ -585,7 +585,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task SendActivationEmailAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] SendActivationEmail: Sends an activation email to the User
+        /// SendActivationEmail: Sends an activation email to the User
         /// </summary>
         /// <remarks>
         /// Sends an activation email to the specified User
@@ -597,7 +597,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> SendActivationEmailWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] UnlockUser: Unlock User
+        /// UnlockUser: Unlock User
         /// </summary>
         /// <remarks>
         /// Unlocks the specified User
@@ -610,7 +610,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task UnlockUserAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] UnlockUser: Unlock User
+        /// UnlockUser: Unlock User
         /// </summary>
         /// <remarks>
         /// Unlocks the specified User
@@ -647,7 +647,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UnsuspendUserWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] UpdateUser: Update User
+        /// UpdateUser: Update User
         /// </summary>
         /// <remarks>
         /// Updates the specified User
@@ -661,7 +661,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<UserResponse> UpdateUserAsync(string id, UpdateUserRequest updateUserRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] UpdateUser: Update User
+        /// UpdateUser: Update User
         /// </summary>
         /// <remarks>
         /// Updates the specified User
@@ -791,7 +791,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreateUser: Create User Create a new User
+        /// CreateUser: Create User Create a new User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createUserRequest">Details of the User to be created</param>
@@ -805,7 +805,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreateUser: Create User Create a new User
+        /// CreateUser: Create User Create a new User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createUserRequest">Details of the User to be created</param>
@@ -887,7 +887,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreateUser: Create User Create a new User
+        /// CreateUser: Create User Create a new User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createUserRequest">Details of the User to be created</param>
@@ -902,7 +902,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreateUser: Create User Create a new User
+        /// CreateUser: Create User Create a new User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createUserRequest">Details of the User to be created</param>
@@ -987,7 +987,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteUser: Delete User By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
+        /// DeleteUser: Delete User By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the user</param>
@@ -1000,7 +1000,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteUser: Delete User By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
+        /// DeleteUser: Delete User By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the user</param>
@@ -1078,7 +1078,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteUser: Delete User By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
+        /// DeleteUser: Delete User By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the user</param>
@@ -1092,7 +1092,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteUser: Delete User By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
+        /// DeleteUser: Delete User By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the user</param>
@@ -1173,7 +1173,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ExpirePassword: Reset the user&#39;s password to a temporary one Resets the user&#39;s password to a temporary one which is then expired
+        /// ExpirePassword: Reset the user&#39;s password to a temporary one Resets the user&#39;s password to a temporary one which is then expired
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User having its password reset</param>
@@ -1186,7 +1186,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ExpirePassword: Reset the user&#39;s password to a temporary one Resets the user&#39;s password to a temporary one which is then expired
+        /// ExpirePassword: Reset the user&#39;s password to a temporary one Resets the user&#39;s password to a temporary one which is then expired
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User having its password reset</param>
@@ -1259,7 +1259,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ExpirePassword: Reset the user&#39;s password to a temporary one Resets the user&#39;s password to a temporary one which is then expired
+        /// ExpirePassword: Reset the user&#39;s password to a temporary one Resets the user&#39;s password to a temporary one which is then expired
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User having its password reset</param>
@@ -1273,7 +1273,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ExpirePassword: Reset the user&#39;s password to a temporary one Resets the user&#39;s password to a temporary one which is then expired
+        /// ExpirePassword: Reset the user&#39;s password to a temporary one Resets the user&#39;s password to a temporary one which is then expired
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User having its password reset</param>
@@ -1349,7 +1349,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] FindUsersById: Find users by id endpoint Finds a maximum of 50 users by ID
+        /// FindUsersById: Find users by id endpoint Finds a maximum of 50 users by ID
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A list of unique identifiers for the users</param>
@@ -1362,7 +1362,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] FindUsersById: Find users by id endpoint Finds a maximum of 50 users by ID
+        /// FindUsersById: Find users by id endpoint Finds a maximum of 50 users by ID
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A list of unique identifiers for the users</param>
@@ -1435,7 +1435,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] FindUsersById: Find users by id endpoint Finds a maximum of 50 users by ID
+        /// FindUsersById: Find users by id endpoint Finds a maximum of 50 users by ID
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A list of unique identifiers for the users</param>
@@ -1449,7 +1449,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] FindUsersById: Find users by id endpoint Finds a maximum of 50 users by ID
+        /// FindUsersById: Find users by id endpoint Finds a maximum of 50 users by ID
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A list of unique identifiers for the users</param>
@@ -1525,7 +1525,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetUser: Get User Get the specified User
+        /// GetUser: Get User Get the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User</param>
@@ -1539,7 +1539,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetUser: Get User Get the specified User
+        /// GetUser: Get User Get the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User</param>
@@ -1617,7 +1617,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetUser: Get User Get the specified User
+        /// GetUser: Get User Get the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User</param>
@@ -1632,7 +1632,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetUser: Get User Get the specified User
+        /// GetUser: Get User Get the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User</param>
@@ -1871,7 +1871,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListUsers: List Users List the available Users
+        /// ListUsers: List Users List the available Users
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeRoles">Flag indicating that the users roles should be included in the response (optional, default to false)</param>
@@ -1885,7 +1885,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListUsers: List Users List the available Users
+        /// ListUsers: List Users List the available Users
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeRoles">Flag indicating that the users roles should be included in the response (optional, default to false)</param>
@@ -1960,7 +1960,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListUsers: List Users List the available Users
+        /// ListUsers: List Users List the available Users
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeRoles">Flag indicating that the users roles should be included in the response (optional, default to false)</param>
@@ -1975,7 +1975,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListUsers: List Users List the available Users
+        /// ListUsers: List Users List the available Users
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeRoles">Flag indicating that the users roles should be included in the response (optional, default to false)</param>
@@ -2053,7 +2053,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ResetFactors: Reset MFA factors Resets the MFA factors of the specified User
+        /// ResetFactors: Reset MFA factors Resets the MFA factors of the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User having their MFA factors reset</param>
@@ -2065,7 +2065,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ResetFactors: Reset MFA factors Resets the MFA factors of the specified User
+        /// ResetFactors: Reset MFA factors Resets the MFA factors of the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User having their MFA factors reset</param>
@@ -2138,7 +2138,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ResetFactors: Reset MFA factors Resets the MFA factors of the specified User
+        /// ResetFactors: Reset MFA factors Resets the MFA factors of the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User having their MFA factors reset</param>
@@ -2151,7 +2151,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ResetFactors: Reset MFA factors Resets the MFA factors of the specified User
+        /// ResetFactors: Reset MFA factors Resets the MFA factors of the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User having their MFA factors reset</param>
@@ -2227,7 +2227,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ResetPassword: Reset Password Resets the password of the specified User
+        /// ResetPassword: Reset Password Resets the password of the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User having their password reset</param>
@@ -2239,7 +2239,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ResetPassword: Reset Password Resets the password of the specified User
+        /// ResetPassword: Reset Password Resets the password of the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User having their password reset</param>
@@ -2312,7 +2312,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ResetPassword: Reset Password Resets the password of the specified User
+        /// ResetPassword: Reset Password Resets the password of the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User having their password reset</param>
@@ -2325,7 +2325,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ResetPassword: Reset Password Resets the password of the specified User
+        /// ResetPassword: Reset Password Resets the password of the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User having their password reset</param>
@@ -2401,7 +2401,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] SendActivationEmail: Sends an activation email to the User Sends an activation email to the specified User
+        /// SendActivationEmail: Sends an activation email to the User Sends an activation email to the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User to be activated</param>
@@ -2413,7 +2413,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] SendActivationEmail: Sends an activation email to the User Sends an activation email to the specified User
+        /// SendActivationEmail: Sends an activation email to the User Sends an activation email to the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User to be activated</param>
@@ -2486,7 +2486,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] SendActivationEmail: Sends an activation email to the User Sends an activation email to the specified User
+        /// SendActivationEmail: Sends an activation email to the User Sends an activation email to the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User to be activated</param>
@@ -2499,7 +2499,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] SendActivationEmail: Sends an activation email to the User Sends an activation email to the specified User
+        /// SendActivationEmail: Sends an activation email to the User Sends an activation email to the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User to be activated</param>
@@ -2575,7 +2575,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UnlockUser: Unlock User Unlocks the specified User
+        /// UnlockUser: Unlock User Unlocks the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User to be unlocked</param>
@@ -2587,7 +2587,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UnlockUser: Unlock User Unlocks the specified User
+        /// UnlockUser: Unlock User Unlocks the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User to be unlocked</param>
@@ -2660,7 +2660,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UnlockUser: Unlock User Unlocks the specified User
+        /// UnlockUser: Unlock User Unlocks the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User to be unlocked</param>
@@ -2673,7 +2673,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UnlockUser: Unlock User Unlocks the specified User
+        /// UnlockUser: Unlock User Unlocks the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User to be unlocked</param>
@@ -2923,7 +2923,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdateUser: Update User Updates the specified User
+        /// UpdateUser: Update User Updates the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User to be updated</param>
@@ -2937,7 +2937,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdateUser: Update User Updates the specified User
+        /// UpdateUser: Update User Updates the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User to be updated</param>
@@ -3022,7 +3022,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdateUser: Update User Updates the specified User
+        /// UpdateUser: Update User Updates the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User to be updated</param>
@@ -3037,7 +3037,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdateUser: Update User Updates the specified User
+        /// UpdateUser: Update User Updates the specified User
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the User to be updated</param>

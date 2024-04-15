@@ -25,7 +25,7 @@ namespace Finbourne.Identity.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] AddScim: Add SCIM
+        /// AddScim: Add SCIM
         /// </summary>
         /// <remarks>
         /// Generates an API token to be used for SCIM
@@ -38,7 +38,7 @@ namespace Finbourne.Identity.Sdk.Api
         AddScimResponse AddScim(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] AddScim: Add SCIM
+        /// AddScim: Add SCIM
         /// </summary>
         /// <remarks>
         /// Generates an API token to be used for SCIM
@@ -50,7 +50,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of AddScimResponse</returns>
         ApiResponse<AddScimResponse> AddScimWithHttpInfo(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] RemoveScim: Remove SCIM
+        /// RemoveScim: Remove SCIM
         /// </summary>
         /// <remarks>
         /// Deactivates any existing SCIM API token
@@ -61,7 +61,7 @@ namespace Finbourne.Identity.Sdk.Api
         void RemoveScim(int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] RemoveScim: Remove SCIM
+        /// RemoveScim: Remove SCIM
         /// </summary>
         /// <remarks>
         /// Deactivates any existing SCIM API token
@@ -80,7 +80,7 @@ namespace Finbourne.Identity.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] AddScim: Add SCIM
+        /// AddScim: Add SCIM
         /// </summary>
         /// <remarks>
         /// Generates an API token to be used for SCIM
@@ -94,7 +94,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<AddScimResponse> AddScimAsync(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] AddScim: Add SCIM
+        /// AddScim: Add SCIM
         /// </summary>
         /// <remarks>
         /// Generates an API token to be used for SCIM
@@ -107,7 +107,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (AddScimResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AddScimResponse>> AddScimWithHttpInfoAsync(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] RemoveScim: Remove SCIM
+        /// RemoveScim: Remove SCIM
         /// </summary>
         /// <remarks>
         /// Deactivates any existing SCIM API token
@@ -119,7 +119,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task RemoveScimAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] RemoveScim: Remove SCIM
+        /// RemoveScim: Remove SCIM
         /// </summary>
         /// <remarks>
         /// Deactivates any existing SCIM API token
@@ -247,7 +247,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] AddScim: Add SCIM Generates an API token to be used for SCIM
+        /// AddScim: Add SCIM Generates an API token to be used for SCIM
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="apiTokenAction">The action to take. For the API token. Defaults to \&quot;ensure\&quot; (optional)</param>
@@ -261,7 +261,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] AddScim: Add SCIM Generates an API token to be used for SCIM
+        /// AddScim: Add SCIM Generates an API token to be used for SCIM
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="apiTokenAction">The action to take. For the API token. Defaults to \&quot;ensure\&quot; (optional)</param>
@@ -338,7 +338,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] AddScim: Add SCIM Generates an API token to be used for SCIM
+        /// AddScim: Add SCIM Generates an API token to be used for SCIM
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="apiTokenAction">The action to take. For the API token. Defaults to \&quot;ensure\&quot; (optional)</param>
@@ -353,7 +353,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] AddScim: Add SCIM Generates an API token to be used for SCIM
+        /// AddScim: Add SCIM Generates an API token to be used for SCIM
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="apiTokenAction">The action to take. For the API token. Defaults to \&quot;ensure\&quot; (optional)</param>
@@ -433,7 +433,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] RemoveScim: Remove SCIM Deactivates any existing SCIM API token
+        /// RemoveScim: Remove SCIM Deactivates any existing SCIM API token
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -444,7 +444,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] RemoveScim: Remove SCIM Deactivates any existing SCIM API token
+        /// RemoveScim: Remove SCIM Deactivates any existing SCIM API token
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -509,7 +509,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] RemoveScim: Remove SCIM Deactivates any existing SCIM API token
+        /// RemoveScim: Remove SCIM Deactivates any existing SCIM API token
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -521,7 +521,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] RemoveScim: Remove SCIM Deactivates any existing SCIM API token
+        /// RemoveScim: Remove SCIM Deactivates any existing SCIM API token
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>

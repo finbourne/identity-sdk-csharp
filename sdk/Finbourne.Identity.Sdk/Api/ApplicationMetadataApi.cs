@@ -25,7 +25,7 @@ namespace Finbourne.Identity.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] ListAccessControlledResources: Get resources available for access control
+        /// ListAccessControlledResources: Get resources available for access control
         /// </summary>
         /// <remarks>
         /// Get the comprehensive set of resources that are available for access control
@@ -36,7 +36,7 @@ namespace Finbourne.Identity.Sdk.Api
         ResourceListOfAccessControlledResource ListAccessControlledResources(int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] ListAccessControlledResources: Get resources available for access control
+        /// ListAccessControlledResources: Get resources available for access control
         /// </summary>
         /// <remarks>
         /// Get the comprehensive set of resources that are available for access control
@@ -55,7 +55,7 @@ namespace Finbourne.Identity.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] ListAccessControlledResources: Get resources available for access control
+        /// ListAccessControlledResources: Get resources available for access control
         /// </summary>
         /// <remarks>
         /// Get the comprehensive set of resources that are available for access control
@@ -67,7 +67,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfAccessControlledResource> ListAccessControlledResourcesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] ListAccessControlledResources: Get resources available for access control
+        /// ListAccessControlledResources: Get resources available for access control
         /// </summary>
         /// <remarks>
         /// Get the comprehensive set of resources that are available for access control
@@ -195,7 +195,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListAccessControlledResources: Get resources available for access control Get the comprehensive set of resources that are available for access control
+        /// ListAccessControlledResources: Get resources available for access control Get the comprehensive set of resources that are available for access control
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -207,7 +207,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListAccessControlledResources: Get resources available for access control Get the comprehensive set of resources that are available for access control
+        /// ListAccessControlledResources: Get resources available for access control Get the comprehensive set of resources that are available for access control
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -274,7 +274,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListAccessControlledResources: Get resources available for access control Get the comprehensive set of resources that are available for access control
+        /// ListAccessControlledResources: Get resources available for access control Get the comprehensive set of resources that are available for access control
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -287,7 +287,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListAccessControlledResources: Get resources available for access control Get the comprehensive set of resources that are available for access control
+        /// ListAccessControlledResources: Get resources available for access control Get the comprehensive set of resources that are available for access control
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>

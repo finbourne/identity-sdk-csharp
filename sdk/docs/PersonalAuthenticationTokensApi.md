@@ -4,15 +4,15 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateApiKey**](PersonalAuthenticationTokensApi.md#createapikey) | **POST** /api/keys | [EARLY ACCESS] CreateApiKey: Create a Personal Access Token |
-| [**DeleteApiKey**](PersonalAuthenticationTokensApi.md#deleteapikey) | **DELETE** /api/keys/{id} | [EARLY ACCESS] DeleteApiKey: Invalidate a Personal Access Token |
-| [**ListOwnApiKeys**](PersonalAuthenticationTokensApi.md#listownapikeys) | **GET** /api/keys | [EARLY ACCESS] ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens. |
+| [**CreateApiKey**](PersonalAuthenticationTokensApi.md#createapikey) | **POST** /api/keys | CreateApiKey: Create a Personal Access Token |
+| [**DeleteApiKey**](PersonalAuthenticationTokensApi.md#deleteapikey) | **DELETE** /api/keys/{id} | DeleteApiKey: Invalidate a Personal Access Token |
+| [**ListOwnApiKeys**](PersonalAuthenticationTokensApi.md#listownapikeys) | **GET** /api/keys | ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens. |
 
 <a id="createapikey"></a>
 # **CreateApiKey**
 > CreatedApiKey CreateApiKey (CreateApiKey createApiKey)
 
-[EARLY ACCESS] CreateApiKey: Create a Personal Access Token
+CreateApiKey: Create a Personal Access Token
 
 Generates a Personal Access Token and returns the new key and its associated metadata.
 
@@ -40,7 +40,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] CreateApiKey: Create a Personal Access Token
+                // CreateApiKey: Create a Personal Access Token
                 CreatedApiKey result = apiInstance.CreateApiKey(createApiKey);
                 Debug.WriteLine(result);
             }
@@ -61,7 +61,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] CreateApiKey: Create a Personal Access Token
+    // CreateApiKey: Create a Personal Access Token
     ApiResponse<CreatedApiKey> response = apiInstance.CreateApiKeyWithHttpInfo(createApiKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -108,7 +108,7 @@ catch (ApiException e)
 # **DeleteApiKey**
 > ApiKey DeleteApiKey (string id)
 
-[EARLY ACCESS] DeleteApiKey: Invalidate a Personal Access Token
+DeleteApiKey: Invalidate a Personal Access Token
 
 Immediately invalidates the specified Personal Access Token
 
@@ -136,7 +136,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] DeleteApiKey: Invalidate a Personal Access Token
+                // DeleteApiKey: Invalidate a Personal Access Token
                 ApiKey result = apiInstance.DeleteApiKey(id);
                 Debug.WriteLine(result);
             }
@@ -157,7 +157,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] DeleteApiKey: Invalidate a Personal Access Token
+    // DeleteApiKey: Invalidate a Personal Access Token
     ApiResponse<ApiKey> response = apiInstance.DeleteApiKeyWithHttpInfo(id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -204,7 +204,7 @@ catch (ApiException e)
 # **ListOwnApiKeys**
 > List&lt;ApiKey&gt; ListOwnApiKeys ()
 
-[EARLY ACCESS] ListOwnApiKeys: Gets the meta data for all of the user's existing Personal Access Tokens.
+ListOwnApiKeys: Gets the meta data for all of the user's existing Personal Access Tokens.
 
 Gets the meta data for all of the user's Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
 
@@ -231,7 +231,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] ListOwnApiKeys: Gets the meta data for all of the user's existing Personal Access Tokens.
+                // ListOwnApiKeys: Gets the meta data for all of the user's existing Personal Access Tokens.
                 List<ApiKey> result = apiInstance.ListOwnApiKeys();
                 Debug.WriteLine(result);
             }
@@ -252,7 +252,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] ListOwnApiKeys: Gets the meta data for all of the user's existing Personal Access Tokens.
+    // ListOwnApiKeys: Gets the meta data for all of the user's existing Personal Access Tokens.
     ApiResponse<List<ApiKey>> response = apiInstance.ListOwnApiKeysWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);

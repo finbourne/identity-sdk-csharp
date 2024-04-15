@@ -4,13 +4,13 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**InvalidateToken**](TokensApi.md#invalidatetoken) | **DELETE** /api/tokens | [EARLY ACCESS] InvalidateToken: Invalidate current JWT token (sign out) |
+| [**InvalidateToken**](TokensApi.md#invalidatetoken) | **DELETE** /api/tokens | InvalidateToken: Invalidate current JWT token (sign out) |
 
 <a id="invalidatetoken"></a>
 # **InvalidateToken**
 > void InvalidateToken ()
 
-[EARLY ACCESS] InvalidateToken: Invalidate current JWT token (sign out)
+InvalidateToken: Invalidate current JWT token (sign out)
 
 Log the current user out of all Finbourne platforms by invalidating the current token
 
@@ -37,7 +37,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] InvalidateToken: Invalidate current JWT token (sign out)
+                // InvalidateToken: Invalidate current JWT token (sign out)
                 apiInstance.InvalidateToken();
             }
             catch (ApiException  e)
@@ -57,7 +57,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] InvalidateToken: Invalidate current JWT token (sign out)
+    // InvalidateToken: Invalidate current JWT token (sign out)
     apiInstance.InvalidateTokenWithHttpInfo();
 }
 catch (ApiException e)

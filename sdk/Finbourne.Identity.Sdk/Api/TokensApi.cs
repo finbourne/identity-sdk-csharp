@@ -25,7 +25,7 @@ namespace Finbourne.Identity.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] InvalidateToken: Invalidate current JWT token (sign out)
+        /// InvalidateToken: Invalidate current JWT token (sign out)
         /// </summary>
         /// <remarks>
         /// Log the current user out of all Finbourne platforms by invalidating the current token
@@ -36,7 +36,7 @@ namespace Finbourne.Identity.Sdk.Api
         void InvalidateToken(int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] InvalidateToken: Invalidate current JWT token (sign out)
+        /// InvalidateToken: Invalidate current JWT token (sign out)
         /// </summary>
         /// <remarks>
         /// Log the current user out of all Finbourne platforms by invalidating the current token
@@ -55,7 +55,7 @@ namespace Finbourne.Identity.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] InvalidateToken: Invalidate current JWT token (sign out)
+        /// InvalidateToken: Invalidate current JWT token (sign out)
         /// </summary>
         /// <remarks>
         /// Log the current user out of all Finbourne platforms by invalidating the current token
@@ -67,7 +67,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task InvalidateTokenAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] InvalidateToken: Invalidate current JWT token (sign out)
+        /// InvalidateToken: Invalidate current JWT token (sign out)
         /// </summary>
         /// <remarks>
         /// Log the current user out of all Finbourne platforms by invalidating the current token
@@ -195,7 +195,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] InvalidateToken: Invalidate current JWT token (sign out) Log the current user out of all Finbourne platforms by invalidating the current token
+        /// InvalidateToken: Invalidate current JWT token (sign out) Log the current user out of all Finbourne platforms by invalidating the current token
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -206,7 +206,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] InvalidateToken: Invalidate current JWT token (sign out) Log the current user out of all Finbourne platforms by invalidating the current token
+        /// InvalidateToken: Invalidate current JWT token (sign out) Log the current user out of all Finbourne platforms by invalidating the current token
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -271,7 +271,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] InvalidateToken: Invalidate current JWT token (sign out) Log the current user out of all Finbourne platforms by invalidating the current token
+        /// InvalidateToken: Invalidate current JWT token (sign out) Log the current user out of all Finbourne platforms by invalidating the current token
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -283,7 +283,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] InvalidateToken: Invalidate current JWT token (sign out) Log the current user out of all Finbourne platforms by invalidating the current token
+        /// InvalidateToken: Invalidate current JWT token (sign out) Log the current user out of all Finbourne platforms by invalidating the current token
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>

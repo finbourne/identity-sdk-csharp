@@ -69,7 +69,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of PasswordPolicyResponse</returns>
         ApiResponse<PasswordPolicyResponse> GetPasswordPolicyWithHttpInfo(string userType, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
+        /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
         /// </summary>
         /// <remarks>
         /// The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
@@ -82,7 +82,7 @@ namespace Finbourne.Identity.Sdk.Api
         List<SupportAccessResponse> GetSupportAccessHistory(DateTimeOffset? start = default(DateTimeOffset?), DateTimeOffset? end = default(DateTimeOffset?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
+        /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
         /// </summary>
         /// <remarks>
         /// The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
@@ -94,7 +94,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of List&lt;SupportAccessResponse&gt;</returns>
         ApiResponse<List<SupportAccessResponse>> GetSupportAccessHistoryWithHttpInfo(DateTimeOffset? start = default(DateTimeOffset?), DateTimeOffset? end = default(DateTimeOffset?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation
+        /// GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation
         /// </summary>
         /// <remarks>
         /// Get mapping of support roles, the internal representation to a human friendly representation
@@ -105,7 +105,7 @@ namespace Finbourne.Identity.Sdk.Api
         SupportRolesResponse GetSupportRoles(int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation
+        /// GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation
         /// </summary>
         /// <remarks>
         /// Get mapping of support roles, the internal representation to a human friendly representation
@@ -115,7 +115,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of SupportRolesResponse</returns>
         ApiResponse<SupportRolesResponse> GetSupportRolesWithHttpInfo(int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] GrantSupportAccess: Grants FINBOURNE support access to your account
+        /// GrantSupportAccess: Grants FINBOURNE support access to your account
         /// </summary>
         /// <remarks>
         /// Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
@@ -127,7 +127,7 @@ namespace Finbourne.Identity.Sdk.Api
         SupportAccessResponse GrantSupportAccess(SupportAccessRequest supportAccessRequest, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] GrantSupportAccess: Grants FINBOURNE support access to your account
+        /// GrantSupportAccess: Grants FINBOURNE support access to your account
         /// </summary>
         /// <remarks>
         /// Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
@@ -138,7 +138,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of SupportAccessResponse</returns>
         ApiResponse<SupportAccessResponse> GrantSupportAccessWithHttpInfo(SupportAccessRequest supportAccessRequest, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] InvalidateSupportAccess: Revoke any FINBOURNE support access to your account
+        /// InvalidateSupportAccess: Revoke any FINBOURNE support access to your account
         /// </summary>
         /// <remarks>
         /// This will result in a loss of access to your data for all FINBOURNE support agents
@@ -149,7 +149,7 @@ namespace Finbourne.Identity.Sdk.Api
         List<SupportAccessResponse> InvalidateSupportAccess(int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] InvalidateSupportAccess: Revoke any FINBOURNE support access to your account
+        /// InvalidateSupportAccess: Revoke any FINBOURNE support access to your account
         /// </summary>
         /// <remarks>
         /// This will result in a loss of access to your data for all FINBOURNE support agents
@@ -241,7 +241,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (PasswordPolicyResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PasswordPolicyResponse>> GetPasswordPolicyWithHttpInfoAsync(string userType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
+        /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
         /// </summary>
         /// <remarks>
         /// The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
@@ -255,7 +255,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<List<SupportAccessResponse>> GetSupportAccessHistoryAsync(DateTimeOffset? start = default(DateTimeOffset?), DateTimeOffset? end = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
+        /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
         /// </summary>
         /// <remarks>
         /// The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
@@ -268,7 +268,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (List&lt;SupportAccessResponse&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<SupportAccessResponse>>> GetSupportAccessHistoryWithHttpInfoAsync(DateTimeOffset? start = default(DateTimeOffset?), DateTimeOffset? end = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation
+        /// GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation
         /// </summary>
         /// <remarks>
         /// Get mapping of support roles, the internal representation to a human friendly representation
@@ -280,7 +280,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<SupportRolesResponse> GetSupportRolesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation
+        /// GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation
         /// </summary>
         /// <remarks>
         /// Get mapping of support roles, the internal representation to a human friendly representation
@@ -291,7 +291,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (SupportRolesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SupportRolesResponse>> GetSupportRolesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] GrantSupportAccess: Grants FINBOURNE support access to your account
+        /// GrantSupportAccess: Grants FINBOURNE support access to your account
         /// </summary>
         /// <remarks>
         /// Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
@@ -304,7 +304,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<SupportAccessResponse> GrantSupportAccessAsync(SupportAccessRequest supportAccessRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] GrantSupportAccess: Grants FINBOURNE support access to your account
+        /// GrantSupportAccess: Grants FINBOURNE support access to your account
         /// </summary>
         /// <remarks>
         /// Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
@@ -316,7 +316,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (SupportAccessResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SupportAccessResponse>> GrantSupportAccessWithHttpInfoAsync(SupportAccessRequest supportAccessRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] InvalidateSupportAccess: Revoke any FINBOURNE support access to your account
+        /// InvalidateSupportAccess: Revoke any FINBOURNE support access to your account
         /// </summary>
         /// <remarks>
         /// This will result in a loss of access to your data for all FINBOURNE support agents
@@ -328,7 +328,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<List<SupportAccessResponse>> InvalidateSupportAccessAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] InvalidateSupportAccess: Revoke any FINBOURNE support access to your account
+        /// InvalidateSupportAccess: Revoke any FINBOURNE support access to your account
         /// </summary>
         /// <remarks>
         /// This will result in a loss of access to your data for all FINBOURNE support agents
@@ -817,7 +817,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
+        /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">The start expiry date to query support access requests from (optional)</param>
@@ -831,7 +831,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
+        /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">The start expiry date to query support access requests from (optional)</param>
@@ -906,7 +906,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
+        /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">The start expiry date to query support access requests from (optional)</param>
@@ -921,7 +921,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
+        /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">The start expiry date to query support access requests from (optional)</param>
@@ -999,7 +999,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation Get mapping of support roles, the internal representation to a human friendly representation
+        /// GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation Get mapping of support roles, the internal representation to a human friendly representation
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1011,7 +1011,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation Get mapping of support roles, the internal representation to a human friendly representation
+        /// GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation Get mapping of support roles, the internal representation to a human friendly representation
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1076,7 +1076,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation Get mapping of support roles, the internal representation to a human friendly representation
+        /// GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation Get mapping of support roles, the internal representation to a human friendly representation
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1089,7 +1089,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation Get mapping of support roles, the internal representation to a human friendly representation
+        /// GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation Get mapping of support roles, the internal representation to a human friendly representation
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1157,7 +1157,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GrantSupportAccess: Grants FINBOURNE support access to your account Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
+        /// GrantSupportAccess: Grants FINBOURNE support access to your account Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportAccessRequest">Request detailing the duration and reasons for supplying support access</param>
@@ -1170,7 +1170,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GrantSupportAccess: Grants FINBOURNE support access to your account Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
+        /// GrantSupportAccess: Grants FINBOURNE support access to your account Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportAccessRequest">Request detailing the duration and reasons for supplying support access</param>
@@ -1247,7 +1247,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GrantSupportAccess: Grants FINBOURNE support access to your account Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
+        /// GrantSupportAccess: Grants FINBOURNE support access to your account Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportAccessRequest">Request detailing the duration and reasons for supplying support access</param>
@@ -1261,7 +1261,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GrantSupportAccess: Grants FINBOURNE support access to your account Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
+        /// GrantSupportAccess: Grants FINBOURNE support access to your account Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportAccessRequest">Request detailing the duration and reasons for supplying support access</param>
@@ -1341,7 +1341,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] InvalidateSupportAccess: Revoke any FINBOURNE support access to your account This will result in a loss of access to your data for all FINBOURNE support agents
+        /// InvalidateSupportAccess: Revoke any FINBOURNE support access to your account This will result in a loss of access to your data for all FINBOURNE support agents
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1353,7 +1353,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] InvalidateSupportAccess: Revoke any FINBOURNE support access to your account This will result in a loss of access to your data for all FINBOURNE support agents
+        /// InvalidateSupportAccess: Revoke any FINBOURNE support access to your account This will result in a loss of access to your data for all FINBOURNE support agents
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1418,7 +1418,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] InvalidateSupportAccess: Revoke any FINBOURNE support access to your account This will result in a loss of access to your data for all FINBOURNE support agents
+        /// InvalidateSupportAccess: Revoke any FINBOURNE support access to your account This will result in a loss of access to your data for all FINBOURNE support agents
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1431,7 +1431,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] InvalidateSupportAccess: Revoke any FINBOURNE support access to your account This will result in a loss of access to your data for all FINBOURNE support agents
+        /// InvalidateSupportAccess: Revoke any FINBOURNE support access to your account This will result in a loss of access to your data for all FINBOURNE support agents
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>

@@ -25,7 +25,7 @@ namespace Finbourne.Identity.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] AddUserToRole: Add User to Role
+        /// AddUserToRole: Add User to Role
         /// </summary>
         /// <remarks>
         /// Adds the User to the specified Role
@@ -38,7 +38,7 @@ namespace Finbourne.Identity.Sdk.Api
         void AddUserToRole(string id, string userId, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] AddUserToRole: Add User to Role
+        /// AddUserToRole: Add User to Role
         /// </summary>
         /// <remarks>
         /// Adds the User to the specified Role
@@ -50,7 +50,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AddUserToRoleWithHttpInfo(string id, string userId, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] CreateRole: Create Role
+        /// CreateRole: Create Role
         /// </summary>
         /// <remarks>
         /// Creates a new Role
@@ -62,7 +62,7 @@ namespace Finbourne.Identity.Sdk.Api
         RoleResponse CreateRole(CreateRoleRequest createRoleRequest, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] CreateRole: Create Role
+        /// CreateRole: Create Role
         /// </summary>
         /// <remarks>
         /// Creates a new Role
@@ -73,7 +73,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of RoleResponse</returns>
         ApiResponse<RoleResponse> CreateRoleWithHttpInfo(CreateRoleRequest createRoleRequest, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] DeleteRole: Delete Role
+        /// DeleteRole: Delete Role
         /// </summary>
         /// <remarks>
         /// Delete the specified role
@@ -85,7 +85,7 @@ namespace Finbourne.Identity.Sdk.Api
         void DeleteRole(string id, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteRole: Delete Role
+        /// DeleteRole: Delete Role
         /// </summary>
         /// <remarks>
         /// Delete the specified role
@@ -96,7 +96,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteRoleWithHttpInfo(string id, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] GetRole: Get Role
+        /// GetRole: Get Role
         /// </summary>
         /// <remarks>
         /// Get the specified role
@@ -108,7 +108,7 @@ namespace Finbourne.Identity.Sdk.Api
         RoleResponse GetRole(string id, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] GetRole: Get Role
+        /// GetRole: Get Role
         /// </summary>
         /// <remarks>
         /// Get the specified role
@@ -119,7 +119,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of RoleResponse</returns>
         ApiResponse<RoleResponse> GetRoleWithHttpInfo(string id, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] ListRoles: List Roles
+        /// ListRoles: List Roles
         /// </summary>
         /// <remarks>
         /// List the available Roles
@@ -130,7 +130,7 @@ namespace Finbourne.Identity.Sdk.Api
         List<RoleResponse> ListRoles(int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] ListRoles: List Roles
+        /// ListRoles: List Roles
         /// </summary>
         /// <remarks>
         /// List the available Roles
@@ -140,7 +140,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of List&lt;RoleResponse&gt;</returns>
         ApiResponse<List<RoleResponse>> ListRolesWithHttpInfo(int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] ListUsersInRole: Get the users in the specified role.
+        /// ListUsersInRole: Get the users in the specified role.
         /// </summary>
         /// <remarks>
         /// List all Users in the specified Role
@@ -152,7 +152,7 @@ namespace Finbourne.Identity.Sdk.Api
         List<UserResponse> ListUsersInRole(string id, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] ListUsersInRole: Get the users in the specified role.
+        /// ListUsersInRole: Get the users in the specified role.
         /// </summary>
         /// <remarks>
         /// List all Users in the specified Role
@@ -163,7 +163,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of List&lt;UserResponse&gt;</returns>
         ApiResponse<List<UserResponse>> ListUsersInRoleWithHttpInfo(string id, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] RemoveUserFromRole: Remove User from Role
+        /// RemoveUserFromRole: Remove User from Role
         /// </summary>
         /// <remarks>
         /// Removes the User from the specified Role
@@ -176,7 +176,7 @@ namespace Finbourne.Identity.Sdk.Api
         void RemoveUserFromRole(string id, string userId, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] RemoveUserFromRole: Remove User from Role
+        /// RemoveUserFromRole: Remove User from Role
         /// </summary>
         /// <remarks>
         /// Removes the User from the specified Role
@@ -188,7 +188,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RemoveUserFromRoleWithHttpInfo(string id, string userId, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] UpdateRole: Update Role
+        /// UpdateRole: Update Role
         /// </summary>
         /// <remarks>
         /// Update the specified Role
@@ -201,7 +201,7 @@ namespace Finbourne.Identity.Sdk.Api
         RoleResponse UpdateRole(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] UpdateRole: Update Role
+        /// UpdateRole: Update Role
         /// </summary>
         /// <remarks>
         /// Update the specified Role
@@ -222,7 +222,7 @@ namespace Finbourne.Identity.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] AddUserToRole: Add User to Role
+        /// AddUserToRole: Add User to Role
         /// </summary>
         /// <remarks>
         /// Adds the User to the specified Role
@@ -236,7 +236,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task AddUserToRoleAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] AddUserToRole: Add User to Role
+        /// AddUserToRole: Add User to Role
         /// </summary>
         /// <remarks>
         /// Adds the User to the specified Role
@@ -249,7 +249,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AddUserToRoleWithHttpInfoAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] CreateRole: Create Role
+        /// CreateRole: Create Role
         /// </summary>
         /// <remarks>
         /// Creates a new Role
@@ -262,7 +262,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<RoleResponse> CreateRoleAsync(CreateRoleRequest createRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] CreateRole: Create Role
+        /// CreateRole: Create Role
         /// </summary>
         /// <remarks>
         /// Creates a new Role
@@ -274,7 +274,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (RoleResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RoleResponse>> CreateRoleWithHttpInfoAsync(CreateRoleRequest createRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] DeleteRole: Delete Role
+        /// DeleteRole: Delete Role
         /// </summary>
         /// <remarks>
         /// Delete the specified role
@@ -287,7 +287,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task DeleteRoleAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteRole: Delete Role
+        /// DeleteRole: Delete Role
         /// </summary>
         /// <remarks>
         /// Delete the specified role
@@ -299,7 +299,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] GetRole: Get Role
+        /// GetRole: Get Role
         /// </summary>
         /// <remarks>
         /// Get the specified role
@@ -312,7 +312,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<RoleResponse> GetRoleAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] GetRole: Get Role
+        /// GetRole: Get Role
         /// </summary>
         /// <remarks>
         /// Get the specified role
@@ -324,7 +324,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (RoleResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RoleResponse>> GetRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] ListRoles: List Roles
+        /// ListRoles: List Roles
         /// </summary>
         /// <remarks>
         /// List the available Roles
@@ -336,7 +336,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<List<RoleResponse>> ListRolesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] ListRoles: List Roles
+        /// ListRoles: List Roles
         /// </summary>
         /// <remarks>
         /// List the available Roles
@@ -347,7 +347,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (List&lt;RoleResponse&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<RoleResponse>>> ListRolesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] ListUsersInRole: Get the users in the specified role.
+        /// ListUsersInRole: Get the users in the specified role.
         /// </summary>
         /// <remarks>
         /// List all Users in the specified Role
@@ -360,7 +360,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<List<UserResponse>> ListUsersInRoleAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] ListUsersInRole: Get the users in the specified role.
+        /// ListUsersInRole: Get the users in the specified role.
         /// </summary>
         /// <remarks>
         /// List all Users in the specified Role
@@ -372,7 +372,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (List&lt;UserResponse&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UserResponse>>> ListUsersInRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] RemoveUserFromRole: Remove User from Role
+        /// RemoveUserFromRole: Remove User from Role
         /// </summary>
         /// <remarks>
         /// Removes the User from the specified Role
@@ -386,7 +386,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task RemoveUserFromRoleAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] RemoveUserFromRole: Remove User from Role
+        /// RemoveUserFromRole: Remove User from Role
         /// </summary>
         /// <remarks>
         /// Removes the User from the specified Role
@@ -399,7 +399,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RemoveUserFromRoleWithHttpInfoAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] UpdateRole: Update Role
+        /// UpdateRole: Update Role
         /// </summary>
         /// <remarks>
         /// Update the specified Role
@@ -413,7 +413,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<RoleResponse> UpdateRoleAsync(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] UpdateRole: Update Role
+        /// UpdateRole: Update Role
         /// </summary>
         /// <remarks>
         /// Update the specified Role
@@ -543,7 +543,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] AddUserToRole: Add User to Role Adds the User to the specified Role
+        /// AddUserToRole: Add User to Role Adds the User to the specified Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the Role</param>
@@ -556,7 +556,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] AddUserToRole: Add User to Role Adds the User to the specified Role
+        /// AddUserToRole: Add User to Role Adds the User to the specified Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the Role</param>
@@ -637,7 +637,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] AddUserToRole: Add User to Role Adds the User to the specified Role
+        /// AddUserToRole: Add User to Role Adds the User to the specified Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the Role</param>
@@ -651,7 +651,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] AddUserToRole: Add User to Role Adds the User to the specified Role
+        /// AddUserToRole: Add User to Role Adds the User to the specified Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the Role</param>
@@ -735,7 +735,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreateRole: Create Role Creates a new Role
+        /// CreateRole: Create Role Creates a new Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createRoleRequest">Details of the role to be created</param>
@@ -748,7 +748,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreateRole: Create Role Creates a new Role
+        /// CreateRole: Create Role Creates a new Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createRoleRequest">Details of the role to be created</param>
@@ -825,7 +825,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreateRole: Create Role Creates a new Role
+        /// CreateRole: Create Role Creates a new Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createRoleRequest">Details of the role to be created</param>
@@ -839,7 +839,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreateRole: Create Role Creates a new Role
+        /// CreateRole: Create Role Creates a new Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createRoleRequest">Details of the role to be created</param>
@@ -919,7 +919,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteRole: Delete Role Delete the specified role
+        /// DeleteRole: Delete Role Delete the specified role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role</param>
@@ -931,7 +931,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteRole: Delete Role Delete the specified role
+        /// DeleteRole: Delete Role Delete the specified role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role</param>
@@ -1004,7 +1004,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteRole: Delete Role Delete the specified role
+        /// DeleteRole: Delete Role Delete the specified role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role</param>
@@ -1017,7 +1017,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteRole: Delete Role Delete the specified role
+        /// DeleteRole: Delete Role Delete the specified role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role</param>
@@ -1093,7 +1093,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetRole: Get Role Get the specified role
+        /// GetRole: Get Role Get the specified role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role</param>
@@ -1106,7 +1106,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetRole: Get Role Get the specified role
+        /// GetRole: Get Role Get the specified role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role</param>
@@ -1179,7 +1179,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetRole: Get Role Get the specified role
+        /// GetRole: Get Role Get the specified role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role</param>
@@ -1193,7 +1193,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetRole: Get Role Get the specified role
+        /// GetRole: Get Role Get the specified role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role</param>
@@ -1269,7 +1269,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListRoles: List Roles List the available Roles
+        /// ListRoles: List Roles List the available Roles
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1281,7 +1281,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListRoles: List Roles List the available Roles
+        /// ListRoles: List Roles List the available Roles
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1346,7 +1346,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListRoles: List Roles List the available Roles
+        /// ListRoles: List Roles List the available Roles
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1359,7 +1359,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListRoles: List Roles List the available Roles
+        /// ListRoles: List Roles List the available Roles
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1427,7 +1427,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListUsersInRole: Get the users in the specified role. List all Users in the specified Role
+        /// ListUsersInRole: Get the users in the specified role. List all Users in the specified Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the Role</param>
@@ -1440,7 +1440,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListUsersInRole: Get the users in the specified role. List all Users in the specified Role
+        /// ListUsersInRole: Get the users in the specified role. List all Users in the specified Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the Role</param>
@@ -1513,7 +1513,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListUsersInRole: Get the users in the specified role. List all Users in the specified Role
+        /// ListUsersInRole: Get the users in the specified role. List all Users in the specified Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the Role</param>
@@ -1527,7 +1527,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListUsersInRole: Get the users in the specified role. List all Users in the specified Role
+        /// ListUsersInRole: Get the users in the specified role. List all Users in the specified Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the Role</param>
@@ -1603,7 +1603,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] RemoveUserFromRole: Remove User from Role Removes the User from the specified Role
+        /// RemoveUserFromRole: Remove User from Role Removes the User from the specified Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the Role</param>
@@ -1616,7 +1616,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] RemoveUserFromRole: Remove User from Role Removes the User from the specified Role
+        /// RemoveUserFromRole: Remove User from Role Removes the User from the specified Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the Role</param>
@@ -1697,7 +1697,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] RemoveUserFromRole: Remove User from Role Removes the User from the specified Role
+        /// RemoveUserFromRole: Remove User from Role Removes the User from the specified Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the Role</param>
@@ -1711,7 +1711,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] RemoveUserFromRole: Remove User from Role Removes the User from the specified Role
+        /// RemoveUserFromRole: Remove User from Role Removes the User from the specified Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the Role</param>
@@ -1795,7 +1795,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdateRole: Update Role Update the specified Role
+        /// UpdateRole: Update Role Update the specified Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role to be updated</param>
@@ -1809,7 +1809,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdateRole: Update Role Update the specified Role
+        /// UpdateRole: Update Role Update the specified Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role to be updated</param>
@@ -1888,7 +1888,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdateRole: Update Role Update the specified Role
+        /// UpdateRole: Update Role Update the specified Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role to be updated</param>
@@ -1903,7 +1903,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdateRole: Update Role Update the specified Role
+        /// UpdateRole: Update Role Update the specified Role
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role to be updated</param>

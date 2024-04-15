@@ -6,10 +6,10 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 |--------|--------------|-------------|
 | [**GetAuthenticationInformation**](AuthenticationApi.md#getauthenticationinformation) | **GET** /api/authentication/information | GetAuthenticationInformation: Gets AuthenticationInformation |
 | [**GetPasswordPolicy**](AuthenticationApi.md#getpasswordpolicy) | **GET** /api/authentication/password-policy/{userType} | [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type |
-| [**GetSupportAccessHistory**](AuthenticationApi.md#getsupportaccesshistory) | **GET** /api/authentication/support | [EARLY ACCESS] GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination |
-| [**GetSupportRoles**](AuthenticationApi.md#getsupportroles) | **GET** /api/authentication/support-roles | [EARLY ACCESS] GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation |
-| [**GrantSupportAccess**](AuthenticationApi.md#grantsupportaccess) | **POST** /api/authentication/support | [EARLY ACCESS] GrantSupportAccess: Grants FINBOURNE support access to your account |
-| [**InvalidateSupportAccess**](AuthenticationApi.md#invalidatesupportaccess) | **DELETE** /api/authentication/support | [EARLY ACCESS] InvalidateSupportAccess: Revoke any FINBOURNE support access to your account |
+| [**GetSupportAccessHistory**](AuthenticationApi.md#getsupportaccesshistory) | **GET** /api/authentication/support | GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination |
+| [**GetSupportRoles**](AuthenticationApi.md#getsupportroles) | **GET** /api/authentication/support-roles | GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation |
+| [**GrantSupportAccess**](AuthenticationApi.md#grantsupportaccess) | **POST** /api/authentication/support | GrantSupportAccess: Grants FINBOURNE support access to your account |
+| [**InvalidateSupportAccess**](AuthenticationApi.md#invalidatesupportaccess) | **DELETE** /api/authentication/support | InvalidateSupportAccess: Revoke any FINBOURNE support access to your account |
 | [**UpdatePasswordPolicy**](AuthenticationApi.md#updatepasswordpolicy) | **PUT** /api/authentication/password-policy/{userType} | [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type |
 
 <a id="getauthenticationinformation"></a>
@@ -202,7 +202,7 @@ catch (ApiException e)
 # **GetSupportAccessHistory**
 > List&lt;SupportAccessResponse&gt; GetSupportAccessHistory (DateTimeOffset? start = null, DateTimeOffset? end = null)
 
-[EARLY ACCESS] GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
+GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
 
 The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
 
@@ -231,7 +231,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
+                // GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
                 List<SupportAccessResponse> result = apiInstance.GetSupportAccessHistory(start, end);
                 Debug.WriteLine(result);
             }
@@ -252,7 +252,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
+    // GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
     ApiResponse<List<SupportAccessResponse>> response = apiInstance.GetSupportAccessHistoryWithHttpInfo(start, end);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -300,7 +300,7 @@ catch (ApiException e)
 # **GetSupportRoles**
 > SupportRolesResponse GetSupportRoles ()
 
-[EARLY ACCESS] GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation
+GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation
 
 Get mapping of support roles, the internal representation to a human friendly representation
 
@@ -327,7 +327,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation
+                // GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation
                 SupportRolesResponse result = apiInstance.GetSupportRoles();
                 Debug.WriteLine(result);
             }
@@ -348,7 +348,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation
+    // GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation
     ApiResponse<SupportRolesResponse> response = apiInstance.GetSupportRolesWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -390,7 +390,7 @@ This endpoint does not need any parameter.
 # **GrantSupportAccess**
 > SupportAccessResponse GrantSupportAccess (SupportAccessRequest supportAccessRequest)
 
-[EARLY ACCESS] GrantSupportAccess: Grants FINBOURNE support access to your account
+GrantSupportAccess: Grants FINBOURNE support access to your account
 
 Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
 
@@ -418,7 +418,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] GrantSupportAccess: Grants FINBOURNE support access to your account
+                // GrantSupportAccess: Grants FINBOURNE support access to your account
                 SupportAccessResponse result = apiInstance.GrantSupportAccess(supportAccessRequest);
                 Debug.WriteLine(result);
             }
@@ -439,7 +439,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] GrantSupportAccess: Grants FINBOURNE support access to your account
+    // GrantSupportAccess: Grants FINBOURNE support access to your account
     ApiResponse<SupportAccessResponse> response = apiInstance.GrantSupportAccessWithHttpInfo(supportAccessRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -486,7 +486,7 @@ catch (ApiException e)
 # **InvalidateSupportAccess**
 > List&lt;SupportAccessResponse&gt; InvalidateSupportAccess ()
 
-[EARLY ACCESS] InvalidateSupportAccess: Revoke any FINBOURNE support access to your account
+InvalidateSupportAccess: Revoke any FINBOURNE support access to your account
 
 This will result in a loss of access to your data for all FINBOURNE support agents
 
@@ -513,7 +513,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] InvalidateSupportAccess: Revoke any FINBOURNE support access to your account
+                // InvalidateSupportAccess: Revoke any FINBOURNE support access to your account
                 List<SupportAccessResponse> result = apiInstance.InvalidateSupportAccess();
                 Debug.WriteLine(result);
             }
@@ -534,7 +534,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] InvalidateSupportAccess: Revoke any FINBOURNE support access to your account
+    // InvalidateSupportAccess: Revoke any FINBOURNE support access to your account
     ApiResponse<List<SupportAccessResponse>> response = apiInstance.InvalidateSupportAccessWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);

@@ -4,14 +4,14 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**AddScim**](IdentityProviderApi.md#addscim) | **PUT** /api/identityprovider/scim | [EARLY ACCESS] AddScim: Add SCIM |
-| [**RemoveScim**](IdentityProviderApi.md#removescim) | **DELETE** /api/identityprovider/scim | [EARLY ACCESS] RemoveScim: Remove SCIM |
+| [**AddScim**](IdentityProviderApi.md#addscim) | **PUT** /api/identityprovider/scim | AddScim: Add SCIM |
+| [**RemoveScim**](IdentityProviderApi.md#removescim) | **DELETE** /api/identityprovider/scim | RemoveScim: Remove SCIM |
 
 <a id="addscim"></a>
 # **AddScim**
 > AddScimResponse AddScim (string? apiTokenAction = null, DateTimeOffset? oldApiTokenDeactivation = null)
 
-[EARLY ACCESS] AddScim: Add SCIM
+AddScim: Add SCIM
 
 Generates an API token to be used for SCIM
 
@@ -40,7 +40,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] AddScim: Add SCIM
+                // AddScim: Add SCIM
                 AddScimResponse result = apiInstance.AddScim(apiTokenAction, oldApiTokenDeactivation);
                 Debug.WriteLine(result);
             }
@@ -61,7 +61,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] AddScim: Add SCIM
+    // AddScim: Add SCIM
     ApiResponse<AddScimResponse> response = apiInstance.AddScimWithHttpInfo(apiTokenAction, oldApiTokenDeactivation);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -109,7 +109,7 @@ catch (ApiException e)
 # **RemoveScim**
 > void RemoveScim ()
 
-[EARLY ACCESS] RemoveScim: Remove SCIM
+RemoveScim: Remove SCIM
 
 Deactivates any existing SCIM API token
 
@@ -136,7 +136,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] RemoveScim: Remove SCIM
+                // RemoveScim: Remove SCIM
                 apiInstance.RemoveScim();
             }
             catch (ApiException  e)
@@ -156,7 +156,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] RemoveScim: Remove SCIM
+    // RemoveScim: Remove SCIM
     apiInstance.RemoveScimWithHttpInfo();
 }
 catch (ApiException e)

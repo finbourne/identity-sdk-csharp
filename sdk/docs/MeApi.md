@@ -4,14 +4,14 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**GetUserInfo**](MeApi.md#getuserinfo) | **GET** /api/me | [EARLY ACCESS] GetUserInfo: Get User Info |
+| [**GetUserInfo**](MeApi.md#getuserinfo) | **GET** /api/me | GetUserInfo: Get User Info |
 | [**SetPassword**](MeApi.md#setpassword) | **PUT** /api/me/password | SetPassword: Set password of current user |
 
 <a id="getuserinfo"></a>
 # **GetUserInfo**
 > CurrentUserResponse GetUserInfo ()
 
-[EARLY ACCESS] GetUserInfo: Get User Info
+GetUserInfo: Get User Info
 
 Get the requesting user's basic info
 
@@ -38,7 +38,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] GetUserInfo: Get User Info
+                // GetUserInfo: Get User Info
                 CurrentUserResponse result = apiInstance.GetUserInfo();
                 Debug.WriteLine(result);
             }
@@ -59,7 +59,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] GetUserInfo: Get User Info
+    // GetUserInfo: Get User Info
     ApiResponse<CurrentUserResponse> response = apiInstance.GetUserInfoWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);

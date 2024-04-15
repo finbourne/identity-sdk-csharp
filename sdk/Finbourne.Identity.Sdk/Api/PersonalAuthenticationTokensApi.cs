@@ -25,7 +25,7 @@ namespace Finbourne.Identity.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] CreateApiKey: Create a Personal Access Token
+        /// CreateApiKey: Create a Personal Access Token
         /// </summary>
         /// <remarks>
         /// Generates a Personal Access Token and returns the new key and its associated metadata.
@@ -37,7 +37,7 @@ namespace Finbourne.Identity.Sdk.Api
         CreatedApiKey CreateApiKey(CreateApiKey createApiKey, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] CreateApiKey: Create a Personal Access Token
+        /// CreateApiKey: Create a Personal Access Token
         /// </summary>
         /// <remarks>
         /// Generates a Personal Access Token and returns the new key and its associated metadata.
@@ -48,7 +48,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of CreatedApiKey</returns>
         ApiResponse<CreatedApiKey> CreateApiKeyWithHttpInfo(CreateApiKey createApiKey, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] DeleteApiKey: Invalidate a Personal Access Token
+        /// DeleteApiKey: Invalidate a Personal Access Token
         /// </summary>
         /// <remarks>
         /// Immediately invalidates the specified Personal Access Token
@@ -60,7 +60,7 @@ namespace Finbourne.Identity.Sdk.Api
         ApiKey DeleteApiKey(string id, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteApiKey: Invalidate a Personal Access Token
+        /// DeleteApiKey: Invalidate a Personal Access Token
         /// </summary>
         /// <remarks>
         /// Immediately invalidates the specified Personal Access Token
@@ -71,7 +71,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of ApiKey</returns>
         ApiResponse<ApiKey> DeleteApiKeyWithHttpInfo(string id, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens.
+        /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens.
         /// </summary>
         /// <remarks>
         /// Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
@@ -82,7 +82,7 @@ namespace Finbourne.Identity.Sdk.Api
         List<ApiKey> ListOwnApiKeys(int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens.
+        /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens.
         /// </summary>
         /// <remarks>
         /// Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
@@ -101,7 +101,7 @@ namespace Finbourne.Identity.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] CreateApiKey: Create a Personal Access Token
+        /// CreateApiKey: Create a Personal Access Token
         /// </summary>
         /// <remarks>
         /// Generates a Personal Access Token and returns the new key and its associated metadata.
@@ -114,7 +114,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<CreatedApiKey> CreateApiKeyAsync(CreateApiKey createApiKey, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] CreateApiKey: Create a Personal Access Token
+        /// CreateApiKey: Create a Personal Access Token
         /// </summary>
         /// <remarks>
         /// Generates a Personal Access Token and returns the new key and its associated metadata.
@@ -126,7 +126,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (CreatedApiKey)</returns>
         System.Threading.Tasks.Task<ApiResponse<CreatedApiKey>> CreateApiKeyWithHttpInfoAsync(CreateApiKey createApiKey, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] DeleteApiKey: Invalidate a Personal Access Token
+        /// DeleteApiKey: Invalidate a Personal Access Token
         /// </summary>
         /// <remarks>
         /// Immediately invalidates the specified Personal Access Token
@@ -139,7 +139,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<ApiKey> DeleteApiKeyAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteApiKey: Invalidate a Personal Access Token
+        /// DeleteApiKey: Invalidate a Personal Access Token
         /// </summary>
         /// <remarks>
         /// Immediately invalidates the specified Personal Access Token
@@ -151,7 +151,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (ApiKey)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiKey>> DeleteApiKeyWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens.
+        /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens.
         /// </summary>
         /// <remarks>
         /// Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
@@ -163,7 +163,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<List<ApiKey>> ListOwnApiKeysAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens.
+        /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens.
         /// </summary>
         /// <remarks>
         /// Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
@@ -291,7 +291,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreateApiKey: Create a Personal Access Token Generates a Personal Access Token and returns the new key and its associated metadata.
+        /// CreateApiKey: Create a Personal Access Token Generates a Personal Access Token and returns the new key and its associated metadata.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createApiKey">The request to create a new Personal Access Token</param>
@@ -304,7 +304,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreateApiKey: Create a Personal Access Token Generates a Personal Access Token and returns the new key and its associated metadata.
+        /// CreateApiKey: Create a Personal Access Token Generates a Personal Access Token and returns the new key and its associated metadata.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createApiKey">The request to create a new Personal Access Token</param>
@@ -381,7 +381,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreateApiKey: Create a Personal Access Token Generates a Personal Access Token and returns the new key and its associated metadata.
+        /// CreateApiKey: Create a Personal Access Token Generates a Personal Access Token and returns the new key and its associated metadata.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createApiKey">The request to create a new Personal Access Token</param>
@@ -395,7 +395,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreateApiKey: Create a Personal Access Token Generates a Personal Access Token and returns the new key and its associated metadata.
+        /// CreateApiKey: Create a Personal Access Token Generates a Personal Access Token and returns the new key and its associated metadata.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createApiKey">The request to create a new Personal Access Token</param>
@@ -475,7 +475,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteApiKey: Invalidate a Personal Access Token Immediately invalidates the specified Personal Access Token
+        /// DeleteApiKey: Invalidate a Personal Access Token Immediately invalidates the specified Personal Access Token
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the Personal Access Token to delete</param>
@@ -488,7 +488,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteApiKey: Invalidate a Personal Access Token Immediately invalidates the specified Personal Access Token
+        /// DeleteApiKey: Invalidate a Personal Access Token Immediately invalidates the specified Personal Access Token
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the Personal Access Token to delete</param>
@@ -561,7 +561,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteApiKey: Invalidate a Personal Access Token Immediately invalidates the specified Personal Access Token
+        /// DeleteApiKey: Invalidate a Personal Access Token Immediately invalidates the specified Personal Access Token
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the Personal Access Token to delete</param>
@@ -575,7 +575,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteApiKey: Invalidate a Personal Access Token Immediately invalidates the specified Personal Access Token
+        /// DeleteApiKey: Invalidate a Personal Access Token Immediately invalidates the specified Personal Access Token
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the Personal Access Token to delete</param>
@@ -651,7 +651,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens. Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
+        /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens. Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -663,7 +663,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens. Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
+        /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens. Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -728,7 +728,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens. Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
+        /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens. Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -741,7 +741,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens. Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
+        /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens. Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>

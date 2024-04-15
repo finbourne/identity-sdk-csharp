@@ -25,7 +25,7 @@ namespace Finbourne.Identity.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] GetUserInfo: Get User Info
+        /// GetUserInfo: Get User Info
         /// </summary>
         /// <remarks>
         /// Get the requesting user&#39;s basic info
@@ -36,7 +36,7 @@ namespace Finbourne.Identity.Sdk.Api
         CurrentUserResponse GetUserInfo(int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] GetUserInfo: Get User Info
+        /// GetUserInfo: Get User Info
         /// </summary>
         /// <remarks>
         /// Get the requesting user&#39;s basic info
@@ -78,7 +78,7 @@ namespace Finbourne.Identity.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] GetUserInfo: Get User Info
+        /// GetUserInfo: Get User Info
         /// </summary>
         /// <remarks>
         /// Get the requesting user&#39;s basic info
@@ -90,7 +90,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<CurrentUserResponse> GetUserInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] GetUserInfo: Get User Info
+        /// GetUserInfo: Get User Info
         /// </summary>
         /// <remarks>
         /// Get the requesting user&#39;s basic info
@@ -243,7 +243,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetUserInfo: Get User Info Get the requesting user&#39;s basic info
+        /// GetUserInfo: Get User Info Get the requesting user&#39;s basic info
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -255,7 +255,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetUserInfo: Get User Info Get the requesting user&#39;s basic info
+        /// GetUserInfo: Get User Info Get the requesting user&#39;s basic info
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -320,7 +320,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetUserInfo: Get User Info Get the requesting user&#39;s basic info
+        /// GetUserInfo: Get User Info Get the requesting user&#39;s basic info
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -333,7 +333,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetUserInfo: Get User Info Get the requesting user&#39;s basic info
+        /// GetUserInfo: Get User Info Get the requesting user&#39;s basic info
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
