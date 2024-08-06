@@ -65,7 +65,7 @@ namespace Finbourne.Identity.Sdk.Extensions
                 if (string.IsNullOrWhiteSpace(apiConfiguration.BaseUrl))
                     throw new ArgumentNullException(
                         nameof(apiConfiguration.BaseUrl),
-                        $"BaseUrl Uri missing. Please specify either FBN_FINBOURNE-IDENTITY_API_URL environment variable or finbourne-identityUrl in secrets.json.");
+                        $"BaseUrl Uri missing. Please specify either FBN_IDENTITY_URL environment variable or identityUrl in secrets.json.");
 
                 throw new UriFormatException($"Invalid Uri: {apiConfiguration.BaseUrl}");
             }
