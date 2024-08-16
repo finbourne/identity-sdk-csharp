@@ -77,7 +77,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteApplicationWithHttpInfo(string id, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] GetApplication: Get Application
+        /// GetApplication: Get Application
         /// </summary>
         /// <remarks>
         /// get the specified application, and optionally the OIDC secret
@@ -90,7 +90,7 @@ namespace Finbourne.Identity.Sdk.Api
         OAuthApplication GetApplication(string id, bool? includeSecret = default(bool?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] GetApplication: Get Application
+        /// GetApplication: Get Application
         /// </summary>
         /// <remarks>
         /// get the specified application, and optionally the OIDC secret
@@ -102,7 +102,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of OAuthApplication</returns>
         ApiResponse<OAuthApplication> GetApplicationWithHttpInfo(string id, bool? includeSecret = default(bool?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] ListApplications: List Applications
+        /// ListApplications: List Applications
         /// </summary>
         /// <remarks>
         /// List the available applications
@@ -113,7 +113,7 @@ namespace Finbourne.Identity.Sdk.Api
         List<OAuthApplication> ListApplications(int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] ListApplications: List Applications
+        /// ListApplications: List Applications
         /// </summary>
         /// <remarks>
         /// List the available applications
@@ -205,7 +205,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteApplicationWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] GetApplication: Get Application
+        /// GetApplication: Get Application
         /// </summary>
         /// <remarks>
         /// get the specified application, and optionally the OIDC secret
@@ -219,7 +219,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<OAuthApplication> GetApplicationAsync(string id, bool? includeSecret = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] GetApplication: Get Application
+        /// GetApplication: Get Application
         /// </summary>
         /// <remarks>
         /// get the specified application, and optionally the OIDC secret
@@ -232,7 +232,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (OAuthApplication)</returns>
         System.Threading.Tasks.Task<ApiResponse<OAuthApplication>> GetApplicationWithHttpInfoAsync(string id, bool? includeSecret = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] ListApplications: List Applications
+        /// ListApplications: List Applications
         /// </summary>
         /// <remarks>
         /// List the available applications
@@ -244,7 +244,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<List<OAuthApplication>> ListApplicationsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] ListApplications: List Applications
+        /// ListApplications: List Applications
         /// </summary>
         /// <remarks>
         /// List the available applications
@@ -743,7 +743,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetApplication: Get Application get the specified application, and optionally the OIDC secret
+        /// GetApplication: Get Application get the specified application, and optionally the OIDC secret
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the application</param>
@@ -757,7 +757,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetApplication: Get Application get the specified application, and optionally the OIDC secret
+        /// GetApplication: Get Application get the specified application, and optionally the OIDC secret
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the application</param>
@@ -835,7 +835,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetApplication: Get Application get the specified application, and optionally the OIDC secret
+        /// GetApplication: Get Application get the specified application, and optionally the OIDC secret
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the application</param>
@@ -850,7 +850,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetApplication: Get Application get the specified application, and optionally the OIDC secret
+        /// GetApplication: Get Application get the specified application, and optionally the OIDC secret
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the application</param>
@@ -931,7 +931,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListApplications: List Applications List the available applications
+        /// ListApplications: List Applications List the available applications
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -943,7 +943,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListApplications: List Applications List the available applications
+        /// ListApplications: List Applications List the available applications
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1008,7 +1008,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListApplications: List Applications List the available applications
+        /// ListApplications: List Applications List the available applications
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1021,7 +1021,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListApplications: List Applications List the available applications
+        /// ListApplications: List Applications List the available applications
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>

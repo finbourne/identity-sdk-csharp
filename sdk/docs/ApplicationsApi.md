@@ -6,8 +6,8 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 |--------|--------------|-------------|
 | [**CreateApplication**](ApplicationsApi.md#createapplication) | **POST** /api/applications | [EARLY ACCESS] CreateApplication: Create Application |
 | [**DeleteApplication**](ApplicationsApi.md#deleteapplication) | **DELETE** /api/applications/{id} | [EARLY ACCESS] DeleteApplication: Delete Application |
-| [**GetApplication**](ApplicationsApi.md#getapplication) | **GET** /api/applications/{id} | [EARLY ACCESS] GetApplication: Get Application |
-| [**ListApplications**](ApplicationsApi.md#listapplications) | **GET** /api/applications | [EARLY ACCESS] ListApplications: List Applications |
+| [**GetApplication**](ApplicationsApi.md#getapplication) | **GET** /api/applications/{id} | GetApplication: Get Application |
+| [**ListApplications**](ApplicationsApi.md#listapplications) | **GET** /api/applications | ListApplications: List Applications |
 | [**RotateApplicationSecrets**](ApplicationsApi.md#rotateapplicationsecrets) | **POST** /api/applications/{id}/lifecycle/$newsecret | [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets |
 
 <a id="createapplication"></a>
@@ -216,7 +216,7 @@ void (empty response body)
 # **GetApplication**
 > OAuthApplication GetApplication (string id, bool? includeSecret = null)
 
-[EARLY ACCESS] GetApplication: Get Application
+GetApplication: Get Application
 
 get the specified application, and optionally the OIDC secret
 
@@ -256,7 +256,7 @@ namespace Examples
 
             try
             {
-                // [EARLY ACCESS] GetApplication: Get Application
+                // GetApplication: Get Application
                 OAuthApplication result = apiInstance.GetApplication(id, includeSecret);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -277,7 +277,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] GetApplication: Get Application
+    // GetApplication: Get Application
     ApiResponse<OAuthApplication> response = apiInstance.GetApplicationWithHttpInfo(id, includeSecret);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -322,7 +322,7 @@ catch (ApiException e)
 # **ListApplications**
 > List&lt;OAuthApplication&gt; ListApplications ()
 
-[EARLY ACCESS] ListApplications: List Applications
+ListApplications: List Applications
 
 List the available applications
 
@@ -360,7 +360,7 @@ namespace Examples
 
             try
             {
-                // [EARLY ACCESS] ListApplications: List Applications
+                // ListApplications: List Applications
                 List<OAuthApplication> result = apiInstance.ListApplications();
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -381,7 +381,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] ListApplications: List Applications
+    // ListApplications: List Applications
     ApiResponse<List<OAuthApplication>> response = apiInstance.ListApplicationsWithHttpInfo();
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));

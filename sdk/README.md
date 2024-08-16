@@ -8,8 +8,8 @@ Class | Method | HTTP request | Description
 *ApplicationMetadataApi* | [**ListAccessControlledResources**](docs/ApplicationMetadataApi.md#listaccesscontrolledresources) | **GET** /api/metadata/access/resources | ListAccessControlledResources: Get resources available for access control
 *ApplicationsApi* | [**CreateApplication**](docs/ApplicationsApi.md#createapplication) | **POST** /api/applications | [EARLY ACCESS] CreateApplication: Create Application
 *ApplicationsApi* | [**DeleteApplication**](docs/ApplicationsApi.md#deleteapplication) | **DELETE** /api/applications/{id} | [EARLY ACCESS] DeleteApplication: Delete Application
-*ApplicationsApi* | [**GetApplication**](docs/ApplicationsApi.md#getapplication) | **GET** /api/applications/{id} | [EARLY ACCESS] GetApplication: Get Application
-*ApplicationsApi* | [**ListApplications**](docs/ApplicationsApi.md#listapplications) | **GET** /api/applications | [EARLY ACCESS] ListApplications: List Applications
+*ApplicationsApi* | [**GetApplication**](docs/ApplicationsApi.md#getapplication) | **GET** /api/applications/{id} | GetApplication: Get Application
+*ApplicationsApi* | [**ListApplications**](docs/ApplicationsApi.md#listapplications) | **GET** /api/applications | ListApplications: List Applications
 *ApplicationsApi* | [**RotateApplicationSecrets**](docs/ApplicationsApi.md#rotateapplicationsecrets) | **POST** /api/applications/{id}/lifecycle/$newsecret | [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets
 *AuthenticationApi* | [**GetAuthenticationInformation**](docs/AuthenticationApi.md#getauthenticationinformation) | **GET** /api/authentication/information | GetAuthenticationInformation: Gets AuthenticationInformation
 *AuthenticationApi* | [**GetPasswordPolicy**](docs/AuthenticationApi.md#getpasswordpolicy) | **GET** /api/authentication/password-policy/{userType} | [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type
