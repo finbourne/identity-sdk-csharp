@@ -38,8 +38,9 @@ namespace Finbourne.Identity.Sdk.Model
         /// <param name="firstName">User&#39;s first name.</param>
         /// <param name="lastName">User&#39;s last name.</param>
         /// <param name="type">User&#39;s type (Personal, Service...).</param>
+        /// <param name="alternativeUserIds">User&#39;s alternative user IDs. Only returned for the current user.</param>
         /// <param name="links">links.</param>
-        public UserSummary(string id = default(string), string login = default(string), string email = default(string), string secondEmail = default(string), string firstName = default(string), string lastName = default(string), string type = default(string), List<Link> links = default(List<Link>))
+        public UserSummary(string id = default(string), string login = default(string), string email = default(string), string secondEmail = default(string), string firstName = default(string), string lastName = default(string), string type = default(string), Dictionary<string, string> alternativeUserIds = default(Dictionary<string, string>), List<Link> links = default(List<Link>))
         {
             this.Id = id;
             this.Login = login;
@@ -48,6 +49,7 @@ namespace Finbourne.Identity.Sdk.Model
             this.FirstName = firstName;
             this.LastName = lastName;
             this.Type = type;
+            this.AlternativeUserIds = alternativeUserIds;
             this.Links = links;
         }
 
@@ -100,6 +102,13 @@ namespace Finbourne.Identity.Sdk.Model
         public string Type { get; set; }
 
         /// <summary>
+        /// User&#39;s alternative user IDs. Only returned for the current user
+        /// </summary>
+        /// <value>User&#39;s alternative user IDs. Only returned for the current user</value>
+        [DataMember(Name = "alternativeUserIds", EmitDefaultValue = true)]
+        public Dictionary<string, string> AlternativeUserIds { get; set; }
+
+        /// <summary>
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = true)]
@@ -120,6 +129,7 @@ namespace Finbourne.Identity.Sdk.Model
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
             sb.Append("  LastName: ").Append(LastName).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  AlternativeUserIds: ").Append(AlternativeUserIds).Append("\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -192,6 +202,12 @@ namespace Finbourne.Identity.Sdk.Model
                     this.Type.Equals(input.Type))
                 ) && 
                 (
+                    this.AlternativeUserIds == input.AlternativeUserIds ||
+                    this.AlternativeUserIds != null &&
+                    input.AlternativeUserIds != null &&
+                    this.AlternativeUserIds.SequenceEqual(input.AlternativeUserIds)
+                ) && 
+                (
                     this.Links == input.Links ||
                     this.Links != null &&
                     input.Links != null &&
@@ -235,6 +251,10 @@ namespace Finbourne.Identity.Sdk.Model
                 if (this.Type != null)
                 {
                     hashCode = (hashCode * 59) + this.Type.GetHashCode();
+                }
+                if (this.AlternativeUserIds != null)
+                {
+                    hashCode = (hashCode * 59) + this.AlternativeUserIds.GetHashCode();
                 }
                 if (this.Links != null)
                 {
