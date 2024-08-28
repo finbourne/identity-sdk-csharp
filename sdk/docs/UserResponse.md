@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** | The user&#39;s system supplied unique identifier | 
+**AlternativeUserIds** | **Dictionary&lt;string, string&gt;** | The user&#39;s alternative IDs | [optional] 
 **EmailAddress** | **string** | The user&#39;s emailAddress address, which must be unique within the system | 
 **SecondEmailAddress** | **string** | The user&#39;s second email address. Only allowed for service users. | [optional] 
 **Login** | **string** |  | 

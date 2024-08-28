@@ -37,6 +37,7 @@ namespace Finbourne.Identity.Sdk.Model
         /// Initializes a new instance of the <see cref="UserResponse" /> class.
         /// </summary>
         /// <param name="id">The user&#39;s system supplied unique identifier (required).</param>
+        /// <param name="alternativeUserIds">The user&#39;s alternative IDs.</param>
         /// <param name="emailAddress">The user&#39;s emailAddress address, which must be unique within the system (required).</param>
         /// <param name="secondEmailAddress">The user&#39;s second email address. Only allowed for service users..</param>
         /// <param name="login">login (required).</param>
@@ -47,7 +48,7 @@ namespace Finbourne.Identity.Sdk.Model
         /// <param name="status">The status of the user (required).</param>
         /// <param name="external">Whether or not the user originates from an external identity system (required).</param>
         /// <param name="links">links.</param>
-        public UserResponse(string id = default(string), string emailAddress = default(string), string secondEmailAddress = default(string), string login = default(string), string firstName = default(string), string lastName = default(string), List<RoleResponse> roles = default(List<RoleResponse>), string type = default(string), string status = default(string), bool external = default(bool), List<Link> links = default(List<Link>))
+        public UserResponse(string id = default(string), Dictionary<string, string> alternativeUserIds = default(Dictionary<string, string>), string emailAddress = default(string), string secondEmailAddress = default(string), string login = default(string), string firstName = default(string), string lastName = default(string), List<RoleResponse> roles = default(List<RoleResponse>), string type = default(string), string status = default(string), bool external = default(bool), List<Link> links = default(List<Link>))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -92,6 +93,7 @@ namespace Finbourne.Identity.Sdk.Model
             }
             this.Status = status;
             this.External = external;
+            this.AlternativeUserIds = alternativeUserIds;
             this.SecondEmailAddress = secondEmailAddress;
             this.Roles = roles;
             this.Links = links;
@@ -103,6 +105,13 @@ namespace Finbourne.Identity.Sdk.Model
         /// <value>The user&#39;s system supplied unique identifier</value>
         [DataMember(Name = "id", IsRequired = true, EmitDefaultValue = true)]
         public string Id { get; set; }
+
+        /// <summary>
+        /// The user&#39;s alternative IDs
+        /// </summary>
+        /// <value>The user&#39;s alternative IDs</value>
+        [DataMember(Name = "alternativeUserIds", EmitDefaultValue = true)]
+        public Dictionary<string, string> AlternativeUserIds { get; set; }
 
         /// <summary>
         /// The user&#39;s emailAddress address, which must be unique within the system
@@ -181,6 +190,7 @@ namespace Finbourne.Identity.Sdk.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class UserResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  AlternativeUserIds: ").Append(AlternativeUserIds).Append("\n");
             sb.Append("  EmailAddress: ").Append(EmailAddress).Append("\n");
             sb.Append("  SecondEmailAddress: ").Append(SecondEmailAddress).Append("\n");
             sb.Append("  Login: ").Append(Login).Append("\n");
@@ -230,6 +240,12 @@ namespace Finbourne.Identity.Sdk.Model
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
+                ) && 
+                (
+                    this.AlternativeUserIds == input.AlternativeUserIds ||
+                    this.AlternativeUserIds != null &&
+                    input.AlternativeUserIds != null &&
+                    this.AlternativeUserIds.SequenceEqual(input.AlternativeUserIds)
                 ) && 
                 (
                     this.EmailAddress == input.EmailAddress ||
@@ -296,6 +312,10 @@ namespace Finbourne.Identity.Sdk.Model
                 if (this.Id != null)
                 {
                     hashCode = (hashCode * 59) + this.Id.GetHashCode();
+                }
+                if (this.AlternativeUserIds != null)
+                {
+                    hashCode = (hashCode * 59) + this.AlternativeUserIds.GetHashCode();
                 }
                 if (this.EmailAddress != null)
                 {

@@ -41,8 +41,9 @@ namespace Finbourne.Identity.Sdk.Model
         /// <param name="emailAddress">emailAddress (required).</param>
         /// <param name="secondEmailAddress">secondEmailAddress.</param>
         /// <param name="login">The user&#39;s login username, in the form of an email address, which must be unique within the system.  For user accounts this should exactly match the user&#39;s email address. (required).</param>
+        /// <param name="alternativeUserIds">alternativeUserIds.</param>
         /// <param name="roles">Deprecated. To update a user&#39;s roles use the AddUserToRole and RemoveUserFromRole endpoints.</param>
-        public UpdateUserRequest(string firstName = default(string), string lastName = default(string), string emailAddress = default(string), string secondEmailAddress = default(string), string login = default(string), List<RoleId> roles = default(List<RoleId>))
+        public UpdateUserRequest(string firstName = default(string), string lastName = default(string), string emailAddress = default(string), string secondEmailAddress = default(string), string login = default(string), Dictionary<string, string> alternativeUserIds = default(Dictionary<string, string>), List<RoleId> roles = default(List<RoleId>))
         {
             // to ensure "firstName" is required (not null)
             if (firstName == null)
@@ -69,6 +70,7 @@ namespace Finbourne.Identity.Sdk.Model
             }
             this.Login = login;
             this.SecondEmailAddress = secondEmailAddress;
+            this.AlternativeUserIds = alternativeUserIds;
             this.Roles = roles;
         }
 
@@ -104,6 +106,12 @@ namespace Finbourne.Identity.Sdk.Model
         public string Login { get; set; }
 
         /// <summary>
+        /// Gets or Sets AlternativeUserIds
+        /// </summary>
+        [DataMember(Name = "alternativeUserIds", EmitDefaultValue = true)]
+        public Dictionary<string, string> AlternativeUserIds { get; set; }
+
+        /// <summary>
         /// Deprecated. To update a user&#39;s roles use the AddUserToRole and RemoveUserFromRole endpoints
         /// </summary>
         /// <value>Deprecated. To update a user&#39;s roles use the AddUserToRole and RemoveUserFromRole endpoints</value>
@@ -123,6 +131,7 @@ namespace Finbourne.Identity.Sdk.Model
             sb.Append("  EmailAddress: ").Append(EmailAddress).Append("\n");
             sb.Append("  SecondEmailAddress: ").Append(SecondEmailAddress).Append("\n");
             sb.Append("  Login: ").Append(Login).Append("\n");
+            sb.Append("  AlternativeUserIds: ").Append(AlternativeUserIds).Append("\n");
             sb.Append("  Roles: ").Append(Roles).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -185,6 +194,12 @@ namespace Finbourne.Identity.Sdk.Model
                     this.Login.Equals(input.Login))
                 ) && 
                 (
+                    this.AlternativeUserIds == input.AlternativeUserIds ||
+                    this.AlternativeUserIds != null &&
+                    input.AlternativeUserIds != null &&
+                    this.AlternativeUserIds.SequenceEqual(input.AlternativeUserIds)
+                ) && 
+                (
                     this.Roles == input.Roles ||
                     this.Roles != null &&
                     input.Roles != null &&
@@ -220,6 +235,10 @@ namespace Finbourne.Identity.Sdk.Model
                 if (this.Login != null)
                 {
                     hashCode = (hashCode * 59) + this.Login.GetHashCode();
+                }
+                if (this.AlternativeUserIds != null)
+                {
+                    hashCode = (hashCode * 59) + this.AlternativeUserIds.GetHashCode();
                 }
                 if (this.Roles != null)
                 {
