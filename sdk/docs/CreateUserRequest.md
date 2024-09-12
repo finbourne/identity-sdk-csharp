@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **EmailAddress** | **string** | The user&#39;s email address - to which the account validation email will be sent. For user accounts  this should exactly match the Login. | 
 **SecondEmailAddress** | **string** | The user&#39;s second email address. Only allowed for Service users | [optional] 
 **Login** | **string** | The user&#39;s login username, in the form of an email address, which must be unique within the system.  For user accounts this should exactly match the user&#39;s email address. | 
+**AlternativeUserIds** | **Dictionary&lt;string, string&gt;** |  | [optional] 
 **Roles** | [**List&lt;RoleId&gt;**](RoleId.md) | Optional. Any known roles the user should be created with. | [optional] 
 **Type** | **string** | The type of user (e.g. Personal or Service) | 
 

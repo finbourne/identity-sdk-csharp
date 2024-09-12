@@ -152,6 +152,27 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of UserResponse</returns>
         ApiResponse<UserResponse> GetUserWithHttpInfo(string id, bool? includeRoles = default(bool?), int operationIndex = 0);
         /// <summary>
+        /// [EXPERIMENTAL] GetUserSchema: Get User Schema
+        /// </summary>
+        /// <remarks>
+        /// Get the User Schema
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>UserSchemaResponse</returns>
+        UserSchemaResponse GetUserSchema(int operationIndex = 0);
+
+        /// <summary>
+        /// [EXPERIMENTAL] GetUserSchema: Get User Schema
+        /// </summary>
+        /// <remarks>
+        /// Get the User Schema
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of UserSchemaResponse</returns>
+        ApiResponse<UserSchemaResponse> GetUserSchemaWithHttpInfo(int operationIndex = 0);
+        /// <summary>
         /// [EARLY ACCESS] ListRunnableUsers: List Runable Users
         /// </summary>
         /// <remarks>
@@ -337,6 +358,29 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of UserResponse</returns>
         ApiResponse<UserResponse> UpdateUserWithHttpInfo(string id, UpdateUserRequest updateUserRequest, int operationIndex = 0);
+        /// <summary>
+        /// [EXPERIMENTAL] UpdateUserSchema: Update User Schema
+        /// </summary>
+        /// <remarks>
+        /// Update the User Schema
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateUserSchemaRequest">The new User Schema</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>UserSchemaResponse</returns>
+        UserSchemaResponse UpdateUserSchema(UpdateUserSchemaRequest updateUserSchemaRequest, int operationIndex = 0);
+
+        /// <summary>
+        /// [EXPERIMENTAL] UpdateUserSchema: Update User Schema
+        /// </summary>
+        /// <remarks>
+        /// Update the User Schema
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateUserSchemaRequest">The new User Schema</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of UserSchemaResponse</returns>
+        ApiResponse<UserSchemaResponse> UpdateUserSchemaWithHttpInfo(UpdateUserSchemaRequest updateUserSchemaRequest, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -477,6 +521,29 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserResponse>> GetUserWithHttpInfoAsync(string id, bool? includeRoles = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// [EXPERIMENTAL] GetUserSchema: Get User Schema
+        /// </summary>
+        /// <remarks>
+        /// Get the User Schema
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UserSchemaResponse</returns>
+        System.Threading.Tasks.Task<UserSchemaResponse> GetUserSchemaAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// [EXPERIMENTAL] GetUserSchema: Get User Schema
+        /// </summary>
+        /// <remarks>
+        /// Get the User Schema
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UserSchemaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserSchemaResponse>> GetUserSchemaWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// [EARLY ACCESS] ListRunnableUsers: List Runable Users
         /// </summary>
@@ -679,6 +746,31 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserResponse>> UpdateUserWithHttpInfoAsync(string id, UpdateUserRequest updateUserRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// [EXPERIMENTAL] UpdateUserSchema: Update User Schema
+        /// </summary>
+        /// <remarks>
+        /// Update the User Schema
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateUserSchemaRequest">The new User Schema</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UserSchemaResponse</returns>
+        System.Threading.Tasks.Task<UserSchemaResponse> UpdateUserSchemaAsync(UpdateUserSchemaRequest updateUserSchemaRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// [EXPERIMENTAL] UpdateUserSchema: Update User Schema
+        /// </summary>
+        /// <remarks>
+        /// Update the User Schema
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateUserSchemaRequest">The new User Schema</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UserSchemaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserSchemaResponse>> UpdateUserSchemaWithHttpInfoAsync(UpdateUserSchemaRequest updateUserSchemaRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1709,6 +1801,164 @@ namespace Finbourne.Identity.Sdk.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetUser", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// [EXPERIMENTAL] GetUserSchema: Get User Schema Get the User Schema
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>UserSchemaResponse</returns>
+        public UserSchemaResponse GetUserSchema(int operationIndex = 0)
+        {
+            Finbourne.Identity.Sdk.Client.ApiResponse<UserSchemaResponse> localVarResponse = GetUserSchemaWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [EXPERIMENTAL] GetUserSchema: Get User Schema Get the User Schema
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of UserSchemaResponse</returns>
+        public Finbourne.Identity.Sdk.Client.ApiResponse<UserSchemaResponse> GetUserSchemaWithHttpInfo(int operationIndex = 0)
+        {
+            Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "UsersApi.GetUserSchema";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<UserSchemaResponse>("/api/users/schema", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetUserSchema", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// [EXPERIMENTAL] GetUserSchema: Get User Schema Get the User Schema
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UserSchemaResponse</returns>
+        public async System.Threading.Tasks.Task<UserSchemaResponse> GetUserSchemaAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Finbourne.Identity.Sdk.Client.ApiResponse<UserSchemaResponse> localVarResponse = await GetUserSchemaWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [EXPERIMENTAL] GetUserSchema: Get User Schema Get the User Schema
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UserSchemaResponse)</returns>
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<UserSchemaResponse>> GetUserSchemaWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "UsersApi.GetUserSchema";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<UserSchemaResponse>("/api/users/schema", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetUserSchema", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3121,6 +3371,190 @@ namespace Finbourne.Identity.Sdk.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateUser", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// [EXPERIMENTAL] UpdateUserSchema: Update User Schema Update the User Schema
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateUserSchemaRequest">The new User Schema</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>UserSchemaResponse</returns>
+        public UserSchemaResponse UpdateUserSchema(UpdateUserSchemaRequest updateUserSchemaRequest, int operationIndex = 0)
+        {
+            Finbourne.Identity.Sdk.Client.ApiResponse<UserSchemaResponse> localVarResponse = UpdateUserSchemaWithHttpInfo(updateUserSchemaRequest);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [EXPERIMENTAL] UpdateUserSchema: Update User Schema Update the User Schema
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateUserSchemaRequest">The new User Schema</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of UserSchemaResponse</returns>
+        public Finbourne.Identity.Sdk.Client.ApiResponse<UserSchemaResponse> UpdateUserSchemaWithHttpInfo(UpdateUserSchemaRequest updateUserSchemaRequest, int operationIndex = 0)
+        {
+            // verify the required parameter 'updateUserSchemaRequest' is set
+            if (updateUserSchemaRequest == null)
+            {
+                throw new Finbourne.Identity.Sdk.Client.ApiException(400, "Missing required parameter 'updateUserSchemaRequest' when calling UsersApi->UpdateUserSchema");
+            }
+
+            Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json-patch+json",
+                "application/json",
+                "text/json",
+                "application/*+json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = updateUserSchemaRequest;
+
+            localVarRequestOptions.Operation = "UsersApi.UpdateUserSchema";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Put<UserSchemaResponse>("/api/users/schema", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateUserSchema", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// [EXPERIMENTAL] UpdateUserSchema: Update User Schema Update the User Schema
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateUserSchemaRequest">The new User Schema</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UserSchemaResponse</returns>
+        public async System.Threading.Tasks.Task<UserSchemaResponse> UpdateUserSchemaAsync(UpdateUserSchemaRequest updateUserSchemaRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Finbourne.Identity.Sdk.Client.ApiResponse<UserSchemaResponse> localVarResponse = await UpdateUserSchemaWithHttpInfoAsync(updateUserSchemaRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [EXPERIMENTAL] UpdateUserSchema: Update User Schema Update the User Schema
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateUserSchemaRequest">The new User Schema</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UserSchemaResponse)</returns>
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<UserSchemaResponse>> UpdateUserSchemaWithHttpInfoAsync(UpdateUserSchemaRequest updateUserSchemaRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'updateUserSchemaRequest' is set
+            if (updateUserSchemaRequest == null)
+            {
+                throw new Finbourne.Identity.Sdk.Client.ApiException(400, "Missing required parameter 'updateUserSchemaRequest' when calling UsersApi->UpdateUserSchema");
+            }
+
+
+            Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json-patch+json", 
+                "application/json", 
+                "text/json", 
+                "application/*+json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = updateUserSchemaRequest;
+
+            localVarRequestOptions.Operation = "UsersApi.UpdateUserSchema";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PutAsync<UserSchemaResponse>("/api/users/schema", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateUserSchema", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -9,6 +9,7 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 | [**ExpirePassword**](UsersApi.md#expirepassword) | **POST** /api/users/{id}/lifecycle/$expirepassword | ExpirePassword: Reset the user&#39;s password to a temporary one |
 | [**FindUsersById**](UsersApi.md#findusersbyid) | **GET** /api/directory | FindUsersById: Find users by id endpoint |
 | [**GetUser**](UsersApi.md#getuser) | **GET** /api/users/{id} | GetUser: Get User |
+| [**GetUserSchema**](UsersApi.md#getuserschema) | **GET** /api/users/schema | [EXPERIMENTAL] GetUserSchema: Get User Schema |
 | [**ListRunnableUsers**](UsersApi.md#listrunnableusers) | **GET** /api/users/$runnable | [EARLY ACCESS] ListRunnableUsers: List Runable Users |
 | [**ListUsers**](UsersApi.md#listusers) | **GET** /api/users | ListUsers: List Users |
 | [**ResetFactors**](UsersApi.md#resetfactors) | **POST** /api/users/{id}/lifecycle/$resetfactors | ResetFactors: Reset MFA factors |
@@ -17,6 +18,7 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 | [**UnlockUser**](UsersApi.md#unlockuser) | **POST** /api/users/{id}/lifecycle/$unlock | UnlockUser: Unlock User |
 | [**UnsuspendUser**](UsersApi.md#unsuspenduser) | **POST** /api/users/{id}/lifecycle/$unsuspend | [EXPERIMENTAL] UnsuspendUser: Unsuspend user |
 | [**UpdateUser**](UsersApi.md#updateuser) | **PUT** /api/users/{id} | UpdateUser: Update User |
+| [**UpdateUserSchema**](UsersApi.md#updateuserschema) | **PUT** /api/users/schema | [EXPERIMENTAL] UpdateUserSchema: Update User Schema |
 
 <a id="createuser"></a>
 # **CreateUser**
@@ -531,6 +533,103 @@ catch (ApiException e)
 |-------------|-------------|------------------|
 | **200** | Get the specified user |  -  |
 | **400** | The details of the input related failure |  -  |
+| **0** | Error response |  -  |
+
+[Back to top](#) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to Model list](../README.md#documentation-for-models) &#8226; [Back to README](../README.md)
+
+<a id="getuserschema"></a>
+# **GetUserSchema**
+> UserSchemaResponse GetUserSchema ()
+
+[EXPERIMENTAL] GetUserSchema: Get User Schema
+
+Get the User Schema
+
+### Example
+```csharp
+using System.Collections.Generic;
+using Finbourne.Identity.Sdk.Api;
+using Finbourne.Identity.Sdk.Client;
+using Finbourne.Identity.Sdk.Extensions;
+using Finbourne.Identity.Sdk.Model;
+using Newtonsoft.Json;
+
+namespace Examples
+{
+    public static class Program
+    {
+        public static void Main()
+        {
+            var secretsFilename = "secrets.json";
+            var path = Path.Combine(Directory.GetCurrentDirectory(), secretsFilename);
+            // Replace with the relevant values
+            File.WriteAllText(
+                path, 
+                @"{
+                    ""api"": {
+                        ""tokenUrl"": ""<your-token-url>"",
+                        ""identityUrl"": ""https://<your-domain>.lusid.com/identity"",
+                        ""username"": ""<your-username>"",
+                        ""password"": ""<your-password>"",
+                        ""clientId"": ""<your-client-id>"",
+                        ""clientSecret"": ""<your-client-secret>""
+                    }
+                }");
+            var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
+
+            try
+            {
+                // [EXPERIMENTAL] GetUserSchema: Get User Schema
+                UserSchemaResponse result = apiInstance.GetUserSchema();
+                Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+            }
+            catch (ApiException e)
+            {
+                Console.WriteLine("Exception when calling UsersApi.GetUserSchema: " + e.Message);
+                Console.WriteLine("Status Code: " + e.ErrorCode);
+                Console.WriteLine(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetUserSchemaWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // [EXPERIMENTAL] GetUserSchema: Get User Schema
+    ApiResponse<UserSchemaResponse> response = apiInstance.GetUserSchemaWithHttpInfo();
+    Console.WriteLine("Status Code: " + response.StatusCode);
+    Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
+    Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
+}
+catch (ApiException e)
+{
+    Console.WriteLine("Exception when calling UsersApi.GetUserSchemaWithHttpInfo: " + e.Message);
+    Console.WriteLine("Status Code: " + e.ErrorCode);
+    Console.WriteLine(e.StackTrace);
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+### Return type
+
+[**UserSchemaResponse**](UserSchemaResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Update the User Schema |  -  |
 | **0** | Error response |  -  |
 
 [Back to top](#) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to Model list](../README.md#documentation-for-models) &#8226; [Back to README](../README.md)
@@ -1332,6 +1431,109 @@ catch (ApiException e)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Update a user |  -  |
+| **400** | The details of the input related failure |  -  |
+| **0** | Error response |  -  |
+
+[Back to top](#) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to Model list](../README.md#documentation-for-models) &#8226; [Back to README](../README.md)
+
+<a id="updateuserschema"></a>
+# **UpdateUserSchema**
+> UserSchemaResponse UpdateUserSchema (UpdateUserSchemaRequest updateUserSchemaRequest)
+
+[EXPERIMENTAL] UpdateUserSchema: Update User Schema
+
+Update the User Schema
+
+### Example
+```csharp
+using System.Collections.Generic;
+using Finbourne.Identity.Sdk.Api;
+using Finbourne.Identity.Sdk.Client;
+using Finbourne.Identity.Sdk.Extensions;
+using Finbourne.Identity.Sdk.Model;
+using Newtonsoft.Json;
+
+namespace Examples
+{
+    public static class Program
+    {
+        public static void Main()
+        {
+            var secretsFilename = "secrets.json";
+            var path = Path.Combine(Directory.GetCurrentDirectory(), secretsFilename);
+            // Replace with the relevant values
+            File.WriteAllText(
+                path, 
+                @"{
+                    ""api"": {
+                        ""tokenUrl"": ""<your-token-url>"",
+                        ""identityUrl"": ""https://<your-domain>.lusid.com/identity"",
+                        ""username"": ""<your-username>"",
+                        ""password"": ""<your-password>"",
+                        ""clientId"": ""<your-client-id>"",
+                        ""clientSecret"": ""<your-client-secret>""
+                    }
+                }");
+            var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
+            var updateUserSchemaRequest = new UpdateUserSchemaRequest(); // UpdateUserSchemaRequest | The new User Schema
+
+            try
+            {
+                // [EXPERIMENTAL] UpdateUserSchema: Update User Schema
+                UserSchemaResponse result = apiInstance.UpdateUserSchema(updateUserSchemaRequest);
+                Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+            }
+            catch (ApiException e)
+            {
+                Console.WriteLine("Exception when calling UsersApi.UpdateUserSchema: " + e.Message);
+                Console.WriteLine("Status Code: " + e.ErrorCode);
+                Console.WriteLine(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UpdateUserSchemaWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // [EXPERIMENTAL] UpdateUserSchema: Update User Schema
+    ApiResponse<UserSchemaResponse> response = apiInstance.UpdateUserSchemaWithHttpInfo(updateUserSchemaRequest);
+    Console.WriteLine("Status Code: " + response.StatusCode);
+    Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
+    Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
+}
+catch (ApiException e)
+{
+    Console.WriteLine("Exception when calling UsersApi.UpdateUserSchemaWithHttpInfo: " + e.Message);
+    Console.WriteLine("Status Code: " + e.ErrorCode);
+    Console.WriteLine(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **updateUserSchemaRequest** | [**UpdateUserSchemaRequest**](UpdateUserSchemaRequest.md) | The new User Schema |  |
+
+### Return type
+
+[**UserSchemaResponse**](UserSchemaResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Update the User Schema |  -  |
 | **400** | The details of the input related failure |  -  |
 | **0** | Error response |  -  |
 
