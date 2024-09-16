@@ -50,10 +50,21 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<AuthenticationApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<AuthenticationApi>();
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // AuthenticationInformation result = apiInstance.GetAuthenticationInformation(opts: opts);
+
                 // GetAuthenticationInformation: Gets AuthenticationInformation
                 AuthenticationInformation result = apiInstance.GetAuthenticationInformation();
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -147,11 +158,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<AuthenticationApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<AuthenticationApi>();
             var userType = "userType_example";  // string | The type of user (should only be personal or service)
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // PasswordPolicyResponse result = apiInstance.GetPasswordPolicy(userType, opts: opts);
+
                 // [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type
                 PasswordPolicyResponse result = apiInstance.GetPasswordPolicy(userType);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -250,12 +272,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<AuthenticationApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<AuthenticationApi>();
             var start = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | The start expiry date to query support access requests from (optional) 
             var end = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | The end expiry date to query support access requests to (optional) 
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // List<SupportAccessResponse> result = apiInstance.GetSupportAccessHistory(start, end, opts: opts);
+
                 // GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
                 List<SupportAccessResponse> result = apiInstance.GetSupportAccessHistory(start, end);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -355,10 +388,21 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<AuthenticationApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<AuthenticationApi>();
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // SupportRolesResponse result = apiInstance.GetSupportRoles(opts: opts);
+
                 // GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation
                 SupportRolesResponse result = apiInstance.GetSupportRoles();
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -452,11 +496,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<AuthenticationApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<AuthenticationApi>();
             var supportAccessRequest = new SupportAccessRequest(); // SupportAccessRequest | Request detailing the duration and reasons for supplying support access
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // SupportAccessResponse result = apiInstance.GrantSupportAccess(supportAccessRequest, opts: opts);
+
                 // GrantSupportAccess: Grants FINBOURNE support access to your account
                 SupportAccessResponse result = apiInstance.GrantSupportAccess(supportAccessRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -555,10 +610,21 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<AuthenticationApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<AuthenticationApi>();
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // List<SupportAccessResponse> result = apiInstance.InvalidateSupportAccess(opts: opts);
+
                 // InvalidateSupportAccess: Revoke any FINBOURNE support access to your account
                 List<SupportAccessResponse> result = apiInstance.InvalidateSupportAccess();
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -652,12 +718,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<AuthenticationApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<AuthenticationApi>();
             var userType = "userType_example";  // string | The type of user (should only be personal or service)
             var updatePasswordPolicyRequest = new UpdatePasswordPolicyRequest?(); // UpdatePasswordPolicyRequest? | The password policy for the given user type (optional) 
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // PasswordPolicyResponse result = apiInstance.UpdatePasswordPolicy(userType, updatePasswordPolicyRequest, opts: opts);
+
                 // [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type
                 PasswordPolicyResponse result = apiInstance.UpdatePasswordPolicy(userType, updatePasswordPolicyRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

@@ -46,11 +46,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PersonalAuthenticationTokensApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PersonalAuthenticationTokensApi>();
             var createApiKey = new CreateApiKey(); // CreateApiKey | The request to create a new Personal Access Token
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // CreatedApiKey result = apiInstance.CreateApiKey(createApiKey, opts: opts);
+
                 // CreateApiKey: Create a Personal Access Token
                 CreatedApiKey result = apiInstance.CreateApiKey(createApiKey);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -149,11 +160,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PersonalAuthenticationTokensApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PersonalAuthenticationTokensApi>();
             var id = "id_example";  // string | The id of the Personal Access Token to delete
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ApiKey result = apiInstance.DeleteApiKey(id, opts: opts);
+
                 // DeleteApiKey: Invalidate a Personal Access Token
                 ApiKey result = apiInstance.DeleteApiKey(id);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -252,10 +274,21 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PersonalAuthenticationTokensApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PersonalAuthenticationTokensApi>();
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // List<ApiKey> result = apiInstance.ListOwnApiKeys(opts: opts);
+
                 // ListOwnApiKeys: Gets the meta data for all of the user's existing Personal Access Tokens.
                 List<ApiKey> result = apiInstance.ListOwnApiKeys();
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

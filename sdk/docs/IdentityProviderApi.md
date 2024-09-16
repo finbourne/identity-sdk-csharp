@@ -45,12 +45,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<IdentityProviderApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<IdentityProviderApi>();
             var apiTokenAction = "apiTokenAction_example";  // string? | The action to take. For the API token. Defaults to \"ensure\" (optional) 
             var oldApiTokenDeactivation = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional deactivation date for the old API token. Only used if apiTokenAction is \"regenerate\" (optional) 
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // AddScimResponse result = apiInstance.AddScim(apiTokenAction, oldApiTokenDeactivation, opts: opts);
+
                 // AddScim: Add SCIM
                 AddScimResponse result = apiInstance.AddScim(apiTokenAction, oldApiTokenDeactivation);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -150,10 +161,21 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<IdentityProviderApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<IdentityProviderApi>();
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.RemoveScim(opts: opts);
+
                 // RemoveScim: Remove SCIM
                 apiInstance.RemoveScim();
             }

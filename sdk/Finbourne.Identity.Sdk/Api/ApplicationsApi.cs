@@ -18,6 +18,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Finbourne.Identity.Sdk.Client;
+using Finbourne.Identity.Sdk.Extensions;
 using Finbourne.Identity.Sdk.Client.Auth;
 using Finbourne.Identity.Sdk.Model;
 
@@ -39,8 +40,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createApplicationRequest">Details of the application to be created (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>OAuthApplication</returns>
-        OAuthApplication CreateApplication(CreateApplicationRequest? createApplicationRequest = default(CreateApplicationRequest?), int operationIndex = 0);
+        OAuthApplication CreateApplication(CreateApplicationRequest? createApplicationRequest = default(CreateApplicationRequest?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EARLY ACCESS] CreateApplication: Create Application
@@ -51,8 +53,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createApplicationRequest">Details of the application to be created (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of OAuthApplication</returns>
-        ApiResponse<OAuthApplication> CreateApplicationWithHttpInfo(CreateApplicationRequest? createApplicationRequest = default(CreateApplicationRequest?), int operationIndex = 0);
+        ApiResponse<OAuthApplication> CreateApplicationWithHttpInfo(CreateApplicationRequest? createApplicationRequest = default(CreateApplicationRequest?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EARLY ACCESS] DeleteApplication: Delete Application
         /// </summary>
@@ -62,8 +65,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns></returns>
-        void DeleteApplication(string id, int operationIndex = 0);
+        void DeleteApplication(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EARLY ACCESS] DeleteApplication: Delete Application
@@ -74,8 +78,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteApplicationWithHttpInfo(string id, int operationIndex = 0);
+        ApiResponse<Object> DeleteApplicationWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GetApplication: Get Application
         /// </summary>
@@ -86,8 +91,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="includeSecret">Optional. If set to true, the application secrets will be returned in plain text (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>OAuthApplication</returns>
-        OAuthApplication GetApplication(string id, bool? includeSecret = default(bool?), int operationIndex = 0);
+        OAuthApplication GetApplication(string id, bool? includeSecret = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetApplication: Get Application
@@ -99,8 +105,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="includeSecret">Optional. If set to true, the application secrets will be returned in plain text (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of OAuthApplication</returns>
-        ApiResponse<OAuthApplication> GetApplicationWithHttpInfo(string id, bool? includeSecret = default(bool?), int operationIndex = 0);
+        ApiResponse<OAuthApplication> GetApplicationWithHttpInfo(string id, bool? includeSecret = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ListApplications: List Applications
         /// </summary>
@@ -109,8 +116,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>List&lt;OAuthApplication&gt;</returns>
-        List<OAuthApplication> ListApplications(int operationIndex = 0);
+        List<OAuthApplication> ListApplications(int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// ListApplications: List Applications
@@ -120,8 +128,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;OAuthApplication&gt;</returns>
-        ApiResponse<List<OAuthApplication>> ListApplicationsWithHttpInfo(int operationIndex = 0);
+        ApiResponse<List<OAuthApplication>> ListApplicationsWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets
         /// </summary>
@@ -131,8 +140,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>OAuthApplication</returns>
-        OAuthApplication RotateApplicationSecrets(string id, int operationIndex = 0);
+        OAuthApplication RotateApplicationSecrets(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets
@@ -143,8 +153,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of OAuthApplication</returns>
-        ApiResponse<OAuthApplication> RotateApplicationSecretsWithHttpInfo(string id, int operationIndex = 0);
+        ApiResponse<OAuthApplication> RotateApplicationSecretsWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -164,8 +175,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="createApplicationRequest">Details of the application to be created (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of OAuthApplication</returns>
-        System.Threading.Tasks.Task<OAuthApplication> CreateApplicationAsync(CreateApplicationRequest? createApplicationRequest = default(CreateApplicationRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OAuthApplication> CreateApplicationAsync(CreateApplicationRequest? createApplicationRequest = default(CreateApplicationRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EARLY ACCESS] CreateApplication: Create Application
@@ -177,8 +189,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="createApplicationRequest">Details of the application to be created (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (OAuthApplication)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthApplication>> CreateApplicationWithHttpInfoAsync(CreateApplicationRequest? createApplicationRequest = default(CreateApplicationRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OAuthApplication>> CreateApplicationWithHttpInfoAsync(CreateApplicationRequest? createApplicationRequest = default(CreateApplicationRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EARLY ACCESS] DeleteApplication: Delete Application
         /// </summary>
@@ -189,8 +202,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteApplicationAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteApplicationAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EARLY ACCESS] DeleteApplication: Delete Application
@@ -202,8 +216,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteApplicationWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteApplicationWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GetApplication: Get Application
         /// </summary>
@@ -215,8 +230,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="includeSecret">Optional. If set to true, the application secrets will be returned in plain text (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of OAuthApplication</returns>
-        System.Threading.Tasks.Task<OAuthApplication> GetApplicationAsync(string id, bool? includeSecret = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OAuthApplication> GetApplicationAsync(string id, bool? includeSecret = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetApplication: Get Application
@@ -229,8 +245,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="includeSecret">Optional. If set to true, the application secrets will be returned in plain text (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (OAuthApplication)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthApplication>> GetApplicationWithHttpInfoAsync(string id, bool? includeSecret = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OAuthApplication>> GetApplicationWithHttpInfoAsync(string id, bool? includeSecret = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ListApplications: List Applications
         /// </summary>
@@ -240,8 +257,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of List&lt;OAuthApplication&gt;</returns>
-        System.Threading.Tasks.Task<List<OAuthApplication>> ListApplicationsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<OAuthApplication>> ListApplicationsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// ListApplications: List Applications
@@ -252,8 +270,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;OAuthApplication&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<OAuthApplication>>> ListApplicationsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<OAuthApplication>>> ListApplicationsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets
         /// </summary>
@@ -264,8 +283,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of OAuthApplication</returns>
-        System.Threading.Tasks.Task<OAuthApplication> RotateApplicationSecretsAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OAuthApplication> RotateApplicationSecretsAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets
@@ -277,8 +297,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (OAuthApplication)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthApplication>> RotateApplicationSecretsWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OAuthApplication>> RotateApplicationSecretsWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 
@@ -311,9 +332,15 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns></returns>
         public ApplicationsApi(string basePath)
         {
+            var globalConfiguration = Finbourne.Identity.Sdk.Client.GlobalConfiguration.Instance;
             this.Configuration = Finbourne.Identity.Sdk.Client.Configuration.MergeConfigurations(
-                Finbourne.Identity.Sdk.Client.GlobalConfiguration.Instance,
-                new Finbourne.Identity.Sdk.Client.Configuration { BasePath = basePath }
+                globalConfiguration,
+                new Finbourne.Identity.Sdk.Client.Configuration
+                {
+                    BasePath = basePath,
+                    TimeoutMs = globalConfiguration.TimeoutMs,
+                    RateLimitRetries = globalConfiguration.RateLimitRetries
+                }
             );
             this.Client = new Finbourne.Identity.Sdk.Client.ApiClient(this.Configuration.BasePath);
             this.AsynchronousClient = new Finbourne.Identity.Sdk.Client.ApiClient(this.Configuration.BasePath);
@@ -402,10 +429,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createApplicationRequest">Details of the application to be created (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>OAuthApplication</returns>
-        public OAuthApplication CreateApplication(CreateApplicationRequest? createApplicationRequest = default(CreateApplicationRequest?), int operationIndex = 0)
+        public OAuthApplication CreateApplication(CreateApplicationRequest? createApplicationRequest = default(CreateApplicationRequest?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication> localVarResponse = CreateApplicationWithHttpInfo(createApplicationRequest);
+            Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication> localVarResponse = CreateApplicationWithHttpInfo(createApplicationRequest, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -415,10 +443,21 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createApplicationRequest">Details of the application to be created (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of OAuthApplication</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication> CreateApplicationWithHttpInfo(CreateApplicationRequest? createApplicationRequest = default(CreateApplicationRequest?), int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication> CreateApplicationWithHttpInfo(CreateApplicationRequest? createApplicationRequest = default(CreateApplicationRequest?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json",
@@ -487,10 +526,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="createApplicationRequest">Details of the application to be created (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of OAuthApplication</returns>
-        public async System.Threading.Tasks.Task<OAuthApplication> CreateApplicationAsync(CreateApplicationRequest? createApplicationRequest = default(CreateApplicationRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OAuthApplication> CreateApplicationAsync(CreateApplicationRequest? createApplicationRequest = default(CreateApplicationRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication> localVarResponse = await CreateApplicationWithHttpInfoAsync(createApplicationRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication> localVarResponse = await CreateApplicationWithHttpInfoAsync(createApplicationRequest, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -501,11 +541,22 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="createApplicationRequest">Details of the application to be created (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (OAuthApplication)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication>> CreateApplicationWithHttpInfoAsync(CreateApplicationRequest? createApplicationRequest = default(CreateApplicationRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication>> CreateApplicationWithHttpInfoAsync(CreateApplicationRequest? createApplicationRequest = default(CreateApplicationRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json", 
@@ -574,10 +625,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns></returns>
-        public void DeleteApplication(string id, int operationIndex = 0)
+        public void DeleteApplication(string id, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            DeleteApplicationWithHttpInfo(id);
+            DeleteApplicationWithHttpInfo(id, opts: opts);
         }
 
         /// <summary>
@@ -586,8 +638,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<Object> DeleteApplicationWithHttpInfo(string id, int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<Object> DeleteApplicationWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -596,6 +649,16 @@ namespace Finbourne.Identity.Sdk.Api
             }
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -660,10 +723,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteApplicationAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteApplicationAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            await DeleteApplicationWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
+            await DeleteApplicationWithHttpInfoAsync(id, operationIndex, cancellationToken, opts).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -673,8 +737,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> DeleteApplicationWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> DeleteApplicationWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -684,6 +749,16 @@ namespace Finbourne.Identity.Sdk.Api
 
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -749,10 +824,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="includeSecret">Optional. If set to true, the application secrets will be returned in plain text (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>OAuthApplication</returns>
-        public OAuthApplication GetApplication(string id, bool? includeSecret = default(bool?), int operationIndex = 0)
+        public OAuthApplication GetApplication(string id, bool? includeSecret = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication> localVarResponse = GetApplicationWithHttpInfo(id, includeSecret);
+            Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication> localVarResponse = GetApplicationWithHttpInfo(id, includeSecret, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -763,8 +839,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="includeSecret">Optional. If set to true, the application secrets will be returned in plain text (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of OAuthApplication</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication> GetApplicationWithHttpInfo(string id, bool? includeSecret = default(bool?), int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication> GetApplicationWithHttpInfo(string id, bool? includeSecret = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -773,6 +850,16 @@ namespace Finbourne.Identity.Sdk.Api
             }
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -842,10 +929,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="includeSecret">Optional. If set to true, the application secrets will be returned in plain text (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of OAuthApplication</returns>
-        public async System.Threading.Tasks.Task<OAuthApplication> GetApplicationAsync(string id, bool? includeSecret = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OAuthApplication> GetApplicationAsync(string id, bool? includeSecret = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication> localVarResponse = await GetApplicationWithHttpInfoAsync(id, includeSecret, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication> localVarResponse = await GetApplicationWithHttpInfoAsync(id, includeSecret, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -857,8 +945,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="includeSecret">Optional. If set to true, the application secrets will be returned in plain text (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (OAuthApplication)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication>> GetApplicationWithHttpInfoAsync(string id, bool? includeSecret = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication>> GetApplicationWithHttpInfoAsync(string id, bool? includeSecret = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -868,6 +957,16 @@ namespace Finbourne.Identity.Sdk.Api
 
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -935,10 +1034,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>List&lt;OAuthApplication&gt;</returns>
-        public List<OAuthApplication> ListApplications(int operationIndex = 0)
+        public List<OAuthApplication> ListApplications(int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<List<OAuthApplication>> localVarResponse = ListApplicationsWithHttpInfo();
+            Finbourne.Identity.Sdk.Client.ApiResponse<List<OAuthApplication>> localVarResponse = ListApplicationsWithHttpInfo(opts: opts);
             return localVarResponse.Data;
         }
 
@@ -947,10 +1047,21 @@ namespace Finbourne.Identity.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;OAuthApplication&gt;</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<List<OAuthApplication>> ListApplicationsWithHttpInfo(int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<List<OAuthApplication>> ListApplicationsWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1013,10 +1124,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of List&lt;OAuthApplication&gt;</returns>
-        public async System.Threading.Tasks.Task<List<OAuthApplication>> ListApplicationsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<OAuthApplication>> ListApplicationsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<List<OAuthApplication>> localVarResponse = await ListApplicationsWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Identity.Sdk.Client.ApiResponse<List<OAuthApplication>> localVarResponse = await ListApplicationsWithHttpInfoAsync(operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1026,11 +1138,22 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;OAuthApplication&gt;)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<OAuthApplication>>> ListApplicationsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<OAuthApplication>>> ListApplicationsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1094,10 +1217,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>OAuthApplication</returns>
-        public OAuthApplication RotateApplicationSecrets(string id, int operationIndex = 0)
+        public OAuthApplication RotateApplicationSecrets(string id, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication> localVarResponse = RotateApplicationSecretsWithHttpInfo(id);
+            Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication> localVarResponse = RotateApplicationSecretsWithHttpInfo(id, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -1107,8 +1231,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of OAuthApplication</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication> RotateApplicationSecretsWithHttpInfo(string id, int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication> RotateApplicationSecretsWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1117,6 +1242,16 @@ namespace Finbourne.Identity.Sdk.Api
             }
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1181,10 +1316,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of OAuthApplication</returns>
-        public async System.Threading.Tasks.Task<OAuthApplication> RotateApplicationSecretsAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OAuthApplication> RotateApplicationSecretsAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication> localVarResponse = await RotateApplicationSecretsWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication> localVarResponse = await RotateApplicationSecretsWithHttpInfoAsync(id, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1195,8 +1331,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the application</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (OAuthApplication)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication>> RotateApplicationSecretsWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<OAuthApplication>> RotateApplicationSecretsWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1206,6 +1343,16 @@ namespace Finbourne.Identity.Sdk.Api
 
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };

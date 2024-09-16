@@ -18,6 +18,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Finbourne.Identity.Sdk.Client;
+using Finbourne.Identity.Sdk.Extensions;
 using Finbourne.Identity.Sdk.Client.Auth;
 using Finbourne.Identity.Sdk.Model;
 
@@ -39,8 +40,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createApiKey">The request to create a new Personal Access Token</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>CreatedApiKey</returns>
-        CreatedApiKey CreateApiKey(CreateApiKey createApiKey, int operationIndex = 0);
+        CreatedApiKey CreateApiKey(CreateApiKey createApiKey, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// CreateApiKey: Create a Personal Access Token
@@ -51,8 +53,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createApiKey">The request to create a new Personal Access Token</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of CreatedApiKey</returns>
-        ApiResponse<CreatedApiKey> CreateApiKeyWithHttpInfo(CreateApiKey createApiKey, int operationIndex = 0);
+        ApiResponse<CreatedApiKey> CreateApiKeyWithHttpInfo(CreateApiKey createApiKey, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// DeleteApiKey: Invalidate a Personal Access Token
         /// </summary>
@@ -62,8 +65,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the Personal Access Token to delete</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiKey</returns>
-        ApiKey DeleteApiKey(string id, int operationIndex = 0);
+        ApiKey DeleteApiKey(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// DeleteApiKey: Invalidate a Personal Access Token
@@ -74,8 +78,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the Personal Access Token to delete</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ApiKey</returns>
-        ApiResponse<ApiKey> DeleteApiKeyWithHttpInfo(string id, int operationIndex = 0);
+        ApiResponse<ApiKey> DeleteApiKeyWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens.
         /// </summary>
@@ -84,8 +89,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>List&lt;ApiKey&gt;</returns>
-        List<ApiKey> ListOwnApiKeys(int operationIndex = 0);
+        List<ApiKey> ListOwnApiKeys(int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens.
@@ -95,8 +101,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;ApiKey&gt;</returns>
-        ApiResponse<List<ApiKey>> ListOwnApiKeysWithHttpInfo(int operationIndex = 0);
+        ApiResponse<List<ApiKey>> ListOwnApiKeysWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -116,8 +123,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="createApiKey">The request to create a new Personal Access Token</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of CreatedApiKey</returns>
-        System.Threading.Tasks.Task<CreatedApiKey> CreateApiKeyAsync(CreateApiKey createApiKey, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreatedApiKey> CreateApiKeyAsync(CreateApiKey createApiKey, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// CreateApiKey: Create a Personal Access Token
@@ -129,8 +137,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="createApiKey">The request to create a new Personal Access Token</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (CreatedApiKey)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreatedApiKey>> CreateApiKeyWithHttpInfoAsync(CreateApiKey createApiKey, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreatedApiKey>> CreateApiKeyWithHttpInfoAsync(CreateApiKey createApiKey, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// DeleteApiKey: Invalidate a Personal Access Token
         /// </summary>
@@ -141,8 +150,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The id of the Personal Access Token to delete</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiKey</returns>
-        System.Threading.Tasks.Task<ApiKey> DeleteApiKeyAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiKey> DeleteApiKeyAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// DeleteApiKey: Invalidate a Personal Access Token
@@ -154,8 +164,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The id of the Personal Access Token to delete</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ApiKey)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiKey>> DeleteApiKeyWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ApiKey>> DeleteApiKeyWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens.
         /// </summary>
@@ -165,8 +176,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of List&lt;ApiKey&gt;</returns>
-        System.Threading.Tasks.Task<List<ApiKey>> ListOwnApiKeysAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<ApiKey>> ListOwnApiKeysAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens.
@@ -177,8 +189,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;ApiKey&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ApiKey>>> ListOwnApiKeysWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<ApiKey>>> ListOwnApiKeysWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 
@@ -211,9 +224,15 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns></returns>
         public PersonalAuthenticationTokensApi(string basePath)
         {
+            var globalConfiguration = Finbourne.Identity.Sdk.Client.GlobalConfiguration.Instance;
             this.Configuration = Finbourne.Identity.Sdk.Client.Configuration.MergeConfigurations(
-                Finbourne.Identity.Sdk.Client.GlobalConfiguration.Instance,
-                new Finbourne.Identity.Sdk.Client.Configuration { BasePath = basePath }
+                globalConfiguration,
+                new Finbourne.Identity.Sdk.Client.Configuration
+                {
+                    BasePath = basePath,
+                    TimeoutMs = globalConfiguration.TimeoutMs,
+                    RateLimitRetries = globalConfiguration.RateLimitRetries
+                }
             );
             this.Client = new Finbourne.Identity.Sdk.Client.ApiClient(this.Configuration.BasePath);
             this.AsynchronousClient = new Finbourne.Identity.Sdk.Client.ApiClient(this.Configuration.BasePath);
@@ -302,10 +321,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createApiKey">The request to create a new Personal Access Token</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>CreatedApiKey</returns>
-        public CreatedApiKey CreateApiKey(CreateApiKey createApiKey, int operationIndex = 0)
+        public CreatedApiKey CreateApiKey(CreateApiKey createApiKey, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<CreatedApiKey> localVarResponse = CreateApiKeyWithHttpInfo(createApiKey);
+            Finbourne.Identity.Sdk.Client.ApiResponse<CreatedApiKey> localVarResponse = CreateApiKeyWithHttpInfo(createApiKey, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -315,8 +335,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createApiKey">The request to create a new Personal Access Token</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of CreatedApiKey</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<CreatedApiKey> CreateApiKeyWithHttpInfo(CreateApiKey createApiKey, int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<CreatedApiKey> CreateApiKeyWithHttpInfo(CreateApiKey createApiKey, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'createApiKey' is set
             if (createApiKey == null)
@@ -325,6 +346,16 @@ namespace Finbourne.Identity.Sdk.Api
             }
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json",
@@ -393,10 +424,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="createApiKey">The request to create a new Personal Access Token</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of CreatedApiKey</returns>
-        public async System.Threading.Tasks.Task<CreatedApiKey> CreateApiKeyAsync(CreateApiKey createApiKey, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreatedApiKey> CreateApiKeyAsync(CreateApiKey createApiKey, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<CreatedApiKey> localVarResponse = await CreateApiKeyWithHttpInfoAsync(createApiKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Identity.Sdk.Client.ApiResponse<CreatedApiKey> localVarResponse = await CreateApiKeyWithHttpInfoAsync(createApiKey, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -407,8 +439,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="createApiKey">The request to create a new Personal Access Token</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (CreatedApiKey)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<CreatedApiKey>> CreateApiKeyWithHttpInfoAsync(CreateApiKey createApiKey, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<CreatedApiKey>> CreateApiKeyWithHttpInfoAsync(CreateApiKey createApiKey, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'createApiKey' is set
             if (createApiKey == null)
@@ -418,6 +451,16 @@ namespace Finbourne.Identity.Sdk.Api
 
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json", 
@@ -486,10 +529,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the Personal Access Token to delete</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiKey</returns>
-        public ApiKey DeleteApiKey(string id, int operationIndex = 0)
+        public ApiKey DeleteApiKey(string id, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<ApiKey> localVarResponse = DeleteApiKeyWithHttpInfo(id);
+            Finbourne.Identity.Sdk.Client.ApiResponse<ApiKey> localVarResponse = DeleteApiKeyWithHttpInfo(id, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -499,8 +543,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the Personal Access Token to delete</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ApiKey</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<ApiKey> DeleteApiKeyWithHttpInfo(string id, int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<ApiKey> DeleteApiKeyWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -509,6 +554,16 @@ namespace Finbourne.Identity.Sdk.Api
             }
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -573,10 +628,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The id of the Personal Access Token to delete</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiKey</returns>
-        public async System.Threading.Tasks.Task<ApiKey> DeleteApiKeyAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ApiKey> DeleteApiKeyAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<ApiKey> localVarResponse = await DeleteApiKeyWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Identity.Sdk.Client.ApiResponse<ApiKey> localVarResponse = await DeleteApiKeyWithHttpInfoAsync(id, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -587,8 +643,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The id of the Personal Access Token to delete</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ApiKey)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<ApiKey>> DeleteApiKeyWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<ApiKey>> DeleteApiKeyWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -598,6 +655,16 @@ namespace Finbourne.Identity.Sdk.Api
 
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -661,10 +728,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>List&lt;ApiKey&gt;</returns>
-        public List<ApiKey> ListOwnApiKeys(int operationIndex = 0)
+        public List<ApiKey> ListOwnApiKeys(int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<List<ApiKey>> localVarResponse = ListOwnApiKeysWithHttpInfo();
+            Finbourne.Identity.Sdk.Client.ApiResponse<List<ApiKey>> localVarResponse = ListOwnApiKeysWithHttpInfo(opts: opts);
             return localVarResponse.Data;
         }
 
@@ -673,10 +741,21 @@ namespace Finbourne.Identity.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;ApiKey&gt;</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<List<ApiKey>> ListOwnApiKeysWithHttpInfo(int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<List<ApiKey>> ListOwnApiKeysWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -739,10 +818,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of List&lt;ApiKey&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ApiKey>> ListOwnApiKeysAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<ApiKey>> ListOwnApiKeysAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<List<ApiKey>> localVarResponse = await ListOwnApiKeysWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Identity.Sdk.Client.ApiResponse<List<ApiKey>> localVarResponse = await ListOwnApiKeysWithHttpInfoAsync(operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -752,11 +832,22 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;ApiKey&gt;)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<ApiKey>>> ListOwnApiKeysWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<ApiKey>>> ListOwnApiKeysWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };

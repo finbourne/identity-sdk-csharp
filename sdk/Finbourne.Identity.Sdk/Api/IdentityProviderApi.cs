@@ -18,6 +18,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Finbourne.Identity.Sdk.Client;
+using Finbourne.Identity.Sdk.Extensions;
 using Finbourne.Identity.Sdk.Client.Auth;
 using Finbourne.Identity.Sdk.Model;
 
@@ -40,8 +41,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="apiTokenAction">The action to take. For the API token. Defaults to \&quot;ensure\&quot; (optional)</param>
         /// <param name="oldApiTokenDeactivation">Optional deactivation date for the old API token. Only used if apiTokenAction is \&quot;regenerate\&quot; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>AddScimResponse</returns>
-        AddScimResponse AddScim(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0);
+        AddScimResponse AddScim(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// AddScim: Add SCIM
@@ -53,8 +55,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="apiTokenAction">The action to take. For the API token. Defaults to \&quot;ensure\&quot; (optional)</param>
         /// <param name="oldApiTokenDeactivation">Optional deactivation date for the old API token. Only used if apiTokenAction is \&quot;regenerate\&quot; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of AddScimResponse</returns>
-        ApiResponse<AddScimResponse> AddScimWithHttpInfo(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0);
+        ApiResponse<AddScimResponse> AddScimWithHttpInfo(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// RemoveScim: Remove SCIM
         /// </summary>
@@ -63,8 +66,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns></returns>
-        void RemoveScim(int operationIndex = 0);
+        void RemoveScim(int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// RemoveScim: Remove SCIM
@@ -74,8 +78,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RemoveScimWithHttpInfo(int operationIndex = 0);
+        ApiResponse<Object> RemoveScimWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -96,8 +101,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="oldApiTokenDeactivation">Optional deactivation date for the old API token. Only used if apiTokenAction is \&quot;regenerate\&quot; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of AddScimResponse</returns>
-        System.Threading.Tasks.Task<AddScimResponse> AddScimAsync(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AddScimResponse> AddScimAsync(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// AddScim: Add SCIM
@@ -110,8 +116,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="oldApiTokenDeactivation">Optional deactivation date for the old API token. Only used if apiTokenAction is \&quot;regenerate\&quot; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (AddScimResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AddScimResponse>> AddScimWithHttpInfoAsync(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AddScimResponse>> AddScimWithHttpInfoAsync(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// RemoveScim: Remove SCIM
         /// </summary>
@@ -121,8 +128,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task RemoveScimAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task RemoveScimAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// RemoveScim: Remove SCIM
@@ -133,8 +141,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RemoveScimWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> RemoveScimWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 
@@ -167,9 +176,15 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns></returns>
         public IdentityProviderApi(string basePath)
         {
+            var globalConfiguration = Finbourne.Identity.Sdk.Client.GlobalConfiguration.Instance;
             this.Configuration = Finbourne.Identity.Sdk.Client.Configuration.MergeConfigurations(
-                Finbourne.Identity.Sdk.Client.GlobalConfiguration.Instance,
-                new Finbourne.Identity.Sdk.Client.Configuration { BasePath = basePath }
+                globalConfiguration,
+                new Finbourne.Identity.Sdk.Client.Configuration
+                {
+                    BasePath = basePath,
+                    TimeoutMs = globalConfiguration.TimeoutMs,
+                    RateLimitRetries = globalConfiguration.RateLimitRetries
+                }
             );
             this.Client = new Finbourne.Identity.Sdk.Client.ApiClient(this.Configuration.BasePath);
             this.AsynchronousClient = new Finbourne.Identity.Sdk.Client.ApiClient(this.Configuration.BasePath);
@@ -259,10 +274,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="apiTokenAction">The action to take. For the API token. Defaults to \&quot;ensure\&quot; (optional)</param>
         /// <param name="oldApiTokenDeactivation">Optional deactivation date for the old API token. Only used if apiTokenAction is \&quot;regenerate\&quot; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>AddScimResponse</returns>
-        public AddScimResponse AddScim(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0)
+        public AddScimResponse AddScim(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<AddScimResponse> localVarResponse = AddScimWithHttpInfo(apiTokenAction, oldApiTokenDeactivation);
+            Finbourne.Identity.Sdk.Client.ApiResponse<AddScimResponse> localVarResponse = AddScimWithHttpInfo(apiTokenAction, oldApiTokenDeactivation, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -273,10 +289,21 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="apiTokenAction">The action to take. For the API token. Defaults to \&quot;ensure\&quot; (optional)</param>
         /// <param name="oldApiTokenDeactivation">Optional deactivation date for the old API token. Only used if apiTokenAction is \&quot;regenerate\&quot; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of AddScimResponse</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<AddScimResponse> AddScimWithHttpInfo(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<AddScimResponse> AddScimWithHttpInfo(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -351,10 +378,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="oldApiTokenDeactivation">Optional deactivation date for the old API token. Only used if apiTokenAction is \&quot;regenerate\&quot; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of AddScimResponse</returns>
-        public async System.Threading.Tasks.Task<AddScimResponse> AddScimAsync(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AddScimResponse> AddScimAsync(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<AddScimResponse> localVarResponse = await AddScimWithHttpInfoAsync(apiTokenAction, oldApiTokenDeactivation, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Identity.Sdk.Client.ApiResponse<AddScimResponse> localVarResponse = await AddScimWithHttpInfoAsync(apiTokenAction, oldApiTokenDeactivation, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -366,11 +394,22 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="oldApiTokenDeactivation">Optional deactivation date for the old API token. Only used if apiTokenAction is \&quot;regenerate\&quot; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (AddScimResponse)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<AddScimResponse>> AddScimWithHttpInfoAsync(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<AddScimResponse>> AddScimWithHttpInfoAsync(string? apiTokenAction = default(string?), DateTimeOffset? oldApiTokenDeactivation = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -443,10 +482,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns></returns>
-        public void RemoveScim(int operationIndex = 0)
+        public void RemoveScim(int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            RemoveScimWithHttpInfo();
+            RemoveScimWithHttpInfo(opts: opts);
         }
 
         /// <summary>
@@ -454,10 +494,21 @@ namespace Finbourne.Identity.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<Object> RemoveScimWithHttpInfo(int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<Object> RemoveScimWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -520,10 +571,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task RemoveScimAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task RemoveScimAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            await RemoveScimWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            await RemoveScimWithHttpInfoAsync(operationIndex, cancellationToken, opts).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -532,11 +584,22 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> RemoveScimWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> RemoveScimWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };

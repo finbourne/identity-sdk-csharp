@@ -48,11 +48,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<ApplicationsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<ApplicationsApi>();
             var createApplicationRequest = new CreateApplicationRequest?(); // CreateApplicationRequest? | Details of the application to be created (optional) 
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // OAuthApplication result = apiInstance.CreateApplication(createApplicationRequest, opts: opts);
+
                 // [EARLY ACCESS] CreateApplication: Create Application
                 OAuthApplication result = apiInstance.CreateApplication(createApplicationRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -151,11 +162,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<ApplicationsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<ApplicationsApi>();
             var id = "id_example";  // string | The unique identifier for the application
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.DeleteApplication(id, opts: opts);
+
                 // [EARLY ACCESS] DeleteApplication: Delete Application
                 apiInstance.DeleteApplication(id);
             }
@@ -250,12 +272,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<ApplicationsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<ApplicationsApi>();
             var id = "id_example";  // string | The unique identifier for the application
             var includeSecret = true;  // bool? | Optional. If set to true, the application secrets will be returned in plain text (optional) 
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // OAuthApplication result = apiInstance.GetApplication(id, includeSecret, opts: opts);
+
                 // GetApplication: Get Application
                 OAuthApplication result = apiInstance.GetApplication(id, includeSecret);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -356,10 +389,21 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<ApplicationsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<ApplicationsApi>();
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // List<OAuthApplication> result = apiInstance.ListApplications(opts: opts);
+
                 // ListApplications: List Applications
                 List<OAuthApplication> result = apiInstance.ListApplications();
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -453,11 +497,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<ApplicationsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<ApplicationsApi>();
             var id = "id_example";  // string | The unique identifier for the application
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // OAuthApplication result = apiInstance.RotateApplicationSecrets(id, opts: opts);
+
                 // [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets
                 OAuthApplication result = apiInstance.RotateApplicationSecrets(id);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

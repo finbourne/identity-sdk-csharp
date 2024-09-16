@@ -51,12 +51,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RolesApi>();
             var id = "id_example";  // string | The unique identifier for the Role
             var userId = "userId_example";  // string | The unique identifier for the User
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.AddUserToRole(id, userId, opts: opts);
+
                 // AddUserToRole: Add User to Role
                 apiInstance.AddUserToRole(id, userId);
             }
@@ -153,11 +164,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RolesApi>();
             var createRoleRequest = new CreateRoleRequest(); // CreateRoleRequest | Details of the role to be created
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // RoleResponse result = apiInstance.CreateRole(createRoleRequest, opts: opts);
+
                 // CreateRole: Create Role
                 RoleResponse result = apiInstance.CreateRole(createRoleRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -257,11 +279,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RolesApi>();
             var id = "id_example";  // string | The unique identifier for the role
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.DeleteRole(id, opts: opts);
+
                 // DeleteRole: Delete Role
                 apiInstance.DeleteRole(id);
             }
@@ -356,11 +389,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RolesApi>();
             var id = "id_example";  // string | The unique identifier for the role
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // RoleResponse result = apiInstance.GetRole(id, opts: opts);
+
                 // GetRole: Get Role
                 RoleResponse result = apiInstance.GetRole(id);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -460,10 +504,21 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RolesApi>();
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // List<RoleResponse> result = apiInstance.ListRoles(opts: opts);
+
                 // ListRoles: List Roles
                 List<RoleResponse> result = apiInstance.ListRoles();
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -557,11 +612,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RolesApi>();
             var id = "id_example";  // string | The unique identifier for the Role
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // List<UserResponse> result = apiInstance.ListUsersInRole(id, opts: opts);
+
                 // ListUsersInRole: Get the users in the specified role.
                 List<UserResponse> result = apiInstance.ListUsersInRole(id);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -660,12 +726,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RolesApi>();
             var id = "id_example";  // string | The unique identifier for the Role
             var userId = "userId_example";  // string | The unique identifier for the User
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.RemoveUserFromRole(id, userId, opts: opts);
+
                 // RemoveUserFromRole: Remove User from Role
                 apiInstance.RemoveUserFromRole(id, userId);
             }
@@ -762,12 +839,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RolesApi>();
             var id = "id_example";  // string | The unique identifier for the role to be updated
             var updateRoleRequest = new UpdateRoleRequest?(); // UpdateRoleRequest? | The new definition of the role (optional) 
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // RoleResponse result = apiInstance.UpdateRole(id, updateRoleRequest, opts: opts);
+
                 // UpdateRole: Update Role
                 RoleResponse result = apiInstance.UpdateRole(id, updateRoleRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

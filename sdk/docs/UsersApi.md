@@ -58,12 +58,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UsersApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
             var createUserRequest = new CreateUserRequest(); // CreateUserRequest | Details of the User to be created
             var waitForReindex = false;  // bool? | Should the request wait until the newly created User is indexed (available in List) before returning (optional)  (default to false)
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // UserResponse result = apiInstance.CreateUser(createUserRequest, waitForReindex, opts: opts);
+
                 // CreateUser: Create User
                 UserResponse result = apiInstance.CreateUser(createUserRequest, waitForReindex);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -163,12 +174,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UsersApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
             var id = "id_example";  // string | The unique identifier for the user
             var purge = true;  // bool? | Whether to purge any trace of the user from the identity provider (will affect audit) (optional) 
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.DeleteUser(id, purge, opts: opts);
+
                 // DeleteUser: Delete User
                 apiInstance.DeleteUser(id, purge);
             }
@@ -264,11 +286,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UsersApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
             var id = "id_example";  // string | The unique identifier for the User having its password reset
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // TemporaryPassword result = apiInstance.ExpirePassword(id, opts: opts);
+
                 // ExpirePassword: Reset the user's password to a temporary one
                 TemporaryPassword result = apiInstance.ExpirePassword(id);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -367,11 +400,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UsersApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
             var id = new List<string>(); // List<string> | A list of unique identifiers for the users
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ListUsersResponse result = apiInstance.FindUsersById(id, opts: opts);
+
                 // FindUsersById: Find users by id endpoint
                 ListUsersResponse result = apiInstance.FindUsersById(id);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -470,12 +514,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UsersApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
             var id = "id_example";  // string | The unique identifier for the User
             var includeRoles = true;  // bool? | Flag indicating that the users roles should be included in the response (optional) 
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // UserResponse result = apiInstance.GetUser(id, includeRoles, opts: opts);
+
                 // GetUser: Get User
                 UserResponse result = apiInstance.GetUser(id, includeRoles);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -575,10 +630,21 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UsersApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // UserSchemaResponse result = apiInstance.GetUserSchema(opts: opts);
+
                 // [EXPERIMENTAL] GetUserSchema: Get User Schema
                 UserSchemaResponse result = apiInstance.GetUserSchema();
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -672,10 +738,21 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UsersApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // List<UserResponse> result = apiInstance.ListRunnableUsers(opts: opts);
+
                 // [EARLY ACCESS] ListRunnableUsers: List Runable Users
                 List<UserResponse> result = apiInstance.ListRunnableUsers();
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -769,12 +846,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UsersApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
             var includeRoles = false;  // bool? | Flag indicating that the users roles should be included in the response (optional)  (default to false)
             var includeDeactivated = false;  // bool? | Include previously deleted (not purged) users (optional)  (default to false)
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // List<UserResponse> result = apiInstance.ListUsers(includeRoles, includeDeactivated, opts: opts);
+
                 // ListUsers: List Users
                 List<UserResponse> result = apiInstance.ListUsers(includeRoles, includeDeactivated);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -874,11 +962,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UsersApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
             var id = "id_example";  // string | The unique identifier for the User having their MFA factors reset
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.ResetFactors(id, opts: opts);
+
                 // ResetFactors: Reset MFA factors
                 apiInstance.ResetFactors(id);
             }
@@ -973,11 +1072,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UsersApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
             var id = "id_example";  // string | The unique identifier for the User having their password reset
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.ResetPassword(id, opts: opts);
+
                 // ResetPassword: Reset Password
                 apiInstance.ResetPassword(id);
             }
@@ -1072,11 +1182,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UsersApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
             var id = "id_example";  // string | The unique identifier for the User to be activated
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.SendActivationEmail(id, opts: opts);
+
                 // SendActivationEmail: Sends an activation email to the User
                 apiInstance.SendActivationEmail(id);
             }
@@ -1171,11 +1292,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UsersApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
             var id = "id_example";  // string | The unique identifier for the User to be unlocked
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.UnlockUser(id, opts: opts);
+
                 // UnlockUser: Unlock User
                 apiInstance.UnlockUser(id);
             }
@@ -1270,11 +1402,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UsersApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
             var id = "id_example";  // string | The unique identifier for the User to Unsuspend
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.UnsuspendUser(id, opts: opts);
+
                 // [EXPERIMENTAL] UnsuspendUser: Unsuspend user
                 apiInstance.UnsuspendUser(id);
             }
@@ -1369,12 +1512,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UsersApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
             var id = "id_example";  // string | The unique identifier for the User to be updated
             var updateUserRequest = new UpdateUserRequest(); // UpdateUserRequest | The new definition of the User
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // UserResponse result = apiInstance.UpdateUser(id, updateUserRequest, opts: opts);
+
                 // UpdateUser: Update User
                 UserResponse result = apiInstance.UpdateUser(id, updateUserRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1474,11 +1628,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UsersApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
             var updateUserSchemaRequest = new UpdateUserSchemaRequest(); // UpdateUserSchemaRequest | The new User Schema
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // UserSchemaResponse result = apiInstance.UpdateUserSchema(updateUserSchemaRequest, opts: opts);
+
                 // [EXPERIMENTAL] UpdateUserSchema: Update User Schema
                 UserSchemaResponse result = apiInstance.UpdateUserSchema(updateUserSchemaRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

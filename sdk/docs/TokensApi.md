@@ -44,10 +44,21 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<TokensApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<TokensApi>();
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.InvalidateToken(opts: opts);
+
                 // InvalidateToken: Invalidate current JWT token (sign out)
                 apiInstance.InvalidateToken();
             }

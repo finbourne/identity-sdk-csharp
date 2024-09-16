@@ -18,6 +18,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Finbourne.Identity.Sdk.Client;
+using Finbourne.Identity.Sdk.Extensions;
 using Finbourne.Identity.Sdk.Client.Auth;
 using Finbourne.Identity.Sdk.Model;
 
@@ -38,8 +39,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>CurrentUserResponse</returns>
-        CurrentUserResponse GetUserInfo(int operationIndex = 0);
+        CurrentUserResponse GetUserInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetUserInfo: Get User Info
@@ -49,8 +51,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of CurrentUserResponse</returns>
-        ApiResponse<CurrentUserResponse> GetUserInfoWithHttpInfo(int operationIndex = 0);
+        ApiResponse<CurrentUserResponse> GetUserInfoWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// SetPassword: Set password of current user
         /// </summary>
@@ -60,8 +63,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPassword">The request containing the new password value</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>SetPasswordResponse</returns>
-        SetPasswordResponse SetPassword(SetPassword setPassword, int operationIndex = 0);
+        SetPasswordResponse SetPassword(SetPassword setPassword, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// SetPassword: Set password of current user
@@ -72,8 +76,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPassword">The request containing the new password value</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of SetPasswordResponse</returns>
-        ApiResponse<SetPasswordResponse> SetPasswordWithHttpInfo(SetPassword setPassword, int operationIndex = 0);
+        ApiResponse<SetPasswordResponse> SetPasswordWithHttpInfo(SetPassword setPassword, int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -92,8 +97,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of CurrentUserResponse</returns>
-        System.Threading.Tasks.Task<CurrentUserResponse> GetUserInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CurrentUserResponse> GetUserInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetUserInfo: Get User Info
@@ -104,8 +110,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (CurrentUserResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CurrentUserResponse>> GetUserInfoWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CurrentUserResponse>> GetUserInfoWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// SetPassword: Set password of current user
         /// </summary>
@@ -116,8 +123,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="setPassword">The request containing the new password value</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of SetPasswordResponse</returns>
-        System.Threading.Tasks.Task<SetPasswordResponse> SetPasswordAsync(SetPassword setPassword, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SetPasswordResponse> SetPasswordAsync(SetPassword setPassword, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// SetPassword: Set password of current user
@@ -129,8 +137,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="setPassword">The request containing the new password value</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (SetPasswordResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SetPasswordResponse>> SetPasswordWithHttpInfoAsync(SetPassword setPassword, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SetPasswordResponse>> SetPasswordWithHttpInfoAsync(SetPassword setPassword, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 
@@ -163,9 +172,15 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns></returns>
         public MeApi(string basePath)
         {
+            var globalConfiguration = Finbourne.Identity.Sdk.Client.GlobalConfiguration.Instance;
             this.Configuration = Finbourne.Identity.Sdk.Client.Configuration.MergeConfigurations(
-                Finbourne.Identity.Sdk.Client.GlobalConfiguration.Instance,
-                new Finbourne.Identity.Sdk.Client.Configuration { BasePath = basePath }
+                globalConfiguration,
+                new Finbourne.Identity.Sdk.Client.Configuration
+                {
+                    BasePath = basePath,
+                    TimeoutMs = globalConfiguration.TimeoutMs,
+                    RateLimitRetries = globalConfiguration.RateLimitRetries
+                }
             );
             this.Client = new Finbourne.Identity.Sdk.Client.ApiClient(this.Configuration.BasePath);
             this.AsynchronousClient = new Finbourne.Identity.Sdk.Client.ApiClient(this.Configuration.BasePath);
@@ -253,10 +268,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>CurrentUserResponse</returns>
-        public CurrentUserResponse GetUserInfo(int operationIndex = 0)
+        public CurrentUserResponse GetUserInfo(int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<CurrentUserResponse> localVarResponse = GetUserInfoWithHttpInfo();
+            Finbourne.Identity.Sdk.Client.ApiResponse<CurrentUserResponse> localVarResponse = GetUserInfoWithHttpInfo(opts: opts);
             return localVarResponse.Data;
         }
 
@@ -265,10 +281,21 @@ namespace Finbourne.Identity.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of CurrentUserResponse</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<CurrentUserResponse> GetUserInfoWithHttpInfo(int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<CurrentUserResponse> GetUserInfoWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -331,10 +358,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of CurrentUserResponse</returns>
-        public async System.Threading.Tasks.Task<CurrentUserResponse> GetUserInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CurrentUserResponse> GetUserInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<CurrentUserResponse> localVarResponse = await GetUserInfoWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Identity.Sdk.Client.ApiResponse<CurrentUserResponse> localVarResponse = await GetUserInfoWithHttpInfoAsync(operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -344,11 +372,22 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (CurrentUserResponse)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<CurrentUserResponse>> GetUserInfoWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<CurrentUserResponse>> GetUserInfoWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -412,10 +451,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPassword">The request containing the new password value</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>SetPasswordResponse</returns>
-        public SetPasswordResponse SetPassword(SetPassword setPassword, int operationIndex = 0)
+        public SetPasswordResponse SetPassword(SetPassword setPassword, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<SetPasswordResponse> localVarResponse = SetPasswordWithHttpInfo(setPassword);
+            Finbourne.Identity.Sdk.Client.ApiResponse<SetPasswordResponse> localVarResponse = SetPasswordWithHttpInfo(setPassword, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -425,8 +465,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPassword">The request containing the new password value</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of SetPasswordResponse</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<SetPasswordResponse> SetPasswordWithHttpInfo(SetPassword setPassword, int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<SetPasswordResponse> SetPasswordWithHttpInfo(SetPassword setPassword, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'setPassword' is set
             if (setPassword == null)
@@ -435,6 +476,16 @@ namespace Finbourne.Identity.Sdk.Api
             }
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json",
@@ -503,10 +554,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="setPassword">The request containing the new password value</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of SetPasswordResponse</returns>
-        public async System.Threading.Tasks.Task<SetPasswordResponse> SetPasswordAsync(SetPassword setPassword, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SetPasswordResponse> SetPasswordAsync(SetPassword setPassword, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<SetPasswordResponse> localVarResponse = await SetPasswordWithHttpInfoAsync(setPassword, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Identity.Sdk.Client.ApiResponse<SetPasswordResponse> localVarResponse = await SetPasswordWithHttpInfoAsync(setPassword, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -517,8 +569,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="setPassword">The request containing the new password value</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (SetPasswordResponse)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<SetPasswordResponse>> SetPasswordWithHttpInfoAsync(SetPassword setPassword, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<SetPasswordResponse>> SetPasswordWithHttpInfoAsync(SetPassword setPassword, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'setPassword' is set
             if (setPassword == null)
@@ -528,6 +581,16 @@ namespace Finbourne.Identity.Sdk.Api
 
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json", 

@@ -45,10 +45,21 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<MeApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<MeApi>();
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // CurrentUserResponse result = apiInstance.GetUserInfo(opts: opts);
+
                 // GetUserInfo: Get User Info
                 CurrentUserResponse result = apiInstance.GetUserInfo();
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -142,11 +153,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<MeApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<MeApi>();
             var setPassword = new SetPassword(); // SetPassword | The request containing the new password value
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // SetPasswordResponse result = apiInstance.SetPassword(setPassword, opts: opts);
+
                 // SetPassword: Set password of current user
                 SetPasswordResponse result = apiInstance.SetPassword(setPassword);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

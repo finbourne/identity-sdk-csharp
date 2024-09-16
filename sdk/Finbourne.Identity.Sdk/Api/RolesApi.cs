@@ -18,6 +18,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Finbourne.Identity.Sdk.Client;
+using Finbourne.Identity.Sdk.Extensions;
 using Finbourne.Identity.Sdk.Client.Auth;
 using Finbourne.Identity.Sdk.Model;
 
@@ -40,8 +41,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the Role</param>
         /// <param name="userId">The unique identifier for the User</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns></returns>
-        void AddUserToRole(string id, string userId, int operationIndex = 0);
+        void AddUserToRole(string id, string userId, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// AddUserToRole: Add User to Role
@@ -53,8 +55,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the Role</param>
         /// <param name="userId">The unique identifier for the User</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> AddUserToRoleWithHttpInfo(string id, string userId, int operationIndex = 0);
+        ApiResponse<Object> AddUserToRoleWithHttpInfo(string id, string userId, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// CreateRole: Create Role
         /// </summary>
@@ -64,8 +67,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createRoleRequest">Details of the role to be created</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>RoleResponse</returns>
-        RoleResponse CreateRole(CreateRoleRequest createRoleRequest, int operationIndex = 0);
+        RoleResponse CreateRole(CreateRoleRequest createRoleRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// CreateRole: Create Role
@@ -76,8 +80,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createRoleRequest">Details of the role to be created</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of RoleResponse</returns>
-        ApiResponse<RoleResponse> CreateRoleWithHttpInfo(CreateRoleRequest createRoleRequest, int operationIndex = 0);
+        ApiResponse<RoleResponse> CreateRoleWithHttpInfo(CreateRoleRequest createRoleRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// DeleteRole: Delete Role
         /// </summary>
@@ -87,8 +92,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns></returns>
-        void DeleteRole(string id, int operationIndex = 0);
+        void DeleteRole(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// DeleteRole: Delete Role
@@ -99,8 +105,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteRoleWithHttpInfo(string id, int operationIndex = 0);
+        ApiResponse<Object> DeleteRoleWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GetRole: Get Role
         /// </summary>
@@ -110,8 +117,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>RoleResponse</returns>
-        RoleResponse GetRole(string id, int operationIndex = 0);
+        RoleResponse GetRole(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetRole: Get Role
@@ -122,8 +130,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of RoleResponse</returns>
-        ApiResponse<RoleResponse> GetRoleWithHttpInfo(string id, int operationIndex = 0);
+        ApiResponse<RoleResponse> GetRoleWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ListRoles: List Roles
         /// </summary>
@@ -132,8 +141,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>List&lt;RoleResponse&gt;</returns>
-        List<RoleResponse> ListRoles(int operationIndex = 0);
+        List<RoleResponse> ListRoles(int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// ListRoles: List Roles
@@ -143,8 +153,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;RoleResponse&gt;</returns>
-        ApiResponse<List<RoleResponse>> ListRolesWithHttpInfo(int operationIndex = 0);
+        ApiResponse<List<RoleResponse>> ListRolesWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ListUsersInRole: Get the users in the specified role.
         /// </summary>
@@ -154,8 +165,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the Role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>List&lt;UserResponse&gt;</returns>
-        List<UserResponse> ListUsersInRole(string id, int operationIndex = 0);
+        List<UserResponse> ListUsersInRole(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// ListUsersInRole: Get the users in the specified role.
@@ -166,8 +178,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the Role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;UserResponse&gt;</returns>
-        ApiResponse<List<UserResponse>> ListUsersInRoleWithHttpInfo(string id, int operationIndex = 0);
+        ApiResponse<List<UserResponse>> ListUsersInRoleWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// RemoveUserFromRole: Remove User from Role
         /// </summary>
@@ -178,8 +191,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the Role</param>
         /// <param name="userId">The unique identifier for the User</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns></returns>
-        void RemoveUserFromRole(string id, string userId, int operationIndex = 0);
+        void RemoveUserFromRole(string id, string userId, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// RemoveUserFromRole: Remove User from Role
@@ -191,8 +205,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the Role</param>
         /// <param name="userId">The unique identifier for the User</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RemoveUserFromRoleWithHttpInfo(string id, string userId, int operationIndex = 0);
+        ApiResponse<Object> RemoveUserFromRoleWithHttpInfo(string id, string userId, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// UpdateRole: Update Role
         /// </summary>
@@ -203,8 +218,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the role to be updated</param>
         /// <param name="updateRoleRequest">The new definition of the role (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>RoleResponse</returns>
-        RoleResponse UpdateRole(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0);
+        RoleResponse UpdateRole(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// UpdateRole: Update Role
@@ -216,8 +232,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the role to be updated</param>
         /// <param name="updateRoleRequest">The new definition of the role (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of RoleResponse</returns>
-        ApiResponse<RoleResponse> UpdateRoleWithHttpInfo(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0);
+        ApiResponse<RoleResponse> UpdateRoleWithHttpInfo(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -238,8 +255,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="userId">The unique identifier for the User</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task AddUserToRoleAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task AddUserToRoleAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// AddUserToRole: Add User to Role
@@ -252,8 +270,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="userId">The unique identifier for the User</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AddUserToRoleWithHttpInfoAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> AddUserToRoleWithHttpInfoAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// CreateRole: Create Role
         /// </summary>
@@ -264,8 +283,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="createRoleRequest">Details of the role to be created</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of RoleResponse</returns>
-        System.Threading.Tasks.Task<RoleResponse> CreateRoleAsync(CreateRoleRequest createRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RoleResponse> CreateRoleAsync(CreateRoleRequest createRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// CreateRole: Create Role
@@ -277,8 +297,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="createRoleRequest">Details of the role to be created</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (RoleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RoleResponse>> CreateRoleWithHttpInfoAsync(CreateRoleRequest createRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RoleResponse>> CreateRoleWithHttpInfoAsync(CreateRoleRequest createRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// DeleteRole: Delete Role
         /// </summary>
@@ -289,8 +310,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteRoleAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteRoleAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// DeleteRole: Delete Role
@@ -302,8 +324,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GetRole: Get Role
         /// </summary>
@@ -314,8 +337,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of RoleResponse</returns>
-        System.Threading.Tasks.Task<RoleResponse> GetRoleAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RoleResponse> GetRoleAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetRole: Get Role
@@ -327,8 +351,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (RoleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RoleResponse>> GetRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RoleResponse>> GetRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ListRoles: List Roles
         /// </summary>
@@ -338,8 +363,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of List&lt;RoleResponse&gt;</returns>
-        System.Threading.Tasks.Task<List<RoleResponse>> ListRolesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<RoleResponse>> ListRolesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// ListRoles: List Roles
@@ -350,8 +376,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;RoleResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<RoleResponse>>> ListRolesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<RoleResponse>>> ListRolesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ListUsersInRole: Get the users in the specified role.
         /// </summary>
@@ -362,8 +389,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the Role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of List&lt;UserResponse&gt;</returns>
-        System.Threading.Tasks.Task<List<UserResponse>> ListUsersInRoleAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<UserResponse>> ListUsersInRoleAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// ListUsersInRole: Get the users in the specified role.
@@ -375,8 +403,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the Role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;UserResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UserResponse>>> ListUsersInRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UserResponse>>> ListUsersInRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// RemoveUserFromRole: Remove User from Role
         /// </summary>
@@ -388,8 +417,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="userId">The unique identifier for the User</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task RemoveUserFromRoleAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task RemoveUserFromRoleAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// RemoveUserFromRole: Remove User from Role
@@ -402,8 +432,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="userId">The unique identifier for the User</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RemoveUserFromRoleWithHttpInfoAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> RemoveUserFromRoleWithHttpInfoAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// UpdateRole: Update Role
         /// </summary>
@@ -415,8 +446,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="updateRoleRequest">The new definition of the role (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of RoleResponse</returns>
-        System.Threading.Tasks.Task<RoleResponse> UpdateRoleAsync(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RoleResponse> UpdateRoleAsync(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// UpdateRole: Update Role
@@ -429,8 +461,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="updateRoleRequest">The new definition of the role (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (RoleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RoleResponse>> UpdateRoleWithHttpInfoAsync(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RoleResponse>> UpdateRoleWithHttpInfoAsync(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 
@@ -463,9 +496,15 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns></returns>
         public RolesApi(string basePath)
         {
+            var globalConfiguration = Finbourne.Identity.Sdk.Client.GlobalConfiguration.Instance;
             this.Configuration = Finbourne.Identity.Sdk.Client.Configuration.MergeConfigurations(
-                Finbourne.Identity.Sdk.Client.GlobalConfiguration.Instance,
-                new Finbourne.Identity.Sdk.Client.Configuration { BasePath = basePath }
+                globalConfiguration,
+                new Finbourne.Identity.Sdk.Client.Configuration
+                {
+                    BasePath = basePath,
+                    TimeoutMs = globalConfiguration.TimeoutMs,
+                    RateLimitRetries = globalConfiguration.RateLimitRetries
+                }
             );
             this.Client = new Finbourne.Identity.Sdk.Client.ApiClient(this.Configuration.BasePath);
             this.AsynchronousClient = new Finbourne.Identity.Sdk.Client.ApiClient(this.Configuration.BasePath);
@@ -555,10 +594,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the Role</param>
         /// <param name="userId">The unique identifier for the User</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns></returns>
-        public void AddUserToRole(string id, string userId, int operationIndex = 0)
+        public void AddUserToRole(string id, string userId, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            AddUserToRoleWithHttpInfo(id, userId);
+            AddUserToRoleWithHttpInfo(id, userId, opts: opts);
         }
 
         /// <summary>
@@ -568,8 +608,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the Role</param>
         /// <param name="userId">The unique identifier for the User</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<Object> AddUserToRoleWithHttpInfo(string id, string userId, int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<Object> AddUserToRoleWithHttpInfo(string id, string userId, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -584,6 +625,16 @@ namespace Finbourne.Identity.Sdk.Api
             }
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -650,10 +701,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="userId">The unique identifier for the User</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task AddUserToRoleAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task AddUserToRoleAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            await AddUserToRoleWithHttpInfoAsync(id, userId, operationIndex, cancellationToken).ConfigureAwait(false);
+            await AddUserToRoleWithHttpInfoAsync(id, userId, operationIndex, cancellationToken, opts).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -664,8 +716,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="userId">The unique identifier for the User</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> AddUserToRoleWithHttpInfoAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> AddUserToRoleWithHttpInfoAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -681,6 +734,16 @@ namespace Finbourne.Identity.Sdk.Api
 
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -746,10 +809,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createRoleRequest">Details of the role to be created</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>RoleResponse</returns>
-        public RoleResponse CreateRole(CreateRoleRequest createRoleRequest, int operationIndex = 0)
+        public RoleResponse CreateRole(CreateRoleRequest createRoleRequest, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> localVarResponse = CreateRoleWithHttpInfo(createRoleRequest);
+            Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> localVarResponse = CreateRoleWithHttpInfo(createRoleRequest, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -759,8 +823,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createRoleRequest">Details of the role to be created</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of RoleResponse</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> CreateRoleWithHttpInfo(CreateRoleRequest createRoleRequest, int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> CreateRoleWithHttpInfo(CreateRoleRequest createRoleRequest, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'createRoleRequest' is set
             if (createRoleRequest == null)
@@ -769,6 +834,16 @@ namespace Finbourne.Identity.Sdk.Api
             }
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json",
@@ -837,10 +912,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="createRoleRequest">Details of the role to be created</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of RoleResponse</returns>
-        public async System.Threading.Tasks.Task<RoleResponse> CreateRoleAsync(CreateRoleRequest createRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RoleResponse> CreateRoleAsync(CreateRoleRequest createRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> localVarResponse = await CreateRoleWithHttpInfoAsync(createRoleRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> localVarResponse = await CreateRoleWithHttpInfoAsync(createRoleRequest, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -851,8 +927,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="createRoleRequest">Details of the role to be created</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (RoleResponse)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse>> CreateRoleWithHttpInfoAsync(CreateRoleRequest createRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse>> CreateRoleWithHttpInfoAsync(CreateRoleRequest createRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'createRoleRequest' is set
             if (createRoleRequest == null)
@@ -862,6 +939,16 @@ namespace Finbourne.Identity.Sdk.Api
 
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json", 
@@ -930,10 +1017,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns></returns>
-        public void DeleteRole(string id, int operationIndex = 0)
+        public void DeleteRole(string id, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            DeleteRoleWithHttpInfo(id);
+            DeleteRoleWithHttpInfo(id, opts: opts);
         }
 
         /// <summary>
@@ -942,8 +1030,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<Object> DeleteRoleWithHttpInfo(string id, int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<Object> DeleteRoleWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -952,6 +1041,16 @@ namespace Finbourne.Identity.Sdk.Api
             }
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1016,10 +1115,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteRoleAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteRoleAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            await DeleteRoleWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
+            await DeleteRoleWithHttpInfoAsync(id, operationIndex, cancellationToken, opts).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -1029,8 +1129,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> DeleteRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> DeleteRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1040,6 +1141,16 @@ namespace Finbourne.Identity.Sdk.Api
 
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1104,10 +1215,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>RoleResponse</returns>
-        public RoleResponse GetRole(string id, int operationIndex = 0)
+        public RoleResponse GetRole(string id, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> localVarResponse = GetRoleWithHttpInfo(id);
+            Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> localVarResponse = GetRoleWithHttpInfo(id, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -1117,8 +1229,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of RoleResponse</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> GetRoleWithHttpInfo(string id, int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> GetRoleWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1127,6 +1240,16 @@ namespace Finbourne.Identity.Sdk.Api
             }
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1191,10 +1314,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of RoleResponse</returns>
-        public async System.Threading.Tasks.Task<RoleResponse> GetRoleAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RoleResponse> GetRoleAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> localVarResponse = await GetRoleWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> localVarResponse = await GetRoleWithHttpInfoAsync(id, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1205,8 +1329,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (RoleResponse)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse>> GetRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse>> GetRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1216,6 +1341,16 @@ namespace Finbourne.Identity.Sdk.Api
 
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1279,10 +1414,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>List&lt;RoleResponse&gt;</returns>
-        public List<RoleResponse> ListRoles(int operationIndex = 0)
+        public List<RoleResponse> ListRoles(int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<List<RoleResponse>> localVarResponse = ListRolesWithHttpInfo();
+            Finbourne.Identity.Sdk.Client.ApiResponse<List<RoleResponse>> localVarResponse = ListRolesWithHttpInfo(opts: opts);
             return localVarResponse.Data;
         }
 
@@ -1291,10 +1427,21 @@ namespace Finbourne.Identity.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;RoleResponse&gt;</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<List<RoleResponse>> ListRolesWithHttpInfo(int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<List<RoleResponse>> ListRolesWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1357,10 +1504,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of List&lt;RoleResponse&gt;</returns>
-        public async System.Threading.Tasks.Task<List<RoleResponse>> ListRolesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<RoleResponse>> ListRolesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<List<RoleResponse>> localVarResponse = await ListRolesWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Identity.Sdk.Client.ApiResponse<List<RoleResponse>> localVarResponse = await ListRolesWithHttpInfoAsync(operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1370,11 +1518,22 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;RoleResponse&gt;)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<RoleResponse>>> ListRolesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<RoleResponse>>> ListRolesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1438,10 +1597,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the Role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>List&lt;UserResponse&gt;</returns>
-        public List<UserResponse> ListUsersInRole(string id, int operationIndex = 0)
+        public List<UserResponse> ListUsersInRole(string id, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>> localVarResponse = ListUsersInRoleWithHttpInfo(id);
+            Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>> localVarResponse = ListUsersInRoleWithHttpInfo(id, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -1451,8 +1611,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the Role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;UserResponse&gt;</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>> ListUsersInRoleWithHttpInfo(string id, int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>> ListUsersInRoleWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1461,6 +1622,16 @@ namespace Finbourne.Identity.Sdk.Api
             }
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1525,10 +1696,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the Role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of List&lt;UserResponse&gt;</returns>
-        public async System.Threading.Tasks.Task<List<UserResponse>> ListUsersInRoleAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<UserResponse>> ListUsersInRoleAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>> localVarResponse = await ListUsersInRoleWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>> localVarResponse = await ListUsersInRoleWithHttpInfoAsync(id, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1539,8 +1711,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the Role</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;UserResponse&gt;)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>>> ListUsersInRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>>> ListUsersInRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1550,6 +1723,16 @@ namespace Finbourne.Identity.Sdk.Api
 
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1615,10 +1798,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the Role</param>
         /// <param name="userId">The unique identifier for the User</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns></returns>
-        public void RemoveUserFromRole(string id, string userId, int operationIndex = 0)
+        public void RemoveUserFromRole(string id, string userId, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            RemoveUserFromRoleWithHttpInfo(id, userId);
+            RemoveUserFromRoleWithHttpInfo(id, userId, opts: opts);
         }
 
         /// <summary>
@@ -1628,8 +1812,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the Role</param>
         /// <param name="userId">The unique identifier for the User</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<Object> RemoveUserFromRoleWithHttpInfo(string id, string userId, int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<Object> RemoveUserFromRoleWithHttpInfo(string id, string userId, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1644,6 +1829,16 @@ namespace Finbourne.Identity.Sdk.Api
             }
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1710,10 +1905,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="userId">The unique identifier for the User</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task RemoveUserFromRoleAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task RemoveUserFromRoleAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            await RemoveUserFromRoleWithHttpInfoAsync(id, userId, operationIndex, cancellationToken).ConfigureAwait(false);
+            await RemoveUserFromRoleWithHttpInfoAsync(id, userId, operationIndex, cancellationToken, opts).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -1724,8 +1920,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="userId">The unique identifier for the User</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> RemoveUserFromRoleWithHttpInfoAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> RemoveUserFromRoleWithHttpInfoAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1741,6 +1938,16 @@ namespace Finbourne.Identity.Sdk.Api
 
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1807,10 +2014,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the role to be updated</param>
         /// <param name="updateRoleRequest">The new definition of the role (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>RoleResponse</returns>
-        public RoleResponse UpdateRole(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0)
+        public RoleResponse UpdateRole(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> localVarResponse = UpdateRoleWithHttpInfo(id, updateRoleRequest);
+            Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> localVarResponse = UpdateRoleWithHttpInfo(id, updateRoleRequest, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -1821,8 +2029,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="id">The unique identifier for the role to be updated</param>
         /// <param name="updateRoleRequest">The new definition of the role (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of RoleResponse</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> UpdateRoleWithHttpInfo(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> UpdateRoleWithHttpInfo(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1831,6 +2040,16 @@ namespace Finbourne.Identity.Sdk.Api
             }
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json",
@@ -1901,10 +2120,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="updateRoleRequest">The new definition of the role (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of RoleResponse</returns>
-        public async System.Threading.Tasks.Task<RoleResponse> UpdateRoleAsync(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RoleResponse> UpdateRoleAsync(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> localVarResponse = await UpdateRoleWithHttpInfoAsync(id, updateRoleRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> localVarResponse = await UpdateRoleWithHttpInfoAsync(id, updateRoleRequest, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1916,8 +2136,9 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="updateRoleRequest">The new definition of the role (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (RoleResponse)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse>> UpdateRoleWithHttpInfoAsync(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse>> UpdateRoleWithHttpInfoAsync(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1927,6 +2148,16 @@ namespace Finbourne.Identity.Sdk.Api
 
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json", 
