@@ -40,8 +40,9 @@ namespace Finbourne.Identity.Sdk.Model
         /// <param name="emailAddress">The user&#39;s email address which may be null depending on the authentication method (required).</param>
         /// <param name="type">The type of user (e.g. Personal or Service) (required).</param>
         /// <param name="domainType">The type of domain in which the user exists.</param>
+        /// <param name="userExpiry">The user&#39;s user expiry datetime (required).</param>
         /// <param name="links">links.</param>
-        public CurrentUserResponse(string id = default(string), string emailAddress = default(string), string type = default(string), string domainType = default(string), List<Link> links = default(List<Link>))
+        public CurrentUserResponse(string id = default(string), string emailAddress = default(string), string type = default(string), string domainType = default(string), DateTimeOffset userExpiry = default(DateTimeOffset), List<Link> links = default(List<Link>))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -61,6 +62,7 @@ namespace Finbourne.Identity.Sdk.Model
                 throw new ArgumentNullException("type is a required property for CurrentUserResponse and cannot be null");
             }
             this.Type = type;
+            this.UserExpiry = userExpiry;
             this.DomainType = domainType;
             this.Links = links;
         }
@@ -94,6 +96,13 @@ namespace Finbourne.Identity.Sdk.Model
         public string DomainType { get; set; }
 
         /// <summary>
+        /// The user&#39;s user expiry datetime
+        /// </summary>
+        /// <value>The user&#39;s user expiry datetime</value>
+        [DataMember(Name = "userExpiry", IsRequired = true, EmitDefaultValue = true)]
+        public DateTimeOffset UserExpiry { get; set; }
+
+        /// <summary>
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = true)]
@@ -111,6 +120,7 @@ namespace Finbourne.Identity.Sdk.Model
             sb.Append("  EmailAddress: ").Append(EmailAddress).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  DomainType: ").Append(DomainType).Append("\n");
+            sb.Append("  UserExpiry: ").Append(UserExpiry).Append("\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -168,6 +178,11 @@ namespace Finbourne.Identity.Sdk.Model
                     this.DomainType.Equals(input.DomainType))
                 ) && 
                 (
+                    this.UserExpiry == input.UserExpiry ||
+                    (this.UserExpiry != null &&
+                    this.UserExpiry.Equals(input.UserExpiry))
+                ) && 
+                (
                     this.Links == input.Links ||
                     this.Links != null &&
                     input.Links != null &&
@@ -199,6 +214,10 @@ namespace Finbourne.Identity.Sdk.Model
                 if (this.DomainType != null)
                 {
                     hashCode = (hashCode * 59) + this.DomainType.GetHashCode();
+                }
+                if (this.UserExpiry != null)
+                {
+                    hashCode = (hashCode * 59) + this.UserExpiry.GetHashCode();
                 }
                 if (this.Links != null)
                 {
