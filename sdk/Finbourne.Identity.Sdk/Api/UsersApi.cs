@@ -17,7 +17,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Net.Mime;
-using Finbourne.Identity.Sdk.Client;
+using IApiAccessor = Finbourne.Identity.Sdk.Client.IApiAccessor;
 using Finbourne.Identity.Sdk.Extensions;
 using Finbourne.Identity.Sdk.Client.Auth;
 using Finbourne.Identity.Sdk.Model;
@@ -57,7 +57,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of UserResponse</returns>
-        ApiResponse<UserResponse> CreateUserWithHttpInfo(CreateUserRequest createUserRequest, bool? waitForReindex = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<UserResponse> CreateUserWithHttpInfo(CreateUserRequest createUserRequest, bool? waitForReindex = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// DeleteUser: Delete User
         /// </summary>
@@ -84,7 +84,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteUserWithHttpInfo(string id, bool? purge = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<Object> DeleteUserWithHttpInfo(string id, bool? purge = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ExpirePassword: Reset the user&#39;s password to a temporary one
         /// </summary>
@@ -109,7 +109,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of TemporaryPassword</returns>
-        ApiResponse<TemporaryPassword> ExpirePasswordWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<TemporaryPassword> ExpirePasswordWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// FindUsersById: Find users by id endpoint
         /// </summary>
@@ -134,7 +134,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ListUsersResponse</returns>
-        ApiResponse<ListUsersResponse> FindUsersByIdWithHttpInfo(List<string> id, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<ListUsersResponse> FindUsersByIdWithHttpInfo(List<string> id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GetUser: Get User
         /// </summary>
@@ -161,7 +161,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of UserResponse</returns>
-        ApiResponse<UserResponse> GetUserWithHttpInfo(string id, bool? includeRoles = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<UserResponse> GetUserWithHttpInfo(string id, bool? includeRoles = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetUserSchema: Get User Schema
         /// </summary>
@@ -184,7 +184,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of UserSchemaResponse</returns>
-        ApiResponse<UserSchemaResponse> GetUserSchemaWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<UserSchemaResponse> GetUserSchemaWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EARLY ACCESS] ListRunnableUsers: List Runable Users
         /// </summary>
@@ -207,7 +207,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;UserResponse&gt;</returns>
-        ApiResponse<List<UserResponse>> ListRunnableUsersWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>> ListRunnableUsersWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ListUsers: List Users
         /// </summary>
@@ -234,7 +234,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;UserResponse&gt;</returns>
-        ApiResponse<List<UserResponse>> ListUsersWithHttpInfo(bool? includeRoles = default(bool?), bool? includeDeactivated = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>> ListUsersWithHttpInfo(bool? includeRoles = default(bool?), bool? includeDeactivated = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ResetFactors: Reset MFA factors
         /// </summary>
@@ -259,7 +259,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ResetFactorsWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<Object> ResetFactorsWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ResetPassword: Reset Password
         /// </summary>
@@ -284,7 +284,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ResetPasswordWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<Object> ResetPasswordWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// SendActivationEmail: Sends an activation email to the User
         /// </summary>
@@ -309,7 +309,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> SendActivationEmailWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<Object> SendActivationEmailWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// UnlockUser: Unlock User
         /// </summary>
@@ -334,7 +334,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UnlockUserWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<Object> UnlockUserWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] UnsuspendUser: Unsuspend user
         /// </summary>
@@ -359,7 +359,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UnsuspendUserWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<Object> UnsuspendUserWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// UpdateUser: Update User
         /// </summary>
@@ -386,7 +386,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of UserResponse</returns>
-        ApiResponse<UserResponse> UpdateUserWithHttpInfo(string id, UpdateUserRequest updateUserRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<UserResponse> UpdateUserWithHttpInfo(string id, UpdateUserRequest updateUserRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] UpdateUserSchema: Update User Schema
         /// </summary>
@@ -411,7 +411,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of UserSchemaResponse</returns>
-        ApiResponse<UserSchemaResponse> UpdateUserSchemaWithHttpInfo(UpdateUserSchemaRequest updateUserSchemaRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<UserSchemaResponse> UpdateUserSchemaWithHttpInfo(UpdateUserSchemaRequest updateUserSchemaRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -449,7 +449,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (UserResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserResponse>> CreateUserWithHttpInfoAsync(CreateUserRequest createUserRequest, bool? waitForReindex = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<UserResponse>> CreateUserWithHttpInfoAsync(CreateUserRequest createUserRequest, bool? waitForReindex = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// DeleteUser: Delete User
         /// </summary>
@@ -478,7 +478,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserWithHttpInfoAsync(string id, bool? purge = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> DeleteUserWithHttpInfoAsync(string id, bool? purge = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ExpirePassword: Reset the user&#39;s password to a temporary one
         /// </summary>
@@ -505,7 +505,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (TemporaryPassword)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TemporaryPassword>> ExpirePasswordWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<TemporaryPassword>> ExpirePasswordWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// FindUsersById: Find users by id endpoint
         /// </summary>
@@ -532,7 +532,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ListUsersResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListUsersResponse>> FindUsersByIdWithHttpInfoAsync(List<string> id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<ListUsersResponse>> FindUsersByIdWithHttpInfoAsync(List<string> id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GetUser: Get User
         /// </summary>
@@ -561,7 +561,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (UserResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserResponse>> GetUserWithHttpInfoAsync(string id, bool? includeRoles = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<UserResponse>> GetUserWithHttpInfoAsync(string id, bool? includeRoles = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetUserSchema: Get User Schema
         /// </summary>
@@ -586,7 +586,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (UserSchemaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserSchemaResponse>> GetUserSchemaWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<UserSchemaResponse>> GetUserSchemaWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EARLY ACCESS] ListRunnableUsers: List Runable Users
         /// </summary>
@@ -611,7 +611,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;UserResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UserResponse>>> ListRunnableUsersWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>>> ListRunnableUsersWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ListUsers: List Users
         /// </summary>
@@ -640,7 +640,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;UserResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UserResponse>>> ListUsersWithHttpInfoAsync(bool? includeRoles = default(bool?), bool? includeDeactivated = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>>> ListUsersWithHttpInfoAsync(bool? includeRoles = default(bool?), bool? includeDeactivated = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ResetFactors: Reset MFA factors
         /// </summary>
@@ -667,7 +667,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ResetFactorsWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> ResetFactorsWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ResetPassword: Reset Password
         /// </summary>
@@ -694,7 +694,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ResetPasswordWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> ResetPasswordWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// SendActivationEmail: Sends an activation email to the User
         /// </summary>
@@ -721,7 +721,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SendActivationEmailWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> SendActivationEmailWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// UnlockUser: Unlock User
         /// </summary>
@@ -748,7 +748,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UnlockUserWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> UnlockUserWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] UnsuspendUser: Unsuspend user
         /// </summary>
@@ -775,7 +775,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UnsuspendUserWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> UnsuspendUserWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// UpdateUser: Update User
         /// </summary>
@@ -804,7 +804,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (UserResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserResponse>> UpdateUserWithHttpInfoAsync(string id, UpdateUserRequest updateUserRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<UserResponse>> UpdateUserWithHttpInfoAsync(string id, UpdateUserRequest updateUserRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] UpdateUserSchema: Update User Schema
         /// </summary>
@@ -831,7 +831,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (UserSchemaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserSchemaResponse>> UpdateUserSchemaWithHttpInfoAsync(UpdateUserSchemaRequest updateUserSchemaRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<UserSchemaResponse>> UpdateUserSchemaWithHttpInfoAsync(UpdateUserSchemaRequest updateUserSchemaRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 

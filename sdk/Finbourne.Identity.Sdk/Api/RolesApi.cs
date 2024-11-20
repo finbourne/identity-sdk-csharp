@@ -17,7 +17,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Net.Mime;
-using Finbourne.Identity.Sdk.Client;
+using IApiAccessor = Finbourne.Identity.Sdk.Client.IApiAccessor;
 using Finbourne.Identity.Sdk.Extensions;
 using Finbourne.Identity.Sdk.Client.Auth;
 using Finbourne.Identity.Sdk.Model;
@@ -57,7 +57,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> AddUserToRoleWithHttpInfo(string id, string userId, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<Object> AddUserToRoleWithHttpInfo(string id, string userId, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// CreateRole: Create Role
         /// </summary>
@@ -82,7 +82,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of RoleResponse</returns>
-        ApiResponse<RoleResponse> CreateRoleWithHttpInfo(CreateRoleRequest createRoleRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> CreateRoleWithHttpInfo(CreateRoleRequest createRoleRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// DeleteRole: Delete Role
         /// </summary>
@@ -107,7 +107,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteRoleWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<Object> DeleteRoleWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GetRole: Get Role
         /// </summary>
@@ -132,7 +132,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of RoleResponse</returns>
-        ApiResponse<RoleResponse> GetRoleWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> GetRoleWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ListRoles: List Roles
         /// </summary>
@@ -155,7 +155,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;RoleResponse&gt;</returns>
-        ApiResponse<List<RoleResponse>> ListRolesWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<List<RoleResponse>> ListRolesWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ListUsersInRole: Get the users in the specified role.
         /// </summary>
@@ -180,7 +180,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;UserResponse&gt;</returns>
-        ApiResponse<List<UserResponse>> ListUsersInRoleWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>> ListUsersInRoleWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// RemoveUserFromRole: Remove User from Role
         /// </summary>
@@ -207,7 +207,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RemoveUserFromRoleWithHttpInfo(string id, string userId, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<Object> RemoveUserFromRoleWithHttpInfo(string id, string userId, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// UpdateRole: Update Role
         /// </summary>
@@ -234,7 +234,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of RoleResponse</returns>
-        ApiResponse<RoleResponse> UpdateRoleWithHttpInfo(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> UpdateRoleWithHttpInfo(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -272,7 +272,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AddUserToRoleWithHttpInfoAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> AddUserToRoleWithHttpInfoAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// CreateRole: Create Role
         /// </summary>
@@ -299,7 +299,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (RoleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RoleResponse>> CreateRoleWithHttpInfoAsync(CreateRoleRequest createRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse>> CreateRoleWithHttpInfoAsync(CreateRoleRequest createRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// DeleteRole: Delete Role
         /// </summary>
@@ -326,7 +326,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> DeleteRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GetRole: Get Role
         /// </summary>
@@ -353,7 +353,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (RoleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RoleResponse>> GetRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse>> GetRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ListRoles: List Roles
         /// </summary>
@@ -378,7 +378,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;RoleResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<RoleResponse>>> ListRolesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<RoleResponse>>> ListRolesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ListUsersInRole: Get the users in the specified role.
         /// </summary>
@@ -405,7 +405,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;UserResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UserResponse>>> ListUsersInRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>>> ListUsersInRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// RemoveUserFromRole: Remove User from Role
         /// </summary>
@@ -434,7 +434,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RemoveUserFromRoleWithHttpInfoAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> RemoveUserFromRoleWithHttpInfoAsync(string id, string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// UpdateRole: Update Role
         /// </summary>
@@ -463,7 +463,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (RoleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RoleResponse>> UpdateRoleWithHttpInfoAsync(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse>> UpdateRoleWithHttpInfoAsync(string id, UpdateRoleRequest? updateRoleRequest = default(UpdateRoleRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 

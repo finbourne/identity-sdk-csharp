@@ -17,7 +17,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Net.Mime;
-using Finbourne.Identity.Sdk.Client;
+using IApiAccessor = Finbourne.Identity.Sdk.Client.IApiAccessor;
 using Finbourne.Identity.Sdk.Extensions;
 using Finbourne.Identity.Sdk.Client.Auth;
 using Finbourne.Identity.Sdk.Model;
@@ -53,7 +53,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of AuthenticationInformation</returns>
-        ApiResponse<AuthenticationInformation> GetAuthenticationInformationWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<AuthenticationInformation> GetAuthenticationInformationWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type
         /// </summary>
@@ -78,7 +78,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PasswordPolicyResponse</returns>
-        ApiResponse<PasswordPolicyResponse> GetPasswordPolicyWithHttpInfo(string userType, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<PasswordPolicyResponse> GetPasswordPolicyWithHttpInfo(string userType, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
         /// </summary>
@@ -105,7 +105,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;SupportAccessResponse&gt;</returns>
-        ApiResponse<List<SupportAccessResponse>> GetSupportAccessHistoryWithHttpInfo(DateTimeOffset? start = default(DateTimeOffset?), DateTimeOffset? end = default(DateTimeOffset?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<List<SupportAccessResponse>> GetSupportAccessHistoryWithHttpInfo(DateTimeOffset? start = default(DateTimeOffset?), DateTimeOffset? end = default(DateTimeOffset?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation
         /// </summary>
@@ -128,7 +128,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of SupportRolesResponse</returns>
-        ApiResponse<SupportRolesResponse> GetSupportRolesWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<SupportRolesResponse> GetSupportRolesWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GrantSupportAccess: Grants FINBOURNE support access to your account
         /// </summary>
@@ -153,7 +153,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of SupportAccessResponse</returns>
-        ApiResponse<SupportAccessResponse> GrantSupportAccessWithHttpInfo(SupportAccessRequest supportAccessRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<SupportAccessResponse> GrantSupportAccessWithHttpInfo(SupportAccessRequest supportAccessRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// InvalidateSupportAccess: Revoke any FINBOURNE support access to your account
         /// </summary>
@@ -176,7 +176,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;SupportAccessResponse&gt;</returns>
-        ApiResponse<List<SupportAccessResponse>> InvalidateSupportAccessWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<List<SupportAccessResponse>> InvalidateSupportAccessWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type
         /// </summary>
@@ -203,7 +203,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PasswordPolicyResponse</returns>
-        ApiResponse<PasswordPolicyResponse> UpdatePasswordPolicyWithHttpInfo(string userType, UpdatePasswordPolicyRequest? updatePasswordPolicyRequest = default(UpdatePasswordPolicyRequest?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<PasswordPolicyResponse> UpdatePasswordPolicyWithHttpInfo(string userType, UpdatePasswordPolicyRequest? updatePasswordPolicyRequest = default(UpdatePasswordPolicyRequest?), int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -237,7 +237,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (AuthenticationInformation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuthenticationInformation>> GetAuthenticationInformationWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<AuthenticationInformation>> GetAuthenticationInformationWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type
         /// </summary>
@@ -264,7 +264,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PasswordPolicyResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PasswordPolicyResponse>> GetPasswordPolicyWithHttpInfoAsync(string userType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<PasswordPolicyResponse>> GetPasswordPolicyWithHttpInfoAsync(string userType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
         /// </summary>
@@ -293,7 +293,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;SupportAccessResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<SupportAccessResponse>>> GetSupportAccessHistoryWithHttpInfoAsync(DateTimeOffset? start = default(DateTimeOffset?), DateTimeOffset? end = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<SupportAccessResponse>>> GetSupportAccessHistoryWithHttpInfoAsync(DateTimeOffset? start = default(DateTimeOffset?), DateTimeOffset? end = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation
         /// </summary>
@@ -318,7 +318,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (SupportRolesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SupportRolesResponse>> GetSupportRolesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<SupportRolesResponse>> GetSupportRolesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GrantSupportAccess: Grants FINBOURNE support access to your account
         /// </summary>
@@ -345,7 +345,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (SupportAccessResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SupportAccessResponse>> GrantSupportAccessWithHttpInfoAsync(SupportAccessRequest supportAccessRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<SupportAccessResponse>> GrantSupportAccessWithHttpInfoAsync(SupportAccessRequest supportAccessRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// InvalidateSupportAccess: Revoke any FINBOURNE support access to your account
         /// </summary>
@@ -370,7 +370,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;SupportAccessResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<SupportAccessResponse>>> InvalidateSupportAccessWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<SupportAccessResponse>>> InvalidateSupportAccessWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type
         /// </summary>
@@ -399,7 +399,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PasswordPolicyResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PasswordPolicyResponse>> UpdatePasswordPolicyWithHttpInfoAsync(string userType, UpdatePasswordPolicyRequest? updatePasswordPolicyRequest = default(UpdatePasswordPolicyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<PasswordPolicyResponse>> UpdatePasswordPolicyWithHttpInfoAsync(string userType, UpdatePasswordPolicyRequest? updatePasswordPolicyRequest = default(UpdatePasswordPolicyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 
