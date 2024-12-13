@@ -810,7 +810,7 @@ This endpoint does not need any parameter.
 
 <a id="listusers"></a>
 # **ListUsers**
-> List&lt;UserResponse&gt; ListUsers (bool? includeRoles = null, bool? includeDeactivated = null)
+> List&lt;UserResponse&gt; ListUsers (bool? includeDeactivated = null)
 
 ListUsers: List Users
 
@@ -855,16 +855,15 @@ namespace Examples
             // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UsersApi>();
 
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
-            var includeRoles = false;  // bool? | Flag indicating that the users roles should be included in the response (optional)  (default to false)
             var includeDeactivated = false;  // bool? | Include previously deleted (not purged) users (optional)  (default to false)
 
             try
             {
                 // uncomment the below to set overrides at the request level
-                // List<UserResponse> result = apiInstance.ListUsers(includeRoles, includeDeactivated, opts: opts);
+                // List<UserResponse> result = apiInstance.ListUsers(includeDeactivated, opts: opts);
 
                 // ListUsers: List Users
-                List<UserResponse> result = apiInstance.ListUsers(includeRoles, includeDeactivated);
+                List<UserResponse> result = apiInstance.ListUsers(includeDeactivated);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
             catch (ApiException e)
@@ -885,7 +884,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // ListUsers: List Users
-    ApiResponse<List<UserResponse>> response = apiInstance.ListUsersWithHttpInfo(includeRoles, includeDeactivated);
+    ApiResponse<List<UserResponse>> response = apiInstance.ListUsersWithHttpInfo(includeDeactivated);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
     Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
@@ -902,7 +901,6 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **includeRoles** | **bool?** | Flag indicating that the users roles should be included in the response | [optional] [default to false] |
 | **includeDeactivated** | **bool?** | Include previously deleted (not purged) users | [optional] [default to false] |
 
 ### Return type

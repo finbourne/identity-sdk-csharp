@@ -215,12 +215,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// List the available Users
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeRoles">Flag indicating that the users roles should be included in the response (optional, default to false)</param>
         /// <param name="includeDeactivated">Include previously deleted (not purged) users (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>List&lt;UserResponse&gt;</returns>
-        List<UserResponse> ListUsers(bool? includeRoles = default(bool?), bool? includeDeactivated = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        List<UserResponse> ListUsers(bool? includeDeactivated = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// ListUsers: List Users
@@ -229,12 +228,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// List the available Users
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeRoles">Flag indicating that the users roles should be included in the response (optional, default to false)</param>
         /// <param name="includeDeactivated">Include previously deleted (not purged) users (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;UserResponse&gt;</returns>
-        Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>> ListUsersWithHttpInfo(bool? includeRoles = default(bool?), bool? includeDeactivated = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>> ListUsersWithHttpInfo(bool? includeDeactivated = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ResetFactors: Reset MFA factors
         /// </summary>
@@ -619,13 +617,12 @@ namespace Finbourne.Identity.Sdk.Api
         /// List the available Users
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeRoles">Flag indicating that the users roles should be included in the response (optional, default to false)</param>
         /// <param name="includeDeactivated">Include previously deleted (not purged) users (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of List&lt;UserResponse&gt;</returns>
-        System.Threading.Tasks.Task<List<UserResponse>> ListUsersAsync(bool? includeRoles = default(bool?), bool? includeDeactivated = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<List<UserResponse>> ListUsersAsync(bool? includeDeactivated = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// ListUsers: List Users
@@ -634,13 +631,12 @@ namespace Finbourne.Identity.Sdk.Api
         /// List the available Users
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeRoles">Flag indicating that the users roles should be included in the response (optional, default to false)</param>
         /// <param name="includeDeactivated">Include previously deleted (not purged) users (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;UserResponse&gt;)</returns>
-        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>>> ListUsersWithHttpInfoAsync(bool? includeRoles = default(bool?), bool? includeDeactivated = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>>> ListUsersWithHttpInfoAsync(bool? includeDeactivated = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ResetFactors: Reset MFA factors
         /// </summary>
@@ -2365,14 +2361,13 @@ namespace Finbourne.Identity.Sdk.Api
         /// ListUsers: List Users List the available Users
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeRoles">Flag indicating that the users roles should be included in the response (optional, default to false)</param>
         /// <param name="includeDeactivated">Include previously deleted (not purged) users (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>List&lt;UserResponse&gt;</returns>
-        public List<UserResponse> ListUsers(bool? includeRoles = default(bool?), bool? includeDeactivated = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public List<UserResponse> ListUsers(bool? includeDeactivated = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>> localVarResponse = ListUsersWithHttpInfo(includeRoles, includeDeactivated, opts: opts);
+            Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>> localVarResponse = ListUsersWithHttpInfo(includeDeactivated, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -2380,12 +2375,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// ListUsers: List Users List the available Users
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeRoles">Flag indicating that the users roles should be included in the response (optional, default to false)</param>
         /// <param name="includeDeactivated">Include previously deleted (not purged) users (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;UserResponse&gt;</returns>
-        public Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>> ListUsersWithHttpInfo(bool? includeRoles = default(bool?), bool? includeDeactivated = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>> ListUsersWithHttpInfo(bool? includeDeactivated = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
 
@@ -2419,10 +2413,6 @@ namespace Finbourne.Identity.Sdk.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (includeRoles != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "includeRoles", includeRoles));
-            }
             if (includeDeactivated != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "includeDeactivated", includeDeactivated));
@@ -2466,15 +2456,14 @@ namespace Finbourne.Identity.Sdk.Api
         /// ListUsers: List Users List the available Users
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeRoles">Flag indicating that the users roles should be included in the response (optional, default to false)</param>
         /// <param name="includeDeactivated">Include previously deleted (not purged) users (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of List&lt;UserResponse&gt;</returns>
-        public async System.Threading.Tasks.Task<List<UserResponse>> ListUsersAsync(bool? includeRoles = default(bool?), bool? includeDeactivated = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<List<UserResponse>> ListUsersAsync(bool? includeDeactivated = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>> localVarResponse = await ListUsersWithHttpInfoAsync(includeRoles, includeDeactivated, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>> localVarResponse = await ListUsersWithHttpInfoAsync(includeDeactivated, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2482,13 +2471,12 @@ namespace Finbourne.Identity.Sdk.Api
         /// ListUsers: List Users List the available Users
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeRoles">Flag indicating that the users roles should be included in the response (optional, default to false)</param>
         /// <param name="includeDeactivated">Include previously deleted (not purged) users (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;UserResponse&gt;)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>>> ListUsersWithHttpInfoAsync(bool? includeRoles = default(bool?), bool? includeDeactivated = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<UserResponse>>> ListUsersWithHttpInfoAsync(bool? includeDeactivated = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
@@ -2523,10 +2511,6 @@ namespace Finbourne.Identity.Sdk.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (includeRoles != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "includeRoles", includeRoles));
-            }
             if (includeDeactivated != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "includeDeactivated", includeDeactivated));
