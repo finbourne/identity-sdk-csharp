@@ -281,8 +281,8 @@ namespace Examples
             // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<AuthenticationApi>();
 
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<AuthenticationApi>();
-            var start = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | The start expiry date to query support access requests from (optional) 
-            var end = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | The end expiry date to query support access requests to (optional) 
+            var start = DateTimeOffset.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | The start expiry date to query support access requests from (optional) 
+            var end = DateTimeOffset.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | The end expiry date to query support access requests to (optional) 
 
             try
             {

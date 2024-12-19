@@ -55,7 +55,7 @@ namespace Examples
 
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<IdentityProviderApi>();
             var apiTokenAction = "apiTokenAction_example";  // string? | The action to take. For the API token. Defaults to \"ensure\" (optional) 
-            var oldApiTokenDeactivation = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional deactivation date for the old API token. Only used if apiTokenAction is \"regenerate\" (optional) 
+            var oldApiTokenDeactivation = DateTimeOffset.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional deactivation date for the old API token. Only used if apiTokenAction is \"regenerate\" (optional) 
 
             try
             {
