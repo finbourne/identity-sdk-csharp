@@ -10,6 +10,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Sockets;
+using System.Security.Authentication;
 using System.Threading.Tasks;
 using Finbourne.Identity.Sdk.Client;
 using SdkConfiguration = Finbourne.Identity.Sdk.Client.Configuration;
@@ -36,10 +38,12 @@ namespace Finbourne.Identity.Sdk.Extensions
         /// <returns>The boolean of whether the Polly retry condition is satisfied</returns>
         public static bool GetPollyRetryCondition(ResponseBase response)
         {
-            // Retry on concurrency conflict failures
-            bool concurrencyConflictCondition = response.StatusCode == (HttpStatusCode)409;
-
-            return concurrencyConflictCondition;
+            bool isRetryableStatusCode = response.StatusCode == (HttpStatusCode)409 ||
+                                                response.StatusCode == (HttpStatusCode)503 ||
+                                                response.StatusCode == (HttpStatusCode)504;
+            bool isRetryableException = GetRetryableException(response);
+            
+            return isRetryableStatusCode || isRetryableException;
         }
 
         /// <summary>
@@ -55,8 +59,48 @@ namespace Finbourne.Identity.Sdk.Extensions
             return rateLimitHitCondition;
         }
 
-        private static void HandleRetryAction(DelegateResult<ResponseBase> result, int retryCount, Context ctx)
+        /// <summary>
+        /// Get the Polly retry condition on which to retry when exceptions are thrown.
+        /// </summary>
+        /// <param name="response">Exception object that comes from the API Client</param>
+        /// <returns>The boolean of whether the Polly retry condition is satisfied</returns>
+        private static bool GetRetryableException(ResponseBase response)
         {
+            Exception exception = response.ErrorException;
+
+            if (exception == null) return false;
+
+            var baseException = exception.GetBaseException();
+            
+            bool isRetryable = baseException is SocketException ||
+                               baseException is AuthenticationException;
+            
+            if (baseException is WebException webEx)
+            {
+                isRetryable = webEx.Status == WebExceptionStatus.NameResolutionFailure ||
+                 webEx.Status == WebExceptionStatus.ConnectFailure || // Connection failure
+                 webEx.Status == WebExceptionStatus.ReceiveFailure || // TCP receive failure
+                 webEx.Status == WebExceptionStatus.SendFailure || // TCP send failure
+                 webEx.Status == WebExceptionStatus.PipelineFailure || // Network pipeline error
+                 webEx.Status == WebExceptionStatus.TrustFailure || // SSL/TLS trust issue
+                 webEx.Status == WebExceptionStatus.ConnectionClosed; // Connection prematurely closed
+            }
+            
+            return isRetryable;
+        }
+
+        private static void HandleRetryAction(DelegateResult<ResponseBase> response, TimeSpan delay, Context ctx)
+        {
+            var message = "";
+            if (response.Result.ErrorException != null)
+            {
+                message = response.Result.ErrorException.ToString();
+                if (response.Result.ErrorException is WebException webEx)
+                    message = webEx.Status.ToString();
+            }
+            else
+                message = response.Result.StatusCode.ToString();
+            Console.WriteLine($"Retrying because of {message}. Retrying in {delay}");
         }
 
         #region Synchronous Retry Policies
@@ -95,14 +139,21 @@ namespace Finbourne.Identity.Sdk.Extensions
                         // Add logging or other logic here
                     });
 
-
         /// <summary>
         /// Define Polly retry policy for synchronous API calls.
         /// </summary>
         public static Policy<ResponseBase> DefaultRetryPolicy =>
             Policy
                 .HandleResult<ResponseBase>(GetPollyRetryCondition)
-                .Retry(retryCount: DefaultNumberOfRetries, onRetry: HandleRetryAction);
+                .WaitAndRetry(retryCount: DefaultNumberOfRetries, retryAttempt =>
+                    {
+                        var jitter = TimeSpan.FromMilliseconds(Random.Shared.Next(0, 1000));
+                        var exponentialBackoff = TimeSpan.FromTicks(Math.Min(TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)).Ticks,
+                            TimeSpan.FromSeconds(3).Ticks));
+                        return exponentialBackoff + jitter;
+
+                    },
+                    onRetry: HandleRetryAction);
 
         /// <summary>
         /// Retry policy wrap that handles rate limit codes (409) as well as the default retry policy.
@@ -132,6 +183,7 @@ namespace Finbourne.Identity.Sdk.Extensions
 
         private static void OnRetry(DelegateResult<ResponseBase> arg1, TimeSpan arg2, Context arg3)
         {
+            Console.WriteLine("Rate limit retry");
         }
 
         #endregion
@@ -163,7 +215,14 @@ namespace Finbourne.Identity.Sdk.Extensions
         public static AsyncPolicy<ResponseBase> DefaultRetryPolicyAsync =>
             Policy
                 .HandleResult<ResponseBase>(GetPollyRetryCondition)
-                .RetryAsync(retryCount: DefaultNumberOfRetries, onRetry: HandleRetryAction);
+                .WaitAndRetryAsync(retryCount: DefaultNumberOfRetries, retryAttempt =>
+                    {
+                        var jitter = TimeSpan.FromMilliseconds(Random.Shared.Next(0, 1000));
+                        var exponentialBackoff = TimeSpan.FromTicks(Math.Min(
+                            TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)).Ticks, TimeSpan.FromSeconds(3).Ticks));
+                        return exponentialBackoff + jitter;
+                    },
+                    onRetry: HandleRetryAction);
 
         /// <summary>
         /// Defines async policy for handling rate limit (429) http response codes.
