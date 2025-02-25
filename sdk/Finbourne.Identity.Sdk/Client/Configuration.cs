@@ -599,7 +599,7 @@ namespace Finbourne.Identity.Sdk.Client
             string report = "C# SDK (Finbourne.Identity.Sdk) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
-            report += "    Version of the API: 0.0.3202\n";
+            report += "    Version of the API: 0.0.3204\n";
             report += "    SDK Package Version: 2.0.0\n";
 
             return report;
