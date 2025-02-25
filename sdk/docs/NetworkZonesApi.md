@@ -4,17 +4,17 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateNetworkZone**](NetworkZonesApi.md#createnetworkzone) | **POST** /api/networkzones | [BETA] CreateNetworkZone: Creates a network zone |
-| [**DeleteNetworkZone**](NetworkZonesApi.md#deletenetworkzone) | **DELETE** /api/networkzones/{code} | [BETA] DeleteNetworkZone: Deletes a network zone |
-| [**GetNetworkZone**](NetworkZonesApi.md#getnetworkzone) | **GET** /api/networkzones/{code} | [BETA] GetNetworkZone: Retrieve a Network Zone |
-| [**ListNetworkZones**](NetworkZonesApi.md#listnetworkzones) | **GET** /api/networkzones | [BETA] ListNetworkZones: Lists all network zones for a domain |
-| [**UpdateNetworkZone**](NetworkZonesApi.md#updatenetworkzone) | **PUT** /api/networkzones/{code} | [BETA] UpdateNetworkZone: Updates an existing network zone |
+| [**CreateNetworkZone**](NetworkZonesApi.md#createnetworkzone) | **POST** /api/networkzones | [EARLY ACCESS] CreateNetworkZone: Creates a network zone |
+| [**DeleteNetworkZone**](NetworkZonesApi.md#deletenetworkzone) | **DELETE** /api/networkzones/{code} | [EARLY ACCESS] DeleteNetworkZone: Deletes a network zone |
+| [**GetNetworkZone**](NetworkZonesApi.md#getnetworkzone) | **GET** /api/networkzones/{code} | [EARLY ACCESS] GetNetworkZone: Retrieve a Network Zone |
+| [**ListNetworkZones**](NetworkZonesApi.md#listnetworkzones) | **GET** /api/networkzones | [EARLY ACCESS] ListNetworkZones: Lists all network zones for a domain |
+| [**UpdateNetworkZone**](NetworkZonesApi.md#updatenetworkzone) | **PUT** /api/networkzones/{code} | [EARLY ACCESS] UpdateNetworkZone: Updates an existing network zone |
 
 <a id="createnetworkzone"></a>
 # **CreateNetworkZone**
 > NetworkZoneDefinitionResponse CreateNetworkZone (CreateNetworkZoneRequest createNetworkZoneRequest)
 
-[BETA] CreateNetworkZone: Creates a network zone
+[EARLY ACCESS] CreateNetworkZone: Creates a network zone
 
 By default, the network zone will have its hierarchy set to last on creation.
 
@@ -64,7 +64,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // NetworkZoneDefinitionResponse result = apiInstance.CreateNetworkZone(createNetworkZoneRequest, opts: opts);
 
-                // [BETA] CreateNetworkZone: Creates a network zone
+                // [EARLY ACCESS] CreateNetworkZone: Creates a network zone
                 NetworkZoneDefinitionResponse result = apiInstance.CreateNetworkZone(createNetworkZoneRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -85,7 +85,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [BETA] CreateNetworkZone: Creates a network zone
+    // [EARLY ACCESS] CreateNetworkZone: Creates a network zone
     ApiResponse<NetworkZoneDefinitionResponse> response = apiInstance.CreateNetworkZoneWithHttpInfo(createNetworkZoneRequest);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -128,7 +128,7 @@ catch (ApiException e)
 # **DeleteNetworkZone**
 > void DeleteNetworkZone (string code)
 
-[BETA] DeleteNetworkZone: Deletes a network zone
+[EARLY ACCESS] DeleteNetworkZone: Deletes a network zone
 
 Will return a success if network zone already deleted
 
@@ -178,7 +178,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // apiInstance.DeleteNetworkZone(code, opts: opts);
 
-                // [BETA] DeleteNetworkZone: Deletes a network zone
+                // [EARLY ACCESS] DeleteNetworkZone: Deletes a network zone
                 apiInstance.DeleteNetworkZone(code);
             }
             catch (ApiException e)
@@ -198,7 +198,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [BETA] DeleteNetworkZone: Deletes a network zone
+    // [EARLY ACCESS] DeleteNetworkZone: Deletes a network zone
     apiInstance.DeleteNetworkZoneWithHttpInfo(code);
 }
 catch (ApiException e)
@@ -238,7 +238,7 @@ void (empty response body)
 # **GetNetworkZone**
 > NetworkZoneDefinitionResponse GetNetworkZone (string code)
 
-[BETA] GetNetworkZone: Retrieve a Network Zone
+[EARLY ACCESS] GetNetworkZone: Retrieve a Network Zone
 
 Retrieves a Network Zone
 
@@ -288,7 +288,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // NetworkZoneDefinitionResponse result = apiInstance.GetNetworkZone(code, opts: opts);
 
-                // [BETA] GetNetworkZone: Retrieve a Network Zone
+                // [EARLY ACCESS] GetNetworkZone: Retrieve a Network Zone
                 NetworkZoneDefinitionResponse result = apiInstance.GetNetworkZone(code);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -309,7 +309,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [BETA] GetNetworkZone: Retrieve a Network Zone
+    // [EARLY ACCESS] GetNetworkZone: Retrieve a Network Zone
     ApiResponse<NetworkZoneDefinitionResponse> response = apiInstance.GetNetworkZoneWithHttpInfo(code);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -352,7 +352,7 @@ catch (ApiException e)
 # **ListNetworkZones**
 > List&lt;NetworkZoneDefinitionResponse&gt; ListNetworkZones ()
 
-[BETA] ListNetworkZones: Lists all network zones for a domain
+[EARLY ACCESS] ListNetworkZones: Lists all network zones for a domain
 
 Lists all network zones for a domain
 
@@ -401,7 +401,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // List<NetworkZoneDefinitionResponse> result = apiInstance.ListNetworkZones(opts: opts);
 
-                // [BETA] ListNetworkZones: Lists all network zones for a domain
+                // [EARLY ACCESS] ListNetworkZones: Lists all network zones for a domain
                 List<NetworkZoneDefinitionResponse> result = apiInstance.ListNetworkZones();
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -422,7 +422,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [BETA] ListNetworkZones: Lists all network zones for a domain
+    // [EARLY ACCESS] ListNetworkZones: Lists all network zones for a domain
     ApiResponse<List<NetworkZoneDefinitionResponse>> response = apiInstance.ListNetworkZonesWithHttpInfo();
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -460,7 +460,7 @@ This endpoint does not need any parameter.
 # **UpdateNetworkZone**
 > NetworkZoneDefinitionResponse UpdateNetworkZone (string code, UpdateNetworkZoneRequest updateNetworkZoneRequest)
 
-[BETA] UpdateNetworkZone: Updates an existing network zone
+[EARLY ACCESS] UpdateNetworkZone: Updates an existing network zone
 
 Updates an existing network zone
 
@@ -511,7 +511,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // NetworkZoneDefinitionResponse result = apiInstance.UpdateNetworkZone(code, updateNetworkZoneRequest, opts: opts);
 
-                // [BETA] UpdateNetworkZone: Updates an existing network zone
+                // [EARLY ACCESS] UpdateNetworkZone: Updates an existing network zone
                 NetworkZoneDefinitionResponse result = apiInstance.UpdateNetworkZone(code, updateNetworkZoneRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -532,7 +532,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [BETA] UpdateNetworkZone: Updates an existing network zone
+    // [EARLY ACCESS] UpdateNetworkZone: Updates an existing network zone
     ApiResponse<NetworkZoneDefinitionResponse> response = apiInstance.UpdateNetworkZoneWithHttpInfo(code, updateNetworkZoneRequest);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));

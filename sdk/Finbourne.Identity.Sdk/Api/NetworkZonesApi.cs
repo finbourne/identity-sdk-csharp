@@ -32,7 +32,7 @@ namespace Finbourne.Identity.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [BETA] CreateNetworkZone: Creates a network zone
+        /// [EARLY ACCESS] CreateNetworkZone: Creates a network zone
         /// </summary>
         /// <remarks>
         /// By default, the network zone will have its hierarchy set to last on creation.
@@ -45,7 +45,7 @@ namespace Finbourne.Identity.Sdk.Api
         NetworkZoneDefinitionResponse CreateNetworkZone(CreateNetworkZoneRequest createNetworkZoneRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [BETA] CreateNetworkZone: Creates a network zone
+        /// [EARLY ACCESS] CreateNetworkZone: Creates a network zone
         /// </summary>
         /// <remarks>
         /// By default, the network zone will have its hierarchy set to last on creation.
@@ -57,7 +57,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of NetworkZoneDefinitionResponse</returns>
         Finbourne.Identity.Sdk.Client.ApiResponse<NetworkZoneDefinitionResponse> CreateNetworkZoneWithHttpInfo(CreateNetworkZoneRequest createNetworkZoneRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [BETA] DeleteNetworkZone: Deletes a network zone
+        /// [EARLY ACCESS] DeleteNetworkZone: Deletes a network zone
         /// </summary>
         /// <remarks>
         /// Will return a success if network zone already deleted
@@ -70,7 +70,7 @@ namespace Finbourne.Identity.Sdk.Api
         void DeleteNetworkZone(string code, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [BETA] DeleteNetworkZone: Deletes a network zone
+        /// [EARLY ACCESS] DeleteNetworkZone: Deletes a network zone
         /// </summary>
         /// <remarks>
         /// Will return a success if network zone already deleted
@@ -82,7 +82,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of Object(void)</returns>
         Finbourne.Identity.Sdk.Client.ApiResponse<Object> DeleteNetworkZoneWithHttpInfo(string code, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [BETA] GetNetworkZone: Retrieve a Network Zone
+        /// [EARLY ACCESS] GetNetworkZone: Retrieve a Network Zone
         /// </summary>
         /// <remarks>
         /// Retrieves a Network Zone
@@ -95,7 +95,7 @@ namespace Finbourne.Identity.Sdk.Api
         NetworkZoneDefinitionResponse GetNetworkZone(string code, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [BETA] GetNetworkZone: Retrieve a Network Zone
+        /// [EARLY ACCESS] GetNetworkZone: Retrieve a Network Zone
         /// </summary>
         /// <remarks>
         /// Retrieves a Network Zone
@@ -107,7 +107,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of NetworkZoneDefinitionResponse</returns>
         Finbourne.Identity.Sdk.Client.ApiResponse<NetworkZoneDefinitionResponse> GetNetworkZoneWithHttpInfo(string code, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [BETA] ListNetworkZones: Lists all network zones for a domain
+        /// [EARLY ACCESS] ListNetworkZones: Lists all network zones for a domain
         /// </summary>
         /// <remarks>
         /// Lists all network zones for a domain
@@ -119,7 +119,7 @@ namespace Finbourne.Identity.Sdk.Api
         List<NetworkZoneDefinitionResponse> ListNetworkZones(int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [BETA] ListNetworkZones: Lists all network zones for a domain
+        /// [EARLY ACCESS] ListNetworkZones: Lists all network zones for a domain
         /// </summary>
         /// <remarks>
         /// Lists all network zones for a domain
@@ -130,7 +130,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of List&lt;NetworkZoneDefinitionResponse&gt;</returns>
         Finbourne.Identity.Sdk.Client.ApiResponse<List<NetworkZoneDefinitionResponse>> ListNetworkZonesWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [BETA] UpdateNetworkZone: Updates an existing network zone
+        /// [EARLY ACCESS] UpdateNetworkZone: Updates an existing network zone
         /// </summary>
         /// <remarks>
         /// Updates an existing network zone
@@ -144,7 +144,7 @@ namespace Finbourne.Identity.Sdk.Api
         NetworkZoneDefinitionResponse UpdateNetworkZone(string code, UpdateNetworkZoneRequest updateNetworkZoneRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [BETA] UpdateNetworkZone: Updates an existing network zone
+        /// [EARLY ACCESS] UpdateNetworkZone: Updates an existing network zone
         /// </summary>
         /// <remarks>
         /// Updates an existing network zone
@@ -166,7 +166,7 @@ namespace Finbourne.Identity.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [BETA] CreateNetworkZone: Creates a network zone
+        /// [EARLY ACCESS] CreateNetworkZone: Creates a network zone
         /// </summary>
         /// <remarks>
         /// By default, the network zone will have its hierarchy set to last on creation.
@@ -180,7 +180,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<NetworkZoneDefinitionResponse> CreateNetworkZoneAsync(CreateNetworkZoneRequest createNetworkZoneRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [BETA] CreateNetworkZone: Creates a network zone
+        /// [EARLY ACCESS] CreateNetworkZone: Creates a network zone
         /// </summary>
         /// <remarks>
         /// By default, the network zone will have its hierarchy set to last on creation.
@@ -193,7 +193,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (NetworkZoneDefinitionResponse)</returns>
         System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<NetworkZoneDefinitionResponse>> CreateNetworkZoneWithHttpInfoAsync(CreateNetworkZoneRequest createNetworkZoneRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [BETA] DeleteNetworkZone: Deletes a network zone
+        /// [EARLY ACCESS] DeleteNetworkZone: Deletes a network zone
         /// </summary>
         /// <remarks>
         /// Will return a success if network zone already deleted
@@ -207,7 +207,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task DeleteNetworkZoneAsync(string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [BETA] DeleteNetworkZone: Deletes a network zone
+        /// [EARLY ACCESS] DeleteNetworkZone: Deletes a network zone
         /// </summary>
         /// <remarks>
         /// Will return a success if network zone already deleted
@@ -220,7 +220,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<Object>> DeleteNetworkZoneWithHttpInfoAsync(string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [BETA] GetNetworkZone: Retrieve a Network Zone
+        /// [EARLY ACCESS] GetNetworkZone: Retrieve a Network Zone
         /// </summary>
         /// <remarks>
         /// Retrieves a Network Zone
@@ -234,7 +234,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<NetworkZoneDefinitionResponse> GetNetworkZoneAsync(string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [BETA] GetNetworkZone: Retrieve a Network Zone
+        /// [EARLY ACCESS] GetNetworkZone: Retrieve a Network Zone
         /// </summary>
         /// <remarks>
         /// Retrieves a Network Zone
@@ -247,7 +247,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (NetworkZoneDefinitionResponse)</returns>
         System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<NetworkZoneDefinitionResponse>> GetNetworkZoneWithHttpInfoAsync(string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [BETA] ListNetworkZones: Lists all network zones for a domain
+        /// [EARLY ACCESS] ListNetworkZones: Lists all network zones for a domain
         /// </summary>
         /// <remarks>
         /// Lists all network zones for a domain
@@ -260,7 +260,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<List<NetworkZoneDefinitionResponse>> ListNetworkZonesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [BETA] ListNetworkZones: Lists all network zones for a domain
+        /// [EARLY ACCESS] ListNetworkZones: Lists all network zones for a domain
         /// </summary>
         /// <remarks>
         /// Lists all network zones for a domain
@@ -272,7 +272,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (List&lt;NetworkZoneDefinitionResponse&gt;)</returns>
         System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<NetworkZoneDefinitionResponse>>> ListNetworkZonesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [BETA] UpdateNetworkZone: Updates an existing network zone
+        /// [EARLY ACCESS] UpdateNetworkZone: Updates an existing network zone
         /// </summary>
         /// <remarks>
         /// Updates an existing network zone
@@ -287,7 +287,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<NetworkZoneDefinitionResponse> UpdateNetworkZoneAsync(string code, UpdateNetworkZoneRequest updateNetworkZoneRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [BETA] UpdateNetworkZone: Updates an existing network zone
+        /// [EARLY ACCESS] UpdateNetworkZone: Updates an existing network zone
         /// </summary>
         /// <remarks>
         /// Updates an existing network zone
@@ -424,7 +424,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] CreateNetworkZone: Creates a network zone By default, the network zone will have its hierarchy set to last on creation.
+        /// [EARLY ACCESS] CreateNetworkZone: Creates a network zone By default, the network zone will have its hierarchy set to last on creation.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createNetworkZoneRequest">The details of the network zone to define</param>
@@ -438,7 +438,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] CreateNetworkZone: Creates a network zone By default, the network zone will have its hierarchy set to last on creation.
+        /// [EARLY ACCESS] CreateNetworkZone: Creates a network zone By default, the network zone will have its hierarchy set to last on creation.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createNetworkZoneRequest">The details of the network zone to define</param>
@@ -526,7 +526,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] CreateNetworkZone: Creates a network zone By default, the network zone will have its hierarchy set to last on creation.
+        /// [EARLY ACCESS] CreateNetworkZone: Creates a network zone By default, the network zone will have its hierarchy set to last on creation.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createNetworkZoneRequest">The details of the network zone to define</param>
@@ -541,7 +541,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] CreateNetworkZone: Creates a network zone By default, the network zone will have its hierarchy set to last on creation.
+        /// [EARLY ACCESS] CreateNetworkZone: Creates a network zone By default, the network zone will have its hierarchy set to last on creation.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createNetworkZoneRequest">The details of the network zone to define</param>
@@ -632,7 +632,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] DeleteNetworkZone: Deletes a network zone Will return a success if network zone already deleted
+        /// [EARLY ACCESS] DeleteNetworkZone: Deletes a network zone Will return a success if network zone already deleted
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The unique identifier of the network zone to delete</param>
@@ -645,7 +645,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] DeleteNetworkZone: Deletes a network zone Will return a success if network zone already deleted
+        /// [EARLY ACCESS] DeleteNetworkZone: Deletes a network zone Will return a success if network zone already deleted
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The unique identifier of the network zone to delete</param>
@@ -729,7 +729,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] DeleteNetworkZone: Deletes a network zone Will return a success if network zone already deleted
+        /// [EARLY ACCESS] DeleteNetworkZone: Deletes a network zone Will return a success if network zone already deleted
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The unique identifier of the network zone to delete</param>
@@ -743,7 +743,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] DeleteNetworkZone: Deletes a network zone Will return a success if network zone already deleted
+        /// [EARLY ACCESS] DeleteNetworkZone: Deletes a network zone Will return a success if network zone already deleted
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The unique identifier of the network zone to delete</param>
@@ -830,7 +830,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] GetNetworkZone: Retrieve a Network Zone Retrieves a Network Zone
+        /// [EARLY ACCESS] GetNetworkZone: Retrieve a Network Zone Retrieves a Network Zone
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The unique identifier of the network zone</param>
@@ -844,7 +844,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] GetNetworkZone: Retrieve a Network Zone Retrieves a Network Zone
+        /// [EARLY ACCESS] GetNetworkZone: Retrieve a Network Zone Retrieves a Network Zone
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The unique identifier of the network zone</param>
@@ -928,7 +928,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] GetNetworkZone: Retrieve a Network Zone Retrieves a Network Zone
+        /// [EARLY ACCESS] GetNetworkZone: Retrieve a Network Zone Retrieves a Network Zone
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The unique identifier of the network zone</param>
@@ -943,7 +943,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] GetNetworkZone: Retrieve a Network Zone Retrieves a Network Zone
+        /// [EARLY ACCESS] GetNetworkZone: Retrieve a Network Zone Retrieves a Network Zone
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The unique identifier of the network zone</param>
@@ -1030,7 +1030,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] ListNetworkZones: Lists all network zones for a domain Lists all network zones for a domain
+        /// [EARLY ACCESS] ListNetworkZones: Lists all network zones for a domain Lists all network zones for a domain
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1043,7 +1043,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] ListNetworkZones: Lists all network zones for a domain Lists all network zones for a domain
+        /// [EARLY ACCESS] ListNetworkZones: Lists all network zones for a domain Lists all network zones for a domain
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1119,7 +1119,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] ListNetworkZones: Lists all network zones for a domain Lists all network zones for a domain
+        /// [EARLY ACCESS] ListNetworkZones: Lists all network zones for a domain Lists all network zones for a domain
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1133,7 +1133,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] ListNetworkZones: Lists all network zones for a domain Lists all network zones for a domain
+        /// [EARLY ACCESS] ListNetworkZones: Lists all network zones for a domain Lists all network zones for a domain
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1212,7 +1212,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] UpdateNetworkZone: Updates an existing network zone Updates an existing network zone
+        /// [EARLY ACCESS] UpdateNetworkZone: Updates an existing network zone Updates an existing network zone
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The unique identifier of the network zone</param>
@@ -1227,7 +1227,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] UpdateNetworkZone: Updates an existing network zone Updates an existing network zone
+        /// [EARLY ACCESS] UpdateNetworkZone: Updates an existing network zone Updates an existing network zone
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The unique identifier of the network zone</param>
@@ -1323,7 +1323,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] UpdateNetworkZone: Updates an existing network zone Updates an existing network zone
+        /// [EARLY ACCESS] UpdateNetworkZone: Updates an existing network zone Updates an existing network zone
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The unique identifier of the network zone</param>
@@ -1339,7 +1339,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] UpdateNetworkZone: Updates an existing network zone Updates an existing network zone
+        /// [EARLY ACCESS] UpdateNetworkZone: Updates an existing network zone Updates an existing network zone
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The unique identifier of the network zone</param>
