@@ -38,7 +38,7 @@ namespace Finbourne.Identity.Sdk.Model
         /// <param name="varInterface">varInterface.</param>
         /// <param name="authenticationStep">authenticationStep.</param>
         /// <param name="externalSessionId">externalSessionId.</param>
-        public LogAuthenticationContext(LogAuthenticationProvider authenticationProvider = default(LogAuthenticationProvider), List<LogCredentialProvider> credentialProvider = default(List<LogCredentialProvider>), List<LogCredentialType> credentialType = default(List<LogCredentialType>), LogIssuer issuer = default(LogIssuer), string varInterface = default(string), int? authenticationStep = default(int?), string externalSessionId = default(string))
+        public LogAuthenticationContext(string authenticationProvider = default(string), List<string> credentialProvider = default(List<string>), List<string> credentialType = default(List<string>), LogIssuer issuer = default(LogIssuer), string varInterface = default(string), int? authenticationStep = default(int?), string externalSessionId = default(string))
         {
             this.AuthenticationProvider = authenticationProvider;
             this.CredentialProvider = credentialProvider;
@@ -52,20 +52,20 @@ namespace Finbourne.Identity.Sdk.Model
         /// <summary>
         /// Gets or Sets AuthenticationProvider
         /// </summary>
-        [DataMember(Name = "authenticationProvider", EmitDefaultValue = false)]
-        public LogAuthenticationProvider AuthenticationProvider { get; set; }
+        [DataMember(Name = "authenticationProvider", EmitDefaultValue = true)]
+        public string AuthenticationProvider { get; set; }
 
         /// <summary>
         /// Gets or Sets CredentialProvider
         /// </summary>
         [DataMember(Name = "credentialProvider", EmitDefaultValue = true)]
-        public List<LogCredentialProvider> CredentialProvider { get; set; }
+        public List<string> CredentialProvider { get; set; }
 
         /// <summary>
         /// Gets or Sets CredentialType
         /// </summary>
         [DataMember(Name = "credentialType", EmitDefaultValue = true)]
-        public List<LogCredentialType> CredentialType { get; set; }
+        public List<string> CredentialType { get; set; }
 
         /// <summary>
         /// Gets or Sets Issuer
