@@ -1,14 +1,14 @@
-# Finbourne.Identity.Sdk.Api.SystemLogsApi
+# Finbourne.Identity.Sdk.Api.IdentityLogsApi
 
 All URIs are relative to *https://fbn-prd.lusid.com/identity*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**ListLogs**](SystemLogsApi.md#listlogs) | **GET** /api/logs | [BETA] ListLogs: Lists system logs for a domain |
+| [**ListLogs**](IdentityLogsApi.md#listlogs) | **GET** /api/logs | [BETA] ListLogs: Lists system logs for a domain |
 
 <a id="listlogs"></a>
 # **ListLogs**
-> ResourceListOfSystemLog ListLogs (DateTimeOffset? since = null, DateTimeOffset? until = null, string? after = null, string? filter = null, string? query = null, int? limit = null, string? sortOrder = null)
+> ResourceListOfSystemLog ListLogs (DateTimeOffset? oktaSince = null, DateTimeOffset? oktaUntil = null, string? oktaFilter = null, string? oktaQuery = null, int? oktaLimit = null, string? oktaSortOrder = null, string? oktaAfter = null)
 
 [BETA] ListLogs: Lists system logs for a domain
 
@@ -50,29 +50,29 @@ namespace Examples
             // opts.TimeoutMs = 30_000;
 
             // uncomment the below to use an api factory with overrides
-            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<SystemLogsApi>();
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<IdentityLogsApi>();
 
-            var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<SystemLogsApi>();
-            var since = DateTimeOffset.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Lower bound of log events published property (optional) 
-            var until = DateTimeOffset.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Upper bound of log events published property (optional) 
-            var after = "after_example";  // string? | Page token (optional) 
-            var filter = "filter_example";  // string? | Okta filter expression (optional) 
-            var query = "query_example";  // string? | Filters log events results by one or more case insensitive keywords (optional) 
-            var limit = 56;  // int? | Max number of results returned (optional) 
-            var sortOrder = "sortOrder_example";  // string? | Order of events by published property. Either ASCENDING or DESCENDING (optional) 
+            var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<IdentityLogsApi>();
+            var oktaSince = DateTimeOffset.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Lower bound of log events published property (optional) 
+            var oktaUntil = DateTimeOffset.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Upper bound of log events published property (optional) 
+            var oktaFilter = "oktaFilter_example";  // string? | Okta Page token (optional) 
+            var oktaQuery = "oktaQuery_example";  // string? | Okta filter expression (optional) 
+            var oktaLimit = 56;  // int? | Filters log events results by one or more case insensitive keywords (optional) 
+            var oktaSortOrder = "oktaSortOrder_example";  // string? | Max number of results returned (optional) 
+            var oktaAfter = "oktaAfter_example";  // string? | Order of events by published property. Either ASCENDING or DESCENDING (optional) 
 
             try
             {
                 // uncomment the below to set overrides at the request level
-                // ResourceListOfSystemLog result = apiInstance.ListLogs(since, until, after, filter, query, limit, sortOrder, opts: opts);
+                // ResourceListOfSystemLog result = apiInstance.ListLogs(oktaSince, oktaUntil, oktaFilter, oktaQuery, oktaLimit, oktaSortOrder, oktaAfter, opts: opts);
 
                 // [BETA] ListLogs: Lists system logs for a domain
-                ResourceListOfSystemLog result = apiInstance.ListLogs(since, until, after, filter, query, limit, sortOrder);
+                ResourceListOfSystemLog result = apiInstance.ListLogs(oktaSince, oktaUntil, oktaFilter, oktaQuery, oktaLimit, oktaSortOrder, oktaAfter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
             catch (ApiException e)
             {
-                Console.WriteLine("Exception when calling SystemLogsApi.ListLogs: " + e.Message);
+                Console.WriteLine("Exception when calling IdentityLogsApi.ListLogs: " + e.Message);
                 Console.WriteLine("Status Code: " + e.ErrorCode);
                 Console.WriteLine(e.StackTrace);
             }
@@ -88,14 +88,14 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // [BETA] ListLogs: Lists system logs for a domain
-    ApiResponse<ResourceListOfSystemLog> response = apiInstance.ListLogsWithHttpInfo(since, until, after, filter, query, limit, sortOrder);
+    ApiResponse<ResourceListOfSystemLog> response = apiInstance.ListLogsWithHttpInfo(oktaSince, oktaUntil, oktaFilter, oktaQuery, oktaLimit, oktaSortOrder, oktaAfter);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
     Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
 }
 catch (ApiException e)
 {
-    Console.WriteLine("Exception when calling SystemLogsApi.ListLogsWithHttpInfo: " + e.Message);
+    Console.WriteLine("Exception when calling IdentityLogsApi.ListLogsWithHttpInfo: " + e.Message);
     Console.WriteLine("Status Code: " + e.ErrorCode);
     Console.WriteLine(e.StackTrace);
 }
@@ -105,13 +105,13 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **since** | **DateTimeOffset?** | Lower bound of log events published property | [optional]  |
-| **until** | **DateTimeOffset?** | Upper bound of log events published property | [optional]  |
-| **after** | **string?** | Page token | [optional]  |
-| **filter** | **string?** | Okta filter expression | [optional]  |
-| **query** | **string?** | Filters log events results by one or more case insensitive keywords | [optional]  |
-| **limit** | **int?** | Max number of results returned | [optional]  |
-| **sortOrder** | **string?** | Order of events by published property. Either ASCENDING or DESCENDING | [optional]  |
+| **oktaSince** | **DateTimeOffset?** | Lower bound of log events published property | [optional]  |
+| **oktaUntil** | **DateTimeOffset?** | Upper bound of log events published property | [optional]  |
+| **oktaFilter** | **string?** | Okta Page token | [optional]  |
+| **oktaQuery** | **string?** | Okta filter expression | [optional]  |
+| **oktaLimit** | **int?** | Filters log events results by one or more case insensitive keywords | [optional]  |
+| **oktaSortOrder** | **string?** | Max number of results returned | [optional]  |
+| **oktaAfter** | **string?** | Order of events by published property. Either ASCENDING or DESCENDING | [optional]  |
 
 ### Return type
 
