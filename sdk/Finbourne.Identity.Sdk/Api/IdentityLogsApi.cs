@@ -40,11 +40,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
         /// <param name="oktaUntil">Upper bound of log events published property (optional)</param>
-        /// <param name="oktaFilter">Okta Page token (optional)</param>
-        /// <param name="oktaQuery">Okta filter expression (optional)</param>
-        /// <param name="oktaLimit">Filters log events results by one or more case insensitive keywords (optional)</param>
-        /// <param name="oktaSortOrder">Max number of results returned (optional)</param>
-        /// <param name="oktaAfter">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaFilter">Okta filter expression (optional)</param>
+        /// <param name="oktaQuery">Filters log events results by one or more case insensitive keywords (optional)</param>
+        /// <param name="oktaLimit">Max number of results returned (optional)</param>
+        /// <param name="oktaSortOrder">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaAfter">Okta Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfSystemLog</returns>
@@ -59,15 +59,48 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
         /// <param name="oktaUntil">Upper bound of log events published property (optional)</param>
-        /// <param name="oktaFilter">Okta Page token (optional)</param>
-        /// <param name="oktaQuery">Okta filter expression (optional)</param>
-        /// <param name="oktaLimit">Filters log events results by one or more case insensitive keywords (optional)</param>
-        /// <param name="oktaSortOrder">Max number of results returned (optional)</param>
-        /// <param name="oktaAfter">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaFilter">Okta filter expression (optional)</param>
+        /// <param name="oktaQuery">Filters log events results by one or more case insensitive keywords (optional)</param>
+        /// <param name="oktaLimit">Max number of results returned (optional)</param>
+        /// <param name="oktaSortOrder">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaAfter">Okta Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfSystemLog</returns>
         Finbourne.Identity.Sdk.Client.ApiResponse<ResourceListOfSystemLog> ListLogsWithHttpInfo(DateTimeOffset? oktaSince = default(DateTimeOffset?), DateTimeOffset? oktaUntil = default(DateTimeOffset?), string? oktaFilter = default(string?), string? oktaQuery = default(string?), int? oktaLimit = default(int?), string? oktaSortOrder = default(string?), string? oktaAfter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        /// <summary>
+        /// [BETA] ListUserLogs: Lists user logs
+        /// </summary>
+        /// <remarks>
+        /// Lists account related system logs for the calling user
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
+        /// <param name="oktaUntil">Upper bound of log events published property (optional)</param>
+        /// <param name="oktaLimit">Max number of results returned (optional)</param>
+        /// <param name="oktaSortOrder">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaAfter">Okta Page token (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>ResourceListOfSystemLog</returns>
+        ResourceListOfSystemLog ListUserLogs(DateTimeOffset? oktaSince = default(DateTimeOffset?), DateTimeOffset? oktaUntil = default(DateTimeOffset?), int? oktaLimit = default(int?), string? oktaSortOrder = default(string?), string? oktaAfter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+
+        /// <summary>
+        /// [BETA] ListUserLogs: Lists user logs
+        /// </summary>
+        /// <remarks>
+        /// Lists account related system logs for the calling user
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
+        /// <param name="oktaUntil">Upper bound of log events published property (optional)</param>
+        /// <param name="oktaLimit">Max number of results returned (optional)</param>
+        /// <param name="oktaSortOrder">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaAfter">Okta Page token (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>ApiResponse of ResourceListOfSystemLog</returns>
+        Finbourne.Identity.Sdk.Client.ApiResponse<ResourceListOfSystemLog> ListUserLogsWithHttpInfo(DateTimeOffset? oktaSince = default(DateTimeOffset?), DateTimeOffset? oktaUntil = default(DateTimeOffset?), int? oktaLimit = default(int?), string? oktaSortOrder = default(string?), string? oktaAfter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -86,11 +119,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
         /// <param name="oktaUntil">Upper bound of log events published property (optional)</param>
-        /// <param name="oktaFilter">Okta Page token (optional)</param>
-        /// <param name="oktaQuery">Okta filter expression (optional)</param>
-        /// <param name="oktaLimit">Filters log events results by one or more case insensitive keywords (optional)</param>
-        /// <param name="oktaSortOrder">Max number of results returned (optional)</param>
-        /// <param name="oktaAfter">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaFilter">Okta filter expression (optional)</param>
+        /// <param name="oktaQuery">Filters log events results by one or more case insensitive keywords (optional)</param>
+        /// <param name="oktaLimit">Max number of results returned (optional)</param>
+        /// <param name="oktaSortOrder">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaAfter">Okta Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
@@ -106,16 +139,51 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
         /// <param name="oktaUntil">Upper bound of log events published property (optional)</param>
-        /// <param name="oktaFilter">Okta Page token (optional)</param>
-        /// <param name="oktaQuery">Okta filter expression (optional)</param>
-        /// <param name="oktaLimit">Filters log events results by one or more case insensitive keywords (optional)</param>
-        /// <param name="oktaSortOrder">Max number of results returned (optional)</param>
-        /// <param name="oktaAfter">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaFilter">Okta filter expression (optional)</param>
+        /// <param name="oktaQuery">Filters log events results by one or more case insensitive keywords (optional)</param>
+        /// <param name="oktaLimit">Max number of results returned (optional)</param>
+        /// <param name="oktaSortOrder">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaAfter">Okta Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfSystemLog)</returns>
         System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<ResourceListOfSystemLog>> ListLogsWithHttpInfoAsync(DateTimeOffset? oktaSince = default(DateTimeOffset?), DateTimeOffset? oktaUntil = default(DateTimeOffset?), string? oktaFilter = default(string?), string? oktaQuery = default(string?), int? oktaLimit = default(int?), string? oktaSortOrder = default(string?), string? oktaAfter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        /// <summary>
+        /// [BETA] ListUserLogs: Lists user logs
+        /// </summary>
+        /// <remarks>
+        /// Lists account related system logs for the calling user
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
+        /// <param name="oktaUntil">Upper bound of log events published property (optional)</param>
+        /// <param name="oktaLimit">Max number of results returned (optional)</param>
+        /// <param name="oktaSortOrder">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaAfter">Okta Page token (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of ResourceListOfSystemLog</returns>
+        System.Threading.Tasks.Task<ResourceListOfSystemLog> ListUserLogsAsync(DateTimeOffset? oktaSince = default(DateTimeOffset?), DateTimeOffset? oktaUntil = default(DateTimeOffset?), int? oktaLimit = default(int?), string? oktaSortOrder = default(string?), string? oktaAfter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+
+        /// <summary>
+        /// [BETA] ListUserLogs: Lists user logs
+        /// </summary>
+        /// <remarks>
+        /// Lists account related system logs for the calling user
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
+        /// <param name="oktaUntil">Upper bound of log events published property (optional)</param>
+        /// <param name="oktaLimit">Max number of results returned (optional)</param>
+        /// <param name="oktaSortOrder">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaAfter">Okta Page token (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of ApiResponse (ResourceListOfSystemLog)</returns>
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<ResourceListOfSystemLog>> ListUserLogsWithHttpInfoAsync(DateTimeOffset? oktaSince = default(DateTimeOffset?), DateTimeOffset? oktaUntil = default(DateTimeOffset?), int? oktaLimit = default(int?), string? oktaSortOrder = default(string?), string? oktaAfter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 
@@ -245,11 +313,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
         /// <param name="oktaUntil">Upper bound of log events published property (optional)</param>
-        /// <param name="oktaFilter">Okta Page token (optional)</param>
-        /// <param name="oktaQuery">Okta filter expression (optional)</param>
-        /// <param name="oktaLimit">Filters log events results by one or more case insensitive keywords (optional)</param>
-        /// <param name="oktaSortOrder">Max number of results returned (optional)</param>
-        /// <param name="oktaAfter">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaFilter">Okta filter expression (optional)</param>
+        /// <param name="oktaQuery">Filters log events results by one or more case insensitive keywords (optional)</param>
+        /// <param name="oktaLimit">Max number of results returned (optional)</param>
+        /// <param name="oktaSortOrder">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaAfter">Okta Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfSystemLog</returns>
@@ -265,11 +333,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
         /// <param name="oktaUntil">Upper bound of log events published property (optional)</param>
-        /// <param name="oktaFilter">Okta Page token (optional)</param>
-        /// <param name="oktaQuery">Okta filter expression (optional)</param>
-        /// <param name="oktaLimit">Filters log events results by one or more case insensitive keywords (optional)</param>
-        /// <param name="oktaSortOrder">Max number of results returned (optional)</param>
-        /// <param name="oktaAfter">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaFilter">Okta filter expression (optional)</param>
+        /// <param name="oktaQuery">Filters log events results by one or more case insensitive keywords (optional)</param>
+        /// <param name="oktaLimit">Max number of results returned (optional)</param>
+        /// <param name="oktaSortOrder">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaAfter">Okta Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfSystemLog</returns>
@@ -376,11 +444,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
         /// <param name="oktaUntil">Upper bound of log events published property (optional)</param>
-        /// <param name="oktaFilter">Okta Page token (optional)</param>
-        /// <param name="oktaQuery">Okta filter expression (optional)</param>
-        /// <param name="oktaLimit">Filters log events results by one or more case insensitive keywords (optional)</param>
-        /// <param name="oktaSortOrder">Max number of results returned (optional)</param>
-        /// <param name="oktaAfter">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaFilter">Okta filter expression (optional)</param>
+        /// <param name="oktaQuery">Filters log events results by one or more case insensitive keywords (optional)</param>
+        /// <param name="oktaLimit">Max number of results returned (optional)</param>
+        /// <param name="oktaSortOrder">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaAfter">Okta Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
@@ -397,11 +465,11 @@ namespace Finbourne.Identity.Sdk.Api
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
         /// <param name="oktaUntil">Upper bound of log events published property (optional)</param>
-        /// <param name="oktaFilter">Okta Page token (optional)</param>
-        /// <param name="oktaQuery">Okta filter expression (optional)</param>
-        /// <param name="oktaLimit">Filters log events results by one or more case insensitive keywords (optional)</param>
-        /// <param name="oktaSortOrder">Max number of results returned (optional)</param>
-        /// <param name="oktaAfter">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaFilter">Okta filter expression (optional)</param>
+        /// <param name="oktaQuery">Filters log events results by one or more case insensitive keywords (optional)</param>
+        /// <param name="oktaLimit">Max number of results returned (optional)</param>
+        /// <param name="oktaSortOrder">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaAfter">Okta Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
@@ -496,6 +564,248 @@ namespace Finbourne.Identity.Sdk.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListLogs", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// [BETA] ListUserLogs: Lists user logs Lists account related system logs for the calling user
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
+        /// <param name="oktaUntil">Upper bound of log events published property (optional)</param>
+        /// <param name="oktaLimit">Max number of results returned (optional)</param>
+        /// <param name="oktaSortOrder">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaAfter">Okta Page token (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>ResourceListOfSystemLog</returns>
+        public ResourceListOfSystemLog ListUserLogs(DateTimeOffset? oktaSince = default(DateTimeOffset?), DateTimeOffset? oktaUntil = default(DateTimeOffset?), int? oktaLimit = default(int?), string? oktaSortOrder = default(string?), string? oktaAfter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        {
+            Finbourne.Identity.Sdk.Client.ApiResponse<ResourceListOfSystemLog> localVarResponse = ListUserLogsWithHttpInfo(oktaSince, oktaUntil, oktaLimit, oktaSortOrder, oktaAfter, opts: opts);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [BETA] ListUserLogs: Lists user logs Lists account related system logs for the calling user
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
+        /// <param name="oktaUntil">Upper bound of log events published property (optional)</param>
+        /// <param name="oktaLimit">Max number of results returned (optional)</param>
+        /// <param name="oktaSortOrder">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaAfter">Okta Page token (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>ApiResponse of ResourceListOfSystemLog</returns>
+        public Finbourne.Identity.Sdk.Client.ApiResponse<ResourceListOfSystemLog> ListUserLogsWithHttpInfo(DateTimeOffset? oktaSince = default(DateTimeOffset?), DateTimeOffset? oktaUntil = default(DateTimeOffset?), int? oktaLimit = default(int?), string? oktaSortOrder = default(string?), string? oktaAfter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        {
+            Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (oktaSince != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaSince", oktaSince));
+            }
+            if (oktaUntil != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaUntil", oktaUntil));
+            }
+            if (oktaLimit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaLimit", oktaLimit));
+            }
+            if (oktaSortOrder != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaSortOrder", oktaSortOrder));
+            }
+            if (oktaAfter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaAfter", oktaAfter));
+            }
+
+            localVarRequestOptions.Operation = "IdentityLogsApi.ListUserLogs";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ResourceListOfSystemLog>("/api/logs/me", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListUserLogs", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// [BETA] ListUserLogs: Lists user logs Lists account related system logs for the calling user
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
+        /// <param name="oktaUntil">Upper bound of log events published property (optional)</param>
+        /// <param name="oktaLimit">Max number of results returned (optional)</param>
+        /// <param name="oktaSortOrder">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaAfter">Okta Page token (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of ResourceListOfSystemLog</returns>
+        public async System.Threading.Tasks.Task<ResourceListOfSystemLog> ListUserLogsAsync(DateTimeOffset? oktaSince = default(DateTimeOffset?), DateTimeOffset? oktaUntil = default(DateTimeOffset?), int? oktaLimit = default(int?), string? oktaSortOrder = default(string?), string? oktaAfter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        {
+            Finbourne.Identity.Sdk.Client.ApiResponse<ResourceListOfSystemLog> localVarResponse = await ListUserLogsWithHttpInfoAsync(oktaSince, oktaUntil, oktaLimit, oktaSortOrder, oktaAfter, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [BETA] ListUserLogs: Lists user logs Lists account related system logs for the calling user
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
+        /// <param name="oktaUntil">Upper bound of log events published property (optional)</param>
+        /// <param name="oktaLimit">Max number of results returned (optional)</param>
+        /// <param name="oktaSortOrder">Order of events by published property. Either ASCENDING or DESCENDING (optional)</param>
+        /// <param name="oktaAfter">Okta Page token (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of ApiResponse (ResourceListOfSystemLog)</returns>
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<ResourceListOfSystemLog>> ListUserLogsWithHttpInfoAsync(DateTimeOffset? oktaSince = default(DateTimeOffset?), DateTimeOffset? oktaUntil = default(DateTimeOffset?), int? oktaLimit = default(int?), string? oktaSortOrder = default(string?), string? oktaAfter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        {
+
+            Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (oktaSince != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaSince", oktaSince));
+            }
+            if (oktaUntil != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaUntil", oktaUntil));
+            }
+            if (oktaLimit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaLimit", oktaLimit));
+            }
+            if (oktaSortOrder != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaSortOrder", oktaSortOrder));
+            }
+            if (oktaAfter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaAfter", oktaAfter));
+            }
+
+            localVarRequestOptions.Operation = "IdentityLogsApi.ListUserLogs";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ResourceListOfSystemLog>("/api/logs/me", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListUserLogs", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
