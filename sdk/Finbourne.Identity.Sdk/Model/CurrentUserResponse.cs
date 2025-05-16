@@ -41,8 +41,9 @@ namespace Finbourne.Identity.Sdk.Model
         /// <param name="type">The type of user (e.g. Personal or Service) (required).</param>
         /// <param name="domainType">The type of domain in which the user exists.</param>
         /// <param name="userExpiry">The user&#39;s user expiry datetime.</param>
+        /// <param name="groups">The groups this user belongs to.</param>
         /// <param name="links">links.</param>
-        public CurrentUserResponse(string id = default(string), string emailAddress = default(string), string type = default(string), string domainType = default(string), DateTimeOffset? userExpiry = default(DateTimeOffset?), List<Link> links = default(List<Link>))
+        public CurrentUserResponse(string id = default(string), string emailAddress = default(string), string type = default(string), string domainType = default(string), DateTimeOffset? userExpiry = default(DateTimeOffset?), List<string> groups = default(List<string>), List<Link> links = default(List<Link>))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -64,6 +65,7 @@ namespace Finbourne.Identity.Sdk.Model
             this.Type = type;
             this.DomainType = domainType;
             this.UserExpiry = userExpiry;
+            this.Groups = groups;
             this.Links = links;
         }
 
@@ -103,6 +105,13 @@ namespace Finbourne.Identity.Sdk.Model
         public DateTimeOffset? UserExpiry { get; set; }
 
         /// <summary>
+        /// The groups this user belongs to
+        /// </summary>
+        /// <value>The groups this user belongs to</value>
+        [DataMember(Name = "groups", EmitDefaultValue = true)]
+        public List<string> Groups { get; set; }
+
+        /// <summary>
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = true)]
@@ -121,6 +130,7 @@ namespace Finbourne.Identity.Sdk.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  DomainType: ").Append(DomainType).Append("\n");
             sb.Append("  UserExpiry: ").Append(UserExpiry).Append("\n");
+            sb.Append("  Groups: ").Append(Groups).Append("\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -183,6 +193,12 @@ namespace Finbourne.Identity.Sdk.Model
                     this.UserExpiry.Equals(input.UserExpiry))
                 ) && 
                 (
+                    this.Groups == input.Groups ||
+                    this.Groups != null &&
+                    input.Groups != null &&
+                    this.Groups.SequenceEqual(input.Groups)
+                ) && 
+                (
                     this.Links == input.Links ||
                     this.Links != null &&
                     input.Links != null &&
@@ -218,6 +234,10 @@ namespace Finbourne.Identity.Sdk.Model
                 if (this.UserExpiry != null)
                 {
                     hashCode = (hashCode * 59) + this.UserExpiry.GetHashCode();
+                }
+                if (this.Groups != null)
+                {
+                    hashCode = (hashCode * 59) + this.Groups.GetHashCode();
                 }
                 if (this.Links != null)
                 {
