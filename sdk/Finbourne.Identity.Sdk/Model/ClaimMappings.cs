@@ -36,20 +36,15 @@ namespace Finbourne.Identity.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ClaimMappings" /> class.
         /// </summary>
-        /// <param name="userId">userId (required).</param>
+        /// <param name="userId">userId.</param>
+        /// <param name="login">login.</param>
         /// <param name="email">email (required).</param>
         /// <param name="firstName">firstName (required).</param>
         /// <param name="lastName">lastName (required).</param>
         /// <param name="userType">userType (required).</param>
         /// <param name="groups">groups.</param>
-        public ClaimMappings(string userId = default(string), string email = default(string), string firstName = default(string), string lastName = default(string), string userType = default(string), string groups = default(string))
+        public ClaimMappings(string userId = default(string), string login = default(string), string email = default(string), string firstName = default(string), string lastName = default(string), string userType = default(string), string groups = default(string))
         {
-            // to ensure "userId" is required (not null)
-            if (userId == null)
-            {
-                throw new ArgumentNullException("userId is a required property for ClaimMappings and cannot be null");
-            }
-            this.UserId = userId;
             // to ensure "email" is required (not null)
             if (email == null)
             {
@@ -74,14 +69,22 @@ namespace Finbourne.Identity.Sdk.Model
                 throw new ArgumentNullException("userType is a required property for ClaimMappings and cannot be null");
             }
             this.UserType = userType;
+            this.UserId = userId;
+            this.Login = login;
             this.Groups = groups;
         }
 
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
-        [DataMember(Name = "userId", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "userId", EmitDefaultValue = true)]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Login
+        /// </summary>
+        [DataMember(Name = "login", EmitDefaultValue = true)]
+        public string Login { get; set; }
 
         /// <summary>
         /// Gets or Sets Email
@@ -122,6 +125,7 @@ namespace Finbourne.Identity.Sdk.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class ClaimMappings {\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
+            sb.Append("  Login: ").Append(Login).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
             sb.Append("  LastName: ").Append(LastName).Append("\n");
@@ -168,6 +172,11 @@ namespace Finbourne.Identity.Sdk.Model
                     this.UserId.Equals(input.UserId))
                 ) && 
                 (
+                    this.Login == input.Login ||
+                    (this.Login != null &&
+                    this.Login.Equals(input.Login))
+                ) && 
+                (
                     this.Email == input.Email ||
                     (this.Email != null &&
                     this.Email.Equals(input.Email))
@@ -207,6 +216,10 @@ namespace Finbourne.Identity.Sdk.Model
                 {
                     hashCode = (hashCode * 59) + this.UserId.GetHashCode();
                 }
+                if (this.Login != null)
+                {
+                    hashCode = (hashCode * 59) + this.Login.GetHashCode();
+                }
                 if (this.Email != null)
                 {
                     hashCode = (hashCode * 59) + this.Email.GetHashCode();
@@ -238,12 +251,6 @@ namespace Finbourne.Identity.Sdk.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // UserId (string) minLength
-            if (this.UserId != null && this.UserId.Length < 1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for UserId, length must be greater than 1.", new [] { "UserId" });
-            }
-
             // Email (string) minLength
             if (this.Email != null && this.Email.Length < 1)
             {
