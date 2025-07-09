@@ -55,7 +55,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of AuthenticationInformation</returns>
         Finbourne.Identity.Sdk.Client.ApiResponse<AuthenticationInformation> GetAuthenticationInformationWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type
+        /// GetPasswordPolicy: Gets password policy for a user type
         /// </summary>
         /// <remarks>
         /// Get the password policy for a given user type
@@ -68,7 +68,7 @@ namespace Finbourne.Identity.Sdk.Api
         PasswordPolicyResponse GetPasswordPolicy(string userType, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type
+        /// GetPasswordPolicy: Gets password policy for a user type
         /// </summary>
         /// <remarks>
         /// Get the password policy for a given user type
@@ -178,7 +178,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of List&lt;SupportAccessResponse&gt;</returns>
         Finbourne.Identity.Sdk.Client.ApiResponse<List<SupportAccessResponse>> InvalidateSupportAccessWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type
+        /// UpdatePasswordPolicy: Updates password policy for a user type
         /// </summary>
         /// <remarks>
         /// Update the password policy for a given user type
@@ -192,7 +192,7 @@ namespace Finbourne.Identity.Sdk.Api
         PasswordPolicyResponse UpdatePasswordPolicy(string userType, UpdatePasswordPolicyRequest? updatePasswordPolicyRequest = default(UpdatePasswordPolicyRequest?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type
+        /// UpdatePasswordPolicy: Updates password policy for a user type
         /// </summary>
         /// <remarks>
         /// Update the password policy for a given user type
@@ -239,7 +239,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (AuthenticationInformation)</returns>
         System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<AuthenticationInformation>> GetAuthenticationInformationWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type
+        /// GetPasswordPolicy: Gets password policy for a user type
         /// </summary>
         /// <remarks>
         /// Get the password policy for a given user type
@@ -253,7 +253,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<PasswordPolicyResponse> GetPasswordPolicyAsync(string userType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type
+        /// GetPasswordPolicy: Gets password policy for a user type
         /// </summary>
         /// <remarks>
         /// Get the password policy for a given user type
@@ -372,7 +372,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (List&lt;SupportAccessResponse&gt;)</returns>
         System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<List<SupportAccessResponse>>> InvalidateSupportAccessWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type
+        /// UpdatePasswordPolicy: Updates password policy for a user type
         /// </summary>
         /// <remarks>
         /// Update the password policy for a given user type
@@ -387,7 +387,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<PasswordPolicyResponse> UpdatePasswordPolicyAsync(string userType, UpdatePasswordPolicyRequest? updatePasswordPolicyRequest = default(UpdatePasswordPolicyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type
+        /// UpdatePasswordPolicy: Updates password policy for a user type
         /// </summary>
         /// <remarks>
         /// Update the password policy for a given user type
@@ -706,7 +706,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type Get the password policy for a given user type
+        /// GetPasswordPolicy: Gets password policy for a user type Get the password policy for a given user type
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userType">The type of user (should only be personal or service)</param>
@@ -720,7 +720,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type Get the password policy for a given user type
+        /// GetPasswordPolicy: Gets password policy for a user type Get the password policy for a given user type
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userType">The type of user (should only be personal or service)</param>
@@ -804,7 +804,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type Get the password policy for a given user type
+        /// GetPasswordPolicy: Gets password policy for a user type Get the password policy for a given user type
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userType">The type of user (should only be personal or service)</param>
@@ -819,7 +819,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type Get the password policy for a given user type
+        /// GetPasswordPolicy: Gets password policy for a user type Get the password policy for a given user type
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userType">The type of user (should only be personal or service)</param>
@@ -1684,7 +1684,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type Update the password policy for a given user type
+        /// UpdatePasswordPolicy: Updates password policy for a user type Update the password policy for a given user type
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userType">The type of user (should only be personal or service)</param>
@@ -1699,7 +1699,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type Update the password policy for a given user type
+        /// UpdatePasswordPolicy: Updates password policy for a user type Update the password policy for a given user type
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userType">The type of user (should only be personal or service)</param>
@@ -1789,7 +1789,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type Update the password policy for a given user type
+        /// UpdatePasswordPolicy: Updates password policy for a user type Update the password policy for a given user type
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userType">The type of user (should only be personal or service)</param>
@@ -1805,7 +1805,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type Update the password policy for a given user type
+        /// UpdatePasswordPolicy: Updates password policy for a user type Update the password policy for a given user type
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userType">The type of user (should only be personal or service)</param>

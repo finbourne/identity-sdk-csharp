@@ -5,12 +5,12 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
 | [**GetAuthenticationInformation**](AuthenticationApi.md#getauthenticationinformation) | **GET** /api/authentication/information | GetAuthenticationInformation: Gets AuthenticationInformation |
-| [**GetPasswordPolicy**](AuthenticationApi.md#getpasswordpolicy) | **GET** /api/authentication/password-policy/{userType} | [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type |
+| [**GetPasswordPolicy**](AuthenticationApi.md#getpasswordpolicy) | **GET** /api/authentication/password-policy/{userType} | GetPasswordPolicy: Gets password policy for a user type |
 | [**GetSupportAccessHistory**](AuthenticationApi.md#getsupportaccesshistory) | **GET** /api/authentication/support | GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination |
 | [**GetSupportRoles**](AuthenticationApi.md#getsupportroles) | **GET** /api/authentication/support-roles | GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation |
 | [**GrantSupportAccess**](AuthenticationApi.md#grantsupportaccess) | **POST** /api/authentication/support | GrantSupportAccess: Grants FINBOURNE support access to your account |
 | [**InvalidateSupportAccess**](AuthenticationApi.md#invalidatesupportaccess) | **DELETE** /api/authentication/support | InvalidateSupportAccess: Revoke any FINBOURNE support access to your account |
-| [**UpdatePasswordPolicy**](AuthenticationApi.md#updatepasswordpolicy) | **PUT** /api/authentication/password-policy/{userType} | [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type |
+| [**UpdatePasswordPolicy**](AuthenticationApi.md#updatepasswordpolicy) | **PUT** /api/authentication/password-policy/{userType} | UpdatePasswordPolicy: Updates password policy for a user type |
 
 <a id="getauthenticationinformation"></a>
 # **GetAuthenticationInformation**
@@ -124,7 +124,7 @@ This endpoint does not need any parameter.
 # **GetPasswordPolicy**
 > PasswordPolicyResponse GetPasswordPolicy (string userType)
 
-[EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type
+GetPasswordPolicy: Gets password policy for a user type
 
 Get the password policy for a given user type
 
@@ -174,7 +174,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // PasswordPolicyResponse result = apiInstance.GetPasswordPolicy(userType, opts: opts);
 
-                // [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type
+                // GetPasswordPolicy: Gets password policy for a user type
                 PasswordPolicyResponse result = apiInstance.GetPasswordPolicy(userType);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -195,7 +195,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] GetPasswordPolicy: Gets password policy for a user type
+    // GetPasswordPolicy: Gets password policy for a user type
     ApiResponse<PasswordPolicyResponse> response = apiInstance.GetPasswordPolicyWithHttpInfo(userType);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -684,7 +684,7 @@ This endpoint does not need any parameter.
 # **UpdatePasswordPolicy**
 > PasswordPolicyResponse UpdatePasswordPolicy (string userType, UpdatePasswordPolicyRequest? updatePasswordPolicyRequest = null)
 
-[EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type
+UpdatePasswordPolicy: Updates password policy for a user type
 
 Update the password policy for a given user type
 
@@ -735,7 +735,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // PasswordPolicyResponse result = apiInstance.UpdatePasswordPolicy(userType, updatePasswordPolicyRequest, opts: opts);
 
-                // [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type
+                // UpdatePasswordPolicy: Updates password policy for a user type
                 PasswordPolicyResponse result = apiInstance.UpdatePasswordPolicy(userType, updatePasswordPolicyRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -756,7 +756,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] UpdatePasswordPolicy: Updates password policy for a user type
+    // UpdatePasswordPolicy: Updates password policy for a user type
     ApiResponse<PasswordPolicyResponse> response = apiInstance.UpdatePasswordPolicyWithHttpInfo(userType, updatePasswordPolicyRequest);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
