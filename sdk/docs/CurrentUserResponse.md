@@ -12,5 +12,25 @@ Name | Type | Description | Notes
 **Groups** | **List&lt;string&gt;** | The groups this user belongs to | [optional] 
 **Links** | [**List&lt;Link&gt;**](Link.md) |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Identity.Sdk.Model;
+using System;
 
+string id = "id";
+string emailAddress = "emailAddress";
+string type = "type";
+string domainType = "example domainType";
+List<string> groups = new List<string>();
+List<Link> links = new List<Link>();
+
+CurrentUserResponse currentUserResponseInstance = new CurrentUserResponse(
+    id: id,
+    emailAddress: emailAddress,
+    type: type,
+    domainType: domainType,
+    userExpiry: userExpiry,
+    groups: groups,
+    links: links);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

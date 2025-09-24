@@ -16,5 +16,30 @@ Name | Type | Description | Notes
 **CreatedBy** | **string** | User Id that created the Network Zone | [optional] 
 **UpdatedBy** | **string** | User Id of the last update on the Network Zone | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Identity.Sdk.Model;
+using System;
 
+string code = "example code";
+string description = "example description";
+List<IpAddressDefinition> networkZoneIPs = new List<IpAddressDefinition>();
+string action = "example action";
+NetworkZonesApplyRules? applyRules = new NetworkZonesApplyRules();
+
+string createdBy = "example createdBy";
+string updatedBy = "example updatedBy";
+
+NetworkZoneDefinitionResponse networkZoneDefinitionResponseInstance = new NetworkZoneDefinitionResponse(
+    code: code,
+    hierarchy: hierarchy,
+    description: description,
+    createdAt: createdAt,
+    updatedAt: updatedAt,
+    networkZoneIPs: networkZoneIPs,
+    action: action,
+    applyRules: applyRules,
+    createdBy: createdBy,
+    updatedBy: updatedBy);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

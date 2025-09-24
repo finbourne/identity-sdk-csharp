@@ -11,5 +11,20 @@ Name | Type | Description | Notes
 **CreatedDate** | **DateTimeOffset** | The creation date of the API key | 
 **DeactivationDate** | **DateTimeOffset?** | The deactivation date of the API key | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Identity.Sdk.Model;
+using System;
 
+string key = "key";
+string id = "id";
+string displayName = "displayName";
+
+CreatedApiKey createdApiKeyInstance = new CreatedApiKey(
+    key: key,
+    id: id,
+    displayName: displayName,
+    createdDate: createdDate,
+    deactivationDate: deactivationDate);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

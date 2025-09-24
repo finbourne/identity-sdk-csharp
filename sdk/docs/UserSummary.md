@@ -15,5 +15,30 @@ Name | Type | Description | Notes
 **AlternativeUserIds** | **Dictionary&lt;string, string&gt;** | User&#39;s alternative user IDs. Only returned for the current user | [optional] 
 **Links** | [**List&lt;Link&gt;**](Link.md) |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Identity.Sdk.Model;
+using System;
 
+string id = "example id";
+string login = "example login";
+string email = "example email";
+string secondEmail = "example secondEmail";
+string firstName = "example firstName";
+string lastName = "example lastName";
+string type = "example type";
+Dictionary<string, string> alternativeUserIds = new Dictionary<string, string>();
+List<Link> links = new List<Link>();
+
+UserSummary userSummaryInstance = new UserSummary(
+    id: id,
+    login: login,
+    email: email,
+    secondEmail: secondEmail,
+    firstName: firstName,
+    lastName: lastName,
+    type: type,
+    alternativeUserIds: alternativeUserIds,
+    links: links);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

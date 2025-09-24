@@ -163,7 +163,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of UserResponse</returns>
         Finbourne.Identity.Sdk.Client.ApiResponse<UserResponse> GetUserWithHttpInfo(string id, bool? includeRoles = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetUserSchema: Get User Schema
+        /// [EARLY ACCESS] GetUserSchema: Get User Schema
         /// </summary>
         /// <remarks>
         /// Get the User Schema
@@ -175,7 +175,7 @@ namespace Finbourne.Identity.Sdk.Api
         UserSchemaResponse GetUserSchema(int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetUserSchema: Get User Schema
+        /// [EARLY ACCESS] GetUserSchema: Get User Schema
         /// </summary>
         /// <remarks>
         /// Get the User Schema
@@ -386,7 +386,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of UserResponse</returns>
         Finbourne.Identity.Sdk.Client.ApiResponse<UserResponse> UpdateUserWithHttpInfo(string id, UpdateUserRequest updateUserRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] UpdateUserSchema: Update User Schema
+        /// [EARLY ACCESS] UpdateUserSchema: Update User Schema
         /// </summary>
         /// <remarks>
         /// Update the User Schema
@@ -399,7 +399,7 @@ namespace Finbourne.Identity.Sdk.Api
         UserSchemaResponse UpdateUserSchema(UpdateUserSchemaRequest updateUserSchemaRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateUserSchema: Update User Schema
+        /// [EARLY ACCESS] UpdateUserSchema: Update User Schema
         /// </summary>
         /// <remarks>
         /// Update the User Schema
@@ -561,7 +561,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (UserResponse)</returns>
         System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<UserResponse>> GetUserWithHttpInfoAsync(string id, bool? includeRoles = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetUserSchema: Get User Schema
+        /// [EARLY ACCESS] GetUserSchema: Get User Schema
         /// </summary>
         /// <remarks>
         /// Get the User Schema
@@ -574,7 +574,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<UserSchemaResponse> GetUserSchemaAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetUserSchema: Get User Schema
+        /// [EARLY ACCESS] GetUserSchema: Get User Schema
         /// </summary>
         /// <remarks>
         /// Get the User Schema
@@ -802,7 +802,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (UserResponse)</returns>
         System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<UserResponse>> UpdateUserWithHttpInfoAsync(string id, UpdateUserRequest updateUserRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] UpdateUserSchema: Update User Schema
+        /// [EARLY ACCESS] UpdateUserSchema: Update User Schema
         /// </summary>
         /// <remarks>
         /// Update the User Schema
@@ -816,7 +816,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<UserSchemaResponse> UpdateUserSchemaAsync(UpdateUserSchemaRequest updateUserSchemaRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateUserSchema: Update User Schema
+        /// [EARLY ACCESS] UpdateUserSchema: Update User Schema
         /// </summary>
         /// <remarks>
         /// Update the User Schema
@@ -1994,7 +1994,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetUserSchema: Get User Schema Get the User Schema
+        /// [EARLY ACCESS] GetUserSchema: Get User Schema Get the User Schema
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -2007,7 +2007,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetUserSchema: Get User Schema Get the User Schema
+        /// [EARLY ACCESS] GetUserSchema: Get User Schema Get the User Schema
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -2083,7 +2083,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetUserSchema: Get User Schema Get the User Schema
+        /// [EARLY ACCESS] GetUserSchema: Get User Schema Get the User Schema
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -2097,7 +2097,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetUserSchema: Get User Schema Get the User Schema
+        /// [EARLY ACCESS] GetUserSchema: Get User Schema Get the User Schema
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -3768,7 +3768,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateUserSchema: Update User Schema Update the User Schema
+        /// [EARLY ACCESS] UpdateUserSchema: Update User Schema Update the User Schema
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateUserSchemaRequest">The new User Schema</param>
@@ -3782,7 +3782,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateUserSchema: Update User Schema Update the User Schema
+        /// [EARLY ACCESS] UpdateUserSchema: Update User Schema Update the User Schema
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateUserSchemaRequest">The new User Schema</param>
@@ -3870,7 +3870,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateUserSchema: Update User Schema Update the User Schema
+        /// [EARLY ACCESS] UpdateUserSchema: Update User Schema Update the User Schema
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateUserSchemaRequest">The new User Schema</param>
@@ -3885,7 +3885,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateUserSchema: Update User Schema Update the User Schema
+        /// [EARLY ACCESS] UpdateUserSchema: Update User Schema Update the User Schema
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateUserSchemaRequest">The new User Schema</param>

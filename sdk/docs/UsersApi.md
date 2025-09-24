@@ -9,7 +9,7 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 | [**ExpirePassword**](UsersApi.md#expirepassword) | **POST** /api/users/{id}/lifecycle/$expirepassword | ExpirePassword: Reset the user&#39;s password to a temporary one |
 | [**FindUsersById**](UsersApi.md#findusersbyid) | **GET** /api/directory | FindUsersById: Find users by id endpoint |
 | [**GetUser**](UsersApi.md#getuser) | **GET** /api/users/{id} | GetUser: Get User |
-| [**GetUserSchema**](UsersApi.md#getuserschema) | **GET** /api/users/schema | [EXPERIMENTAL] GetUserSchema: Get User Schema |
+| [**GetUserSchema**](UsersApi.md#getuserschema) | **GET** /api/users/schema | [EARLY ACCESS] GetUserSchema: Get User Schema |
 | [**ListRunnableUsers**](UsersApi.md#listrunnableusers) | **GET** /api/users/$runnable | [EARLY ACCESS] ListRunnableUsers: List Runable Users |
 | [**ListUsers**](UsersApi.md#listusers) | **GET** /api/users | ListUsers: List Users |
 | [**ResetFactors**](UsersApi.md#resetfactors) | **POST** /api/users/{id}/lifecycle/$resetfactors | ResetFactors: Reset MFA factors |
@@ -18,7 +18,7 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 | [**UnlockUser**](UsersApi.md#unlockuser) | **POST** /api/users/{id}/lifecycle/$unlock | UnlockUser: Unlock User |
 | [**UnsuspendUser**](UsersApi.md#unsuspenduser) | **POST** /api/users/{id}/lifecycle/$unsuspend | [EXPERIMENTAL] UnsuspendUser: Unsuspend user |
 | [**UpdateUser**](UsersApi.md#updateuser) | **PUT** /api/users/{id} | UpdateUser: Update User |
-| [**UpdateUserSchema**](UsersApi.md#updateuserschema) | **PUT** /api/users/schema | [EXPERIMENTAL] UpdateUserSchema: Update User Schema |
+| [**UpdateUserSchema**](UsersApi.md#updateuserschema) | **PUT** /api/users/schema | [EARLY ACCESS] UpdateUserSchema: Update User Schema |
 
 <a id="createuser"></a>
 # **CreateUser**
@@ -596,7 +596,7 @@ catch (ApiException e)
 # **GetUserSchema**
 > UserSchemaResponse GetUserSchema ()
 
-[EXPERIMENTAL] GetUserSchema: Get User Schema
+[EARLY ACCESS] GetUserSchema: Get User Schema
 
 Get the User Schema
 
@@ -645,7 +645,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // UserSchemaResponse result = apiInstance.GetUserSchema(opts: opts);
 
-                // [EXPERIMENTAL] GetUserSchema: Get User Schema
+                // [EARLY ACCESS] GetUserSchema: Get User Schema
                 UserSchemaResponse result = apiInstance.GetUserSchema();
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -666,7 +666,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] GetUserSchema: Get User Schema
+    // [EARLY ACCESS] GetUserSchema: Get User Schema
     ApiResponse<UserSchemaResponse> response = apiInstance.GetUserSchemaWithHttpInfo();
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -1592,7 +1592,7 @@ catch (ApiException e)
 # **UpdateUserSchema**
 > UserSchemaResponse UpdateUserSchema (UpdateUserSchemaRequest updateUserSchemaRequest)
 
-[EXPERIMENTAL] UpdateUserSchema: Update User Schema
+[EARLY ACCESS] UpdateUserSchema: Update User Schema
 
 Update the User Schema
 
@@ -1642,7 +1642,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // UserSchemaResponse result = apiInstance.UpdateUserSchema(updateUserSchemaRequest, opts: opts);
 
-                // [EXPERIMENTAL] UpdateUserSchema: Update User Schema
+                // [EARLY ACCESS] UpdateUserSchema: Update User Schema
                 UserSchemaResponse result = apiInstance.UpdateUserSchema(updateUserSchemaRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -1663,7 +1663,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] UpdateUserSchema: Update User Schema
+    // [EARLY ACCESS] UpdateUserSchema: Update User Schema
     ApiResponse<UserSchemaResponse> response = apiInstance.UpdateUserSchemaWithHttpInfo(updateUserSchemaRequest);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));

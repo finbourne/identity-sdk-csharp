@@ -13,5 +13,26 @@ Name | Type | Description | Notes
 **AuthenticationStep** | **int?** |  | [optional] 
 **ExternalSessionId** | **string** |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Identity.Sdk.Model;
+using System;
 
+string authenticationProvider = "example authenticationProvider";
+List<string> credentialProvider = new List<string>();
+List<string> credentialType = new List<string>();
+LogIssuer? issuer = new LogIssuer();
+
+string interface = "example interface";
+string externalSessionId = "example externalSessionId";
+
+LogAuthenticationContext logAuthenticationContextInstance = new LogAuthenticationContext(
+    authenticationProvider: authenticationProvider,
+    credentialProvider: credentialProvider,
+    credentialType: credentialType,
+    issuer: issuer,
+    interface: interface,
+    authenticationStep: authenticationStep,
+    externalSessionId: externalSessionId);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

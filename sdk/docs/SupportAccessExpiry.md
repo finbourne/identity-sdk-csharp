@@ -7,5 +7,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Expiry** | **DateTimeOffset** | DateTimeOffset at which the access will be revoked | 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Identity.Sdk.Model;
+using System;
 
+
+SupportAccessExpiry supportAccessExpiryInstance = new SupportAccessExpiry(
+    expiry: expiry);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

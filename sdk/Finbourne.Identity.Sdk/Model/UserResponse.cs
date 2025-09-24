@@ -47,8 +47,12 @@ namespace Finbourne.Identity.Sdk.Model
         /// <param name="type">The type of user (e.g. Personal or Service) (required).</param>
         /// <param name="status">The status of the user (required).</param>
         /// <param name="external">Whether or not the user originates from an external identity system (required).</param>
+        /// <param name="lastLogin">Last time the user logged in.</param>
+        /// <param name="lastUpdated">Last time the user was updated.</param>
+        /// <param name="created">Date the user was created.</param>
+        /// <param name="passwordChanged">Last time the password was changed for this user.</param>
         /// <param name="links">links.</param>
-        public UserResponse(string id = default(string), Dictionary<string, string> alternativeUserIds = default(Dictionary<string, string>), string emailAddress = default(string), string secondEmailAddress = default(string), string login = default(string), string firstName = default(string), string lastName = default(string), List<RoleResponse> roles = default(List<RoleResponse>), string type = default(string), string status = default(string), bool external = default(bool), List<Link> links = default(List<Link>))
+        public UserResponse(string id = default(string), Dictionary<string, string> alternativeUserIds = default(Dictionary<string, string>), string emailAddress = default(string), string secondEmailAddress = default(string), string login = default(string), string firstName = default(string), string lastName = default(string), List<RoleResponse> roles = default(List<RoleResponse>), string type = default(string), string status = default(string), bool external = default(bool), DateTimeOffset? lastLogin = default(DateTimeOffset?), DateTimeOffset? lastUpdated = default(DateTimeOffset?), DateTimeOffset? created = default(DateTimeOffset?), DateTimeOffset? passwordChanged = default(DateTimeOffset?), List<Link> links = default(List<Link>))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -96,6 +100,10 @@ namespace Finbourne.Identity.Sdk.Model
             this.AlternativeUserIds = alternativeUserIds;
             this.SecondEmailAddress = secondEmailAddress;
             this.Roles = roles;
+            this.LastLogin = lastLogin;
+            this.LastUpdated = lastUpdated;
+            this.Created = created;
+            this.PasswordChanged = passwordChanged;
             this.Links = links;
         }
 
@@ -176,6 +184,34 @@ namespace Finbourne.Identity.Sdk.Model
         public bool External { get; set; }
 
         /// <summary>
+        /// Last time the user logged in
+        /// </summary>
+        /// <value>Last time the user logged in</value>
+        [DataMember(Name = "lastLogin", EmitDefaultValue = true)]
+        public DateTimeOffset? LastLogin { get; set; }
+
+        /// <summary>
+        /// Last time the user was updated
+        /// </summary>
+        /// <value>Last time the user was updated</value>
+        [DataMember(Name = "lastUpdated", EmitDefaultValue = true)]
+        public DateTimeOffset? LastUpdated { get; set; }
+
+        /// <summary>
+        /// Date the user was created
+        /// </summary>
+        /// <value>Date the user was created</value>
+        [DataMember(Name = "created", EmitDefaultValue = true)]
+        public DateTimeOffset? Created { get; set; }
+
+        /// <summary>
+        /// Last time the password was changed for this user
+        /// </summary>
+        /// <value>Last time the password was changed for this user</value>
+        [DataMember(Name = "passwordChanged", EmitDefaultValue = true)]
+        public DateTimeOffset? PasswordChanged { get; set; }
+
+        /// <summary>
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = true)]
@@ -200,6 +236,10 @@ namespace Finbourne.Identity.Sdk.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  External: ").Append(External).Append("\n");
+            sb.Append("  LastLogin: ").Append(LastLogin).Append("\n");
+            sb.Append("  LastUpdated: ").Append(LastUpdated).Append("\n");
+            sb.Append("  Created: ").Append(Created).Append("\n");
+            sb.Append("  PasswordChanged: ").Append(PasswordChanged).Append("\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -293,6 +333,26 @@ namespace Finbourne.Identity.Sdk.Model
                     this.External.Equals(input.External)
                 ) && 
                 (
+                    this.LastLogin == input.LastLogin ||
+                    (this.LastLogin != null &&
+                    this.LastLogin.Equals(input.LastLogin))
+                ) && 
+                (
+                    this.LastUpdated == input.LastUpdated ||
+                    (this.LastUpdated != null &&
+                    this.LastUpdated.Equals(input.LastUpdated))
+                ) && 
+                (
+                    this.Created == input.Created ||
+                    (this.Created != null &&
+                    this.Created.Equals(input.Created))
+                ) && 
+                (
+                    this.PasswordChanged == input.PasswordChanged ||
+                    (this.PasswordChanged != null &&
+                    this.PasswordChanged.Equals(input.PasswordChanged))
+                ) && 
+                (
                     this.Links == input.Links ||
                     this.Links != null &&
                     input.Links != null &&
@@ -350,6 +410,22 @@ namespace Finbourne.Identity.Sdk.Model
                     hashCode = (hashCode * 59) + this.Status.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.External.GetHashCode();
+                if (this.LastLogin != null)
+                {
+                    hashCode = (hashCode * 59) + this.LastLogin.GetHashCode();
+                }
+                if (this.LastUpdated != null)
+                {
+                    hashCode = (hashCode * 59) + this.LastUpdated.GetHashCode();
+                }
+                if (this.Created != null)
+                {
+                    hashCode = (hashCode * 59) + this.Created.GetHashCode();
+                }
+                if (this.PasswordChanged != null)
+                {
+                    hashCode = (hashCode * 59) + this.PasswordChanged.GetHashCode();
+                }
                 if (this.Links != null)
                 {
                     hashCode = (hashCode * 59) + this.Links.GetHashCode();

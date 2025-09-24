@@ -69,7 +69,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of ResourceListOfSystemLog</returns>
         Finbourne.Identity.Sdk.Client.ApiResponse<ResourceListOfSystemLog> ListLogsWithHttpInfo(DateTimeOffset? oktaSince = default(DateTimeOffset?), DateTimeOffset? oktaUntil = default(DateTimeOffset?), string? oktaFilter = default(string?), string? oktaQuery = default(string?), int? oktaLimit = default(int?), string? oktaSortOrder = default(string?), string? oktaAfter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [BETA] ListUserLogs: Lists user logs
+        /// ListUserLogs: Lists user logs
         /// </summary>
         /// <remarks>
         /// Lists account related system logs for the calling user
@@ -86,7 +86,7 @@ namespace Finbourne.Identity.Sdk.Api
         ResourceListOfSystemLog ListUserLogs(DateTimeOffset? oktaSince = default(DateTimeOffset?), DateTimeOffset? oktaUntil = default(DateTimeOffset?), int? oktaLimit = default(int?), string? oktaSortOrder = default(string?), string? oktaAfter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [BETA] ListUserLogs: Lists user logs
+        /// ListUserLogs: Lists user logs
         /// </summary>
         /// <remarks>
         /// Lists account related system logs for the calling user
@@ -150,7 +150,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>Task of ApiResponse (ResourceListOfSystemLog)</returns>
         System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<ResourceListOfSystemLog>> ListLogsWithHttpInfoAsync(DateTimeOffset? oktaSince = default(DateTimeOffset?), DateTimeOffset? oktaUntil = default(DateTimeOffset?), string? oktaFilter = default(string?), string? oktaQuery = default(string?), int? oktaLimit = default(int?), string? oktaSortOrder = default(string?), string? oktaAfter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [BETA] ListUserLogs: Lists user logs
+        /// ListUserLogs: Lists user logs
         /// </summary>
         /// <remarks>
         /// Lists account related system logs for the calling user
@@ -168,7 +168,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfSystemLog> ListUserLogsAsync(DateTimeOffset? oktaSince = default(DateTimeOffset?), DateTimeOffset? oktaUntil = default(DateTimeOffset?), int? oktaLimit = default(int?), string? oktaSortOrder = default(string?), string? oktaAfter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [BETA] ListUserLogs: Lists user logs
+        /// ListUserLogs: Lists user logs
         /// </summary>
         /// <remarks>
         /// Lists account related system logs for the calling user
@@ -574,7 +574,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] ListUserLogs: Lists user logs Lists account related system logs for the calling user
+        /// ListUserLogs: Lists user logs Lists account related system logs for the calling user
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
@@ -592,7 +592,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] ListUserLogs: Lists user logs Lists account related system logs for the calling user
+        /// ListUserLogs: Lists user logs Lists account related system logs for the calling user
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
@@ -693,7 +693,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] ListUserLogs: Lists user logs Lists account related system logs for the calling user
+        /// ListUserLogs: Lists user logs Lists account related system logs for the calling user
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
@@ -712,7 +712,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] ListUserLogs: Lists user logs Lists account related system logs for the calling user
+        /// ListUserLogs: Lists user logs Lists account related system logs for the calling user
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaSince">Lower bound of log events published property (optional)</param>

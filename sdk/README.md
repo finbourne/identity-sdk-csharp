@@ -24,7 +24,7 @@ Class | Method | HTTP request | Description
 *ExternalTokenIssuersApi* | [**ListExternalTokenIssuers**](docs/ExternalTokenIssuersApi.md#listexternaltokenissuers) | **GET** /api/externaltokenissuers | [EARLY ACCESS] ListExternalTokenIssuers: Lists all External Token Issuers for a domain
 *ExternalTokenIssuersApi* | [**UpdateExternalTokenIssuer**](docs/ExternalTokenIssuersApi.md#updateexternaltokenissuer) | **PUT** /api/externaltokenissuers/{code} | [EARLY ACCESS] UpdateExternalTokenIssuer: Updates an existing External Token Issuer
 *IdentityLogsApi* | [**ListLogs**](docs/IdentityLogsApi.md#listlogs) | **GET** /api/logs | [BETA] ListLogs: Lists system logs for a domain
-*IdentityLogsApi* | [**ListUserLogs**](docs/IdentityLogsApi.md#listuserlogs) | **GET** /api/logs/me | [BETA] ListUserLogs: Lists user logs
+*IdentityLogsApi* | [**ListUserLogs**](docs/IdentityLogsApi.md#listuserlogs) | **GET** /api/logs/me | ListUserLogs: Lists user logs
 *IdentityProviderApi* | [**AddScim**](docs/IdentityProviderApi.md#addscim) | **PUT** /api/identityprovider/scim | AddScim: Add SCIM
 *IdentityProviderApi* | [**RemoveScim**](docs/IdentityProviderApi.md#removescim) | **DELETE** /api/identityprovider/scim | RemoveScim: Remove SCIM
 *MeApi* | [**GetUserInfo**](docs/MeApi.md#getuserinfo) | **GET** /api/me | GetUserInfo: Get User Info
@@ -51,7 +51,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**ExpirePassword**](docs/UsersApi.md#expirepassword) | **POST** /api/users/{id}/lifecycle/$expirepassword | ExpirePassword: Reset the user's password to a temporary one
 *UsersApi* | [**FindUsersById**](docs/UsersApi.md#findusersbyid) | **GET** /api/directory | FindUsersById: Find users by id endpoint
 *UsersApi* | [**GetUser**](docs/UsersApi.md#getuser) | **GET** /api/users/{id} | GetUser: Get User
-*UsersApi* | [**GetUserSchema**](docs/UsersApi.md#getuserschema) | **GET** /api/users/schema | [EXPERIMENTAL] GetUserSchema: Get User Schema
+*UsersApi* | [**GetUserSchema**](docs/UsersApi.md#getuserschema) | **GET** /api/users/schema | [EARLY ACCESS] GetUserSchema: Get User Schema
 *UsersApi* | [**ListRunnableUsers**](docs/UsersApi.md#listrunnableusers) | **GET** /api/users/$runnable | [EARLY ACCESS] ListRunnableUsers: List Runable Users
 *UsersApi* | [**ListUsers**](docs/UsersApi.md#listusers) | **GET** /api/users | ListUsers: List Users
 *UsersApi* | [**ResetFactors**](docs/UsersApi.md#resetfactors) | **POST** /api/users/{id}/lifecycle/$resetfactors | ResetFactors: Reset MFA factors
@@ -60,7 +60,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**UnlockUser**](docs/UsersApi.md#unlockuser) | **POST** /api/users/{id}/lifecycle/$unlock | UnlockUser: Unlock User
 *UsersApi* | [**UnsuspendUser**](docs/UsersApi.md#unsuspenduser) | **POST** /api/users/{id}/lifecycle/$unsuspend | [EXPERIMENTAL] UnsuspendUser: Unsuspend user
 *UsersApi* | [**UpdateUser**](docs/UsersApi.md#updateuser) | **PUT** /api/users/{id} | UpdateUser: Update User
-*UsersApi* | [**UpdateUserSchema**](docs/UsersApi.md#updateuserschema) | **PUT** /api/users/schema | [EXPERIMENTAL] UpdateUserSchema: Update User Schema
+*UsersApi* | [**UpdateUserSchema**](docs/UsersApi.md#updateuserschema) | **PUT** /api/users/schema | [EARLY ACCESS] UpdateUserSchema: Update User Schema
 
 
 <a id="documentation-for-models"></a>

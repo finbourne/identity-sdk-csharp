@@ -9,5 +9,20 @@ Name | Type | Description | Notes
 **RoleIdentifier** | **Dictionary&lt;string, string&gt;** |  | [optional] 
 **InternalIdentifier** | **string** |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Identity.Sdk.Model;
+using System;
 
+string label = "example label";
+string description = "example description";
+Dictionary<string, string> roleIdentifier = new Dictionary<string, string>();
+string internalIdentifier = "example internalIdentifier";
+
+SupportRole supportRoleInstance = new SupportRole(
+    label: label,
+    description: description,
+    roleIdentifier: roleIdentifier,
+    internalIdentifier: internalIdentifier);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

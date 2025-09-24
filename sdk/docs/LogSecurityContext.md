@@ -11,5 +11,21 @@ Name | Type | Description | Notes
 **Domain** | **string** |  | [optional] 
 **IsProxy** | **bool?** |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Identity.Sdk.Model;
+using System;
 
+string asOrg = "example asOrg";
+string isp = "example isp";
+string domain = "example domain";
+bool? isProxy = //"True";
+
+LogSecurityContext logSecurityContextInstance = new LogSecurityContext(
+    asNumber: asNumber,
+    asOrg: asOrg,
+    isp: isp,
+    domain: domain,
+    isProxy: isProxy);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

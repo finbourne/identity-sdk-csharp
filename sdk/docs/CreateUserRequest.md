@@ -14,5 +14,28 @@ Name | Type | Description | Notes
 **Roles** | [**List&lt;RoleId&gt;**](RoleId.md) | Optional. Any known roles the user should be created with. | [optional] 
 **Type** | **string** | The type of user (e.g. Personal or Service) | 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Identity.Sdk.Model;
+using System;
 
+string firstName = "firstName";
+string lastName = "lastName";
+string emailAddress = "emailAddress";
+string secondEmailAddress = "example secondEmailAddress";
+string login = "login";
+Dictionary<string, string> alternativeUserIds = new Dictionary<string, string>();
+List<RoleId> roles = new List<RoleId>();
+string type = "type";
+
+CreateUserRequest createUserRequestInstance = new CreateUserRequest(
+    firstName: firstName,
+    lastName: lastName,
+    emailAddress: emailAddress,
+    secondEmailAddress: secondEmailAddress,
+    login: login,
+    alternativeUserIds: alternativeUserIds,
+    roles: roles,
+    type: type);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

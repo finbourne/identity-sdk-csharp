@@ -9,5 +9,18 @@ Name | Type | Description | Notes
 **Description** | **string** | The description of why the support access has been granted (i.e. support ticket numbers) | [optional] 
 **PermittedRoles** | **List&lt;string&gt;** |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Identity.Sdk.Model;
+using System;
 
+string duration = "duration";
+string description = "example description";
+List<string> permittedRoles = new List<string>();
+
+SupportAccessRequest supportAccessRequestInstance = new SupportAccessRequest(
+    duration: duration,
+    description: description,
+    permittedRoles: permittedRoles);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

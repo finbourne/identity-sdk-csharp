@@ -5,7 +5,7 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
 | [**ListLogs**](IdentityLogsApi.md#listlogs) | **GET** /api/logs | [BETA] ListLogs: Lists system logs for a domain |
-| [**ListUserLogs**](IdentityLogsApi.md#listuserlogs) | **GET** /api/logs/me | [BETA] ListUserLogs: Lists user logs |
+| [**ListUserLogs**](IdentityLogsApi.md#listuserlogs) | **GET** /api/logs/me | ListUserLogs: Lists user logs |
 
 <a id="listlogs"></a>
 # **ListLogs**
@@ -137,7 +137,7 @@ catch (ApiException e)
 # **ListUserLogs**
 > ResourceListOfSystemLog ListUserLogs (DateTimeOffset? oktaSince = null, DateTimeOffset? oktaUntil = null, int? oktaLimit = null, string? oktaSortOrder = null, string? oktaAfter = null)
 
-[BETA] ListUserLogs: Lists user logs
+ListUserLogs: Lists user logs
 
 Lists account related system logs for the calling user
 
@@ -191,7 +191,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ResourceListOfSystemLog result = apiInstance.ListUserLogs(oktaSince, oktaUntil, oktaLimit, oktaSortOrder, oktaAfter, opts: opts);
 
-                // [BETA] ListUserLogs: Lists user logs
+                // ListUserLogs: Lists user logs
                 ResourceListOfSystemLog result = apiInstance.ListUserLogs(oktaSince, oktaUntil, oktaLimit, oktaSortOrder, oktaAfter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -212,7 +212,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [BETA] ListUserLogs: Lists user logs
+    // ListUserLogs: Lists user logs
     ApiResponse<ResourceListOfSystemLog> response = apiInstance.ListUserLogsWithHttpInfo(oktaSince, oktaUntil, oktaLimit, oktaSortOrder, oktaAfter);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));

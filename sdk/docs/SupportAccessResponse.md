@@ -16,5 +16,29 @@ Name | Type | Description | Notes
 **TerminatedBy** | **string** | Obfuscated UserId of the user who revoked the access | [optional] 
 **PermittedRoles** | **List&lt;string&gt;** | A list of permitted roles, valid for support staff to assume, for the duration of the access request | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Identity.Sdk.Model;
+using System;
 
+string id = "id";
+string duration = "duration";
+string description = "example description";
+string createdBy = "createdBy";
+bool terminated = //"True";
+string terminatedBy = "example terminatedBy";
+List<string> permittedRoles = new List<string>();
+
+SupportAccessResponse supportAccessResponseInstance = new SupportAccessResponse(
+    id: id,
+    duration: duration,
+    description: description,
+    createdAt: createdAt,
+    expiry: expiry,
+    createdBy: createdBy,
+    terminated: terminated,
+    terminatedAt: terminatedAt,
+    terminatedBy: terminatedBy,
+    permittedRoles: permittedRoles);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
