@@ -1021,6 +1021,7 @@ namespace Finbourne.Identity.Sdk.Api
 
             if (waitForReindex != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "waitForReindex", waitForReindex));
             }
             localVarRequestOptions.Data = createUserRequest;
@@ -1237,6 +1238,7 @@ namespace Finbourne.Identity.Sdk.Api
             localVarRequestOptions.PathParameters.Add("id", Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
             if (purge != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "purge", purge));
             }
 
@@ -1848,6 +1850,7 @@ namespace Finbourne.Identity.Sdk.Api
             localVarRequestOptions.PathParameters.Add("id", Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
             if (includeRoles != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "includeRoles", includeRoles));
             }
 
@@ -2415,6 +2418,7 @@ namespace Finbourne.Identity.Sdk.Api
 
             if (includeDeactivated != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "includeDeactivated", includeDeactivated));
             }
 

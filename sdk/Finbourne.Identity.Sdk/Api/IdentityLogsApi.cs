@@ -377,30 +377,37 @@ namespace Finbourne.Identity.Sdk.Api
 
             if (oktaSince != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaSince", oktaSince));
             }
             if (oktaUntil != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaUntil", oktaUntil));
             }
             if (oktaFilter != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaFilter", oktaFilter));
             }
             if (oktaQuery != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaQuery", oktaQuery));
             }
             if (oktaLimit != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaLimit", oktaLimit));
             }
             if (oktaSortOrder != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaSortOrder", oktaSortOrder));
             }
             if (oktaAfter != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaAfter", oktaAfter));
             }
 
@@ -639,22 +646,27 @@ namespace Finbourne.Identity.Sdk.Api
 
             if (oktaSince != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaSince", oktaSince));
             }
             if (oktaUntil != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaUntil", oktaUntil));
             }
             if (oktaLimit != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaLimit", oktaLimit));
             }
             if (oktaSortOrder != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaSortOrder", oktaSortOrder));
             }
             if (oktaAfter != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oktaAfter", oktaAfter));
             }
 

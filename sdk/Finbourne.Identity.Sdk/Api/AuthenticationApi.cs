@@ -965,10 +965,12 @@ namespace Finbourne.Identity.Sdk.Api
 
             if (start != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "start", start));
             }
             if (end != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "end", end));
             }
 

@@ -329,10 +329,12 @@ namespace Finbourne.Identity.Sdk.Api
 
             if (apiTokenAction != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "apiTokenAction", apiTokenAction));
             }
             if (oldApiTokenDeactivation != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "oldApiTokenDeactivation", oldApiTokenDeactivation));
             }
 

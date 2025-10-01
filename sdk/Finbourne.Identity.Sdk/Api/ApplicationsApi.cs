@@ -884,6 +884,7 @@ namespace Finbourne.Identity.Sdk.Api
             localVarRequestOptions.PathParameters.Add("id", Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
             if (includeSecret != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "includeSecret", includeSecret));
             }
 
