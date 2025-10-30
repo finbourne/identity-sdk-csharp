@@ -62,7 +62,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// DeleteUser: Delete User
         /// </summary>
         /// <remarks>
-        /// By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
+        /// By default the user will be de-provisioned and inactive, however their record will remain in the identity provider for audit purposes. If this is not desirable and removal of all trace of the user is required, the purge parameter can be specified to indicate the details should be purged completely.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the user</param>
@@ -76,7 +76,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// DeleteUser: Delete User
         /// </summary>
         /// <remarks>
-        /// By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
+        /// By default the user will be de-provisioned and inactive, however their record will remain in the identity provider for audit purposes. If this is not desirable and removal of all trace of the user is required, the purge parameter can be specified to indicate the details should be purged completely.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the user</param>
@@ -452,7 +452,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// DeleteUser: Delete User
         /// </summary>
         /// <remarks>
-        /// By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
+        /// By default the user will be de-provisioned and inactive, however their record will remain in the identity provider for audit purposes. If this is not desirable and removal of all trace of the user is required, the purge parameter can be specified to indicate the details should be purged completely.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the user</param>
@@ -467,7 +467,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// DeleteUser: Delete User
         /// </summary>
         /// <remarks>
-        /// By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
+        /// By default the user will be de-provisioned and inactive, however their record will remain in the identity provider for audit purposes. If this is not desirable and removal of all trace of the user is required, the purge parameter can be specified to indicate the details should be purged completely.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the user</param>
@@ -1173,7 +1173,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// DeleteUser: Delete User By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
+        /// DeleteUser: Delete User By default the user will be de-provisioned and inactive, however their record will remain in the identity provider for audit purposes. If this is not desirable and removal of all trace of the user is required, the purge parameter can be specified to indicate the details should be purged completely.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the user</param>
@@ -1187,7 +1187,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// DeleteUser: Delete User By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
+        /// DeleteUser: Delete User By default the user will be de-provisioned and inactive, however their record will remain in the identity provider for audit purposes. If this is not desirable and removal of all trace of the user is required, the purge parameter can be specified to indicate the details should be purged completely.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the user</param>
@@ -1277,7 +1277,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// DeleteUser: Delete User By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
+        /// DeleteUser: Delete User By default the user will be de-provisioned and inactive, however their record will remain in the identity provider for audit purposes. If this is not desirable and removal of all trace of the user is required, the purge parameter can be specified to indicate the details should be purged completely.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the user</param>
@@ -1292,7 +1292,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// DeleteUser: Delete User By default the user will be de-provisioned and inactive, however their record will remain in the identity  provider for audit purposes. If this is not desirable and removal of all trace of the user is required,  the purge parameter can be specified to indicate the details should be purged completely.
+        /// DeleteUser: Delete User By default the user will be de-provisioned and inactive, however their record will remain in the identity provider for audit purposes. If this is not desirable and removal of all trace of the user is required, the purge parameter can be specified to indicate the details should be purged completely.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The unique identifier for the user</param>

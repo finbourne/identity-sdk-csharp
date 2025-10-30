@@ -6,7 +6,7 @@ Time at which the support access granted for a role expires
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Expiry** | **DateTimeOffset** | DateTimeOffset at which the access will be revoked | 
-**PermittedRole** | **string** | Unique identifier for permitted role.   Use GET /identity/api/authentication/support-roles to lookup role label/code from identifier. | 
+**PermittedRole** | **string** | Unique identifier for permitted role.  Use GET /identity/api/authentication/support-roles to lookup role label/code from identifier. | 
 
 ```csharp
 using Finbourne.Identity.Sdk.Model;

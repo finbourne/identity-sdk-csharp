@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MaxAttempts** | **int** | The maximum number of unsuccessful attempts before the user is locked out of their account.  0 indicates no limit | 
+**MaxAttempts** | **int** | The maximum number of unsuccessful attempts before the user is locked out of their account. 0 indicates no limit | 
 
 ```csharp
 using Finbourne.Identity.Sdk.Model;

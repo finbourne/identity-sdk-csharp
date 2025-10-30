@@ -40,10 +40,11 @@ namespace Finbourne.Identity.Sdk.Model
         /// <param name="lastName">lastName (required).</param>
         /// <param name="emailAddress">emailAddress (required).</param>
         /// <param name="secondEmailAddress">secondEmailAddress.</param>
-        /// <param name="login">The user&#39;s login username, in the form of an email address, which must be unique within the system.  For user accounts this should exactly match the user&#39;s email address. (required).</param>
+        /// <param name="login">The user&#39;s login username, in the form of an email address, which must be unique within the system. For user accounts this should exactly match the user&#39;s email address. (required).</param>
         /// <param name="alternativeUserIds">alternativeUserIds.</param>
         /// <param name="roles">Deprecated. To update a user&#39;s roles use the AddUserToRole and RemoveUserFromRole endpoints.</param>
-        public UpdateUserRequest(string firstName = default(string), string lastName = default(string), string emailAddress = default(string), string secondEmailAddress = default(string), string login = default(string), Dictionary<string, string> alternativeUserIds = default(Dictionary<string, string>), List<RoleId> roles = default(List<RoleId>))
+        /// <param name="userExpiry">The user&#39;s expiry unix datetime.</param>
+        public UpdateUserRequest(string firstName = default(string), string lastName = default(string), string emailAddress = default(string), string secondEmailAddress = default(string), string login = default(string), Dictionary<string, string> alternativeUserIds = default(Dictionary<string, string>), List<RoleId> roles = default(List<RoleId>), DateTimeOffset? userExpiry = default(DateTimeOffset?))
         {
             // to ensure "firstName" is required (not null)
             if (firstName == null)
@@ -72,6 +73,7 @@ namespace Finbourne.Identity.Sdk.Model
             this.SecondEmailAddress = secondEmailAddress;
             this.AlternativeUserIds = alternativeUserIds;
             this.Roles = roles;
+            this.UserExpiry = userExpiry;
         }
 
         /// <summary>
@@ -99,9 +101,9 @@ namespace Finbourne.Identity.Sdk.Model
         public string SecondEmailAddress { get; set; }
 
         /// <summary>
-        /// The user&#39;s login username, in the form of an email address, which must be unique within the system.  For user accounts this should exactly match the user&#39;s email address.
+        /// The user&#39;s login username, in the form of an email address, which must be unique within the system. For user accounts this should exactly match the user&#39;s email address.
         /// </summary>
-        /// <value>The user&#39;s login username, in the form of an email address, which must be unique within the system.  For user accounts this should exactly match the user&#39;s email address.</value>
+        /// <value>The user&#39;s login username, in the form of an email address, which must be unique within the system. For user accounts this should exactly match the user&#39;s email address.</value>
         [DataMember(Name = "login", IsRequired = true, EmitDefaultValue = true)]
         public string Login { get; set; }
 
@@ -119,6 +121,13 @@ namespace Finbourne.Identity.Sdk.Model
         public List<RoleId> Roles { get; set; }
 
         /// <summary>
+        /// The user&#39;s expiry unix datetime
+        /// </summary>
+        /// <value>The user&#39;s expiry unix datetime</value>
+        [DataMember(Name = "userExpiry", EmitDefaultValue = true)]
+        public DateTimeOffset? UserExpiry { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -133,6 +142,7 @@ namespace Finbourne.Identity.Sdk.Model
             sb.Append("  Login: ").Append(Login).Append("\n");
             sb.Append("  AlternativeUserIds: ").Append(AlternativeUserIds).Append("\n");
             sb.Append("  Roles: ").Append(Roles).Append("\n");
+            sb.Append("  UserExpiry: ").Append(UserExpiry).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -204,6 +214,11 @@ namespace Finbourne.Identity.Sdk.Model
                     this.Roles != null &&
                     input.Roles != null &&
                     this.Roles.SequenceEqual(input.Roles)
+                ) && 
+                (
+                    this.UserExpiry == input.UserExpiry ||
+                    (this.UserExpiry != null &&
+                    this.UserExpiry.Equals(input.UserExpiry))
                 );
         }
 
@@ -243,6 +258,10 @@ namespace Finbourne.Identity.Sdk.Model
                 if (this.Roles != null)
                 {
                     hashCode = (hashCode * 59) + this.Roles.GetHashCode();
+                }
+                if (this.UserExpiry != null)
+                {
+                    hashCode = (hashCode * 59) + this.UserExpiry.GetHashCode();
                 }
                 return hashCode;
             }

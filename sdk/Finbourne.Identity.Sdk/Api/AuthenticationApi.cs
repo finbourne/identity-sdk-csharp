@@ -35,7 +35,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// GetAuthenticationInformation: Gets AuthenticationInformation
         /// </summary>
         /// <remarks>
-        /// Get the AuthenticationInformation associated with the current domain. This includes all the  necessary information to login to this domain.
+        /// Get the AuthenticationInformation associated with the current domain. This includes all the necessary information to login to this domain.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -47,7 +47,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// GetAuthenticationInformation: Gets AuthenticationInformation
         /// </summary>
         /// <remarks>
-        /// Get the AuthenticationInformation associated with the current domain. This includes all the  necessary information to login to this domain.
+        /// Get the AuthenticationInformation associated with the current domain. This includes all the necessary information to login to this domain.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -83,7 +83,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
         /// </summary>
         /// <remarks>
-        /// The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
+        /// The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination including obfuscated userIds of those who created and terminated the request
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">The start expiry date to query support access requests from (optional)</param>
@@ -97,7 +97,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
         /// </summary>
         /// <remarks>
-        /// The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
+        /// The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination including obfuscated userIds of those who created and terminated the request
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">The start expiry date to query support access requests from (optional)</param>
@@ -133,7 +133,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// GrantSupportAccess: Grants FINBOURNE support access to your account
         /// </summary>
         /// <remarks>
-        /// Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
+        /// Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportAccessRequest">Request detailing the duration and reasons for supplying support access</param>
@@ -146,7 +146,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// GrantSupportAccess: Grants FINBOURNE support access to your account
         /// </summary>
         /// <remarks>
-        /// Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
+        /// Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportAccessRequest">Request detailing the duration and reasons for supplying support access</param>
@@ -217,7 +217,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// GetAuthenticationInformation: Gets AuthenticationInformation
         /// </summary>
         /// <remarks>
-        /// Get the AuthenticationInformation associated with the current domain. This includes all the  necessary information to login to this domain.
+        /// Get the AuthenticationInformation associated with the current domain. This includes all the necessary information to login to this domain.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -230,7 +230,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// GetAuthenticationInformation: Gets AuthenticationInformation
         /// </summary>
         /// <remarks>
-        /// Get the AuthenticationInformation associated with the current domain. This includes all the  necessary information to login to this domain.
+        /// Get the AuthenticationInformation associated with the current domain. This includes all the necessary information to login to this domain.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -269,7 +269,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
         /// </summary>
         /// <remarks>
-        /// The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
+        /// The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination including obfuscated userIds of those who created and terminated the request
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">The start expiry date to query support access requests from (optional)</param>
@@ -284,7 +284,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
         /// </summary>
         /// <remarks>
-        /// The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
+        /// The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination including obfuscated userIds of those who created and terminated the request
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">The start expiry date to query support access requests from (optional)</param>
@@ -323,7 +323,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// GrantSupportAccess: Grants FINBOURNE support access to your account
         /// </summary>
         /// <remarks>
-        /// Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
+        /// Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportAccessRequest">Request detailing the duration and reasons for supplying support access</param>
@@ -337,7 +337,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// GrantSupportAccess: Grants FINBOURNE support access to your account
         /// </summary>
         /// <remarks>
-        /// Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
+        /// Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportAccessRequest">Request detailing the duration and reasons for supplying support access</param>
@@ -524,7 +524,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// GetAuthenticationInformation: Gets AuthenticationInformation Get the AuthenticationInformation associated with the current domain. This includes all the  necessary information to login to this domain.
+        /// GetAuthenticationInformation: Gets AuthenticationInformation Get the AuthenticationInformation associated with the current domain. This includes all the necessary information to login to this domain.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -537,7 +537,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// GetAuthenticationInformation: Gets AuthenticationInformation Get the AuthenticationInformation associated with the current domain. This includes all the  necessary information to login to this domain.
+        /// GetAuthenticationInformation: Gets AuthenticationInformation Get the AuthenticationInformation associated with the current domain. This includes all the necessary information to login to this domain.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -613,7 +613,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// GetAuthenticationInformation: Gets AuthenticationInformation Get the AuthenticationInformation associated with the current domain. This includes all the  necessary information to login to this domain.
+        /// GetAuthenticationInformation: Gets AuthenticationInformation Get the AuthenticationInformation associated with the current domain. This includes all the necessary information to login to this domain.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -627,7 +627,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// GetAuthenticationInformation: Gets AuthenticationInformation Get the AuthenticationInformation associated with the current domain. This includes all the  necessary information to login to this domain.
+        /// GetAuthenticationInformation: Gets AuthenticationInformation Get the AuthenticationInformation associated with the current domain. This includes all the necessary information to login to this domain.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -906,7 +906,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
+        /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination including obfuscated userIds of those who created and terminated the request
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">The start expiry date to query support access requests from (optional)</param>
@@ -921,7 +921,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
+        /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination including obfuscated userIds of those who created and terminated the request
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">The start expiry date to query support access requests from (optional)</param>
@@ -1009,7 +1009,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
+        /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination including obfuscated userIds of those who created and terminated the request
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">The start expiry date to query support access requests from (optional)</param>
@@ -1025,7 +1025,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination  including obfuscated userIds of those who created and terminated the request
+        /// GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination The active and inactive support requests will be returned, inactive support requests will have information pertaining to their termination including obfuscated userIds of those who created and terminated the request
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="start">The start expiry date to query support access requests from (optional)</param>
@@ -1296,7 +1296,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// GrantSupportAccess: Grants FINBOURNE support access to your account Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
+        /// GrantSupportAccess: Grants FINBOURNE support access to your account Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportAccessRequest">Request detailing the duration and reasons for supplying support access</param>
@@ -1310,7 +1310,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// GrantSupportAccess: Grants FINBOURNE support access to your account Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
+        /// GrantSupportAccess: Grants FINBOURNE support access to your account Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportAccessRequest">Request detailing the duration and reasons for supplying support access</param>
@@ -1398,7 +1398,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// GrantSupportAccess: Grants FINBOURNE support access to your account Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
+        /// GrantSupportAccess: Grants FINBOURNE support access to your account Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportAccessRequest">Request detailing the duration and reasons for supplying support access</param>
@@ -1413,7 +1413,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// GrantSupportAccess: Grants FINBOURNE support access to your account Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues  You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
+        /// GrantSupportAccess: Grants FINBOURNE support access to your account Granting support access will allow FINBOURNE employees full access to your data with the express intent to investigate support issues You can revoke this (and all) access at any time using the InvalidateSupportAccess endpoint.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportAccessRequest">Request detailing the duration and reasons for supplying support access</param>

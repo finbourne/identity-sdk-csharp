@@ -58,7 +58,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// SetPassword: Set password of current user
         /// </summary>
         /// <remarks>
-        /// Set the password of the current user to the specified value.                Note this is feature is only available to Service users authenticated using OpenID. For further information  relating to usage of this feature please consult the documentation.
+        /// Set the password of the current user to the specified value.              Note this is feature is only available to Service users authenticated using OpenID. For further information relating to usage of this feature please consult the documentation.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPassword">The request containing the new password value</param>
@@ -71,7 +71,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// SetPassword: Set password of current user
         /// </summary>
         /// <remarks>
-        /// Set the password of the current user to the specified value.                Note this is feature is only available to Service users authenticated using OpenID. For further information  relating to usage of this feature please consult the documentation.
+        /// Set the password of the current user to the specified value.              Note this is feature is only available to Service users authenticated using OpenID. For further information relating to usage of this feature please consult the documentation.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPassword">The request containing the new password value</param>
@@ -117,7 +117,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// SetPassword: Set password of current user
         /// </summary>
         /// <remarks>
-        /// Set the password of the current user to the specified value.                Note this is feature is only available to Service users authenticated using OpenID. For further information  relating to usage of this feature please consult the documentation.
+        /// Set the password of the current user to the specified value.              Note this is feature is only available to Service users authenticated using OpenID. For further information relating to usage of this feature please consult the documentation.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPassword">The request containing the new password value</param>
@@ -131,7 +131,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// SetPassword: Set password of current user
         /// </summary>
         /// <remarks>
-        /// Set the password of the current user to the specified value.                Note this is feature is only available to Service users authenticated using OpenID. For further information  relating to usage of this feature please consult the documentation.
+        /// Set the password of the current user to the specified value.              Note this is feature is only available to Service users authenticated using OpenID. For further information relating to usage of this feature please consult the documentation.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPassword">The request containing the new password value</param>
@@ -446,7 +446,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// SetPassword: Set password of current user Set the password of the current user to the specified value.                Note this is feature is only available to Service users authenticated using OpenID. For further information  relating to usage of this feature please consult the documentation.
+        /// SetPassword: Set password of current user Set the password of the current user to the specified value.              Note this is feature is only available to Service users authenticated using OpenID. For further information relating to usage of this feature please consult the documentation.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPassword">The request containing the new password value</param>
@@ -460,7 +460,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// SetPassword: Set password of current user Set the password of the current user to the specified value.                Note this is feature is only available to Service users authenticated using OpenID. For further information  relating to usage of this feature please consult the documentation.
+        /// SetPassword: Set password of current user Set the password of the current user to the specified value.              Note this is feature is only available to Service users authenticated using OpenID. For further information relating to usage of this feature please consult the documentation.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPassword">The request containing the new password value</param>
@@ -548,7 +548,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// SetPassword: Set password of current user Set the password of the current user to the specified value.                Note this is feature is only available to Service users authenticated using OpenID. For further information  relating to usage of this feature please consult the documentation.
+        /// SetPassword: Set password of current user Set the password of the current user to the specified value.              Note this is feature is only available to Service users authenticated using OpenID. For further information relating to usage of this feature please consult the documentation.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPassword">The request containing the new password value</param>
@@ -563,7 +563,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// SetPassword: Set password of current user Set the password of the current user to the specified value.                Note this is feature is only available to Service users authenticated using OpenID. For further information  relating to usage of this feature please consult the documentation.
+        /// SetPassword: Set password of current user Set the password of the current user to the specified value.              Note this is feature is only available to Service users authenticated using OpenID. For further information relating to usage of this feature please consult the documentation.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPassword">The request containing the new password value</param>

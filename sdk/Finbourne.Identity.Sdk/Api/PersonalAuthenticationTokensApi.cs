@@ -85,7 +85,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens.
         /// </summary>
         /// <remarks>
-        /// Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
+        /// Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be invalid due to the deactivation date having passed.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -97,7 +97,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens.
         /// </summary>
         /// <remarks>
-        /// Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
+        /// Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be invalid due to the deactivation date having passed.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -171,7 +171,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens.
         /// </summary>
         /// <remarks>
-        /// Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
+        /// Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be invalid due to the deactivation date having passed.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -184,7 +184,7 @@ namespace Finbourne.Identity.Sdk.Api
         /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens.
         /// </summary>
         /// <remarks>
-        /// Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
+        /// Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be invalid due to the deactivation date having passed.
         /// </remarks>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -724,7 +724,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens. Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
+        /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens. Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be invalid due to the deactivation date having passed.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -737,7 +737,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens. Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
+        /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens. Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be invalid due to the deactivation date having passed.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -813,7 +813,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens. Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
+        /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens. Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be invalid due to the deactivation date having passed.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -827,7 +827,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens. Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be  invalid due to the deactivation date having passed.
+        /// ListOwnApiKeys: Gets the meta data for all of the user&#39;s existing Personal Access Tokens. Gets the meta data for all of the user&#39;s Personal Access Tokens that have not been deleted. They may be invalid due to the deactivation date having passed.
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>

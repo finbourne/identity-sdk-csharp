@@ -51,8 +51,9 @@ namespace Finbourne.Identity.Sdk.Model
         /// <param name="lastUpdated">Last time the user was updated.</param>
         /// <param name="created">Date the user was created.</param>
         /// <param name="passwordChanged">Last time the password was changed for this user.</param>
+        /// <param name="userExpiry">The user&#39;s expiry unix datetime.</param>
         /// <param name="links">links.</param>
-        public UserResponse(string id = default(string), Dictionary<string, string> alternativeUserIds = default(Dictionary<string, string>), string emailAddress = default(string), string secondEmailAddress = default(string), string login = default(string), string firstName = default(string), string lastName = default(string), List<RoleResponse> roles = default(List<RoleResponse>), string type = default(string), string status = default(string), bool external = default(bool), DateTimeOffset? lastLogin = default(DateTimeOffset?), DateTimeOffset? lastUpdated = default(DateTimeOffset?), DateTimeOffset? created = default(DateTimeOffset?), DateTimeOffset? passwordChanged = default(DateTimeOffset?), List<Link> links = default(List<Link>))
+        public UserResponse(string id = default(string), Dictionary<string, string> alternativeUserIds = default(Dictionary<string, string>), string emailAddress = default(string), string secondEmailAddress = default(string), string login = default(string), string firstName = default(string), string lastName = default(string), List<RoleResponse> roles = default(List<RoleResponse>), string type = default(string), string status = default(string), bool external = default(bool), DateTimeOffset? lastLogin = default(DateTimeOffset?), DateTimeOffset? lastUpdated = default(DateTimeOffset?), DateTimeOffset? created = default(DateTimeOffset?), DateTimeOffset? passwordChanged = default(DateTimeOffset?), DateTimeOffset? userExpiry = default(DateTimeOffset?), List<Link> links = default(List<Link>))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -104,6 +105,7 @@ namespace Finbourne.Identity.Sdk.Model
             this.LastUpdated = lastUpdated;
             this.Created = created;
             this.PasswordChanged = passwordChanged;
+            this.UserExpiry = userExpiry;
             this.Links = links;
         }
 
@@ -212,6 +214,13 @@ namespace Finbourne.Identity.Sdk.Model
         public DateTimeOffset? PasswordChanged { get; set; }
 
         /// <summary>
+        /// The user&#39;s expiry unix datetime
+        /// </summary>
+        /// <value>The user&#39;s expiry unix datetime</value>
+        [DataMember(Name = "userExpiry", EmitDefaultValue = true)]
+        public DateTimeOffset? UserExpiry { get; set; }
+
+        /// <summary>
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = true)]
@@ -240,6 +249,7 @@ namespace Finbourne.Identity.Sdk.Model
             sb.Append("  LastUpdated: ").Append(LastUpdated).Append("\n");
             sb.Append("  Created: ").Append(Created).Append("\n");
             sb.Append("  PasswordChanged: ").Append(PasswordChanged).Append("\n");
+            sb.Append("  UserExpiry: ").Append(UserExpiry).Append("\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -353,6 +363,11 @@ namespace Finbourne.Identity.Sdk.Model
                     this.PasswordChanged.Equals(input.PasswordChanged))
                 ) && 
                 (
+                    this.UserExpiry == input.UserExpiry ||
+                    (this.UserExpiry != null &&
+                    this.UserExpiry.Equals(input.UserExpiry))
+                ) && 
+                (
                     this.Links == input.Links ||
                     this.Links != null &&
                     input.Links != null &&
@@ -425,6 +440,10 @@ namespace Finbourne.Identity.Sdk.Model
                 if (this.PasswordChanged != null)
                 {
                     hashCode = (hashCode * 59) + this.PasswordChanged.GetHashCode();
+                }
+                if (this.UserExpiry != null)
+                {
+                    hashCode = (hashCode * 59) + this.UserExpiry.GetHashCode();
                 }
                 if (this.Links != null)
                 {

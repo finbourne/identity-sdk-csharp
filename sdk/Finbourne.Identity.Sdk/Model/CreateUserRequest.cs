@@ -38,13 +38,14 @@ namespace Finbourne.Identity.Sdk.Model
         /// </summary>
         /// <param name="firstName">The first name of the user (required).</param>
         /// <param name="lastName">The last name of the user (required).</param>
-        /// <param name="emailAddress">The user&#39;s email address - to which the account validation email will be sent. For user accounts  this should exactly match the Login. (required).</param>
+        /// <param name="emailAddress">The user&#39;s email address - to which the account validation email will be sent. For user accounts this should exactly match the Login. (required).</param>
         /// <param name="secondEmailAddress">The user&#39;s second email address. Only allowed for Service users.</param>
-        /// <param name="login">The user&#39;s login username, in the form of an email address, which must be unique within the system.  For user accounts this should exactly match the user&#39;s email address. (required).</param>
+        /// <param name="login">The user&#39;s login username, in the form of an email address, which must be unique within the system. For user accounts this should exactly match the user&#39;s email address. (required).</param>
         /// <param name="alternativeUserIds">alternativeUserIds.</param>
         /// <param name="roles">Optional. Any known roles the user should be created with..</param>
         /// <param name="type">The type of user (e.g. Personal or Service) (required).</param>
-        public CreateUserRequest(string firstName = default(string), string lastName = default(string), string emailAddress = default(string), string secondEmailAddress = default(string), string login = default(string), Dictionary<string, string> alternativeUserIds = default(Dictionary<string, string>), List<RoleId> roles = default(List<RoleId>), string type = default(string))
+        /// <param name="userExpiry">The user&#39;s expiry unix datetime.</param>
+        public CreateUserRequest(string firstName = default(string), string lastName = default(string), string emailAddress = default(string), string secondEmailAddress = default(string), string login = default(string), Dictionary<string, string> alternativeUserIds = default(Dictionary<string, string>), List<RoleId> roles = default(List<RoleId>), string type = default(string), DateTimeOffset? userExpiry = default(DateTimeOffset?))
         {
             // to ensure "firstName" is required (not null)
             if (firstName == null)
@@ -79,6 +80,7 @@ namespace Finbourne.Identity.Sdk.Model
             this.SecondEmailAddress = secondEmailAddress;
             this.AlternativeUserIds = alternativeUserIds;
             this.Roles = roles;
+            this.UserExpiry = userExpiry;
         }
 
         /// <summary>
@@ -96,9 +98,9 @@ namespace Finbourne.Identity.Sdk.Model
         public string LastName { get; set; }
 
         /// <summary>
-        /// The user&#39;s email address - to which the account validation email will be sent. For user accounts  this should exactly match the Login.
+        /// The user&#39;s email address - to which the account validation email will be sent. For user accounts this should exactly match the Login.
         /// </summary>
-        /// <value>The user&#39;s email address - to which the account validation email will be sent. For user accounts  this should exactly match the Login.</value>
+        /// <value>The user&#39;s email address - to which the account validation email will be sent. For user accounts this should exactly match the Login.</value>
         [DataMember(Name = "emailAddress", IsRequired = true, EmitDefaultValue = true)]
         public string EmailAddress { get; set; }
 
@@ -110,9 +112,9 @@ namespace Finbourne.Identity.Sdk.Model
         public string SecondEmailAddress { get; set; }
 
         /// <summary>
-        /// The user&#39;s login username, in the form of an email address, which must be unique within the system.  For user accounts this should exactly match the user&#39;s email address.
+        /// The user&#39;s login username, in the form of an email address, which must be unique within the system. For user accounts this should exactly match the user&#39;s email address.
         /// </summary>
-        /// <value>The user&#39;s login username, in the form of an email address, which must be unique within the system.  For user accounts this should exactly match the user&#39;s email address.</value>
+        /// <value>The user&#39;s login username, in the form of an email address, which must be unique within the system. For user accounts this should exactly match the user&#39;s email address.</value>
         [DataMember(Name = "login", IsRequired = true, EmitDefaultValue = true)]
         public string Login { get; set; }
 
@@ -137,6 +139,13 @@ namespace Finbourne.Identity.Sdk.Model
         public string Type { get; set; }
 
         /// <summary>
+        /// The user&#39;s expiry unix datetime
+        /// </summary>
+        /// <value>The user&#39;s expiry unix datetime</value>
+        [DataMember(Name = "userExpiry", EmitDefaultValue = true)]
+        public DateTimeOffset? UserExpiry { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -152,6 +161,7 @@ namespace Finbourne.Identity.Sdk.Model
             sb.Append("  AlternativeUserIds: ").Append(AlternativeUserIds).Append("\n");
             sb.Append("  Roles: ").Append(Roles).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  UserExpiry: ").Append(UserExpiry).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -228,6 +238,11 @@ namespace Finbourne.Identity.Sdk.Model
                     this.Type == input.Type ||
                     (this.Type != null &&
                     this.Type.Equals(input.Type))
+                ) && 
+                (
+                    this.UserExpiry == input.UserExpiry ||
+                    (this.UserExpiry != null &&
+                    this.UserExpiry.Equals(input.UserExpiry))
                 );
         }
 
@@ -271,6 +286,10 @@ namespace Finbourne.Identity.Sdk.Model
                 if (this.Type != null)
                 {
                     hashCode = (hashCode * 59) + this.Type.GetHashCode();
+                }
+                if (this.UserExpiry != null)
+                {
+                    hashCode = (hashCode * 59) + this.UserExpiry.GetHashCode();
                 }
                 return hashCode;
             }

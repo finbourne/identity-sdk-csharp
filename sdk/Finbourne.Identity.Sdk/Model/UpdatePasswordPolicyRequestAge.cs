@@ -36,8 +36,8 @@ namespace Finbourne.Identity.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdatePasswordPolicyRequestAge" /> class.
         /// </summary>
-        /// <param name="maxAgeDays">The maximum age (in days) a password can be before expiring and needing to be changed.  0 indicates no limit (required).</param>
-        /// <param name="historyCount">The number of unique passwords that need to be used before a previous password is permitted again.  0 indicates none (required).</param>
+        /// <param name="maxAgeDays">The maximum age (in days) a password can be before expiring and needing to be changed. 0 indicates no limit (required).</param>
+        /// <param name="historyCount">The number of unique passwords that need to be used before a previous password is permitted again. 0 indicates none (required).</param>
         public UpdatePasswordPolicyRequestAge(int maxAgeDays = default(int), int historyCount = default(int))
         {
             this.MaxAgeDays = maxAgeDays;
@@ -45,16 +45,16 @@ namespace Finbourne.Identity.Sdk.Model
         }
 
         /// <summary>
-        /// The maximum age (in days) a password can be before expiring and needing to be changed.  0 indicates no limit
+        /// The maximum age (in days) a password can be before expiring and needing to be changed. 0 indicates no limit
         /// </summary>
-        /// <value>The maximum age (in days) a password can be before expiring and needing to be changed.  0 indicates no limit</value>
+        /// <value>The maximum age (in days) a password can be before expiring and needing to be changed. 0 indicates no limit</value>
         [DataMember(Name = "maxAgeDays", IsRequired = true, EmitDefaultValue = true)]
         public int MaxAgeDays { get; set; }
 
         /// <summary>
-        /// The number of unique passwords that need to be used before a previous password is permitted again.  0 indicates none
+        /// The number of unique passwords that need to be used before a previous password is permitted again. 0 indicates none
         /// </summary>
-        /// <value>The number of unique passwords that need to be used before a previous password is permitted again.  0 indicates none</value>
+        /// <value>The number of unique passwords that need to be used before a previous password is permitted again. 0 indicates none</value>
         [DataMember(Name = "historyCount", IsRequired = true, EmitDefaultValue = true)]
         public int HistoryCount { get; set; }
 

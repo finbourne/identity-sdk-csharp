@@ -37,7 +37,7 @@ namespace Finbourne.Identity.Sdk.Model
         /// Initializes a new instance of the <see cref="SupportAccessExpiryWithRole" /> class.
         /// </summary>
         /// <param name="expiry">DateTimeOffset at which the access will be revoked (required).</param>
-        /// <param name="permittedRole">Unique identifier for permitted role.   Use GET /identity/api/authentication/support-roles to lookup role label/code from identifier. (required).</param>
+        /// <param name="permittedRole">Unique identifier for permitted role.  Use GET /identity/api/authentication/support-roles to lookup role label/code from identifier. (required).</param>
         public SupportAccessExpiryWithRole(DateTimeOffset expiry = default(DateTimeOffset), string permittedRole = default(string))
         {
             this.Expiry = expiry;
@@ -57,9 +57,9 @@ namespace Finbourne.Identity.Sdk.Model
         public DateTimeOffset Expiry { get; set; }
 
         /// <summary>
-        /// Unique identifier for permitted role.   Use GET /identity/api/authentication/support-roles to lookup role label/code from identifier.
+        /// Unique identifier for permitted role.  Use GET /identity/api/authentication/support-roles to lookup role label/code from identifier.
         /// </summary>
-        /// <value>Unique identifier for permitted role.   Use GET /identity/api/authentication/support-roles to lookup role label/code from identifier.</value>
+        /// <value>Unique identifier for permitted role.  Use GET /identity/api/authentication/support-roles to lookup role label/code from identifier.</value>
         [DataMember(Name = "permittedRole", IsRequired = true, EmitDefaultValue = true)]
         public string PermittedRole { get; set; }
 

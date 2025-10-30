@@ -36,16 +36,16 @@ namespace Finbourne.Identity.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdatePasswordPolicyRequestLockout" /> class.
         /// </summary>
-        /// <param name="maxAttempts">The maximum number of unsuccessful attempts before the user is locked out of their account.  0 indicates no limit (required).</param>
+        /// <param name="maxAttempts">The maximum number of unsuccessful attempts before the user is locked out of their account. 0 indicates no limit (required).</param>
         public UpdatePasswordPolicyRequestLockout(int maxAttempts = default(int))
         {
             this.MaxAttempts = maxAttempts;
         }
 
         /// <summary>
-        /// The maximum number of unsuccessful attempts before the user is locked out of their account.  0 indicates no limit
+        /// The maximum number of unsuccessful attempts before the user is locked out of their account. 0 indicates no limit
         /// </summary>
-        /// <value>The maximum number of unsuccessful attempts before the user is locked out of their account.  0 indicates no limit</value>
+        /// <value>The maximum number of unsuccessful attempts before the user is locked out of their account. 0 indicates no limit</value>
         [DataMember(Name = "maxAttempts", IsRequired = true, EmitDefaultValue = true)]
         public int MaxAttempts { get; set; }
 

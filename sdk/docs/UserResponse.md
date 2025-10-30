@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **LastUpdated** | **DateTimeOffset?** | Last time the user was updated | [optional] 
 **Created** | **DateTimeOffset?** | Date the user was created | [optional] 
 **PasswordChanged** | **DateTimeOffset?** | Last time the password was changed for this user | [optional] 
+**UserExpiry** | **DateTimeOffset?** | The user&#39;s expiry unix datetime | [optional] 
 **Links** | [**List&lt;Link&gt;**](Link.md) |  | [optional] 
 
 ```csharp
@@ -54,6 +55,7 @@ UserResponse userResponseInstance = new UserResponse(
     lastUpdated: lastUpdated,
     created: created,
     passwordChanged: passwordChanged,
+    userExpiry: userExpiry,
     links: links);
 ```
 
