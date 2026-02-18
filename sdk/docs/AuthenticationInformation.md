@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **SamlIdentityProviderId** | **string** |  | [optional] 
 **Support** | [**SupportAccessExpiry**](SupportAccessExpiry.md) |  | [optional] 
 **SupportAccessExpiryWithRole** | [**List&lt;SupportAccessExpiryWithRole&gt;**](SupportAccessExpiryWithRole.md) |  | [optional] 
+**Status** | **bool** |  | [optional] 
 **Links** | [**List&lt;Link&gt;**](Link.md) |  | [optional] 
 
 ```csharp
@@ -21,6 +22,7 @@ string samlIdentityProviderId = "example samlIdentityProviderId";
 SupportAccessExpiry? support = new SupportAccessExpiry();
 
 List<SupportAccessExpiryWithRole> supportAccessExpiryWithRole = new List<SupportAccessExpiryWithRole>();
+bool status = //"True";
 List<Link> links = new List<Link>();
 
 AuthenticationInformation authenticationInformationInstance = new AuthenticationInformation(
@@ -29,6 +31,7 @@ AuthenticationInformation authenticationInformationInstance = new Authentication
     samlIdentityProviderId: samlIdentityProviderId,
     support: support,
     supportAccessExpiryWithRole: supportAccessExpiryWithRole,
+    status: status,
     links: links);
 ```
 
