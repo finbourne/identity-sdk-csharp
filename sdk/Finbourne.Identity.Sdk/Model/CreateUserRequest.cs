@@ -40,7 +40,7 @@ namespace Finbourne.Identity.Sdk.Model
         /// <param name="lastName">The last name of the user (required).</param>
         /// <param name="emailAddress">The user&#39;s email address - to which the account validation email will be sent. For user accounts this should exactly match the Login. (required).</param>
         /// <param name="secondEmailAddress">The user&#39;s second email address. Only allowed for Service users.</param>
-        /// <param name="login">The user&#39;s login username, in the form of an email address, which must be unique within the system. For user accounts this should exactly match the user&#39;s email address. (required).</param>
+        /// <param name="login">The user&#39;s login username, which must be unique within the system. For user accounts this should exactly match the user&#39;s email address. (required).</param>
         /// <param name="alternativeUserIds">alternativeUserIds.</param>
         /// <param name="roles">Optional. Any known roles the user should be created with..</param>
         /// <param name="type">The type of user (e.g. Personal or Service) (required).</param>
@@ -112,9 +112,9 @@ namespace Finbourne.Identity.Sdk.Model
         public string SecondEmailAddress { get; set; }
 
         /// <summary>
-        /// The user&#39;s login username, in the form of an email address, which must be unique within the system. For user accounts this should exactly match the user&#39;s email address.
+        /// The user&#39;s login username, which must be unique within the system. For user accounts this should exactly match the user&#39;s email address.
         /// </summary>
-        /// <value>The user&#39;s login username, in the form of an email address, which must be unique within the system. For user accounts this should exactly match the user&#39;s email address.</value>
+        /// <value>The user&#39;s login username, which must be unique within the system. For user accounts this should exactly match the user&#39;s email address.</value>
         [DataMember(Name = "login", IsRequired = true, EmitDefaultValue = true)]
         public string Login { get; set; }
 
