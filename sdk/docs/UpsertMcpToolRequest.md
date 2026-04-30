@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **Parameters** | [**List&lt;McpToolParameter&gt;**](McpToolParameter.md) | The parameters for this MCP tool | [optional] 
 **LuminescePayload** | [**McpToolLuminescePayload**](McpToolLuminescePayload.md) |  | [optional] 
 **SchedulerPayload** | [**McpToolSchedulerPayload**](McpToolSchedulerPayload.md) |  | [optional] 
+**DestructiveActionSummaryTemplate** | **string** | Template for human-readable destructive action summary. Uses {paramName} single-brace placeholders (e.g. \&quot;Delete file &#39;{filePath}&#39;\&quot;). Required when Destructive is true. | [optional] 
 
 ```csharp
 using Finbourne.Identity.Sdk.Model;
@@ -32,6 +33,7 @@ McpToolLuminescePayload? luminescePayload = new McpToolLuminescePayload();
 
 McpToolSchedulerPayload? schedulerPayload = new McpToolSchedulerPayload();
 
+string destructiveActionSummaryTemplate = "example destructiveActionSummaryTemplate";
 
 UpsertMcpToolRequest upsertMcpToolRequestInstance = new UpsertMcpToolRequest(
     name: name,
@@ -43,7 +45,8 @@ UpsertMcpToolRequest upsertMcpToolRequestInstance = new UpsertMcpToolRequest(
     readOnly: readOnly,
     parameters: parameters,
     luminescePayload: luminescePayload,
-    schedulerPayload: schedulerPayload);
+    schedulerPayload: schedulerPayload,
+    destructiveActionSummaryTemplate: destructiveActionSummaryTemplate);
 ```
 
 [Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **PayloadType** | **string** | The type of payload (Luminesce or Scheduler) | [optional] 
 **LuminescePayload** | [**McpToolLuminescePayload**](McpToolLuminescePayload.md) |  | [optional] 
 **SchedulerPayload** | [**McpToolSchedulerPayload**](McpToolSchedulerPayload.md) |  | [optional] 
+**DestructiveActionSummaryTemplate** | **string** | Template for human-readable destructive action summary (e.g. \&quot;Delete file &#39;{filePath}&#39;\&quot;) | [optional] 
 **CreatedAt** | **DateTimeOffset** | When the MCP tool was created | [optional] 
 **CreatedBy** | **string** | Who created the MCP tool | [optional] 
 **UpdatedAt** | **DateTimeOffset** | When the MCP tool was last updated | [optional] 
@@ -43,6 +44,7 @@ McpToolLuminescePayload? luminescePayload = new McpToolLuminescePayload();
 
 McpToolSchedulerPayload? schedulerPayload = new McpToolSchedulerPayload();
 
+string destructiveActionSummaryTemplate = "example destructiveActionSummaryTemplate";
 string createdBy = "example createdBy";
 string updatedBy = "example updatedBy";
 
@@ -61,6 +63,7 @@ McpToolResponse mcpToolResponseInstance = new McpToolResponse(
     payloadType: payloadType,
     luminescePayload: luminescePayload,
     schedulerPayload: schedulerPayload,
+    destructiveActionSummaryTemplate: destructiveActionSummaryTemplate,
     createdAt: createdAt,
     createdBy: createdBy,
     updatedAt: updatedAt,

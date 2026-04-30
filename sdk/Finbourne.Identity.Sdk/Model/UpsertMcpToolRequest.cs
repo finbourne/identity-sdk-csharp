@@ -46,7 +46,8 @@ namespace Finbourne.Identity.Sdk.Model
         /// <param name="parameters">The parameters for this MCP tool.</param>
         /// <param name="luminescePayload">luminescePayload.</param>
         /// <param name="schedulerPayload">schedulerPayload.</param>
-        public UpsertMcpToolRequest(string name = default(string), string title = default(string), string description = default(string), bool destructive = default(bool), bool idempotent = default(bool), bool openWorld = default(bool), bool readOnly = default(bool), List<McpToolParameter> parameters = default(List<McpToolParameter>), McpToolLuminescePayload luminescePayload = default(McpToolLuminescePayload), McpToolSchedulerPayload schedulerPayload = default(McpToolSchedulerPayload))
+        /// <param name="destructiveActionSummaryTemplate">Template for human-readable destructive action summary. Uses {paramName} single-brace placeholders (e.g. \&quot;Delete file &#39;{filePath}&#39;\&quot;). Required when Destructive is true..</param>
+        public UpsertMcpToolRequest(string name = default(string), string title = default(string), string description = default(string), bool destructive = default(bool), bool idempotent = default(bool), bool openWorld = default(bool), bool readOnly = default(bool), List<McpToolParameter> parameters = default(List<McpToolParameter>), McpToolLuminescePayload luminescePayload = default(McpToolLuminescePayload), McpToolSchedulerPayload schedulerPayload = default(McpToolSchedulerPayload), string destructiveActionSummaryTemplate = default(string))
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -73,6 +74,7 @@ namespace Finbourne.Identity.Sdk.Model
             this.Parameters = parameters;
             this.LuminescePayload = luminescePayload;
             this.SchedulerPayload = schedulerPayload;
+            this.DestructiveActionSummaryTemplate = destructiveActionSummaryTemplate;
         }
 
         /// <summary>
@@ -144,6 +146,13 @@ namespace Finbourne.Identity.Sdk.Model
         public McpToolSchedulerPayload SchedulerPayload { get; set; }
 
         /// <summary>
+        /// Template for human-readable destructive action summary. Uses {paramName} single-brace placeholders (e.g. \&quot;Delete file &#39;{filePath}&#39;\&quot;). Required when Destructive is true.
+        /// </summary>
+        /// <value>Template for human-readable destructive action summary. Uses {paramName} single-brace placeholders (e.g. \&quot;Delete file &#39;{filePath}&#39;\&quot;). Required when Destructive is true.</value>
+        [DataMember(Name = "destructiveActionSummaryTemplate", EmitDefaultValue = true)]
+        public string DestructiveActionSummaryTemplate { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -161,6 +170,7 @@ namespace Finbourne.Identity.Sdk.Model
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
             sb.Append("  LuminescePayload: ").Append(LuminescePayload).Append("\n");
             sb.Append("  SchedulerPayload: ").Append(SchedulerPayload).Append("\n");
+            sb.Append("  DestructiveActionSummaryTemplate: ").Append(DestructiveActionSummaryTemplate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -242,6 +252,11 @@ namespace Finbourne.Identity.Sdk.Model
                     this.SchedulerPayload == input.SchedulerPayload ||
                     (this.SchedulerPayload != null &&
                     this.SchedulerPayload.Equals(input.SchedulerPayload))
+                ) && 
+                (
+                    this.DestructiveActionSummaryTemplate == input.DestructiveActionSummaryTemplate ||
+                    (this.DestructiveActionSummaryTemplate != null &&
+                    this.DestructiveActionSummaryTemplate.Equals(input.DestructiveActionSummaryTemplate))
                 );
         }
 
@@ -281,6 +296,10 @@ namespace Finbourne.Identity.Sdk.Model
                 if (this.SchedulerPayload != null)
                 {
                     hashCode = (hashCode * 59) + this.SchedulerPayload.GetHashCode();
+                }
+                if (this.DestructiveActionSummaryTemplate != null)
+                {
+                    hashCode = (hashCode * 59) + this.DestructiveActionSummaryTemplate.GetHashCode();
                 }
                 return hashCode;
             }
@@ -334,6 +353,18 @@ namespace Finbourne.Identity.Sdk.Model
             if (this.Description != null && this.Description.Length < 1)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Description, length must be greater than 1.", new [] { "Description" });
+            }
+
+            // DestructiveActionSummaryTemplate (string) maxLength
+            if (this.DestructiveActionSummaryTemplate != null && this.DestructiveActionSummaryTemplate.Length > 500)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DestructiveActionSummaryTemplate, length must be less than 500.", new [] { "DestructiveActionSummaryTemplate" });
+            }
+
+            // DestructiveActionSummaryTemplate (string) minLength
+            if (this.DestructiveActionSummaryTemplate != null && this.DestructiveActionSummaryTemplate.Length < 0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DestructiveActionSummaryTemplate, length must be greater than 0.", new [] { "DestructiveActionSummaryTemplate" });
             }
 
             yield break;
