@@ -13,11 +13,13 @@ Class | Method | HTTP request | Description
 *ApplicationsApi* | [**RotateApplicationSecrets**](docs/ApplicationsApi.md#rotateapplicationsecrets) | **POST** /api/applications/{id}/lifecycle/$newsecret | [EARLY ACCESS] RotateApplicationSecrets: Rotate Application Secrets
 *AuthenticationApi* | [**GetAuthenticationInformation**](docs/AuthenticationApi.md#getauthenticationinformation) | **GET** /api/authentication/information | GetAuthenticationInformation: Gets AuthenticationInformation
 *AuthenticationApi* | [**GetPasswordPolicy**](docs/AuthenticationApi.md#getpasswordpolicy) | **GET** /api/authentication/password-policy/{userType} | GetPasswordPolicy: Gets password policy for a user type
+*AuthenticationApi* | [**GetSessionPolicy**](docs/AuthenticationApi.md#getsessionpolicy) | **GET** /api/authentication/session-policy | [EXPERIMENTAL] GetSessionPolicy: Get session policy
 *AuthenticationApi* | [**GetSupportAccessHistory**](docs/AuthenticationApi.md#getsupportaccesshistory) | **GET** /api/authentication/support | GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination
 *AuthenticationApi* | [**GetSupportRoles**](docs/AuthenticationApi.md#getsupportroles) | **GET** /api/authentication/support-roles | GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation
 *AuthenticationApi* | [**GrantSupportAccess**](docs/AuthenticationApi.md#grantsupportaccess) | **POST** /api/authentication/support | GrantSupportAccess: Grants FINBOURNE support access to your account
 *AuthenticationApi* | [**InvalidateSupportAccess**](docs/AuthenticationApi.md#invalidatesupportaccess) | **DELETE** /api/authentication/support | InvalidateSupportAccess: Revoke any FINBOURNE support access to your account
 *AuthenticationApi* | [**UpdatePasswordPolicy**](docs/AuthenticationApi.md#updatepasswordpolicy) | **PUT** /api/authentication/password-policy/{userType} | UpdatePasswordPolicy: Updates password policy for a user type
+*AuthenticationApi* | [**UpdateSessionPolicy**](docs/AuthenticationApi.md#updatesessionpolicy) | **PUT** /api/authentication/session-policy | [EXPERIMENTAL] UpdateSessionPolicy: Update session policy
 *CellManagementApi* | [**AcceptCellAttachment**](docs/CellManagementApi.md#acceptcellattachment) | **POST** /api/cellmanagement/acceptattachment | [EARLY ACCESS] AcceptCellAttachment: Accept (or retry) a cell attachment
 *CellManagementApi* | [**DetachParentCell**](docs/CellManagementApi.md#detachparentcell) | **PUT** /api/cellmanagement/detach | [EARLY ACCESS] DetachParentCell: Detach this cell from its parent
 *CellManagementApi* | [**GetCellParentStatus**](docs/CellManagementApi.md#getcellparentstatus) | **GET** /api/cellmanagement/parentcell | [EARLY ACCESS] GetCellParentStatus: Get cell parent status
@@ -137,6 +139,7 @@ Class | Method | HTTP request | Description
  - [ResourceListOfSystemLog](docs/ResourceListOfSystemLog.md)
  - [RoleId](docs/RoleId.md)
  - [RoleResponse](docs/RoleResponse.md)
+ - [SessionPolicyResponse](docs/SessionPolicyResponse.md)
  - [SetAttachingKeyRequest](docs/SetAttachingKeyRequest.md)
  - [SetParentCellRequest](docs/SetParentCellRequest.md)
  - [SetPassword](docs/SetPassword.md)
@@ -157,6 +160,7 @@ Class | Method | HTTP request | Description
  - [UpdatePasswordPolicyRequestConditions](docs/UpdatePasswordPolicyRequestConditions.md)
  - [UpdatePasswordPolicyRequestLockout](docs/UpdatePasswordPolicyRequestLockout.md)
  - [UpdateRoleRequest](docs/UpdateRoleRequest.md)
+ - [UpdateSessionPolicyRequest](docs/UpdateSessionPolicyRequest.md)
  - [UpdateUserRequest](docs/UpdateUserRequest.md)
  - [UpdateUserSchemaRequest](docs/UpdateUserSchemaRequest.md)
  - [UpsertMcpToolRequest](docs/UpsertMcpToolRequest.md)
