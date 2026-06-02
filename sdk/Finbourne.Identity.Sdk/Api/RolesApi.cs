@@ -134,6 +134,33 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of RoleResponse</returns>
         Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> GetRoleWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
+        /// GetRoleByCode: Get Role By Code
+        /// </summary>
+        /// <remarks>
+        /// Get the specified role by its code, optionally scoped. Scope defaults to \&quot;default\&quot;. The \&quot;code\&quot; is the same value supplied as \&quot;name\&quot; when the role was created via CreateRole.
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code">The role code (the value supplied as \&quot;name\&quot; when the role was created).</param>
+        /// <param name="scope">The scope the role lives in. Defaults to \&quot;default\&quot;. (optional, default to &quot;default&quot;)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>RoleResponse</returns>
+        RoleResponse GetRoleByCode(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+
+        /// <summary>
+        /// GetRoleByCode: Get Role By Code
+        /// </summary>
+        /// <remarks>
+        /// Get the specified role by its code, optionally scoped. Scope defaults to \&quot;default\&quot;. The \&quot;code\&quot; is the same value supplied as \&quot;name\&quot; when the role was created via CreateRole.
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code">The role code (the value supplied as \&quot;name\&quot; when the role was created).</param>
+        /// <param name="scope">The scope the role lives in. Defaults to \&quot;default\&quot;. (optional, default to &quot;default&quot;)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>ApiResponse of RoleResponse</returns>
+        Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> GetRoleByCodeWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        /// <summary>
         /// ListRoles: List Roles
         /// </summary>
         /// <remarks>
@@ -354,6 +381,35 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (RoleResponse)</returns>
         System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse>> GetRoleWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        /// <summary>
+        /// GetRoleByCode: Get Role By Code
+        /// </summary>
+        /// <remarks>
+        /// Get the specified role by its code, optionally scoped. Scope defaults to \&quot;default\&quot;. The \&quot;code\&quot; is the same value supplied as \&quot;name\&quot; when the role was created via CreateRole.
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code">The role code (the value supplied as \&quot;name\&quot; when the role was created).</param>
+        /// <param name="scope">The scope the role lives in. Defaults to \&quot;default\&quot;. (optional, default to &quot;default&quot;)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of RoleResponse</returns>
+        System.Threading.Tasks.Task<RoleResponse> GetRoleByCodeAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+
+        /// <summary>
+        /// GetRoleByCode: Get Role By Code
+        /// </summary>
+        /// <remarks>
+        /// Get the specified role by its code, optionally scoped. Scope defaults to \&quot;default\&quot;. The \&quot;code\&quot; is the same value supplied as \&quot;name\&quot; when the role was created via CreateRole.
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code">The role code (the value supplied as \&quot;name\&quot; when the role was created).</param>
+        /// <param name="scope">The scope the role lives in. Defaults to \&quot;default\&quot;. (optional, default to &quot;default&quot;)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of ApiResponse (RoleResponse)</returns>
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse>> GetRoleByCodeWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ListRoles: List Roles
         /// </summary>
@@ -1400,6 +1456,219 @@ namespace Finbourne.Identity.Sdk.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetRole", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// GetRoleByCode: Get Role By Code Get the specified role by its code, optionally scoped. Scope defaults to \&quot;default\&quot;. The \&quot;code\&quot; is the same value supplied as \&quot;name\&quot; when the role was created via CreateRole.
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code">The role code (the value supplied as \&quot;name\&quot; when the role was created).</param>
+        /// <param name="scope">The scope the role lives in. Defaults to \&quot;default\&quot;. (optional, default to &quot;default&quot;)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>RoleResponse</returns>
+        public RoleResponse GetRoleByCode(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        {
+            Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> localVarResponse = GetRoleByCodeWithHttpInfo(code, scope, opts: opts);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// GetRoleByCode: Get Role By Code Get the specified role by its code, optionally scoped. Scope defaults to \&quot;default\&quot;. The \&quot;code\&quot; is the same value supplied as \&quot;name\&quot; when the role was created via CreateRole.
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code">The role code (the value supplied as \&quot;name\&quot; when the role was created).</param>
+        /// <param name="scope">The scope the role lives in. Defaults to \&quot;default\&quot;. (optional, default to &quot;default&quot;)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>ApiResponse of RoleResponse</returns>
+        public Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> GetRoleByCodeWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        {
+            // verify the required parameter 'code' is set
+            if (code == null)
+            {
+                throw new Finbourne.Identity.Sdk.Client.ApiException(400, "Missing required parameter 'code' when calling RolesApi->GetRoleByCode");
+            }
+
+            Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("code", Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
+            if (scope != null)
+            {
+
+                localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
+            }
+
+            localVarRequestOptions.Operation = "RolesApi.GetRoleByCode";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<RoleResponse>("/api/roles/byCode/{code}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetRoleByCode", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// GetRoleByCode: Get Role By Code Get the specified role by its code, optionally scoped. Scope defaults to \&quot;default\&quot;. The \&quot;code\&quot; is the same value supplied as \&quot;name\&quot; when the role was created via CreateRole.
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code">The role code (the value supplied as \&quot;name\&quot; when the role was created).</param>
+        /// <param name="scope">The scope the role lives in. Defaults to \&quot;default\&quot;. (optional, default to &quot;default&quot;)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of RoleResponse</returns>
+        public async System.Threading.Tasks.Task<RoleResponse> GetRoleByCodeAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        {
+            Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse> localVarResponse = await GetRoleByCodeWithHttpInfoAsync(code, scope, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// GetRoleByCode: Get Role By Code Get the specified role by its code, optionally scoped. Scope defaults to \&quot;default\&quot;. The \&quot;code\&quot; is the same value supplied as \&quot;name\&quot; when the role was created via CreateRole.
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code">The role code (the value supplied as \&quot;name\&quot; when the role was created).</param>
+        /// <param name="scope">The scope the role lives in. Defaults to \&quot;default\&quot;. (optional, default to &quot;default&quot;)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of ApiResponse (RoleResponse)</returns>
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<RoleResponse>> GetRoleByCodeWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        {
+            // verify the required parameter 'code' is set
+            if (code == null)
+            {
+                throw new Finbourne.Identity.Sdk.Client.ApiException(400, "Missing required parameter 'code' when calling RolesApi->GetRoleByCode");
+            }
+
+
+            Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("code", Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
+            if (scope != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
+            }
+
+            localVarRequestOptions.Operation = "RolesApi.GetRoleByCode";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<RoleResponse>("/api/roles/byCode/{code}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetRoleByCode", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

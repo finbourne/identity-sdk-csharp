@@ -149,6 +149,54 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of CellParentStatusResponse</returns>
         Finbourne.Identity.Sdk.Client.ApiResponse<CellParentStatusResponse> RemovePrimaryDomainWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
+        /// [EARLY ACCESS] RotateAttachingKey: Rotate the stored Attaching Key on an Attached cell
+        /// </summary>
+        /// <remarks>
+        /// Upserts a new Attaching Key PAT into the cell&#39;s ParameterStore / Azure Key Vault at the canonical per-cell path (&#x60;Lydia/CellManagement/{primaryDomain}/AttachingKey&#x60;) and re-stamps the path on the &#x60;cell_status&#x60; row. Does not require a prior key to exist in the secret store, and does not change the cell&#39;s attachment status or the recorded parent identity. Intended for two callers: the parent admin portal pushing a freshly-rotated PAT, and manual operator use (e.g. to migrate an existing cell onto the per-primary-domain path layout). Requires the cell to be currently &#x60;Attached&#x60; to a parent admin domain. Only the designated primary domain may call this. Requires JWT authentication (PAT tokens are rejected).
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="rotateAttachingKeyRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>CellParentStatusResponse</returns>
+        CellParentStatusResponse RotateAttachingKey(RotateAttachingKeyRequest rotateAttachingKeyRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
+
+        /// <summary>
+        /// [EARLY ACCESS] RotateAttachingKey: Rotate the stored Attaching Key on an Attached cell
+        /// </summary>
+        /// <remarks>
+        /// Upserts a new Attaching Key PAT into the cell&#39;s ParameterStore / Azure Key Vault at the canonical per-cell path (&#x60;Lydia/CellManagement/{primaryDomain}/AttachingKey&#x60;) and re-stamps the path on the &#x60;cell_status&#x60; row. Does not require a prior key to exist in the secret store, and does not change the cell&#39;s attachment status or the recorded parent identity. Intended for two callers: the parent admin portal pushing a freshly-rotated PAT, and manual operator use (e.g. to migrate an existing cell onto the per-primary-domain path layout). Requires the cell to be currently &#x60;Attached&#x60; to a parent admin domain. Only the designated primary domain may call this. Requires JWT authentication (PAT tokens are rejected).
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="rotateAttachingKeyRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>ApiResponse of CellParentStatusResponse</returns>
+        Finbourne.Identity.Sdk.Client.ApiResponse<CellParentStatusResponse> RotateAttachingKeyWithHttpInfo(RotateAttachingKeyRequest rotateAttachingKeyRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
+        /// <summary>
+        /// [EARLY ACCESS] RotateDomainKeys: Force a sweep-rotation of every parent-cell service-user PAT on this cell
+        /// </summary>
+        /// <remarks>
+        /// Stamps the per-cell rotation cutoff to \&quot;now\&quot;. On its next tick (and any subsequent tick until every provisioned PAT has been refreshed past the cutoff), the steady-state AdminCellSync job force-rotates any provisioned parent-cell PAT whose &#x60;CreatedDate&#x60; is strictly before the cutoff, regardless of the normal expiry-based window. Used to rapidly invalidate suspected-compromised PATs and to recover a cell whose recent rotations failed to be pushed to the parent admin portal. The cutoff is sticky: re-calling moves it forward, and new PATs naturally have &#x60;CreatedDate &gt; cutoff&#x60; so subsequent ticks pass the check without further intervention. Only the designated primary domain may call this. Requires JWT authentication (PAT tokens are rejected). Cell must currently be &#x60;Attached&#x60;.
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>CellParentStatusResponse</returns>
+        CellParentStatusResponse RotateDomainKeys(int operationIndex = 0, ConfigurationOptions? opts = null);
+
+        /// <summary>
+        /// [EARLY ACCESS] RotateDomainKeys: Force a sweep-rotation of every parent-cell service-user PAT on this cell
+        /// </summary>
+        /// <remarks>
+        /// Stamps the per-cell rotation cutoff to \&quot;now\&quot;. On its next tick (and any subsequent tick until every provisioned PAT has been refreshed past the cutoff), the steady-state AdminCellSync job force-rotates any provisioned parent-cell PAT whose &#x60;CreatedDate&#x60; is strictly before the cutoff, regardless of the normal expiry-based window. Used to rapidly invalidate suspected-compromised PATs and to recover a cell whose recent rotations failed to be pushed to the parent admin portal. The cutoff is sticky: re-calling moves it forward, and new PATs naturally have &#x60;CreatedDate &gt; cutoff&#x60; so subsequent ticks pass the check without further intervention. Only the designated primary domain may call this. Requires JWT authentication (PAT tokens are rejected). Cell must currently be &#x60;Attached&#x60;.
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>ApiResponse of CellParentStatusResponse</returns>
+        Finbourne.Identity.Sdk.Client.ApiResponse<CellParentStatusResponse> RotateDomainKeysWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
+        /// <summary>
         /// [EARLY ACCESS] SetAttachingKey: Store the Attaching Key pasted from the parent admin portal
         /// </summary>
         /// <remarks>
@@ -357,6 +405,58 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (CellParentStatusResponse)</returns>
         System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<CellParentStatusResponse>> RemovePrimaryDomainWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        /// <summary>
+        /// [EARLY ACCESS] RotateAttachingKey: Rotate the stored Attaching Key on an Attached cell
+        /// </summary>
+        /// <remarks>
+        /// Upserts a new Attaching Key PAT into the cell&#39;s ParameterStore / Azure Key Vault at the canonical per-cell path (&#x60;Lydia/CellManagement/{primaryDomain}/AttachingKey&#x60;) and re-stamps the path on the &#x60;cell_status&#x60; row. Does not require a prior key to exist in the secret store, and does not change the cell&#39;s attachment status or the recorded parent identity. Intended for two callers: the parent admin portal pushing a freshly-rotated PAT, and manual operator use (e.g. to migrate an existing cell onto the per-primary-domain path layout). Requires the cell to be currently &#x60;Attached&#x60; to a parent admin domain. Only the designated primary domain may call this. Requires JWT authentication (PAT tokens are rejected).
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="rotateAttachingKeyRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of CellParentStatusResponse</returns>
+        System.Threading.Tasks.Task<CellParentStatusResponse> RotateAttachingKeyAsync(RotateAttachingKeyRequest rotateAttachingKeyRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+
+        /// <summary>
+        /// [EARLY ACCESS] RotateAttachingKey: Rotate the stored Attaching Key on an Attached cell
+        /// </summary>
+        /// <remarks>
+        /// Upserts a new Attaching Key PAT into the cell&#39;s ParameterStore / Azure Key Vault at the canonical per-cell path (&#x60;Lydia/CellManagement/{primaryDomain}/AttachingKey&#x60;) and re-stamps the path on the &#x60;cell_status&#x60; row. Does not require a prior key to exist in the secret store, and does not change the cell&#39;s attachment status or the recorded parent identity. Intended for two callers: the parent admin portal pushing a freshly-rotated PAT, and manual operator use (e.g. to migrate an existing cell onto the per-primary-domain path layout). Requires the cell to be currently &#x60;Attached&#x60; to a parent admin domain. Only the designated primary domain may call this. Requires JWT authentication (PAT tokens are rejected).
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="rotateAttachingKeyRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of ApiResponse (CellParentStatusResponse)</returns>
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<CellParentStatusResponse>> RotateAttachingKeyWithHttpInfoAsync(RotateAttachingKeyRequest rotateAttachingKeyRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        /// <summary>
+        /// [EARLY ACCESS] RotateDomainKeys: Force a sweep-rotation of every parent-cell service-user PAT on this cell
+        /// </summary>
+        /// <remarks>
+        /// Stamps the per-cell rotation cutoff to \&quot;now\&quot;. On its next tick (and any subsequent tick until every provisioned PAT has been refreshed past the cutoff), the steady-state AdminCellSync job force-rotates any provisioned parent-cell PAT whose &#x60;CreatedDate&#x60; is strictly before the cutoff, regardless of the normal expiry-based window. Used to rapidly invalidate suspected-compromised PATs and to recover a cell whose recent rotations failed to be pushed to the parent admin portal. The cutoff is sticky: re-calling moves it forward, and new PATs naturally have &#x60;CreatedDate &gt; cutoff&#x60; so subsequent ticks pass the check without further intervention. Only the designated primary domain may call this. Requires JWT authentication (PAT tokens are rejected). Cell must currently be &#x60;Attached&#x60;.
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of CellParentStatusResponse</returns>
+        System.Threading.Tasks.Task<CellParentStatusResponse> RotateDomainKeysAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+
+        /// <summary>
+        /// [EARLY ACCESS] RotateDomainKeys: Force a sweep-rotation of every parent-cell service-user PAT on this cell
+        /// </summary>
+        /// <remarks>
+        /// Stamps the per-cell rotation cutoff to \&quot;now\&quot;. On its next tick (and any subsequent tick until every provisioned PAT has been refreshed past the cutoff), the steady-state AdminCellSync job force-rotates any provisioned parent-cell PAT whose &#x60;CreatedDate&#x60; is strictly before the cutoff, regardless of the normal expiry-based window. Used to rapidly invalidate suspected-compromised PATs and to recover a cell whose recent rotations failed to be pushed to the parent admin portal. The cutoff is sticky: re-calling moves it forward, and new PATs naturally have &#x60;CreatedDate &gt; cutoff&#x60; so subsequent ticks pass the check without further intervention. Only the designated primary domain may call this. Requires JWT authentication (PAT tokens are rejected). Cell must currently be &#x60;Attached&#x60;.
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of ApiResponse (CellParentStatusResponse)</returns>
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<CellParentStatusResponse>> RotateDomainKeysWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EARLY ACCESS] SetAttachingKey: Store the Attaching Key pasted from the parent admin portal
         /// </summary>
@@ -1506,6 +1606,404 @@ namespace Finbourne.Identity.Sdk.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RemovePrimaryDomain", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// [EARLY ACCESS] RotateAttachingKey: Rotate the stored Attaching Key on an Attached cell Upserts a new Attaching Key PAT into the cell&#39;s ParameterStore / Azure Key Vault at the canonical per-cell path (&#x60;Lydia/CellManagement/{primaryDomain}/AttachingKey&#x60;) and re-stamps the path on the &#x60;cell_status&#x60; row. Does not require a prior key to exist in the secret store, and does not change the cell&#39;s attachment status or the recorded parent identity. Intended for two callers: the parent admin portal pushing a freshly-rotated PAT, and manual operator use (e.g. to migrate an existing cell onto the per-primary-domain path layout). Requires the cell to be currently &#x60;Attached&#x60; to a parent admin domain. Only the designated primary domain may call this. Requires JWT authentication (PAT tokens are rejected).
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="rotateAttachingKeyRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>CellParentStatusResponse</returns>
+        public CellParentStatusResponse RotateAttachingKey(RotateAttachingKeyRequest rotateAttachingKeyRequest, int operationIndex = 0, ConfigurationOptions? opts = null)
+        {
+            Finbourne.Identity.Sdk.Client.ApiResponse<CellParentStatusResponse> localVarResponse = RotateAttachingKeyWithHttpInfo(rotateAttachingKeyRequest, opts: opts);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [EARLY ACCESS] RotateAttachingKey: Rotate the stored Attaching Key on an Attached cell Upserts a new Attaching Key PAT into the cell&#39;s ParameterStore / Azure Key Vault at the canonical per-cell path (&#x60;Lydia/CellManagement/{primaryDomain}/AttachingKey&#x60;) and re-stamps the path on the &#x60;cell_status&#x60; row. Does not require a prior key to exist in the secret store, and does not change the cell&#39;s attachment status or the recorded parent identity. Intended for two callers: the parent admin portal pushing a freshly-rotated PAT, and manual operator use (e.g. to migrate an existing cell onto the per-primary-domain path layout). Requires the cell to be currently &#x60;Attached&#x60; to a parent admin domain. Only the designated primary domain may call this. Requires JWT authentication (PAT tokens are rejected).
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="rotateAttachingKeyRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>ApiResponse of CellParentStatusResponse</returns>
+        public Finbourne.Identity.Sdk.Client.ApiResponse<CellParentStatusResponse> RotateAttachingKeyWithHttpInfo(RotateAttachingKeyRequest rotateAttachingKeyRequest, int operationIndex = 0, ConfigurationOptions? opts = null)
+        {
+            // verify the required parameter 'rotateAttachingKeyRequest' is set
+            if (rotateAttachingKeyRequest == null)
+            {
+                throw new Finbourne.Identity.Sdk.Client.ApiException(400, "Missing required parameter 'rotateAttachingKeyRequest' when calling CellManagementApi->RotateAttachingKey");
+            }
+
+            Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
+
+            string[] _contentTypes = new string[] {
+                "application/json-patch+json",
+                "application/json",
+                "text/json",
+                "application/*+json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = rotateAttachingKeyRequest;
+
+            localVarRequestOptions.Operation = "CellManagementApi.RotateAttachingKey";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Put<CellParentStatusResponse>("/api/cellmanagement/attachingkey/rotate", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RotateAttachingKey", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// [EARLY ACCESS] RotateAttachingKey: Rotate the stored Attaching Key on an Attached cell Upserts a new Attaching Key PAT into the cell&#39;s ParameterStore / Azure Key Vault at the canonical per-cell path (&#x60;Lydia/CellManagement/{primaryDomain}/AttachingKey&#x60;) and re-stamps the path on the &#x60;cell_status&#x60; row. Does not require a prior key to exist in the secret store, and does not change the cell&#39;s attachment status or the recorded parent identity. Intended for two callers: the parent admin portal pushing a freshly-rotated PAT, and manual operator use (e.g. to migrate an existing cell onto the per-primary-domain path layout). Requires the cell to be currently &#x60;Attached&#x60; to a parent admin domain. Only the designated primary domain may call this. Requires JWT authentication (PAT tokens are rejected).
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="rotateAttachingKeyRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of CellParentStatusResponse</returns>
+        public async System.Threading.Tasks.Task<CellParentStatusResponse> RotateAttachingKeyAsync(RotateAttachingKeyRequest rotateAttachingKeyRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        {
+            Finbourne.Identity.Sdk.Client.ApiResponse<CellParentStatusResponse> localVarResponse = await RotateAttachingKeyWithHttpInfoAsync(rotateAttachingKeyRequest, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [EARLY ACCESS] RotateAttachingKey: Rotate the stored Attaching Key on an Attached cell Upserts a new Attaching Key PAT into the cell&#39;s ParameterStore / Azure Key Vault at the canonical per-cell path (&#x60;Lydia/CellManagement/{primaryDomain}/AttachingKey&#x60;) and re-stamps the path on the &#x60;cell_status&#x60; row. Does not require a prior key to exist in the secret store, and does not change the cell&#39;s attachment status or the recorded parent identity. Intended for two callers: the parent admin portal pushing a freshly-rotated PAT, and manual operator use (e.g. to migrate an existing cell onto the per-primary-domain path layout). Requires the cell to be currently &#x60;Attached&#x60; to a parent admin domain. Only the designated primary domain may call this. Requires JWT authentication (PAT tokens are rejected).
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="rotateAttachingKeyRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of ApiResponse (CellParentStatusResponse)</returns>
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<CellParentStatusResponse>> RotateAttachingKeyWithHttpInfoAsync(RotateAttachingKeyRequest rotateAttachingKeyRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        {
+            // verify the required parameter 'rotateAttachingKeyRequest' is set
+            if (rotateAttachingKeyRequest == null)
+            {
+                throw new Finbourne.Identity.Sdk.Client.ApiException(400, "Missing required parameter 'rotateAttachingKeyRequest' when calling CellManagementApi->RotateAttachingKey");
+            }
+
+
+            Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
+
+            string[] _contentTypes = new string[] {
+                "application/json-patch+json", 
+                "application/json", 
+                "text/json", 
+                "application/*+json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = rotateAttachingKeyRequest;
+
+            localVarRequestOptions.Operation = "CellManagementApi.RotateAttachingKey";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CellParentStatusResponse>("/api/cellmanagement/attachingkey/rotate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RotateAttachingKey", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// [EARLY ACCESS] RotateDomainKeys: Force a sweep-rotation of every parent-cell service-user PAT on this cell Stamps the per-cell rotation cutoff to \&quot;now\&quot;. On its next tick (and any subsequent tick until every provisioned PAT has been refreshed past the cutoff), the steady-state AdminCellSync job force-rotates any provisioned parent-cell PAT whose &#x60;CreatedDate&#x60; is strictly before the cutoff, regardless of the normal expiry-based window. Used to rapidly invalidate suspected-compromised PATs and to recover a cell whose recent rotations failed to be pushed to the parent admin portal. The cutoff is sticky: re-calling moves it forward, and new PATs naturally have &#x60;CreatedDate &gt; cutoff&#x60; so subsequent ticks pass the check without further intervention. Only the designated primary domain may call this. Requires JWT authentication (PAT tokens are rejected). Cell must currently be &#x60;Attached&#x60;.
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>CellParentStatusResponse</returns>
+        public CellParentStatusResponse RotateDomainKeys(int operationIndex = 0, ConfigurationOptions? opts = null)
+        {
+            Finbourne.Identity.Sdk.Client.ApiResponse<CellParentStatusResponse> localVarResponse = RotateDomainKeysWithHttpInfo(opts: opts);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [EARLY ACCESS] RotateDomainKeys: Force a sweep-rotation of every parent-cell service-user PAT on this cell Stamps the per-cell rotation cutoff to \&quot;now\&quot;. On its next tick (and any subsequent tick until every provisioned PAT has been refreshed past the cutoff), the steady-state AdminCellSync job force-rotates any provisioned parent-cell PAT whose &#x60;CreatedDate&#x60; is strictly before the cutoff, regardless of the normal expiry-based window. Used to rapidly invalidate suspected-compromised PATs and to recover a cell whose recent rotations failed to be pushed to the parent admin portal. The cutoff is sticky: re-calling moves it forward, and new PATs naturally have &#x60;CreatedDate &gt; cutoff&#x60; so subsequent ticks pass the check without further intervention. Only the designated primary domain may call this. Requires JWT authentication (PAT tokens are rejected). Cell must currently be &#x60;Attached&#x60;.
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>ApiResponse of CellParentStatusResponse</returns>
+        public Finbourne.Identity.Sdk.Client.ApiResponse<CellParentStatusResponse> RotateDomainKeysWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null)
+        {
+            Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CellManagementApi.RotateDomainKeys";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<CellParentStatusResponse>("/api/cellmanagement/rotatedomainkeys", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RotateDomainKeys", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// [EARLY ACCESS] RotateDomainKeys: Force a sweep-rotation of every parent-cell service-user PAT on this cell Stamps the per-cell rotation cutoff to \&quot;now\&quot;. On its next tick (and any subsequent tick until every provisioned PAT has been refreshed past the cutoff), the steady-state AdminCellSync job force-rotates any provisioned parent-cell PAT whose &#x60;CreatedDate&#x60; is strictly before the cutoff, regardless of the normal expiry-based window. Used to rapidly invalidate suspected-compromised PATs and to recover a cell whose recent rotations failed to be pushed to the parent admin portal. The cutoff is sticky: re-calling moves it forward, and new PATs naturally have &#x60;CreatedDate &gt; cutoff&#x60; so subsequent ticks pass the check without further intervention. Only the designated primary domain may call this. Requires JWT authentication (PAT tokens are rejected). Cell must currently be &#x60;Attached&#x60;.
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of CellParentStatusResponse</returns>
+        public async System.Threading.Tasks.Task<CellParentStatusResponse> RotateDomainKeysAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        {
+            Finbourne.Identity.Sdk.Client.ApiResponse<CellParentStatusResponse> localVarResponse = await RotateDomainKeysWithHttpInfoAsync(operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [EARLY ACCESS] RotateDomainKeys: Force a sweep-rotation of every parent-cell service-user PAT on this cell Stamps the per-cell rotation cutoff to \&quot;now\&quot;. On its next tick (and any subsequent tick until every provisioned PAT has been refreshed past the cutoff), the steady-state AdminCellSync job force-rotates any provisioned parent-cell PAT whose &#x60;CreatedDate&#x60; is strictly before the cutoff, regardless of the normal expiry-based window. Used to rapidly invalidate suspected-compromised PATs and to recover a cell whose recent rotations failed to be pushed to the parent admin portal. The cutoff is sticky: re-calling moves it forward, and new PATs naturally have &#x60;CreatedDate &gt; cutoff&#x60; so subsequent ticks pass the check without further intervention. Only the designated primary domain may call this. Requires JWT authentication (PAT tokens are rejected). Cell must currently be &#x60;Attached&#x60;.
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of ApiResponse (CellParentStatusResponse)</returns>
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<CellParentStatusResponse>> RotateDomainKeysWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        {
+
+            Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "CellManagementApi.RotateDomainKeys";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<CellParentStatusResponse>("/api/cellmanagement/rotatedomainkeys", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RotateDomainKeys", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

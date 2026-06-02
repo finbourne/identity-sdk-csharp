@@ -9,6 +9,8 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 | [**GetCellParentStatus**](CellManagementApi.md#getcellparentstatus) | **GET** /api/cellmanagement/parentcell | [EARLY ACCESS] GetCellParentStatus: Get cell parent status |
 | [**RefuseCellAttachment**](CellManagementApi.md#refusecellattachment) | **POST** /api/cellmanagement/refuseattachment | [EARLY ACCESS] RefuseCellAttachment: Refuse a Proposed cell attachment |
 | [**RemovePrimaryDomain**](CellManagementApi.md#removeprimarydomain) | **DELETE** /api/cellmanagement/primarydomain | [EARLY ACCESS] RemovePrimaryDomain: Remove primary domain |
+| [**RotateAttachingKey**](CellManagementApi.md#rotateattachingkey) | **PUT** /api/cellmanagement/attachingkey/rotate | [EARLY ACCESS] RotateAttachingKey: Rotate the stored Attaching Key on an Attached cell |
+| [**RotateDomainKeys**](CellManagementApi.md#rotatedomainkeys) | **POST** /api/cellmanagement/rotatedomainkeys | [EARLY ACCESS] RotateDomainKeys: Force a sweep-rotation of every parent-cell service-user PAT on this cell |
 | [**SetAttachingKey**](CellManagementApi.md#setattachingkey) | **PUT** /api/cellmanagement/attachingkey | [EARLY ACCESS] SetAttachingKey: Store the Attaching Key pasted from the parent admin portal |
 | [**SetParentCell**](CellManagementApi.md#setparentcell) | **PUT** /api/cellmanagement/parentcell | [EARLY ACCESS] SetParentCell: Set parent cell |
 | [**SetPrimaryDomain**](CellManagementApi.md#setprimarydomain) | **PUT** /api/cellmanagement/primarydomain | [EARLY ACCESS] SetPrimaryDomain: Set primary domain |
@@ -555,6 +557,228 @@ This endpoint does not need any parameter.
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | The updated cell parent status |  -  |
+| **0** | Error response |  -  |
+
+[Back to top](#) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to Model list](../README.md#documentation-for-models) &#8226; [Back to README](../README.md)
+
+<a id="rotateattachingkey"></a>
+# **RotateAttachingKey**
+> CellParentStatusResponse RotateAttachingKey (RotateAttachingKeyRequest rotateAttachingKeyRequest)
+
+[EARLY ACCESS] RotateAttachingKey: Rotate the stored Attaching Key on an Attached cell
+
+Upserts a new Attaching Key PAT into the cell's ParameterStore / Azure Key Vault at the canonical per-cell path (`Lydia/CellManagement/{primaryDomain}/AttachingKey`) and re-stamps the path on the `cell_status` row. Does not require a prior key to exist in the secret store, and does not change the cell's attachment status or the recorded parent identity. Intended for two callers: the parent admin portal pushing a freshly-rotated PAT, and manual operator use (e.g. to migrate an existing cell onto the per-primary-domain path layout). Requires the cell to be currently `Attached` to a parent admin domain. Only the designated primary domain may call this. Requires JWT authentication (PAT tokens are rejected).
+
+### Example
+```csharp
+using System.Collections.Generic;
+using Finbourne.Identity.Sdk.Api;
+using Finbourne.Identity.Sdk.Client;
+using Finbourne.Identity.Sdk.Extensions;
+using Finbourne.Identity.Sdk.Model;
+using Newtonsoft.Json;
+
+namespace Examples
+{
+    public static class Program
+    {
+        public static void Main()
+        {
+            var secretsFilename = "secrets.json";
+            var path = Path.Combine(Directory.GetCurrentDirectory(), secretsFilename);
+            // Replace with the relevant values
+            File.WriteAllText(
+                path, 
+                @"{
+                    ""api"": {
+                        ""tokenUrl"": ""<your-token-url>"",
+                        ""identityUrl"": ""https://<your-domain>.lusid.com/identity"",
+                        ""username"": ""<your-username>"",
+                        ""password"": ""<your-password>"",
+                        ""clientId"": ""<your-client-id>"",
+                        ""clientSecret"": ""<your-client-secret>""
+                    }
+                }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<CellManagementApi>();
+
+            var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<CellManagementApi>();
+            var rotateAttachingKeyRequest = new RotateAttachingKeyRequest(); // RotateAttachingKeyRequest | 
+
+            try
+            {
+                // uncomment the below to set overrides at the request level
+                // CellParentStatusResponse result = apiInstance.RotateAttachingKey(rotateAttachingKeyRequest, opts: opts);
+
+                // [EARLY ACCESS] RotateAttachingKey: Rotate the stored Attaching Key on an Attached cell
+                CellParentStatusResponse result = apiInstance.RotateAttachingKey(rotateAttachingKeyRequest);
+                Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+            }
+            catch (ApiException e)
+            {
+                Console.WriteLine("Exception when calling CellManagementApi.RotateAttachingKey: " + e.Message);
+                Console.WriteLine("Status Code: " + e.ErrorCode);
+                Console.WriteLine(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the RotateAttachingKeyWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // [EARLY ACCESS] RotateAttachingKey: Rotate the stored Attaching Key on an Attached cell
+    ApiResponse<CellParentStatusResponse> response = apiInstance.RotateAttachingKeyWithHttpInfo(rotateAttachingKeyRequest);
+    Console.WriteLine("Status Code: " + response.StatusCode);
+    Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
+    Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
+}
+catch (ApiException e)
+{
+    Console.WriteLine("Exception when calling CellManagementApi.RotateAttachingKeyWithHttpInfo: " + e.Message);
+    Console.WriteLine("Status Code: " + e.ErrorCode);
+    Console.WriteLine(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **rotateAttachingKeyRequest** | [**RotateAttachingKeyRequest**](RotateAttachingKeyRequest.md) |  |  |
+
+### Return type
+
+[**CellParentStatusResponse**](CellParentStatusResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | The updated cell parent status |  -  |
+| **400** | The details of the input related failure |  -  |
+| **0** | Error response |  -  |
+
+[Back to top](#) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to Model list](../README.md#documentation-for-models) &#8226; [Back to README](../README.md)
+
+<a id="rotatedomainkeys"></a>
+# **RotateDomainKeys**
+> CellParentStatusResponse RotateDomainKeys ()
+
+[EARLY ACCESS] RotateDomainKeys: Force a sweep-rotation of every parent-cell service-user PAT on this cell
+
+Stamps the per-cell rotation cutoff to \"now\". On its next tick (and any subsequent tick until every provisioned PAT has been refreshed past the cutoff), the steady-state AdminCellSync job force-rotates any provisioned parent-cell PAT whose `CreatedDate` is strictly before the cutoff, regardless of the normal expiry-based window. Used to rapidly invalidate suspected-compromised PATs and to recover a cell whose recent rotations failed to be pushed to the parent admin portal. The cutoff is sticky: re-calling moves it forward, and new PATs naturally have `CreatedDate > cutoff` so subsequent ticks pass the check without further intervention. Only the designated primary domain may call this. Requires JWT authentication (PAT tokens are rejected). Cell must currently be `Attached`.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using Finbourne.Identity.Sdk.Api;
+using Finbourne.Identity.Sdk.Client;
+using Finbourne.Identity.Sdk.Extensions;
+using Finbourne.Identity.Sdk.Model;
+using Newtonsoft.Json;
+
+namespace Examples
+{
+    public static class Program
+    {
+        public static void Main()
+        {
+            var secretsFilename = "secrets.json";
+            var path = Path.Combine(Directory.GetCurrentDirectory(), secretsFilename);
+            // Replace with the relevant values
+            File.WriteAllText(
+                path, 
+                @"{
+                    ""api"": {
+                        ""tokenUrl"": ""<your-token-url>"",
+                        ""identityUrl"": ""https://<your-domain>.lusid.com/identity"",
+                        ""username"": ""<your-username>"",
+                        ""password"": ""<your-password>"",
+                        ""clientId"": ""<your-client-id>"",
+                        ""clientSecret"": ""<your-client-secret>""
+                    }
+                }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<CellManagementApi>();
+
+            var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<CellManagementApi>();
+
+            try
+            {
+                // uncomment the below to set overrides at the request level
+                // CellParentStatusResponse result = apiInstance.RotateDomainKeys(opts: opts);
+
+                // [EARLY ACCESS] RotateDomainKeys: Force a sweep-rotation of every parent-cell service-user PAT on this cell
+                CellParentStatusResponse result = apiInstance.RotateDomainKeys();
+                Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+            }
+            catch (ApiException e)
+            {
+                Console.WriteLine("Exception when calling CellManagementApi.RotateDomainKeys: " + e.Message);
+                Console.WriteLine("Status Code: " + e.ErrorCode);
+                Console.WriteLine(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the RotateDomainKeysWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // [EARLY ACCESS] RotateDomainKeys: Force a sweep-rotation of every parent-cell service-user PAT on this cell
+    ApiResponse<CellParentStatusResponse> response = apiInstance.RotateDomainKeysWithHttpInfo();
+    Console.WriteLine("Status Code: " + response.StatusCode);
+    Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
+    Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
+}
+catch (ApiException e)
+{
+    Console.WriteLine("Exception when calling CellManagementApi.RotateDomainKeysWithHttpInfo: " + e.Message);
+    Console.WriteLine("Status Code: " + e.ErrorCode);
+    Console.WriteLine(e.StackTrace);
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+### Return type
+
+[**CellParentStatusResponse**](CellParentStatusResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | The cell parent status after stamping the cutoff |  -  |
 | **0** | Error response |  -  |
 
 [Back to top](#) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to Model list](../README.md#documentation-for-models) &#8226; [Back to README](../README.md)

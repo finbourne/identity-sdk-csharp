@@ -8,6 +8,7 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 | [**CreateRole**](RolesApi.md#createrole) | **POST** /api/roles | CreateRole: Create Role |
 | [**DeleteRole**](RolesApi.md#deleterole) | **DELETE** /api/roles/{id} | DeleteRole: Delete Role |
 | [**GetRole**](RolesApi.md#getrole) | **GET** /api/roles/{id} | GetRole: Get Role |
+| [**GetRoleByCode**](RolesApi.md#getrolebycode) | **GET** /api/roles/byCode/{code} | GetRoleByCode: Get Role By Code |
 | [**ListRoles**](RolesApi.md#listroles) | **GET** /api/roles | ListRoles: List Roles |
 | [**ListUsersInRole**](RolesApi.md#listusersinrole) | **GET** /api/roles/{id}/users | ListUsersInRole: Get the users in the specified role. |
 | [**RemoveUserFromRole**](RolesApi.md#removeuserfromrole) | **DELETE** /api/roles/{id}/users/{userId} | RemoveUserFromRole: Remove User from Role |
@@ -445,6 +446,123 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **string** | The unique identifier for the role |  |
+
+### Return type
+
+[**RoleResponse**](RoleResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Get the specified role |  -  |
+| **404** | Not Found |  -  |
+| **400** | The details of the input related failure |  -  |
+| **0** | Error response |  -  |
+
+[Back to top](#) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to Model list](../README.md#documentation-for-models) &#8226; [Back to README](../README.md)
+
+<a id="getrolebycode"></a>
+# **GetRoleByCode**
+> RoleResponse GetRoleByCode (string code, string? scope = null)
+
+GetRoleByCode: Get Role By Code
+
+Get the specified role by its code, optionally scoped. Scope defaults to \"default\". The \"code\" is the same value supplied as \"name\" when the role was created via CreateRole.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using Finbourne.Identity.Sdk.Api;
+using Finbourne.Identity.Sdk.Client;
+using Finbourne.Identity.Sdk.Extensions;
+using Finbourne.Identity.Sdk.Model;
+using Newtonsoft.Json;
+
+namespace Examples
+{
+    public static class Program
+    {
+        public static void Main()
+        {
+            var secretsFilename = "secrets.json";
+            var path = Path.Combine(Directory.GetCurrentDirectory(), secretsFilename);
+            // Replace with the relevant values
+            File.WriteAllText(
+                path, 
+                @"{
+                    ""api"": {
+                        ""tokenUrl"": ""<your-token-url>"",
+                        ""identityUrl"": ""https://<your-domain>.lusid.com/identity"",
+                        ""username"": ""<your-username>"",
+                        ""password"": ""<your-password>"",
+                        ""clientId"": ""<your-client-id>"",
+                        ""clientSecret"": ""<your-client-secret>""
+                    }
+                }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RolesApi>();
+
+            var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RolesApi>();
+            var code = "code_example";  // string | The role code (the value supplied as \"name\" when the role was created).
+            var scope = "\"default\"";  // string? | The scope the role lives in. Defaults to \"default\". (optional)  (default to "default")
+
+            try
+            {
+                // uncomment the below to set overrides at the request level
+                // RoleResponse result = apiInstance.GetRoleByCode(code, scope, opts: opts);
+
+                // GetRoleByCode: Get Role By Code
+                RoleResponse result = apiInstance.GetRoleByCode(code, scope);
+                Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+            }
+            catch (ApiException e)
+            {
+                Console.WriteLine("Exception when calling RolesApi.GetRoleByCode: " + e.Message);
+                Console.WriteLine("Status Code: " + e.ErrorCode);
+                Console.WriteLine(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetRoleByCodeWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GetRoleByCode: Get Role By Code
+    ApiResponse<RoleResponse> response = apiInstance.GetRoleByCodeWithHttpInfo(code, scope);
+    Console.WriteLine("Status Code: " + response.StatusCode);
+    Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
+    Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
+}
+catch (ApiException e)
+{
+    Console.WriteLine("Exception when calling RolesApi.GetRoleByCodeWithHttpInfo: " + e.Message);
+    Console.WriteLine("Status Code: " + e.ErrorCode);
+    Console.WriteLine(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **code** | **string** | The role code (the value supplied as \&quot;name\&quot; when the role was created). |  |
+| **scope** | **string?** | The scope the role lives in. Defaults to \&quot;default\&quot;. | [optional] [default to &quot;default&quot;] |
 
 ### Return type
 
