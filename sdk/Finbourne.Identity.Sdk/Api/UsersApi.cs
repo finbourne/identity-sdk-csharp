@@ -163,6 +163,31 @@ namespace Finbourne.Identity.Sdk.Api
         /// <returns>ApiResponse of UserResponse</returns>
         Finbourne.Identity.Sdk.Client.ApiResponse<UserResponse> GetUserWithHttpInfo(string id, bool? includeRoles = default(bool?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
+        /// GetUserFromLogin: Get User From Login
+        /// </summary>
+        /// <remarks>
+        /// Get the userId of a specified User
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">The unique login for the User</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>UserResponse</returns>
+        UserResponse GetUserFromLogin(string login, int operationIndex = 0, ConfigurationOptions? opts = null);
+
+        /// <summary>
+        /// GetUserFromLogin: Get User From Login
+        /// </summary>
+        /// <remarks>
+        /// Get the userId of a specified User
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">The unique login for the User</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>ApiResponse of UserResponse</returns>
+        Finbourne.Identity.Sdk.Client.ApiResponse<UserResponse> GetUserFromLoginWithHttpInfo(string login, int operationIndex = 0, ConfigurationOptions? opts = null);
+        /// <summary>
         /// [EARLY ACCESS] GetUserSchema: Get User Schema
         /// </summary>
         /// <remarks>
@@ -560,6 +585,33 @@ namespace Finbourne.Identity.Sdk.Api
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (UserResponse)</returns>
         System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<UserResponse>> GetUserWithHttpInfoAsync(string id, bool? includeRoles = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        /// <summary>
+        /// GetUserFromLogin: Get User From Login
+        /// </summary>
+        /// <remarks>
+        /// Get the userId of a specified User
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">The unique login for the User</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of UserResponse</returns>
+        System.Threading.Tasks.Task<UserResponse> GetUserFromLoginAsync(string login, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+
+        /// <summary>
+        /// GetUserFromLogin: Get User From Login
+        /// </summary>
+        /// <remarks>
+        /// Get the userId of a specified User
+        /// </remarks>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">The unique login for the User</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of ApiResponse (UserResponse)</returns>
+        System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<UserResponse>> GetUserFromLoginWithHttpInfoAsync(string login, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EARLY ACCESS] GetUserSchema: Get User Schema
         /// </summary>
@@ -1987,6 +2039,206 @@ namespace Finbourne.Identity.Sdk.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetUser", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// GetUserFromLogin: Get User From Login Get the userId of a specified User
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">The unique login for the User</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>UserResponse</returns>
+        public UserResponse GetUserFromLogin(string login, int operationIndex = 0, ConfigurationOptions? opts = null)
+        {
+            Finbourne.Identity.Sdk.Client.ApiResponse<UserResponse> localVarResponse = GetUserFromLoginWithHttpInfo(login, opts: opts);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// GetUserFromLogin: Get User From Login Get the userId of a specified User
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">The unique login for the User</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>ApiResponse of UserResponse</returns>
+        public Finbourne.Identity.Sdk.Client.ApiResponse<UserResponse> GetUserFromLoginWithHttpInfo(string login, int operationIndex = 0, ConfigurationOptions? opts = null)
+        {
+            // verify the required parameter 'login' is set
+            if (login == null)
+            {
+                throw new Finbourne.Identity.Sdk.Client.ApiException(400, "Missing required parameter 'login' when calling UsersApi->GetUserFromLogin");
+            }
+
+            Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("login", Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToString(login)); // path parameter
+
+            localVarRequestOptions.Operation = "UsersApi.GetUserFromLogin";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<UserResponse>("/api/users/fromlogin/{login}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetUserFromLogin", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// GetUserFromLogin: Get User From Login Get the userId of a specified User
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">The unique login for the User</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of UserResponse</returns>
+        public async System.Threading.Tasks.Task<UserResponse> GetUserFromLoginAsync(string login, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        {
+            Finbourne.Identity.Sdk.Client.ApiResponse<UserResponse> localVarResponse = await GetUserFromLoginWithHttpInfoAsync(login, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// GetUserFromLogin: Get User From Login Get the userId of a specified User
+        /// </summary>
+        /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">The unique login for the User</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of ApiResponse (UserResponse)</returns>
+        public async System.Threading.Tasks.Task<Finbourne.Identity.Sdk.Client.ApiResponse<UserResponse>> GetUserFromLoginWithHttpInfoAsync(string login, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        {
+            // verify the required parameter 'login' is set
+            if (login == null)
+            {
+                throw new Finbourne.Identity.Sdk.Client.ApiException(400, "Missing required parameter 'login' when calling UsersApi->GetUserFromLogin");
+            }
+
+
+            Finbourne.Identity.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Identity.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Finbourne.Identity.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("login", Finbourne.Identity.Sdk.Client.ClientUtils.ParameterToString(login)); // path parameter
+
+            localVarRequestOptions.Operation = "UsersApi.GetUserFromLogin";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<UserResponse>("/api/users/fromlogin/{login}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetUserFromLogin", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

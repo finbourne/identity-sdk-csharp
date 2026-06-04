@@ -9,6 +9,7 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 | [**ExpirePassword**](UsersApi.md#expirepassword) | **POST** /api/users/{id}/lifecycle/$expirepassword | ExpirePassword: Reset the user&#39;s password to a temporary one |
 | [**FindUsersById**](UsersApi.md#findusersbyid) | **GET** /api/directory | FindUsersById: Find users by id endpoint |
 | [**GetUser**](UsersApi.md#getuser) | **GET** /api/users/{id} | GetUser: Get User |
+| [**GetUserFromLogin**](UsersApi.md#getuserfromlogin) | **GET** /api/users/fromlogin/{login} | GetUserFromLogin: Get User From Login |
 | [**GetUserSchema**](UsersApi.md#getuserschema) | **GET** /api/users/schema | [EARLY ACCESS] GetUserSchema: Get User Schema |
 | [**ListRunnableUsers**](UsersApi.md#listrunnableusers) | **GET** /api/users/$runnable | [EARLY ACCESS] ListRunnableUsers: List Runable Users |
 | [**ListUsers**](UsersApi.md#listusers) | **GET** /api/users | ListUsers: List Users |
@@ -587,6 +588,120 @@ catch (ApiException e)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Get the specified user |  -  |
+| **400** | The details of the input related failure |  -  |
+| **0** | Error response |  -  |
+
+[Back to top](#) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to Model list](../README.md#documentation-for-models) &#8226; [Back to README](../README.md)
+
+<a id="getuserfromlogin"></a>
+# **GetUserFromLogin**
+> UserResponse GetUserFromLogin (string login)
+
+GetUserFromLogin: Get User From Login
+
+Get the userId of a specified User
+
+### Example
+```csharp
+using System.Collections.Generic;
+using Finbourne.Identity.Sdk.Api;
+using Finbourne.Identity.Sdk.Client;
+using Finbourne.Identity.Sdk.Extensions;
+using Finbourne.Identity.Sdk.Model;
+using Newtonsoft.Json;
+
+namespace Examples
+{
+    public static class Program
+    {
+        public static void Main()
+        {
+            var secretsFilename = "secrets.json";
+            var path = Path.Combine(Directory.GetCurrentDirectory(), secretsFilename);
+            // Replace with the relevant values
+            File.WriteAllText(
+                path, 
+                @"{
+                    ""api"": {
+                        ""tokenUrl"": ""<your-token-url>"",
+                        ""identityUrl"": ""https://<your-domain>.lusid.com/identity"",
+                        ""username"": ""<your-username>"",
+                        ""password"": ""<your-password>"",
+                        ""clientId"": ""<your-client-id>"",
+                        ""clientSecret"": ""<your-client-secret>""
+                    }
+                }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UsersApi>();
+
+            var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UsersApi>();
+            var login = "login_example";  // string | The unique login for the User
+
+            try
+            {
+                // uncomment the below to set overrides at the request level
+                // UserResponse result = apiInstance.GetUserFromLogin(login, opts: opts);
+
+                // GetUserFromLogin: Get User From Login
+                UserResponse result = apiInstance.GetUserFromLogin(login);
+                Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+            }
+            catch (ApiException e)
+            {
+                Console.WriteLine("Exception when calling UsersApi.GetUserFromLogin: " + e.Message);
+                Console.WriteLine("Status Code: " + e.ErrorCode);
+                Console.WriteLine(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetUserFromLoginWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GetUserFromLogin: Get User From Login
+    ApiResponse<UserResponse> response = apiInstance.GetUserFromLoginWithHttpInfo(login);
+    Console.WriteLine("Status Code: " + response.StatusCode);
+    Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
+    Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
+}
+catch (ApiException e)
+{
+    Console.WriteLine("Exception when calling UsersApi.GetUserFromLoginWithHttpInfo: " + e.Message);
+    Console.WriteLine("Status Code: " + e.ErrorCode);
+    Console.WriteLine(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **login** | **string** | The unique login for the User |  |
+
+### Return type
+
+[**UserResponse**](UserResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Get the specified user from login |  -  |
 | **400** | The details of the input related failure |  -  |
 | **0** | Error response |  -  |
 
