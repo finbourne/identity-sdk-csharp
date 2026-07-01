@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Name** | **string** | The name of the MCP tool (alphanumeric, underscore, and hyphen) | 
 **Title** | **string** | The title of the MCP tool | 
 **Description** | **string** | The description of the MCP tool | 
-**Destructive** | **bool** | Whether the tool is destructive | [optional] 
+**Destructive** | **bool** | Whether the tool is destructive. When true, DestructiveActionSummaryTemplate is required and is shown to the user at the destructive-action consent gate before the tool runs. | [optional] 
 **Idempotent** | **bool** | Whether the tool is idempotent | [optional] 
 **OpenWorld** | **bool** | Whether the tool operates in open world | [optional] 
 **ReadOnly** | **bool** | Whether the tool is read-only | [optional] 

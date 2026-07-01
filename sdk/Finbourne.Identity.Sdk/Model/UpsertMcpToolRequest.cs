@@ -39,7 +39,7 @@ namespace Finbourne.Identity.Sdk.Model
         /// <param name="name">The name of the MCP tool (alphanumeric, underscore, and hyphen) (required).</param>
         /// <param name="title">The title of the MCP tool (required).</param>
         /// <param name="description">The description of the MCP tool (required).</param>
-        /// <param name="destructive">Whether the tool is destructive.</param>
+        /// <param name="destructive">Whether the tool is destructive. When true, DestructiveActionSummaryTemplate is required and is shown to the user at the destructive-action consent gate before the tool runs..</param>
         /// <param name="idempotent">Whether the tool is idempotent.</param>
         /// <param name="openWorld">Whether the tool operates in open world.</param>
         /// <param name="readOnly">Whether the tool is read-only.</param>
@@ -99,9 +99,9 @@ namespace Finbourne.Identity.Sdk.Model
         public string Description { get; set; }
 
         /// <summary>
-        /// Whether the tool is destructive
+        /// Whether the tool is destructive. When true, DestructiveActionSummaryTemplate is required and is shown to the user at the destructive-action consent gate before the tool runs.
         /// </summary>
-        /// <value>Whether the tool is destructive</value>
+        /// <value>Whether the tool is destructive. When true, DestructiveActionSummaryTemplate is required and is shown to the user at the destructive-action consent gate before the tool runs.</value>
         [DataMember(Name = "destructive", EmitDefaultValue = true)]
         public bool Destructive { get; set; }
 

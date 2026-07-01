@@ -45,7 +45,7 @@ namespace Finbourne.Identity.Sdk.Model
         /// <param name="payloadType">The type of payload (Luminesce or Scheduler).</param>
         /// <param name="luminescePayload">luminescePayload.</param>
         /// <param name="schedulerPayload">schedulerPayload.</param>
-        /// <param name="destructiveActionSummaryTemplate">Template for human-readable destructive action summary (e.g. \&quot;Delete file &#39;{filePath}&#39;\&quot;).</param>
+        /// <param name="destructiveActionSummaryTemplate">Template for human-readable destructive action summary. Uses {paramName} single-brace placeholders (e.g. \&quot;Delete file &#39;{filePath}&#39;\&quot;). Required when Destructive is true..</param>
         /// <param name="createdAt">When the MCP tool was created.</param>
         /// <param name="createdBy">Who created the MCP tool.</param>
         /// <param name="updatedAt">When the MCP tool was last updated.</param>
@@ -170,9 +170,9 @@ namespace Finbourne.Identity.Sdk.Model
         public McpToolSchedulerPayload SchedulerPayload { get; set; }
 
         /// <summary>
-        /// Template for human-readable destructive action summary (e.g. \&quot;Delete file &#39;{filePath}&#39;\&quot;)
+        /// Template for human-readable destructive action summary. Uses {paramName} single-brace placeholders (e.g. \&quot;Delete file &#39;{filePath}&#39;\&quot;). Required when Destructive is true.
         /// </summary>
-        /// <value>Template for human-readable destructive action summary (e.g. \&quot;Delete file &#39;{filePath}&#39;\&quot;)</value>
+        /// <value>Template for human-readable destructive action summary. Uses {paramName} single-brace placeholders (e.g. \&quot;Delete file &#39;{filePath}&#39;\&quot;). Required when Destructive is true.</value>
         [DataMember(Name = "destructiveActionSummaryTemplate", EmitDefaultValue = true)]
         public string DestructiveActionSummaryTemplate { get; set; }
 
