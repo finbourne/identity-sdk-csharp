@@ -4,14 +4,14 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**ListLogs**](IdentityLogsApi.md#listlogs) | **GET** /api/logs | [BETA] ListLogs: Lists system logs for a domain |
+| [**ListLogs**](IdentityLogsApi.md#listlogs) | **GET** /api/logs | ListLogs: Lists system logs for a domain |
 | [**ListUserLogs**](IdentityLogsApi.md#listuserlogs) | **GET** /api/logs/me | ListUserLogs: Lists user logs |
 
 <a id="listlogs"></a>
 # **ListLogs**
 > ResourceListOfSystemLog ListLogs (DateTimeOffset? oktaSince = null, DateTimeOffset? oktaUntil = null, string? oktaFilter = null, string? oktaQuery = null, int? oktaLimit = null, string? oktaSortOrder = null, string? oktaAfter = null)
 
-[BETA] ListLogs: Lists system logs for a domain
+ListLogs: Lists system logs for a domain
 
 Lists system logs for a domain
 
@@ -67,7 +67,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ResourceListOfSystemLog result = apiInstance.ListLogs(oktaSince, oktaUntil, oktaFilter, oktaQuery, oktaLimit, oktaSortOrder, oktaAfter, opts: opts);
 
-                // [BETA] ListLogs: Lists system logs for a domain
+                // ListLogs: Lists system logs for a domain
                 ResourceListOfSystemLog result = apiInstance.ListLogs(oktaSince, oktaUntil, oktaFilter, oktaQuery, oktaLimit, oktaSortOrder, oktaAfter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -88,7 +88,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [BETA] ListLogs: Lists system logs for a domain
+    // ListLogs: Lists system logs for a domain
     ApiResponse<ResourceListOfSystemLog> response = apiInstance.ListLogsWithHttpInfo(oktaSince, oktaUntil, oktaFilter, oktaQuery, oktaLimit, oktaSortOrder, oktaAfter);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));

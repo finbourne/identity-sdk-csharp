@@ -35,7 +35,7 @@ Class | Method | HTTP request | Description
 *ExternalTokenIssuersApi* | [**GetExternalTokenIssuer**](docs/ExternalTokenIssuersApi.md#getexternaltokenissuer) | **GET** /api/externaltokenissuers/{code} | [EARLY ACCESS] GetExternalTokenIssuer: Gets an External Token Issuer with code
 *ExternalTokenIssuersApi* | [**ListExternalTokenIssuers**](docs/ExternalTokenIssuersApi.md#listexternaltokenissuers) | **GET** /api/externaltokenissuers | [EARLY ACCESS] ListExternalTokenIssuers: Lists all External Token Issuers for a domain
 *ExternalTokenIssuersApi* | [**UpdateExternalTokenIssuer**](docs/ExternalTokenIssuersApi.md#updateexternaltokenissuer) | **PUT** /api/externaltokenissuers/{code} | [EARLY ACCESS] UpdateExternalTokenIssuer: Updates an existing External Token Issuer
-*IdentityLogsApi* | [**ListLogs**](docs/IdentityLogsApi.md#listlogs) | **GET** /api/logs | [BETA] ListLogs: Lists system logs for a domain
+*IdentityLogsApi* | [**ListLogs**](docs/IdentityLogsApi.md#listlogs) | **GET** /api/logs | ListLogs: Lists system logs for a domain
 *IdentityLogsApi* | [**ListUserLogs**](docs/IdentityLogsApi.md#listuserlogs) | **GET** /api/logs/me | ListUserLogs: Lists user logs
 *IdentityProviderApi* | [**AddScim**](docs/IdentityProviderApi.md#addscim) | **PUT** /api/identityprovider/scim | AddScim: Add SCIM
 *IdentityProviderApi* | [**RemoveScim**](docs/IdentityProviderApi.md#removescim) | **DELETE** /api/identityprovider/scim | RemoveScim: Remove SCIM

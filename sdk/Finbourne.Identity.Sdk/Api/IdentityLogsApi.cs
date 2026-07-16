@@ -32,7 +32,7 @@ namespace Finbourne.Identity.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [BETA] ListLogs: Lists system logs for a domain
+        /// ListLogs: Lists system logs for a domain
         /// </summary>
         /// <remarks>
         /// Lists system logs for a domain
@@ -51,7 +51,7 @@ namespace Finbourne.Identity.Sdk.Api
         ResourceListOfSystemLog ListLogs(DateTimeOffset? oktaSince = default(DateTimeOffset?), DateTimeOffset? oktaUntil = default(DateTimeOffset?), string? oktaFilter = default(string?), string? oktaQuery = default(string?), int? oktaLimit = default(int?), string? oktaSortOrder = default(string?), string? oktaAfter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [BETA] ListLogs: Lists system logs for a domain
+        /// ListLogs: Lists system logs for a domain
         /// </summary>
         /// <remarks>
         /// Lists system logs for a domain
@@ -111,7 +111,7 @@ namespace Finbourne.Identity.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [BETA] ListLogs: Lists system logs for a domain
+        /// ListLogs: Lists system logs for a domain
         /// </summary>
         /// <remarks>
         /// Lists system logs for a domain
@@ -131,7 +131,7 @@ namespace Finbourne.Identity.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfSystemLog> ListLogsAsync(DateTimeOffset? oktaSince = default(DateTimeOffset?), DateTimeOffset? oktaUntil = default(DateTimeOffset?), string? oktaFilter = default(string?), string? oktaQuery = default(string?), int? oktaLimit = default(int?), string? oktaSortOrder = default(string?), string? oktaAfter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [BETA] ListLogs: Lists system logs for a domain
+        /// ListLogs: Lists system logs for a domain
         /// </summary>
         /// <remarks>
         /// Lists system logs for a domain
@@ -308,7 +308,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] ListLogs: Lists system logs for a domain Lists system logs for a domain
+        /// ListLogs: Lists system logs for a domain Lists system logs for a domain
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
@@ -328,7 +328,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] ListLogs: Lists system logs for a domain Lists system logs for a domain
+        /// ListLogs: Lists system logs for a domain Lists system logs for a domain
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
@@ -446,7 +446,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] ListLogs: Lists system logs for a domain Lists system logs for a domain
+        /// ListLogs: Lists system logs for a domain Lists system logs for a domain
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
@@ -467,7 +467,7 @@ namespace Finbourne.Identity.Sdk.Api
         }
 
         /// <summary>
-        /// [BETA] ListLogs: Lists system logs for a domain Lists system logs for a domain
+        /// ListLogs: Lists system logs for a domain Lists system logs for a domain
         /// </summary>
         /// <exception cref="Finbourne.Identity.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaSince">Lower bound of log events published property (optional)</param>
