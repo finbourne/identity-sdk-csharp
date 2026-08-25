@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **Support** | [**SupportAccessExpiry**](SupportAccessExpiry.md) |  | [optional] 
 **SupportAccessExpiryWithRole** | [**List&lt;SupportAccessExpiryWithRole&gt;**](SupportAccessExpiryWithRole.md) |  | [optional] 
 **Status** | **bool** |  | [optional] 
+**Code** | **int?** | Internal provisioning code. | [optional] 
 **Links** | [**List&lt;Link&gt;**](Link.md) |  | [optional] 
 
 ```csharp
@@ -32,6 +33,7 @@ AuthenticationInformation authenticationInformationInstance = new Authentication
     support: support,
     supportAccessExpiryWithRole: supportAccessExpiryWithRole,
     status: status,
+    code: code,
     links: links);
 ```
 
