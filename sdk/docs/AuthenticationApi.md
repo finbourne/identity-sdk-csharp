@@ -6,13 +6,13 @@ All URIs are relative to *https://fbn-prd.lusid.com/identity*
 |--------|--------------|-------------|
 | [**GetAuthenticationInformation**](AuthenticationApi.md#getauthenticationinformation) | **GET** /api/authentication/information | GetAuthenticationInformation: Gets AuthenticationInformation |
 | [**GetPasswordPolicy**](AuthenticationApi.md#getpasswordpolicy) | **GET** /api/authentication/password-policy/{userType} | GetPasswordPolicy: Gets password policy for a user type |
-| [**GetSessionPolicy**](AuthenticationApi.md#getsessionpolicy) | **GET** /api/authentication/session-policy | [EXPERIMENTAL] GetSessionPolicy: Get session policy |
+| [**GetSessionPolicy**](AuthenticationApi.md#getsessionpolicy) | **GET** /api/authentication/session-policy | GetSessionPolicy: Get session policy |
 | [**GetSupportAccessHistory**](AuthenticationApi.md#getsupportaccesshistory) | **GET** /api/authentication/support | GetSupportAccessHistory: Get the history of all support access granted and any information pertaining to their termination |
 | [**GetSupportRoles**](AuthenticationApi.md#getsupportroles) | **GET** /api/authentication/support-roles | GetSupportRoles: Get mapping of support roles, the internal representation to a human friendly representation |
 | [**GrantSupportAccess**](AuthenticationApi.md#grantsupportaccess) | **POST** /api/authentication/support | GrantSupportAccess: Grants FINBOURNE support access to your account |
 | [**InvalidateSupportAccess**](AuthenticationApi.md#invalidatesupportaccess) | **DELETE** /api/authentication/support | InvalidateSupportAccess: Revoke any FINBOURNE support access to your account |
 | [**UpdatePasswordPolicy**](AuthenticationApi.md#updatepasswordpolicy) | **PUT** /api/authentication/password-policy/{userType} | UpdatePasswordPolicy: Updates password policy for a user type |
-| [**UpdateSessionPolicy**](AuthenticationApi.md#updatesessionpolicy) | **PUT** /api/authentication/session-policy | [EXPERIMENTAL] UpdateSessionPolicy: Update session policy |
+| [**UpdateSessionPolicy**](AuthenticationApi.md#updatesessionpolicy) | **PUT** /api/authentication/session-policy | UpdateSessionPolicy: Update session policy |
 
 <a id="getauthenticationinformation"></a>
 # **GetAuthenticationInformation**
@@ -240,7 +240,7 @@ catch (ApiException e)
 # **GetSessionPolicy**
 > SessionPolicyResponse GetSessionPolicy ()
 
-[EXPERIMENTAL] GetSessionPolicy: Get session policy
+GetSessionPolicy: Get session policy
 
 Get the configured session timing settings. These settings dictate the duration of user sessions and the frequency of required re-authentication.
 
@@ -289,7 +289,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // SessionPolicyResponse result = apiInstance.GetSessionPolicy(opts: opts);
 
-                // [EXPERIMENTAL] GetSessionPolicy: Get session policy
+                // GetSessionPolicy: Get session policy
                 SessionPolicyResponse result = apiInstance.GetSessionPolicy();
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -310,7 +310,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] GetSessionPolicy: Get session policy
+    // GetSessionPolicy: Get session policy
     ApiResponse<SessionPolicyResponse> response = apiInstance.GetSessionPolicyWithHttpInfo();
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -910,7 +910,7 @@ catch (ApiException e)
 # **UpdateSessionPolicy**
 > SessionPolicyResponse UpdateSessionPolicy (UpdateSessionPolicyRequest updateSessionPolicyRequest)
 
-[EXPERIMENTAL] UpdateSessionPolicy: Update session policy
+UpdateSessionPolicy: Update session policy
 
 Update the session timing settings. These settings dictate the duration of user sessions and the frequency of required re-authentication.
 
@@ -960,7 +960,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // SessionPolicyResponse result = apiInstance.UpdateSessionPolicy(updateSessionPolicyRequest, opts: opts);
 
-                // [EXPERIMENTAL] UpdateSessionPolicy: Update session policy
+                // UpdateSessionPolicy: Update session policy
                 SessionPolicyResponse result = apiInstance.UpdateSessionPolicy(updateSessionPolicyRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -981,7 +981,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] UpdateSessionPolicy: Update session policy
+    // UpdateSessionPolicy: Update session policy
     ApiResponse<SessionPolicyResponse> response = apiInstance.UpdateSessionPolicyWithHttpInfo(updateSessionPolicyRequest);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
