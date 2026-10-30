@@ -145,9 +145,9 @@ namespace Finbourne.Identity.Sdk.Model
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // AdminDomainName (string) maxLength
-            if (this.AdminDomainName != null && this.AdminDomainName.Length > 30)
+            if (this.AdminDomainName != null && this.AdminDomainName.Length > 57)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for AdminDomainName, length must be less than 30.", new [] { "AdminDomainName" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for AdminDomainName, length must be less than 57.", new [] { "AdminDomainName" });
             }
 
             // AdminDomainName (string) minLength

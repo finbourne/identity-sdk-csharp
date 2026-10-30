@@ -181,9 +181,9 @@ namespace Finbourne.Identity.Sdk.Model
             }
 
             // ParentDomainName (string) maxLength
-            if (this.ParentDomainName != null && this.ParentDomainName.Length > 30)
+            if (this.ParentDomainName != null && this.ParentDomainName.Length > 57)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ParentDomainName, length must be less than 30.", new [] { "ParentDomainName" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ParentDomainName, length must be less than 57.", new [] { "ParentDomainName" });
             }
 
             // ParentDomainName (string) minLength
